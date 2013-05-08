@@ -5,19 +5,17 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-
-
 gem 'sqlite3'
 gem 'haml-rails'
 gem 'underscore-rails'
 gem 'httparty'
 
-gem 'anjlab-bootstrap-rails', '>= 2.3', :require => 'bootstrap-rails'
-
+gem 'less-rails-bootstrap'
 gem 'angular-gem'
+gem 'angular-ui-bootstrap-rails'
+gem 'angular-ui-router-rails'
 
-#gem 'less-rails'
-
+gem 'chosen-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -26,10 +24,15 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+  gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+
+  gem 'better_errors'
+  gem 'pry-plus'
+  gem 'pry-rails'
 end
+
 
 gem 'jquery-rails'
 

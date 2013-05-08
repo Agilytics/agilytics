@@ -13,6 +13,13 @@
 //= require jquery
 //= require jquery_ujs
 //= require underscore
-//= require_tree .
 //= require angular
+//= require chosen-jquery
+//= require angular-ui-bootstrap-tpls
+
+//= require ./angularApp
 //= require_tree ./angular
+//= require angular-ui-states.js
+//= require_tree .
+
+
