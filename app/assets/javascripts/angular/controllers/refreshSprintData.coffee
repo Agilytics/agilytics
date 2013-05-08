@@ -1,4 +1,4 @@
-class @MetricsController
+class @RefreshSprintData
   constructor: ($scope, $http)->
     @http = $http
     @scope = $scope
@@ -24,8 +24,7 @@ class @MetricsController
       passGrid.push lboard if lboard.add
     )
 
-    @http.post('sprint/gridChanges', passGrid).success (data) ->
-      alert JSON.stringify data, null, 2
+    @http.post('sprint/gridUpdateData', passGrid).success (data) ->   alert "successfullyUpdated!"
     .error -> alert 'fail'
 
 #MetricsController.$inject = ['$scope', '$http']

@@ -1,9 +1,9 @@
 require 'rubygems'
 require 'httparty'
 
-class SprintController < ApplicationController 
+class SprintController < ApplicationController
 
-  def initialize 
+  def initialize
     super
     @jira = JiraCaller.new
   end
@@ -19,7 +19,13 @@ class SprintController < ApplicationController
     render :json => @jira.getChangesForGridOfBoardAndSprints(params["_json"])
   end
 
-  def boards 
+  def gridUpdateData
+    data = @jira.getChangesForGridOfBoardAndSprints(params["_json"])
+
+    render :json => ""
+  end
+
+  def boards
     render :json => @jira.getBoards
   end
 
@@ -34,7 +40,7 @@ class SprintController < ApplicationController
 end
 
 
-class JiraCaller 
+class JiraCaller
 
   include HTTParty
 
@@ -70,7 +76,7 @@ class JiraCaller
     array = Array.new
 
     boardIds.each { |boardId|
-      o = getSprint boardId.to_s       
+      o = getSprint boardId.to_s
       array.push o
     }
 

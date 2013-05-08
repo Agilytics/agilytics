@@ -13,7 +13,6 @@ gem 'httparty'
 gem 'less-rails-bootstrap'
 gem 'angular-gem'
 gem 'angular-ui-bootstrap-rails'
-gem 'angular-ui-router-rails'
 
 gem 'chosen-rails'
 

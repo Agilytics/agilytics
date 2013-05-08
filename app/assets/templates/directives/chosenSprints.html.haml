@@ -1,0 +1,7 @@
+%div  
+  %select( data-placeholder="Choose a sprint board" multiple
+           class="span10 chzn-select" ng-model="sprints" ng-options="sprint.name for sprint in sprintList" )
+  %div( class="chosen-buttons" )
+    %button( class="btn-inverse" ng-click="allSprints()" ) All
+    %button( class="btn-inverse" ng-click="noSprints()" ) None
+    %button( class="btn-primary" ng-click="selectedSprints()" ) Ok
