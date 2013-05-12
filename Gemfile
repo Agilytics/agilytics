@@ -5,7 +5,12 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+# Adding Mongo
 gem 'sqlite3'
+gem 'mongoid', '~> 3.0.0'
+
+gem "resque"
+
 gem 'haml-rails'
 gem 'underscore-rails'
 gem 'httparty'
@@ -30,6 +35,9 @@ group :assets do
   gem 'better_errors'
   gem 'pry-plus'
   gem 'pry-rails'
+
+  gem 'pry-debugger'
+
 end
 
 

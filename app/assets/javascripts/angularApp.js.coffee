@@ -7,12 +7,19 @@ window.module = angular.module('agilytics',['ui.compat'])
         $urlRouterProvider.when('/', '/boards').otherwise("/boards")
 
         $stateProvider.state(
-            'boards', {
-              url: '/boards',
-              templateUrl: '/assets/metrics.html'
-              controller: MetricsController
-            }
-          )
+          'boards', {
+            url: '/boards',
+            templateUrl: '/assets/metrics.html'
+            controller: MetricsController
+          }
+        )
+        .state(
+          'refreshData', {
+            url: '/refreshData',
+            templateUrl: '/assets/refreshSprintData.html',
+            controller: RefreshSprintData
+          }
+        )
     ]
   ).run([ '$rootScope', '$state', '$stateParams',
         ($rootScope, $state, $stateParams) ->

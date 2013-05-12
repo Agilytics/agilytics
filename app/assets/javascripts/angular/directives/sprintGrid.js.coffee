@@ -7,7 +7,7 @@ module.directive('sprintGrid', [ "$http", ($http) ->
     $http.get('/assets/grid.json').success (data) ->
       scope.grid = []
       scope.grid.push board for board in data when board.sprints && board.sprints.length
-      _.each(scope.grid, (board)-> 
+      _.each(scope.grid, (board)->
         _.each(board.sprints, (sprint)-> sprint.isChecked = false)
       )
 
@@ -19,13 +19,13 @@ module.directive('sprintGrid', [ "$http", ($http) ->
 
   none = => checkBoard(board, false) for board in @scope.grid
 
-  submit = => 
+  submit = =>
     if(@scope.model)
       @scope.model.grid = @scope.grid
 
   checkBoard = (board, checked) ->
     board.isChecked = checked
-    _.each(board.sprints, (sprint)-> 
+    _.each(board.sprints, (sprint)->
       sprint.isChecked = board.isChecked
     )
 

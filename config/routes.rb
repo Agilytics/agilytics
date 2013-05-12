@@ -1,11 +1,12 @@
 Agilytics::Application.routes.draw do
 
   get "sprint/metrics"
-  get "sprint/changes"  
+  get "sprint/changes"
   get "sprint/boards"
   get "sprint/sprint"
   get "sprint/grid"
-  post "sprint/gridChanges"
+  get "sprint/gridChanges"
+  get "sprint/gridUpdateData"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

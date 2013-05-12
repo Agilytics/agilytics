@@ -3,6 +3,10 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 $ ->
 
+  $.getJSON('/sprint/boards' ).success( (data)->
+      processBoards data
+    ).fail( -> alert('fail'))
+
   processAndShowChanges = (changes)->
     showProcessedChanges( processMetrics changes )
 
@@ -16,45 +20,33 @@ $ ->
   getUrlParam = (name)->
     getUrlParams()[name]
 
-  $.getJSON('/sprint/changes?sprintId=' + getUrlParam "sprintId" ).success(processAndShowChanges).fail( -> alert('fail'))
+  processBoards = (boards) ->
+    if boards
+      html = "<hr><h1>BOARDS</h1><hr>"
+      html += processBoard board for board in boards when board.sprints
+      $("#here").append(html)
 
-  processMetrics = (changes)->
-    ch = changes.changes
-    objs = {}
+  processBoard = (board)->
+    html = "<h1>#{board.name}</h1>"
+    html += "<table><tr>"
+    html += "<th>Sprint Name</th>"
+    html += "<th>Start Date</th>"
+    html += "<th>Initial Commitment</th>"
+    html += "<th>Total Commitment</th>"
+    html += "<th>Initial Velocity</th>"
+    html += "<th>Total Velocity</th></tr>"
 
-    for k,v of ch
-      o1 = v[0]
+    if board.sprints
+      for sprint in board.sprints
+        sprinthtml = "<tr>"
+        sprinthtml += showSprint sprint
+        sprinthtml += "</tr>"
+        html += sprinthtml
 
-      objs[o1.key] = {isInitialized: false, wasAdded: false} unless objs[o1.key]
+    html += "</table>"
+    html
 
-      curStory = objs[o1.key]
-
-      if o1.statC && o1.statC.newValue
-        curStory.size = o1.statC.newValue
-
-      if o1.statC && ( o1.statC.newValue || o1.statC.noStatsValue )
-        unless curStory.isInitialized
-          if o1.statC.noStatsValue
-            curStory.initSize = 0
-          else
-            curStory.initSize = o1.statC.newValue || curStory.size
-          curStory.isInitialized = true
-
-      if o1.column
-        curStory.done = !o1.column.notDone
-
-      if o1.added
-        storyAddedDate = parseInt k
-        curStory.initDate = new Date storyAddedDate
-        curStory.wasAdded = storyAddedDate > changes.startTime
-        curStory.wasRemoved = false
-
-      if o1.added == false
-        curStory.wasRemoved = true
-
-    objs
-
-  showProcessedChanges = (objs)->
+  showSprint = (sprint)->
     initCommitment = 0
     totalCommitment = 0
     initVelocity = 0
@@ -73,27 +65,41 @@ $ ->
         "<span #{highlight(true)}>NOT DONE</span>"
 
     displaySize = (curStory) ->
-      style = highlight(true) unless curStory.size == curStory.initSize || curStory.wasAdded
-      "<span #{style}>#{curStory.size}, #{curStory.initSize}</span>"
+      style = highlight(true) unless curStory.size == curStory.init_size || curStory.was_added
+      "<span #{style}>#{curStory.size}, #{curStory.init_size}</span>"
 
     indicateIfRemoved = (curStory) ->
-      if curStory.wasRemoved
+      if curStory.was_removed
         "text-decoration:line-through"
       else
         ""
 
     html = ""
-    for k,v of objs
-      curStory = v
-      initCommitment += (curStory.initSize || 0) unless curStory.wasAdded
-      totalCommitment += (curStory.size || 0)
-      if curStory.done
-        initVelocity += (curStory.initSize || 0) unless curStory.wasAdded
-        totalVelocity += (curStory.size || 0)
+#    html += "<ul>"
+    if sprint.stories
+      for curStory in sprint.stories
+        initCommitment += (curStory.init_size || 0) unless curStory.was_added
+        totalCommitment += (curStory.size || 0)
+        if curStory.done
+          initVelocity += (curStory.init_size || 0) unless curStory.was_added
+          totalVelocity += (curStory.size || 0)
 
-      html += "<li style=#{indicateIfRemoved(curStory)} >#{k} : #{displayDone(curStory)} : #{displaySize(curStory)} #{if curStory.wasAdded then curStory.initDate else "" }</li>"
+#        html += "<li style=#{indicateIfRemoved(curStory)} >#{curStory.jid} : #{displayDone(curStory)} : #{displaySize(curStory)} #{if curStory.was_added then curStory.init_date else "" }</li>"
 
-    $("#total").html "Initial Commitment: #{initCommitment}, TotalCommitment: #{totalCommitment} <br>"
-    $("#total").append "Initial Velocity: #{initVelocity}, TotalVelocity: #{totalVelocity} <br>"
-    $("#here").append(html)
 
+    startDate = new Date(sprint.changeset.startTime)
+    month = startDate.getMonth() + 1
+    year =  startDate.getFullYear()
+    date =  startDate.getDate()
+    cols = []
+    cols.push "#{sprint.name}"
+    cols.push "#{month}/#{date}/#{year}"
+    cols.push "#{initCommitment}"
+    cols.push "#{totalCommitment}"
+    cols.push "#{initVelocity}"
+    cols.push "#{totalVelocity}"
+
+    html += "<td>#{col}</td>" for col in cols
+
+#    html += "---- END SPRINT ---"
+    html
