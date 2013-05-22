@@ -15,6 +15,8 @@ gem 'haml-rails'
 gem 'underscore-rails'
 gem 'httparty'
 
+gem 'highcharts-rails', '~> 3.0.0'
+
 gem 'less-rails-bootstrap'
 gem 'angular-gem'
 gem 'angular-ui-bootstrap-rails'
@@ -32,11 +34,10 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 
-  gem 'better_errors'
-  gem 'pry-plus'
-  gem 'pry-rails'
-
-  gem 'pry-debugger'
+#  gem 'better_errors'
+#  gem 'pry-plus'
+#  gem 'pry-rails'
+#  gem 'pry-debugger'
 
 end
 

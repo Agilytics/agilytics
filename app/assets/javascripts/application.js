@@ -23,3 +23,9 @@
 //= require_tree .
 
 
+//= require highcharts
+//= require highcharts/modules/exporting
+//= require highcharts/highcharts-more
+
+
+

@@ -14,5 +14,8 @@ class Story
   field :init_size, type: Integer, default: 0
   field :size, type: Integer
 
+  embeds_one :assignee, class_name: 'JiraUser'
+  embeds_one :reporter, class_name: 'JiraUser'
+
   embedded_in :sprint
 end

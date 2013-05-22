@@ -1,0 +1,7 @@
+%h1 Assignees Velocity
+%button(type="button" class="ng-class:{'btn-inverse': 15 == days }; btn btn-mini" ng-click="filter(15)")Last 15 Days
+%button(type="button" class="ng-class:{'btn-inverse': 30 == days }; btn btn-mini" ng-click="filter(30)")Last 30 Days
+%button(type="button" class="ng-class:{'btn-inverse': 60 == days }; btn btn-mini" ng-click="filter(60)")Last 60 Days
+%button(type="button" class="ng-class:{'btn-inverse': 90 == days }; btn btn-mini" ng-click="filter(90)")Last 90 Days
+%button(type="button" class="ng-class:{'btn-inverse':  !days }; btn btn-mini" ng-click="filter('')")All Time
+%div(id="assignees-graph" style="min-width: 400px; height: {{ assignees.length * 25 }}px; margin: 0 auto")

@@ -7,8 +7,6 @@ $ ->
       processBoards data
     ).fail( -> alert('fail'))
 
-  processAndShowChanges = (changes)->
-    showProcessedChanges( processMetrics changes )
 
   getUrlParams = ->
     params = {}
@@ -29,12 +27,12 @@ $ ->
   processBoard = (board)->
     html = "<h1>#{board.name}</h1>"
     html += "<table><tr>"
-    html += "<th>Sprint Name</th>"
-    html += "<th>Start Date</th>"
-    html += "<th>Initial Commitment</th>"
-    html += "<th>Total Commitment</th>"
-    html += "<th>Initial Velocity</th>"
-    html += "<th>Total Velocity</th></tr>"
+    html += "<td>Sprint Name</td>"
+    html += "<td>Start Date</td>"
+    html += "<td>Initial Commitment</td>"
+    html += "<td>Total Commitment</td>"
+    html += "<td>Initial Velocity</td>"
+    html += "<td>Total Velocity</td></th>"
 
     if board.sprints
       for sprint in board.sprints
@@ -87,7 +85,7 @@ $ ->
 #        html += "<li style=#{indicateIfRemoved(curStory)} >#{curStory.jid} : #{displayDone(curStory)} : #{displaySize(curStory)} #{if curStory.was_added then curStory.init_date else "" }</li>"
 
 
-    startDate = new Date(sprint.changeset.startTime)
+    startDate = new Date(sprint.change_set.startTime)
     month = startDate.getMonth() + 1
     year =  startDate.getFullYear()
     date =  startDate.getDate()
