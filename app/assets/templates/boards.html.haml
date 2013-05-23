@@ -1,0 +1,5 @@
+%div(ng-repeat="board in model.boards")
+  %board-summary(board="board")
+  %br(style="margin-top:10px")
+  %assignee-summary(boards="model.boards" assignees="model.assignees" board="board")
+

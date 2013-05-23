@@ -1,4 +1,4 @@
-class @MetricsController
+class @BoardsController
 
   constructor: ($scope, gridService)->
 

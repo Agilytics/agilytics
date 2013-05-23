@@ -11,7 +11,7 @@ module.directive('boardSummary', [ "$http", "$timeout", ($http, $timeout) ->
         "Total Velocity"
       ]
 
-  showGraph = (boardId, sprints)=>
+  showGraph = (boardId, sprints, boardName)=>
 
     series = [
                 name: "Missed"
@@ -33,8 +33,9 @@ module.directive('boardSummary', [ "$http", "$timeout", ($http, $timeout) ->
 
     categories = []
 
+    sprintHadSomeActivity = (sprint)-> sprint.totalCommitment || sprint.addedVelocity || sprint.estimateChangedVelocity || sprint.initVelocity
 
-    for sprint in sprints
+    for sprint in sprints when sprintHadSomeActivity(sprint)
         series[0].data.push sprint.totalCommitment - sprint.totalVelocity
         series[1].data.push sprint.addedVelocity
         series[2].data.push sprint.estimateChangedVelocity
@@ -47,7 +48,7 @@ module.directive('boardSummary', [ "$http", "$timeout", ($http, $timeout) ->
         type: "bar"
 
       title:
-        text: "Sprint Velocities"
+        text: boardName + " : sprint velocities"
 
       xAxis:
         categories: categories
@@ -93,7 +94,7 @@ module.directive('boardSummary', [ "$http", "$timeout", ($http, $timeout) ->
       for sprint in sprints
         processSprint sprint, scope
 
-      sg = -> showGraph( scope.board.jid, sprints )
+      sg = -> showGraph( scope.board.jid, sprints, scope.board.name )
       $timeout(sg, 0)
 
     scope.filter = -> showGraph(scope.board.jid, sprints)

@@ -1,10 +1,20 @@
-module.directive('assigneeSummary', [ "$http", ($http) ->
+module.directive('assigneeSummary', [ "$http", "$timeout", ($http, $timeout) ->
 
-  showGraph = (assignees, boards, days)=>
+  showGraph = (assignees, boards, options, scope)=>
+      # options { days, board }
 
-    if(days)
+      if(options.days)
         d = new Date
-        time = d.setDate(d.getDate()-days);
+        time = d.setDate(d.getDate() - options.days)
+
+      # filter on a specific board
+      thereIsABoardFilter = !!options.board
+      thereIsNoBoardFilter =  !thereIsABoardFilter
+
+      if(thereIsABoardFilter)
+        newBoards = []
+        newBoards.push board for board in boards when board.jid == options.board.jid
+        boards = newBoards
 
       seriesObj = { series: [], boardSeries: {} }
       _.each(boards,(b, i)->
@@ -18,10 +28,15 @@ module.directive('assigneeSummary', [ "$http", ($http) ->
       _.each( assignees, (assignee)->
         filteredVelocities = []
         if(d)
-          filteredVelocities = _.filter(assignee.velocities, (v)-> v.sprintStartDate >= time )
-
+          filteredVelocities = _.filter(assignee.velocities, (v)->
+                        v.sprintStartDate >= time &&
+                        ( thereIsNoBoardFilter ||  v.boardId == options.board.jid )
+          )
         else
-          filteredVelocities = assignee.velocities
+          filteredVelocities = _.filter(assignee.velocities, (v)->
+            ( thereIsNoBoardFilter ||  v.boardId == options.board.jid )
+          )
+
 
         assignee.boardVelocities = {}
         assignee.velocity = 0
@@ -31,6 +46,7 @@ module.directive('assigneeSummary', [ "$http", ($http) ->
         groupedFilteredVelocities = _.groupBy( filteredVelocities, (fv) -> fv.boardId )
 
         _.each(groupedFilteredVelocities, (velocities, boardId) ->
+
             boardVelocity = _.reduce(velocities, sum, 0)
 
             assignee.boardVelocities[boardId] = boardVelocity
@@ -44,48 +60,61 @@ module.directive('assigneeSummary', [ "$http", ($http) ->
 
       categories = []
 
-
+      scope.assigneesLength = 0
       _.each(assignees, (assignee)->
 
-        _.each(seriesObj.boardSeries, (bs, boardId)->
-          bs.data.push assignee.boardVelocities[boardId] || 0
-        )
+        if assignee.velocity
+          scope.assigneesLength += 1
+          _.each(seriesObj.boardSeries, (bs, boardId)->
+            bs.data.push assignee.boardVelocities[boardId] || 0
+          )
 
-        categories.push assignee.name
+          categories.push assignee.name
       )
 
+
       series = seriesObj.series
+      addBoardTitle = ""
+      if(thereIsABoardFilter)
+        addBoardTitle = " for board ( #{options.board.name} )"
 
-      $("#assignees-graph").highcharts
-        chart:
-          type: "bar"
+      _showGraph = (boardId, series, categories, addBoardTitle)->
 
-        title:
-          text: "Assignees"
+        $("#assignees-graph-" + boardId).highcharts
+          chart:
+            type: "bar"
 
-        xAxis:
-          categories: categories
-
-        yAxis:
-          min: 0
           title:
-            text: "Story Points"
+            text: "Assignees " + addBoardTitle
 
-        legend:
-          backgroundColor: "#FFFFFF"
-          reversed: true
+          xAxis:
+            categories: categories
 
-        plotOptions:
-          series:
-            stacking: "normal"
+          yAxis:
+            min: 0
+            title:
+              text: "Story Points"
 
-        series: series
+          legend:
+            backgroundColor: "#FFFFFF"
+            reversed: true
+
+          plotOptions:
+            series:
+              stacking: "normal"
+
+          series: series
+
+      sg = -> _showGraph(scope.boardId, series, categories, addBoardTitle)
+      $timeout(sg, 0)
 
   init = (scope)->
     scope.headers = [
         "Assignee Name",
         "Completed Story Points (Velocity)"
     ]
+
+    scope.boardId = if scope.board then scope.board.jid else "no-board"
 
     assigneeRows = []
 
@@ -100,10 +129,10 @@ module.directive('assigneeSummary', [ "$http", ($http) ->
     scope.filter = (days)=>
           scope.days = days
           console.log(scope.days)
-          showGraph( scope.assignees, scope.boards, days )
+          showGraph( scope.assignees, scope.boards, { days: days, board: scope.board }, scope )
 
     scope.assigneeRows = assigneeRows
-    showGraph( scope.assignees, scope.boards )
+    showGraph( scope.assignees, scope.boards, { board: scope.board }, scope )
 
 
   restrict: 'E'
@@ -113,6 +142,7 @@ module.directive('assigneeSummary', [ "$http", ($http) ->
   scope:
       boards: "="
       assignees: "="
+      board: "="
 
   templateUrl: "/assets/directives/assigneeSummary.html"
 ])
