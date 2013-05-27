@@ -1,14 +1,11 @@
 class @MetricsController
 
-  constructor: ($scope, gridService)->
-
+  constructor: ($scope, agileCubeService)->
+    $scope.model = {}
     gridService.getBoards( (boards, assignees)->
-
-      $scope.model = {}
-      $scope.model.boards = boards
-      $scope.model.assignees = assignees
-
+        $scope.model.boards = boards
+        $scope.model.assignees = assignees
     )
-    this
 
-#MetricsController.$inject = ['$scope', 'gridService']
+    this
+@MetricsController.$inject = ['$scope', 'agileCubeService']

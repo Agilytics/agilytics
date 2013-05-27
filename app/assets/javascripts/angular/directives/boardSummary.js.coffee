@@ -86,18 +86,20 @@ module.directive('boardSummary', [ "$http", "$timeout", ($http, $timeout) ->
 
   linker = (scope, element, attr) ->
 
-    sprints = scope.board.sprints
+    scope.$watch("board.sprints", ->
+      sprints = scope.board.sprints
 
-    init(scope)
+      init(scope)
 
-    if(sprints)
-      for sprint in sprints
-        processSprint sprint, scope
+      if(sprints)
+        for sprint in sprints
+          processSprint sprint, scope
 
-      sg = -> showGraph( scope.board.jid, sprints, scope.board.name )
-      $timeout(sg, 0)
+        sg = -> showGraph( scope.board.jid, sprints, scope.board.name )
+        $timeout(sg, 0)
 
-    scope.filter = -> showGraph(scope.board.jid, sprints)
+      scope.filter = -> showGraph(scope.board.jid, sprints)
+    )
 
     this
 

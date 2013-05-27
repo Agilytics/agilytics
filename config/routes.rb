@@ -8,6 +8,8 @@ Agilytics::Application.routes.draw do
   get 'sprint/gridChanges'
   get 'sprint/createMasterGrid'
 
+  mount JasmineRails::Engine => "/specs" if defined?(JasmineRails)
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

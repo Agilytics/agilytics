@@ -34,10 +34,12 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 
-#  gem 'better_errors'
-#  gem 'pry-plus'
-#  gem 'pry-rails'
-#  gem 'pry-debugger'
+  gem 'better_errors'
+  gem 'pry-plus'
+  gem 'pry-rails'
+  gem 'pry-debugger'
+
+  gem 'jasmine-rails'
 
 end
 

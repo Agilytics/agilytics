@@ -10,25 +10,12 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require jquery
-//= require jquery_ujs
+
 //= require underscore
 //= require angular
-//= require chosen-jquery
-//= require angular-ui-bootstrap-tpls
+//= require_tree ./utils
 
 //= require ./angularApp
 //= require_tree ./angular
-
-//= require angular-ui-states.js
-
-//= require_directory .
-
-
-
-//= require highcharts
-//= require highcharts/modules/exporting
-//= require highcharts/highcharts-more
-
-
+//= require_tree ./tests/testdata
 
