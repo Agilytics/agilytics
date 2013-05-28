@@ -3,6 +3,7 @@ class CubeTester
     @cube = cube
 
   runTests: ->
+
     describe 'TestCube is intact and', =>
       it 'cube should be truty', =>
         expect(@cube).toBeTruthy()
@@ -24,8 +25,11 @@ class CubeTester
         expect(@cube.sprints).toBeTruthy()
         expect(@cube.sprints.length).toEqual(41)
         sprints = []
+
         for board in @cube.boards
           sprints = _.union(sprints, board.sprints)
+          expect(_.union(board.sprints).length).toEqual(board.sprints.length)
+
         expect(@cube.sprints.length).toEqual(sprints.length)
 
 

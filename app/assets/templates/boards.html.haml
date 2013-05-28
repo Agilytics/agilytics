@@ -1,5 +1,5 @@
-%div(ng-repeat="board in model.boards")
+%div(ng-repeat="board in cube.boardsWithSprints")
   %board-summary(board="board")
   %br(style="margin-top:10px")
-  %assignee-board-summary(boards="model.boards" assignees="model.assignees" board="board")
+  %assignee-board-summary(boards="cube.boardsWithSprints" assignees="cube.assignees" board="board")
 

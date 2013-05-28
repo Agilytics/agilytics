@@ -1,6 +1,7 @@
 class @AgileCubeService
 
   getCube: (callback)->
+
     if(@cube)
       callback @cube
     else
@@ -9,6 +10,7 @@ class @AgileCubeService
   buildCube: (boards, callback)=>
     @cubifyAndRelateEntitites(boards)
     callback(@cube)
+
 
   add: colUtils.add
 
@@ -58,9 +60,6 @@ class @AgileCubeService
     board.stories = _.union(sprint.stories, board.stories)
 
     board.assignees = _.union(sprint.assignees, board.assignees)
-
-    board.sprints.push sprint
-
 
 
   ensureOnlyOneAssigneeIsCreatedPerHumanBeing: (story) ->
@@ -128,7 +127,6 @@ class @AgileCubeService
 
   constructor: ($http)-> @$http = $http
 
-
-#module.factory('agileCubeService', ["$http", ($http)-> new AgileCubeService($http) ])
+module.factory('agileCubeService', ["$http", ($http)-> new AgileCubeService($http) ])
 
 

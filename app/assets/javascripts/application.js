@@ -17,18 +17,18 @@
 //= require chosen-jquery
 //= require angular-ui-bootstrap-tpls
 
+//= require_tree ./utils
 //= require ./angularApp
 //= require_tree ./angular
+
 
 //= require angular-ui-states.js
 
 //= require_directory .
 
-
-
 //= require highcharts
 //= require highcharts/modules/exporting
-//= require highcharts/highcharts-more
+// =  r e quire highcharts/highcharts-more
 
 
 

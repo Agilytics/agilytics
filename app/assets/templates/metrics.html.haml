@@ -1,4 +1,4 @@
-%assignee-board-summary(boards="model.boards" assignees="model.assignees")
-%div(ng-repeat="board in model.boards")
+%assignee-board-summary(boards="cube.boardsWithSprints" assignees="cube.assignees")
+%div(ng-repeat="board in cube.boardsWithSprints")
   %board-summary(board="board")
 
