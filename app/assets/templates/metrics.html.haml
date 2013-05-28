@@ -1,4 +1,4 @@
-%h1 Boards jj
-%div(ng-repeat="board in boards")
-  %board-summary(ng-model="board")
+%assignee-summary(boards="model.boards" assignees="model.assignees")
+%div(ng-repeat="board in model.boards")
+  %board-summary(board="board")
 

@@ -1,8 +1,8 @@
-module.directive('boardSummary', [ "$http", ($http) ->
+module.directive('boardSummary', [ "$http", "$timeout", ($http, $timeout) ->
 
-  init = =>
-    @scope.sprintRows = []
-    @scope.headers = [
+  init = (scope)->
+    scope.sprintRows = []
+    scope.headers = [
         "Sprint Name",
         "Start Date",
         "Initial Commitment",
@@ -11,46 +11,100 @@ module.directive('boardSummary', [ "$http", ($http) ->
         "Total Velocity"
       ]
 
-  processSprint = (sprint)=>
-    initCommitment = 0
-    totalCommitment = 0
-    initVelocity = 0
-    totalVelocity = 0
+  showGraph = (boardId, sprints, boardName)=>
 
-    if sprint.stories
-      for curStory in sprint.stories
-        initCommitment += (curStory.init_size || 0) unless curStory.was_added
-        totalCommitment += (curStory.size || 0)
-        if curStory.done
-          initVelocity += (curStory.init_size || 0) unless curStory.was_added
-          totalVelocity += (curStory.size || 0)
+    series = [
+                name: "Missed"
+                color: "#fad2d2"
+                data: []
+              ,
+                name: "Added"
+                color: "black"
+                data: []
+              ,
+                name: "Changed"
+                color: "gray"
+                data: []
+              ,
+                name: "Committed"
+                color: "green"
+                data: []
+            ]
 
-    startDate = new Date(sprint.changeset.startTime)
+    categories = []
+
+    sprintHadSomeActivity = (sprint)-> sprint.totalCommitment || sprint.addedVelocity || sprint.estimateChangedVelocity || sprint.initVelocity
+
+    for sprint in sprints when sprintHadSomeActivity(sprint)
+        series[0].data.push sprint.totalCommitment - sprint.totalVelocity
+        series[1].data.push sprint.addedVelocity
+        series[2].data.push sprint.estimateChangedVelocity
+        series[3].data.push sprint.initVelocity
+
+        categories.push sprint.name
+
+    $("#" + boardId + "-sprints-graph").highcharts
+      chart:
+        type: "bar"
+
+      title:
+        text: boardName + " : sprint velocities"
+
+      xAxis:
+        categories: categories
+
+      yAxis:
+        min: 0
+        title:
+          text: "Story Points"
+
+      legend:
+        backgroundColor: "#FFFFFF"
+        reversed: true
+
+      plotOptions:
+        series:
+          stacking: "normal"
+
+      series: series
+
+  processSprint = (sprint, scope)->
+
+    startDate = new Date(sprint.change_set.startTime)
     month = startDate.getMonth() + 1
     year =  startDate.getFullYear()
     date =  startDate.getDate()
     cols = []
     cols.push "#{sprint.name}"
     cols.push "#{month}/#{date}/#{year}"
-    cols.push "#{initCommitment}"
-    cols.push "#{totalCommitment}"
-    cols.push "#{initVelocity}"
-    cols.push "#{totalVelocity}"
+    cols.push "#{sprint.initCommitment}"
+    cols.push "#{sprint.totalCommitment}"
+    cols.push "#{sprint.initVelocity}"
+    cols.push "#{sprint.totalVelocity}"
 
-    @scope.sprintRows.push(cols)
-    console.log( JSON.stringify(cols, null, 2))
+    scope.sprintRows.push(cols)
 
-  linker = (scope, element, attr) =>
+  linker = (scope, element, attr) ->
+
     sprints = scope.board.sprints
 
-    @scope = scope
-    init()
+    init(scope)
+
     if(sprints)
-      processSprint sprint for sprint in sprints
+      for sprint in sprints
+        processSprint sprint, scope
+
+      sg = -> showGraph( scope.board.jid, sprints, scope.board.name )
+      $timeout(sg, 0)
+
+    scope.filter = -> showGraph(scope.board.jid, sprints)
 
     this
 
   restrict: 'E',
   link: linker,
   templateUrl: "/assets/directives/boardSummary.html"
+  scope:
+      board: "="
+
 ])

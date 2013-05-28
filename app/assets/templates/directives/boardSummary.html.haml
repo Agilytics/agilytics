@@ -1,8 +1,2 @@
-%h1 {{board.name}}
-%table
-  %tr
-    %th(ng-repeat="header in headers")
-      {{header}}
-  %tr(ng-repeat="sprintRow in sprintRows")
-    %td(ng-repeat="col in sprintRow")
-      {{col}}
+%hr
+%div(id="{{board.jid}}-sprints-graph" style="min-width: 400px; height: {{ board.sprints.length * 15 + 125}}px; margin: 0 auto")

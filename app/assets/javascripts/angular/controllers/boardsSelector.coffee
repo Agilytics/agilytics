@@ -1,4 +1,4 @@
-class @BoardsController
+class @BoardsSelectorController
   constructor: ($scope, $http)->
     @scope = $scope
     @scope.boardsModel = {
@@ -27,4 +27,4 @@ class @BoardsController
       alert JSON.stringify data, null, 2
     .error -> alert 'fail'
 
-#BoardsController.$inject = ['$scope', '$http'];
+#BoardsSelectorController.$inject = ['$scope', '$http'];

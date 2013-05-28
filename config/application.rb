@@ -3,10 +3,10 @@ require File.expand_path('../boot', __FILE__)
 # adding Mongo
 #require 'rails/all'
 ####################
-require "action_controller/railtie"
-require "action_mailer/railtie"
-require "active_resource/railtie"
-require "rails/test_unit/railtie"
+require 'action_controller/railtie'
+require 'action_mailer/railtie'
+require 'active_resource/railtie'
+require 'rails/test_unit/railtie'
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -18,7 +18,7 @@ end
 module Agilytics
   class Application < Rails::Application
 
-    Mongoid.load!("config/mongoid.yml", :production)
+    Mongoid.load!('config/mongoid.yml', :production)
     Mongoid.logger.level = Logger::DEBUG
     Moped.logger.level = Logger::DEBUG
 
@@ -45,7 +45,7 @@ module Agilytics
     # config.i18n.default_locale = :de
 
     # Configure the default encoding used in templates for Ruby 1.9.
-    config.encoding = "utf-8"
+    config.encoding = 'utf-8'
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
