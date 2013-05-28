@@ -12,12 +12,14 @@
         .container
           %a.brand{:href => "#"}
             %img{:src => "/assets/logo.gif"}/
-
           %ul.nav
             %li{"ng-class" => "{ active: $state.includes('') }"}
-              %a{:href => "#/contacts"} Start
+              %a{:href => "#/all"} All
             %li{"ng-class" => "{ active: $state.includes('') }"}
-              %a{:href => "#/about"} Ends
+              %a{:href => "#/boards"} Boards
+            %li{"ng-class" => "{ active: $state.includes('') }"}
+              %a{:href => "#/assignees"} Boards
+
 
           %p.navbar-text.pull-right{"ui-view" => "hint"}
     / end Nav

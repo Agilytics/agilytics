@@ -32,6 +32,7 @@ class SprintController < ApplicationController
   end
 
   def boards
+    sleep(1)
     render :json => Board.all
   end
 

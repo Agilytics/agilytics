@@ -4,7 +4,7 @@ module.directive('sprintGrid', [ "$http", ($http) ->
 
   fetchGrid = (scope)=>
 #    $http.get('sprint/grid').success (data) ->
-    $http.get('/assets/grid.json').success (data) ->
+    $http.get('/assets/grid.js.coffee').success (data) ->
       scope.grid = []
       scope.grid.push board for board in data when board.sprints && board.sprints.length
       _.each(scope.grid, (board)->

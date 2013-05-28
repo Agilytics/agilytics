@@ -1,0 +1,10 @@
+%div.row
+  %div.span12
+    %button(type="button" class="ng-class:{'btn-inverse': 15 == days }; btn btn-mini" ng-click="filter(15)")Last 15 Days
+    %button(type="button" class="ng-class:{'btn-inverse': 30 == days }; btn btn-mini" ng-click="filter(30)")Last 30 Days
+    %button(type="button" class="ng-class:{'btn-inverse': 60 == days }; btn btn-mini" ng-click="filter(60)")Last 60 Days
+    %button(type="button" class="ng-class:{'btn-inverse': 90 == days }; btn btn-mini" ng-click="filter(90)")Last 90 Days
+    %button(type="button" class="ng-class:{'btn-inverse':  !days }; btn btn-mini" ng-click="filter('')")All Time
+%div.row
+  %div.span6(id="assignees-velocities-graph-{{boardId}}" style="min-width: 400px; max-height:400; height:{{ assigneesLength * 15 + 115}}px; margin: 0 auto")
+  %div.span6(id="assignees-work-graph-{{boardId}}" style="min-width: 400px; max-height:400; height:{{ assigneesLength * 15 + 115}}px; margin: 0 auto")
