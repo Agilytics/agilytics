@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  pid: 
+  name: 
+  display_name: 
+  email_address: 
+
+two:
+  pid: 
+  name: 
+  display_name: 
+  email_address: 

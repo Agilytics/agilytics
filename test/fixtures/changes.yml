@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  action: 
+  pid: 
+  time: 
+  boardPID: 
+  sprintPID: 
+  location: 
+  status: 
+  associatedStoryPID: 
+  associatedSubTaskPID: 
+  newValue: 
+  oldValue: 
+
+two:
+  action: 
+  pid: 
+  time: 
+  boardPID: 
+  sprintPID: 
+  location: 
+  status: 
+  associatedStoryPID: 
+  associatedSubTaskPID: 
+  newValue: 
+  oldValue: 

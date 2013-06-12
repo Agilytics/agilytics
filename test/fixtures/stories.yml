@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  pid: 
+  acuity: 
+  assignee_PID: 
+  reporter_PID: 
+  create_date: 
+  done_date: 
+  done: 
+  size: 
+  status: 
+  location: 
+
+two:
+  pid: 
+  acuity: 
+  assignee_PID: 
+  reporter_PID: 
+  create_date: 
+  done_date: 
+  done: 
+  size: 
+  status: 
+  location: 

@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Pid:
+  = @board.pid
+%p
+  %b Name:
+  = @board.name
+%p
+  %b Issprintboard:
+  = @board.isSprintBoard
+
+= link_to 'Edit', edit_board_path(@board)
+\|
+= link_to 'Back', boards_path

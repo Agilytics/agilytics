@@ -1,0 +1,33 @@
+%h1 Listing sprints
+
+%table
+  %tr
+    %th Pid
+    %th Name
+    %th Closed
+    %th Velocity
+    %th Have all changes
+    %th Have processed all changes
+    %th Start date
+    %th End date
+    %th
+    %th
+    %th
+
+  - @sprints.each do |sprint|
+    %tr
+      %td= sprint.pid
+      %td= sprint.name
+      %td= sprint.closed
+      %td= sprint.velocity
+      %td= sprint.have_all_changes
+      %td= sprint.have_processed_all_changes
+      %td= sprint.start_date
+      %td= sprint.end_date
+      %td= link_to 'Show', sprint
+      %td= link_to 'Edit', edit_sprint_path(sprint)
+      %td= link_to 'Destroy', sprint, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Sprint', new_sprint_path

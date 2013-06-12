@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  pid: MyString
+  name: MyString
+  closed: 
+  velocity: 
+  have_all_changes: 
+  have_processed_all_changes: 
+  start_date: 
+  end_date: 
+
+two:
+  pid: MyString
+  name: MyString
+  closed: 
+  velocity: 
+  have_all_changes: 
+  have_processed_all_changes: 
+  start_date: 
+  end_date: 
