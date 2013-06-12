@@ -1,4 +1,4 @@
-%div.grid
+%div.grid.ng-cloak
   %div.btn-group
     %button.btn(ng-click="all()") All
     %button.btn(ng-click="none()") None
@@ -10,5 +10,5 @@
         %div{:id => "{{ 'board-' + board.id }}", "ng-click" => "toggle(board.id)"}
           {{ board.name }}
         %div.controls
-          %label.checkbox(ng-repeat="sprint in board.sprints") 
+          %label.checkbox(ng-repeat="sprint in board.sprints")
             %input(type="checkbox" value="{{sprint.id}}" ng-model="sprint.isChecked" ) {{ sprint.name }}

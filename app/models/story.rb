@@ -1,21 +1,25 @@
-class Story
-  include Mongoid::Document
+class Story < ActiveRecord::Base
 
-  field :jid, type: String
+  STORY = 'story'
+  BUG = 'bug'
 
-  field :is_initialized, type: Boolean, default: false
-  field :init_date, type: DateTime
+  attr_accessible :acuity,
+                  :create_date,
+                  :done,
+                  :done_date,
+                  :location,
+                  :pid,
+                  :size,
+                  :name,
+                  :description,
+                  :status,
+                  :assignee_id,
+                  :reporter_id,
+                  :card_type
 
-  field :was_added, type: Boolean, default: false
-  field :was_removed, type: Boolean, default: false
-  field :done, type: Boolean, default: false
-
-
-  field :init_size, type: Integer, default: 0
-  field :size, type: Integer
-
-  embeds_one :assignee, class_name: 'JiraUser'
-  embeds_one :reporter, class_name: 'JiraUser'
-
-  embedded_in :sprint
+  belongs_to :board
+  has_many :sprint_stories
+  has_many :subtasks, dependent: :destroy
+  has_one :assignee, :class_name => 'AgileUser', :foreign_key => 'assignee_id'
+  has_one :reporter, :class_name => 'AgileUser', :foreign_key => 'reporter_id'
 end

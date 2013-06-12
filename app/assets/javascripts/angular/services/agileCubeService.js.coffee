@@ -1,14 +1,15 @@
 class @AgileCubeService
 
   getCube: (callback)->
-
     if(@cube)
       callback @cube
     else
-      @$http.get('/sprint/boards').success( (boards)=> @buildCube(boards, callback) ).error( -> alert('fail'))
+      @$http.get('/import/boards').success( (boards)=> @buildCube(boards, callback) ).error( -> alert('fail'))
 
   buildCube: (boards, callback)=>
+
     @cubifyAndRelateEntitites(boards)
+    window.cube = @cube
     callback(@cube)
 
 

@@ -1,12 +1,18 @@
 Agilytics::Application.routes.draw do
 
-  get 'sprint/metrics'
-  get 'sprint/changes'
-  get 'sprint/boards'
-  get 'sprint/sprint'
-  get 'sprint/grid'
-  get 'sprint/gridChanges'
-  get 'sprint/createMasterGrid'
+  resources :sprints
+
+
+  resources :boards
+
+  get 'import/quote'
+  get 'import/metrics'
+  get 'import/changes'
+  get 'import/boards'
+  get 'import/import'
+  get 'import/grid'
+  get 'import/gridChanges'
+  get 'import/createMasterGrid'
 
   mount JasmineRails::Engine => "/specs" if defined?(JasmineRails)
 
@@ -59,7 +65,7 @@ Agilytics::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'sprint#metrics'
+  root :to => 'import#metrics'
 
   # See how all your routes lay out with "rake routes"
 

@@ -3,7 +3,7 @@ module.directive('chosenSprints', [ "$http", ($http) ->
     selectedBoards = @scope.boardsModel.selectedBoards
     if selectedBoards && selectedBoards.length
       boardIds = _.pluck(selectedBoards, "id")
-      $http.post('sprint/sprints', { boardIds: boardIds }).success (data) =>
+      $http.post('import/sprints', { boardIds: boardIds }).success (data) =>
         alert JSON.stringify data
         # scope.sprintList = data.views
 

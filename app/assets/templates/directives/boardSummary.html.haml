@@ -1,2 +1,3 @@
-%hr
-%div(id="{{board.jid}}-sprints-graph" style="min-width: 400px; height: {{ board.sprints.length * 15 + 125}}px; margin: 0 auto")
+%div.ng-cloak
+  %hr
+  %div.board-panel(ng-click="goToBoard()" id="{{board.jid}}-sprints-graph" style="min-width: 400px; height: {{ board.sprints.length * 15 + 125}}px; margin: 0 auto")

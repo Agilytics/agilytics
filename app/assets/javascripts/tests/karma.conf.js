@@ -10,14 +10,21 @@ basePath = '.';
 files = [
   JASMINE,
   JASMINE_ADAPTER,
-  'http://localhost:3000/assets/application_test.js',
   './testdata/*.js.coffee',
   '*Spec.js',
   '*Spec.coffee',
   '*Spec.js.coffee',
   '**/*Spec.js',
   '**/*Spec.coffee',
-  '**/*Spec.js.coffee'
+  '**/*Spec.js.coffee',
+  '../utils/*',
+  '../angularApp.js.coffee',
+  '../angular/**/*.coffee',
+  '../angular/**/*.js.coffee',
+  '../angular/services/*.coffee',
+  '../angular/services/*.js.coffee',
+  './testdata/**/*.js.coffee',
+  './testdata/**/*.coffee'
 ];
 
 

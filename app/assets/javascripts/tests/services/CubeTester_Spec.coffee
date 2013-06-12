@@ -54,6 +54,7 @@ http = get: ()->
 ac = new AgileCubeService(http)
 ac.getCube(
   (cube)->
+    debugger
     ct = new CubeTester(cube)
     ct.runTests()
 )

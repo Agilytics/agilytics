@@ -98,6 +98,10 @@ module.directive('boardSummary', [ "$http", "$timeout", ($http, $timeout) ->
         sg = -> showGraph( scope.board.jid, sprints, scope.board.name )
         $timeout(sg, 0)
 
+      scope.goToBoard = =>
+        debugger
+        window.location = "#/boards/" + scope.board.jid
+
       scope.filter = -> showGraph(scope.board.jid, sprints)
     )
 

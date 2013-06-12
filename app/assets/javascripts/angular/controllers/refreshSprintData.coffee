@@ -24,7 +24,7 @@ class @RefreshSprintData
       passGrid.push lboard if lboard.add
     )
 
-    @http.post('sprint/gridUpdateData', passGrid).success (data) ->   alert "successfullyUpdated!"
+    @http.post('import/gridUpdateData', passGrid).success (data) ->   alert "successfullyUpdated!"
     .error -> alert 'fail'
 
 #MetricsController.$inject = ['$scope', '$http']

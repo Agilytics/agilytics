@@ -1,18 +1,16 @@
-class Sprint
-  include Mongoid::Document
+class Sprint < ActiveRecord::Base
 
-  field :jid, type: Integer
-  field :name, type: String
-  field :closed, type: Boolean
-  field :velocity, type: Integer
-  field :have_all_changes, type: Boolean, default: false
-  field :have_processed_all_changes, type: Boolean, default: false
-  field :start_date, type: DateTime
+  attr_accessible :closed,
+                  :end_date,
+                  :have_all_changes,
+                  :have_processed_all_changes,
+                  :name,
+                  :pid,
+                  :start_date,
+                  :velocity
 
-
-  embeds_one :change_set
-  embedded_in :board
-  embeds_many :stories
-
+  has_many :changes
+  has_many :sprint_stories
+  belongs_to :board
 
 end

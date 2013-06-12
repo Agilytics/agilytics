@@ -11,14 +11,18 @@ module.directive('assigneeBoardSummary', [ "$http", "$timeout", ($http, $timeout
       thereIsABoardFilter = !!options.board
       thereIsNoBoardFilter =  !thereIsABoardFilter
 
+
       if(thereIsABoardFilter)
+        scope.spanWidth = "span12"
         newBoards = []
         newBoards.push board for board in boards when board.jid == options.board.jid
         boards = newBoards
+      else
+        scope.spanWidth = "span6"
 
       seriesObj = { series: [], seriesBoardWork: [], boardSeries: {}, workSeries: {} }
 
-      _.each(boards,(b, i)->
+      _.each(boards,(b)->
           seriesObj.boardSeries[b.jid] =
                                   name: b.name
                                   data: []

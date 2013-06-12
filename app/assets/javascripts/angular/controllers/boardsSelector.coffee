@@ -23,7 +23,7 @@ class @BoardsSelectorController
       passGrid.push lboard if lboard.add
     )
 
-    @http.post('sprint/gridChanges', passGrid).success (data) ->
+    @http.post('import/gridChanges', passGrid).success (data) ->
       alert JSON.stringify data, null, 2
     .error -> alert 'fail'
 

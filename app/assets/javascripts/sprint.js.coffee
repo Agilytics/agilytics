@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 $ ->
 
-  $.getJSON('/sprint/boards' ).success( (data)->
+  $.getJSON('/import/boards' ).success( (data)->
       processBoards data
     ).fail( -> alert('fail'))
 
