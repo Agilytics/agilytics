@@ -10,6 +10,10 @@ class CreateSprintStories < ActiveRecord::Migration
       t.integer :init_size
       t.string :location
       t.string :status
+      t.datetime :init_date
+      t.boolean :was_added
+      t.boolean :was_removed
+      t.boolean :is_initialized
 
       t.timestamps
 
