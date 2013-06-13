@@ -97,7 +97,10 @@ class JiraCaller
                   getOrCreateSubtask(story, change.associated_subtask_pid)
                 else
                   board.stories << story
-                  sprint.sprint_stories << getOrCreateSprintStory(sprint, story)
+                  sprint_story = getOrCreateSprintStory(sprint, story, time)
+                  setSizeOfStory(sprint_story, change)
+                  setIsStoryDone(sprint_story, change)
+                  setIfAddedOrRemoved(sprint_story, change, time, sprint)
                 end
 
                 change.associated_story_pid = story.pid
@@ -120,8 +123,39 @@ class JiraCaller
 
   protected
 
-  def getOrCreateSprintStory(sprint, story)
+  def setIfAddedOrRemoved(sprint_story, change, time, sprint)
+      sprint_story.was_added = change.action == Change::ADDED
+      sprint_story.was_removed = change.action == Change::REMOVED
+  end
 
+  def setIsStoryDone(sprint_story, change)
+      if change.action == Change::STATUS_LOCATION_CHANGE
+        # assumption being that the events are happening in order of time, last status is current
+        sprint_story.is_done = change.is_done
+      end
+  end
+
+  def setSizeOfStory(sprintStory, change)
+    if change.action == Change::ESTIMATE_CHANGED
+      sprintStory.size += change.new_value.to_i
+      unless sprintStory.is_initialized
+        sprintStory.init_size = change.new_value.to_i
+        sprintStory.is_initialized = true
+      end
+    end
+
+  end
+
+  def getOrCreateSprintStory(sprint, story, time)
+    if sprint.sprint_stories.where(pid: key).exists?
+      sprintStory = sprint.sprint_stories.where(pid: story.pid).first
+    else
+      sprintStory = SprintStory.new
+      sprintStory.pid = story.pid
+      sprintStory.init_date = time.to_date()
+      sprint.sprint_stories << sprintStory
+    end
+    sprintStory
   end
 
   def getOrCreateSubtask(story, subtask_pid)
@@ -280,9 +314,16 @@ class JiraCaller
 
   def if_SizeType_Set(new_change, change)
 
-      if change['statC'] && change['statC']['newValue']
+      if change['statC']
+
         new_change.action = Change::ESTIMATE_CHANGED
-        new_change.new_value = change['statC']['newValue']
+        if change['statC']['noStatsValue']
+            new_change.new_value = change['statC']['newValue'] = 0
+        end
+        if change['statC']['newValue']
+          new_change.new_value = change['statC']['newValue']
+        end
+
       end
 
   end
@@ -304,22 +345,5 @@ class JiraCaller
         new_change.action = Change::REMOVED
       end
   end
-
-  #def setIfAddedOrRemoved(curStory, o1, timestamp, sprint)
-  #
-  #  if o1['added']
-  #
-  #    storyAddedDate = Time.at Integer(timestamp)
-  #    curStory.init_date = storyAddedDate
-  #    startTime = Time.at sprint.change_set.startTime
-  #    curStory.was_added = storyAddedDate > startTime
-  #    curStory.was_removed = false
-  #  end
-  #
-  #  if o1['added'] == false
-  #    curStory.was_removed = true
-  #  end
-  #
-
 
 end

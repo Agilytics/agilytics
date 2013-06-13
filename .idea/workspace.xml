@@ -2,65 +2,21 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" />
-    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" line="247" />
     <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" line="31" />
     <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" line="99" />
-    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" line="122" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/services/agile_data.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/import_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/tasks/import_data.rake" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/import_helper.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/helpers/import_helper_test.rb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/sprint_controller.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/helpers/sprint_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/board.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/change_set.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/grid.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/jira_user.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/sprint.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/story.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/mongoid.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/helpers/sprint_helper_test.rb" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/models/.gitkeep" afterPath="$PROJECT_DIR$/app/controllers/cube_controller.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/sprint/changes.html.haml" afterPath="$PROJECT_DIR$/app/views/import/changes.html.haml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/sprint/metrics.html.haml" afterPath="$PROJECT_DIR$/app/views/import/metrics.html.haml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/functional/sprint_controller_test.rb" afterPath="$PROJECT_DIR$/test/functional/import_controller_test.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/tests/services/CubeTester_Spec.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/tests/services/CubeTester_Spec.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakefile" afterPath="$PROJECT_DIR$/Rakefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/services/agileCubeService.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/services/agileCubeService.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/agilytics.iml" afterPath="$PROJECT_DIR$/.idea/agilytics.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/templates/directives/assigneeBoardSummary.html.haml" afterPath="$PROJECT_DIR$/app/assets/templates/directives/assigneeBoardSummary.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/directives/assigneeBoardSummary.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/directives/assigneeBoardSummary.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/templates/directives/boardSummary.html.haml" afterPath="$PROJECT_DIR$/app/assets/templates/directives/boardSummary.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/directives/boardSummary.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/directives/boardSummary.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/controllers/boardsSelector.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/controllers/boardsSelector.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/templates/directives/chosenBoards.html.haml" afterPath="$PROJECT_DIR$/app/assets/templates/directives/chosenBoards.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/directives/chosenBoards.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/directives/chosenBoards.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/templates/directives/chosenSprints.html.haml" afterPath="$PROJECT_DIR$/app/assets/templates/directives/chosenSprints.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/directives/chosenSprints.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/directives/chosenSprints.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/change.rb" afterPath="$PROJECT_DIR$/app/models/change.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/jira_caller.rb" afterPath="$PROJECT_DIR$/app/services/jira_caller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/tests/karma.conf.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/tests/karma.conf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/overrides.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/overrides.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/controllers/refreshSprintData.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/controllers/refreshSprintData.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/sprint.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/sprint.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/templates/directives/sprintGrid.html.haml" afterPath="$PROJECT_DIR$/app/assets/templates/directives/sprintGrid.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/sprint_story.rb" afterPath="$PROJECT_DIR$/app/models/sprint_story.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="agilytics.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370792160990" ignored="false" />
-    <file path="/jira_caller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1371056207754" ignored="false" />
+    <file path="/Dummy.txt" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1371063305021" ignored="false" />
+    <file path="/jira_caller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1371065459707" ignored="false" />
     <file path="/sprint_controller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369360013117" ignored="false" />
     <file path="/Gemfile" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370791989467" ignored="false" />
     <file path="/development.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1368641950738" ignored="false" />
@@ -111,7 +67,7 @@
     <file path="/test_helper.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370094784663" ignored="false" />
     <file path="/sub_task.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370908745003" ignored="false" />
     <file path="/agile_data.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370903793758" ignored="false" />
-    <file path="/change.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1371042344235" ignored="false" />
+    <file path="/change.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1371064122899" ignored="false" />
     <file path="/application.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370285506787" ignored="false" />
     <file path="/20130603202514_create_sprints.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370293242692" ignored="false" />
     <file path="/20130603202915_create_changes.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370629241317" ignored="false" />
@@ -121,7 +77,7 @@
     <file path="/a.dummy" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370627566650" ignored="false" />
     <file path="/yahoofinance.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370793959960" ignored="false" />
     <file path="/20130603203219_create_subtasks.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370908830850" ignored="false" />
-    <file path="/sprint_story.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1371049751464" ignored="false" />
+    <file path="/sprint_story.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1371065413745" ignored="false" />
     <file path="/20130603203140_create_stories.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370991253147" ignored="false" />
     <file path="/20130611225046_create_sprint_stories.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1371056070757" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -161,28 +117,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jira_caller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="jira_caller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/services/jira_caller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="6" selection-start="2566" selection-end="2566" vertical-scroll-proportion="0.0">
+            <state line="100" column="22" selection-start="2275" selection-end="2275" vertical-scroll-proportion="0.28706625">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20130603203140_create_stories.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20130603203140_create_stories.rb">
+      <file leaf-file-name="change.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/change.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="22" selection-start="244" selection-end="260" vertical-scroll-proportion="0.0">
+            <state line="4" column="17" selection-start="114" selection-end="129" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sprints_controller.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/sprints_controller.rb">
+      <file leaf-file-name="20130603202915_create_changes.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20130603202915_create_changes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="4" selection-start="464" selection-end="464" vertical-scroll-proportion="0.362776">
+            <state line="12" column="25" selection-start="351" selection-end="360" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -192,33 +148,6 @@
         <entry file="file://$PROJECT_DIR$/app/services/agile_data.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="24" column="18" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#551#776#0" expanded="false" />
-                <element signature="e#782#951#0" expanded="false" />
-                <element signature="e#957#1026#0" expanded="false" />
-                <element signature="e#1032#1343#0" expanded="false" />
-                <element signature="e#1349#1744#0" expanded="false" />
-                <element signature="e#1750#2007#0" expanded="false" />
-                <element signature="e#2013#2270#0" expanded="false" />
-                <element signature="e#2276#2433#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="import_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/import_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sprint_story.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/sprint_story.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="20" selection-start="58" selection-end="254" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -228,6 +157,15 @@
         <entry file="file://$PROJECT_DIR$/public/assets/source_maps/app/assets/javascripts/angular/services/agileCubeService.coffee">
           <provider selected="true" editor-type-id="text-editor">
             <state line="6" column="60" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sprint_story.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/sprint_story.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="25" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -273,11 +211,11 @@
         <option value="$PROJECT_DIR$/db/migrate/20130603203219_create_subtasks.rb" />
         <option value="$PROJECT_DIR$/app/models/card.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130603203140_create_stories.rb" />
-        <option value="$PROJECT_DIR$/app/models/change.rb" />
         <option value="$PROJECT_DIR$/app/models/story.rb" />
         <option value="$PROJECT_DIR$/app/models/sprint.rb" />
-        <option value="$PROJECT_DIR$/app/models/sprint_story.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130611225046_create_sprint_stories.rb" />
+        <option value="$PROJECT_DIR$/app/models/change.rb" />
+        <option value="$PROJECT_DIR$/app/models/sprint_story.rb" />
         <option value="$PROJECT_DIR$/app/services/jira_caller.rb" />
       </list>
     </option>
@@ -338,6 +276,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -751,20 +690,19 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FinModeling" />
+    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FinModeling" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -1059,12 +997,12 @@
       <method />
     </configuration>
     <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.CoffeeScript Debug" />
-      <item index="1" class="java.lang.String" itemvalue="Rails.Production: agilytics" />
-      <item index="2" class="java.lang.String" itemvalue="Rails.Development: agilytics" />
-      <item index="3" class="java.lang.String" itemvalue="Rake.test" />
-      <item index="4" class="java.lang.String" itemvalue="Rake.spec" />
-      <item index="5" class="java.lang.String" itemvalue="Ruby.import_data" />
+      <item index="0" class="java.lang.String" itemvalue="Ruby.import_data" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.CoffeeScript Debug" />
+      <item index="2" class="java.lang.String" itemvalue="Rails.Production: agilytics" />
+      <item index="3" class="java.lang.String" itemvalue="Rails.Development: agilytics" />
+      <item index="4" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="5" class="java.lang.String" itemvalue="Rake.spec" />
     </list>
     <recent_temporary>
       <list size="1">
@@ -1119,23 +1057,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="22" width="1280" height="1414" extended-state="6" />
+    <frame x="1280" y="22" width="1280" height="1414" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32791728" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32892805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32422173" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959481" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29011345" sideWeight="0.77828395" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2949757" sideWeight="0.77828395" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4138439" sideWeight="0.99841267" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.634776" sideWeight="0.50039154" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22171602" sideWeight="0.49960846" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22131148" sideWeight="0.49960846" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953683" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32422173" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1224,20 +1162,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/agile_user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="22" selection-start="39" selection-end="151" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/board.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="2" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/subtask.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="70" selection-start="500" selection-end="500" vertical-scroll-proportion="0.0">
@@ -1252,30 +1176,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/change.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="18" selection-start="534" selection-end="534" vertical-scroll-proportion="0.3154574">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/sprint_story.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="20" selection-start="58" selection-end="254" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/story.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="2" selection-start="236" selection-end="236" vertical-scroll-proportion="0.17350158">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130603203140_create_stories.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="22" selection-start="244" selection-end="260" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1294,16 +1197,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/sprint.rb">
+    <entry file="file://$PROJECT_DIR$/public/assets/source_maps/app/assets/javascripts/angular/services/agileCubeService.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="26" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0">
+        <state line="6" column="60" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/source_maps/app/assets/javascripts/angular/services/agileCubeService.coffee">
+    <entry file="file://$PROJECT_DIR$/app/controllers/sprints_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="60" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0">
+        <state line="58" column="4" selection-start="1282" selection-end="1282" vertical-scroll-proportion="0.6634538">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130603203140_create_stories.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="22" selection-start="244" selection-end="260" vertical-scroll-proportion="0.12274959">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/fixtures/sprint_stories.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1315,32 +1232,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/services/jira_caller.rb">
+    <entry file="file://$PROJECT_DIR$/app/services/agile_data.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="6" selection-start="2566" selection-end="2566" vertical-scroll-proportion="0.0">
+        <state line="24" column="18" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/services/agile_data.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/sprint.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="18" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#551#776#0" expanded="false" />
-            <element signature="e#782#951#0" expanded="false" />
-            <element signature="e#957#1026#0" expanded="false" />
-            <element signature="e#1032#1343#0" expanded="false" />
-            <element signature="e#1349#1744#0" expanded="false" />
-            <element signature="e#1750#2007#0" expanded="false" />
-            <element signature="e#2013#2270#0" expanded="false" />
-            <element signature="e#2276#2433#0" expanded="false" />
-          </folding>
+        <state line="12" column="26" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/sprints_controller.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130603202915_create_changes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="4" selection-start="464" selection-end="464" vertical-scroll-proportion="0.362776">
+        <state line="12" column="25" selection-start="351" selection-end="360" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/change.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="17" selection-start="114" selection-end="129" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/sprint_story.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="25" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/jira_caller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="22" selection-start="2275" selection-end="2275" vertical-scroll-proportion="0.28706625">
           <folding />
         </state>
       </provider>
