@@ -10,7 +10,7 @@ class Sprint < ActiveRecord::Base
                   :velocity
 
   has_many :changes
-  #has_many :sprint_stories
+  has_many :sprint_stories
   belongs_to :board
 
 end

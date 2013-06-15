@@ -5,8 +5,8 @@ class CreateSprintStories < ActiveRecord::Migration
       t.string :pid
       t.string :acuity
       t.datetime :create_date
-      t.boolean :done
-      t.integer :size
+      t.boolean :is_done
+      t.integer :size, default: 0
       t.integer :init_size
       t.string :location
       t.string :status
@@ -14,6 +14,9 @@ class CreateSprintStories < ActiveRecord::Migration
       t.boolean :was_added
       t.boolean :was_removed
       t.boolean :is_initialized
+
+      t.integer :story_id
+      t.integer :sprint_id
 
       t.timestamps
 

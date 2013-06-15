@@ -1,47 +1,39 @@
 class JiraCaller
 
-  include HTTParty
-  #basic_auth @uid, @pwd
-  #base_uri @site
-
-  def initialize(uid, pwd, site)
+  def initialize(rest_caller, site)
     @site = site
-    @auth = {:username => uid, :password => pwd}
+    @rest_caller = rest_caller
   end
 
   def httpGet(uri)
-    options = {}
-    options.merge!({:basic_auth => @auth})
-    self.class.get(uri, options)
+    @rest_caller.httpGet(uri)
   end
 
   def getSprintChanges(boardId, sprint)
-
     response = httpGet("#{@site}/rest/greenhopper/1.0/rapid/charts/scopechangeburndownchart.json?rapidViewId=#{boardId}&sprintId=#{sprint.pid}")
 
     case response.code
-    when 200
-      response
-    when 404
-      []
-    else
-      []
-    end
+      when 200
+        response
+      when 404
+        []
+      else
+        []
+      end
   end
 
   def getStoryDetail(storyId)
-
     response = httpGet("#{@site}/rest/api/2/issue/#{storyId}")
 
     case response.code
-    when 200
-      response
-    when 404
-      Object.new
-    else
-      object.new
+      when 200
+        response
+      when 404
+        Object.new
+      else
+        Object.new
+      end
     end
-  end
 
   def getSprints(boardId)
     response = httpGet("#{@site}/rest/greenhopper/1.0/sprints/#{boardId}")
@@ -72,54 +64,75 @@ class JiraCaller
   def sprintChangesFor(boards)
 
       changes = Array.new()
-
       boards.each do |board|
-        board.sprints.each do |sprint|
-          unless sprint.have_all_changes
-
-            change_set = getSprintChanges(board.pid, sprint)
-
-            change_set['changes'].keys.each do |time|
-              val = change_set['changes'][time]
-
-              sprint.end_date = Time.at(change_set['endTime'])
-              sprint.start_date = Time.at(change_set['startTime'])
-
-              val.each do | change |
-
-                change = makeChange(time, change, board, sprint)
-
-                changes << change
-
-                story = getOrCreateStory(change.associated_story_pid, change)
-
-                if change.associated_subtask_pid
-                  getOrCreateSubtask(story, change.associated_subtask_pid)
-                else
-                  board.stories << story
-                  sprint_story = getOrCreateSprintStory(sprint, story, time)
-                  setSizeOfStory(sprint_story, change)
-                  setIsStoryDone(sprint_story, change)
-                  setIfAddedOrRemoved(sprint_story, change, time, sprint)
-                end
-
-                change.associated_story_pid = story.pid
-
-              end
-            end
-
-            if sprint.closed
-              sprint.have_all_changes = true
-            end
-
-            board.save()
-
+          board.sprints.each do |sprint|
+            process_sprint(board, changes, sprint)
           end
-        end
       end
 
-      changes
+  end
+
+  def process_sprint(board, changes, sprint)
+    unless sprint.have_all_changes
+      stories = Hash.new
+      subtasks = Hash.new
+
+      change_set = getSprintChanges(board.pid, sprint)
+
+      change_set['changes'].keys.each do |time|
+
+        val = change_set['changes'][time]
+
+        sprint.end_date = Time.at(change_set['endTime'])
+        sprint.start_date = Time.at(change_set['startTime'])
+
+        val.each do |change|
+
+          process_change(board, change, changes, sprint, stories, subtasks, time)
+
+        end
+
+      end
+
+      if sprint.closed
+        sprint.have_all_changes = true
+      end
+
+      board.save()
+
     end
+  end
+
+  def process_change(board, change, changes, sprint, stories, subtasks, time)
+    change = makeChange(time, change, board, sprint)
+    changes << change
+
+    story_pid = change.associated_story_pid
+
+    if stories.key?(story_pid)
+      story = stories[story_pid]
+    elsif subtasks.key?(story_pid)
+      story = subtasks[story_pid]
+    else
+      story = getOrCreateStory(change.associated_story_pid, board)
+    end
+
+    if change.associated_subtask_pid
+      subtasks[story_pid] = story
+      getOrCreateSubtask(story, change.associated_subtask_pid)
+
+    else
+      stories[story_pid] = story
+      board.stories << story
+      sprint_story = getOrCreateSprintStory(sprint, story, time)
+      setSizeOfStory(sprint_story, change)
+      setIsStoryDone(sprint_story, change)
+      setIfAddedOrRemoved(sprint_story, change, time, sprint)
+
+    end
+
+    change.associated_story_pid = story.pid
+  end
 
   protected
 
@@ -137,22 +150,22 @@ class JiraCaller
 
   def setSizeOfStory(sprintStory, change)
     if change.action == Change::ESTIMATE_CHANGED
+      sprintStory.size = 0 unless sprintStory.size
       sprintStory.size += change.new_value.to_i
       unless sprintStory.is_initialized
         sprintStory.init_size = change.new_value.to_i
         sprintStory.is_initialized = true
       end
     end
-
   end
 
   def getOrCreateSprintStory(sprint, story, time)
-    if sprint.sprint_stories.where(pid: key).exists?
+    if sprint.sprint_stories.where(pid: story.pid).exists?
       sprintStory = sprint.sprint_stories.where(pid: story.pid).first
     else
       sprintStory = SprintStory.new
       sprintStory.pid = story.pid
-      sprintStory.init_date = time.to_date()
+      sprintStory.init_date = Time.at time.to_i
       sprint.sprint_stories << sprintStory
     end
     sprintStory
@@ -179,38 +192,38 @@ class JiraCaller
 
   end
 
-  def getOrCreateStory(story_pid, change)
+  def getOrCreateStory(story_pid, board)
 
       # it's active record so just
 #      c = Card.find_by_pid(story_pid)
-      c = nil
-      unless c
-        c = Story.new()
+      story = Story.find_by_pid(story_pid)
+      unless story
+        story = Story.new()
         s = getStoryDetail(story_pid)
 
         fields = s['fields']
 
-        c.assignee = getOrCreateUser(fields['reporter'])
-        c.reporter = getOrCreateUser(fields['assignee'])
-        c.name = fields['summary']
-        c.card_type = Story::STORY
-        c.description = fields['description']
+        story.assignee = getOrCreateUser(fields['reporter'])
+        story.reporter = getOrCreateUser(fields['assignee'])
+        story.name = fields['summary']
+        story.story_type = Story::STORY
+        story.description = fields['description']
 
         if(fields['priority'])
-          c.acuity = fields['priority']['name']
+          story.acuity = fields['priority']['name']
         end
 
         if(fields['status'])
-          c.done = fields['status']['name'] == 'Closed'
+          story.done = fields['status']['name'] == 'Closed'
         end
 
-        c.create_date = fields['created'].to_date()
+        story.create_date = fields['created'].to_date()
 
       end
 
-      c.pid = story_pid
+      story.pid = story_pid
 
-      c
+      story
   end
 
   def getOrCreateUser(user_blob)

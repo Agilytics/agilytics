@@ -1,0 +1,66 @@
+class RestCaller
+
+  include HTTParty
+
+  def initialize(uid, pwd)
+    @auth = { :username => uid, :password => pwd }
+  end
+
+  def recordIn(fileToSaveData)
+    @record = Hash.new
+    @file = File.open(fileToSaveData, 'w')
+  end
+
+  def useDataFrom(file_name)
+    @file = File.open(file_name, 'r')
+    @responses = JSON.load(@file)
+  end
+
+
+  def end()
+    unless @responses
+      @file.write(@record.to_json)
+    end
+    @file.close()
+  end
+
+  def httpGet(uri)
+    if(@record && @record.key?(uri))
+      puts("duplicate uri #{uri}")
+    end
+
+    options = {}
+    options.merge!({:basic_auth => @auth})
+    if(@responses)
+      if(@responses.key?(uri))
+        res = @responses[uri]
+
+        class << res
+          attr_accessor :code
+        end
+
+        res.code = 200
+
+      else
+        binding.pry
+        puts "404 #{uri}"
+        res =  ClassWithCode.new
+        res.code = 404
+
+      end
+
+    else
+      res = self.class.get(uri, options)
+    end
+
+    if(@record)
+      @record[uri] = res
+    end
+    res
+  end
+
+end
+
+class ClassWithCode < Hash
+  attr_accessor :code
+end
