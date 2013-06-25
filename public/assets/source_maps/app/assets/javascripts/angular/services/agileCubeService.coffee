@@ -1,4 +1,4 @@
-class @AgileCubeService
+class @AgileCubeService2
 
   getCube: (callback)->
     if(@cube)
@@ -18,11 +18,13 @@ class @AgileCubeService
   push: colUtils.push
 
   cubifyAndRelateEntitites: (boards)->
+
     @cube = {}
     @cube.boards = boards
     @cube.boardsWithSprints = []
     @cube.assignees = []
     @cube.sprints = []
+
 
     for board in boards
       board.stories = [] unless board.stories

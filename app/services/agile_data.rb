@@ -11,26 +11,21 @@
   end
 
   def update
-    @boards = @dataProvider.getBoards
+    @boards = @dataProvider.get_boards
     updateModelGrid
     createSprints
-    getSprintChanges
+    get_sprint_changes
     processAllChanges
   end
 
   def create
 
-    @boards = @dataProvider.getBoards
-    @sprintChanges = @dataProvider.sprintChangesFor(@boards)
+    @boards = @dataProvider.get_boards
+    @sprintChanges = @dataProvider.sprint_changes_for(@boards)
 
-    ################
-    #createModelGrid
-    #createSprints
-    #getSprintChanges
-    #processAllChanges
   end
 
-  def produceCube
+  def process_data
 
       # cube
       @cube = {}
@@ -41,16 +36,14 @@
       boards = Board.includes(:stories, :sprints => [:sprint_stories, :changes])
       boards.each &method(:process_board)
 
-      output_to_file("foo.json", boards)
-
   end
 
 
-  def processBoard(board)
+  def process_board(board)
       board.sprints.each &method(:process_sprint)
   end
 
-  def processSprint(sprint)
+  def process_sprint(sprint)
 
       sprint.init_velocity = 0
       sprint.total_velocity = 0
@@ -76,7 +69,7 @@
             wa.assignee = sstory.assignee
             wa.board = sprint.board
             wa.sprint = sprint
-            wa.pid = board.pid + '_' + sprint.pid + '_' + sstory.assignee.pid
+            wa.pid = sprint.board.pid + '_' + sprint.pid + '_' + sstory.assignee.pid
           end
 
           wa.story_points += sstory.size

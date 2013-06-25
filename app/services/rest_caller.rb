@@ -6,12 +6,12 @@ class RestCaller
     @auth = { :username => uid, :password => pwd }
   end
 
-  def recordIn(fileToSaveData)
+  def record_in(fileToSaveData)
     @record = Hash.new
     @file = File.open(fileToSaveData, 'w')
   end
 
-  def useDataFrom(file_name)
+  def use_data_from(file_name)
     @file = File.open(file_name, 'r')
     @responses = JSON.load(@file)
   end
@@ -24,7 +24,7 @@ class RestCaller
     @file.close()
   end
 
-  def httpGet(uri)
+  def http_get(uri)
     if(@record && @record.key?(uri))
       puts("duplicate uri #{uri}")
     end

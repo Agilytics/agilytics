@@ -5,12 +5,12 @@ class JiraCaller
     @rest_caller = rest_caller
   end
 
-  def httpGet(uri)
-    @rest_caller.httpGet(uri)
+  def http_get(uri)
+    @rest_caller.http_get(uri)
   end
 
-  def getSprintChanges(boardId, sprint)
-    response = httpGet("#{@site}/rest/greenhopper/1.0/rapid/charts/scopechangeburndownchart.json?rapidViewId=#{boardId}&sprintId=#{sprint.pid}")
+  def get_sprint_changes(boardId, sprint)
+    response = http_get("#{@site}/rest/greenhopper/1.0/rapid/charts/scopechangeburndownchart.json?rapidViewId=#{boardId}&sprintId=#{sprint.pid}")
 
     case response.code
       when 200
@@ -22,8 +22,8 @@ class JiraCaller
       end
   end
 
-  def getStoryDetail(storyId)
-    response = httpGet("#{@site}/rest/api/2/issue/#{storyId}")
+  def get_story_detail(storyId)
+    response = http_get("#{@site}/rest/api/2/issue/#{storyId}")
 
     case response.code
       when 200
@@ -35,8 +35,8 @@ class JiraCaller
       end
     end
 
-  def getSprints(boardId)
-    response = httpGet("#{@site}/rest/greenhopper/1.0/sprints/#{boardId}")
+  def get_sprints(boardId)
+    response = http_get("#{@site}/rest/greenhopper/1.0/sprints/#{boardId}")
 
     case response.code
       when 200
@@ -48,12 +48,12 @@ class JiraCaller
       end
   end
 
-  def getBoards
-    response = httpGet("#{@site}/rest/greenhopper/1.0/rapidviews/list.json")
+  def get_boards
+    response = http_get("#{@site}/rest/greenhopper/1.0/rapidviews/list.json")
     case response.code
       when 200
-        boards = mapBoards response['views']
-        addSprints boards
+        boards = map_boards response['views']
+        add_sprints boards
       when 404
         []
       else
@@ -61,7 +61,7 @@ class JiraCaller
       end
   end
 
-  def sprintChangesFor(boards)
+  def sprint_changes_for(boards)
 
       changes = Array.new()
       boards.each do |board|
@@ -83,7 +83,7 @@ class JiraCaller
       @assignees = Hash.new
       @reporters = Hash.new
 
-      change_set = getSprintChanges(board.pid, sprint)
+      change_set = get_sprint_changes(board.pid, sprint)
 
       change_set['changes'].keys.each do |time|
 
@@ -112,7 +112,7 @@ class JiraCaller
   end
 
   def process_change(board, change, changes, sprint, stories, subtasks, time)
-    change = makeChange(time, change, board, sprint)
+    change = make_change(time, change, board, sprint)
     changes << change
 
     story_pid = change.associated_story_pid
@@ -122,16 +122,16 @@ class JiraCaller
     elsif subtasks.key?(story_pid)
       story = subtasks[story_pid]
     else
-      story = getOrCreateStory(change.associated_story_pid, board)
+      story = get_or_create_story(change.associated_story_pid, board)
     end
 
     if change.associated_subtask_pid
       subtasks[story_pid] = story
-      getOrCreateSubtask(story, change.associated_subtask_pid)
+      get_or_create_subtask(story, change.associated_subtask_pid)
 
     else
       stories[story_pid] = story
-      sprint_story = getOrCreateSprintStory(sprint, story, time)
+      sprint_story = get_or_create_sprint_story(sprint, story, time)
 
       sprint_story.pid = story_pid
       sprint_story.assignee = story.assignee
@@ -174,7 +174,7 @@ class JiraCaller
     end
   end
 
-  def getOrCreateSprintStory(sprint, story, time)
+  def get_or_create_sprint_story(sprint, story, time)
     if sprint.sprint_stories.where(pid: story.pid).exists?
       sprintStory = sprint.sprint_stories.where(pid: story.pid).first
     else
@@ -189,7 +189,7 @@ class JiraCaller
     sprintStory
   end
 
-  def getOrCreateSubtask(story, subtask_pid)
+  def get_or_create_subtask(story, subtask_pid)
 
     st = Subtask.find_by_pid(subtask_pid)
     unless st
@@ -197,8 +197,8 @@ class JiraCaller
       story.subtasks << st
     end
 
-    st.assignee = getOrCreateUser(fields['reporter'], Assignee, @assignees)
-    st.reporter = getOrCreateUser(fields['assignee'], Reporter, @reporters)
+    st.assignee = get_or_create_user(fields['reporter'], Assignee, @assignees)
+    st.reporter = get_or_create_user(fields['assignee'], Reporter, @reporters)
     st.name = fields['name']
     st.type = Story::STORY
     st.description = fields['description']
@@ -210,19 +210,19 @@ class JiraCaller
 
   end
 
-  def getOrCreateStory(story_pid, board)
+  def get_or_create_story(story_pid, board)
 
       # it's active record so just
       story = Story.find_by_pid(story_pid)
       unless story
         story = Story.new()
-        s = getStoryDetail(story_pid)
+        s = get_story_detail(story_pid)
 
         fields = s['fields']
 
         story.size = fields['customfield_10004']
-        story.reporter = getOrCreateUser(fields['reporter'], Reporter, @reporters)
-        story.assignee = getOrCreateUser(fields['assignee'], Assignee, @assignees)
+        story.reporter = get_or_create_user(fields['reporter'], Reporter, @reporters)
+        story.assignee = get_or_create_user(fields['assignee'], Assignee, @assignees)
         story.name = fields['summary']
         story.story_type = Story::STORY
         story.description = fields['description']
@@ -246,12 +246,14 @@ class JiraCaller
       story
   end
 
-  def getOrCreateUser(user_blob, userClass, collectionOfUserType)
+  def get_or_create_user(user_blob, userClass, collectionOfUserType)
 
     unless user_blob
       return nil
     end
-    user_name = user_blob['name']
+
+    # remove spaces
+    user_name = user_blob['name'].gsub!(/\s/,'+')
 
     user = collectionOfUserType[user_name]
     user = userClass.find_by_pid(user_name) unless user
@@ -270,7 +272,7 @@ class JiraCaller
     user
   end
 
-  def mapBoards (jira_boards)
+  def map_boards (jira_boards)
     boards = Array.new()
     jira_boards.each do |jb|
       b = Board.find_by_pid(jb['id'])
@@ -288,16 +290,16 @@ class JiraCaller
     boards
   end
 
-  def addSprints(boards)
+  def add_sprints(boards)
     boards.each { |board|
-      sprints = getSprints(board.pid)
+      sprints = get_sprints(board.pid)
       sprints['sprints'].each{ |s|
-        addOrCreateSprint(board, s)
+        add_or_create_sprint(board, s)
       }
     }
   end
 
-  def addOrCreateSprint( board, sprint )
+  def add_or_create_sprint( board, sprint )
     s = nil
     board.sprints.each { |ls|
       if ls.pid == sprint['id'].to_s()
@@ -317,12 +319,13 @@ class JiraCaller
   end
 
 
-  def makeChange(timestamp, change, board, sprint)
+  def make_change(timestamp, change, board, sprint)
 
         issueId = change['key']
         thisParentStoryId = change['issueToParentKeys'][issueId] if change['issueToParentKeys']
 
         new_change = Change.new()
+        new_change.pid = "#{timestamp.to_s}_#{board.pid}_#{sprint.pid}"
 
         if thisParentStoryId then
           new_change.associated_story_pid = thisParentStoryId
@@ -337,22 +340,22 @@ class JiraCaller
         new_change.sprint = sprint
         new_change.sprint_pid = sprint.pid
 
-        determineTypeAndApply(new_change, change)
+        determine_type_and_apply(new_change, change)
 
         new_change.save()
 
         new_change
   end
 
-  def determineTypeAndApply(new_change, change)
+  def determine_type_and_apply(new_change, change)
 
-      if_SizeType_Set(new_change, change)
-      if_Done_Set(new_change, change)
-      if_AddedRemoved_Set(new_change, change)
+      if_size_type_set(new_change, change)
+      if_done_set(new_change, change)
+      if_added_removed_set(new_change, change)
 
   end
 
-  def if_SizeType_Set(new_change, change)
+  def if_size_type_set(new_change, change)
 
       if change['statC']
 
@@ -368,7 +371,7 @@ class JiraCaller
 
   end
 
-  def if_Done_Set(new_change, change)
+  def if_done_set(new_change, change)
       if change['column']
         new_change.action = Change::STATUS_LOCATION_CHANGE
         new_change.is_done = !change['column']['notDone']
@@ -376,7 +379,7 @@ class JiraCaller
       end
   end
 
-  def if_AddedRemoved_Set(new_change, change)
+  def if_added_removed_set(new_change, change)
       if change['added'] == true
         new_change.action = Change::ADDED
 

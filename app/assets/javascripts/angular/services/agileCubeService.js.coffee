@@ -1,4 +1,4 @@
-class @AgileCubeService
+class @AgileCubeService2
 
   getCube: (callback)->
     if(@cube)

@@ -15,7 +15,7 @@ class Grid
   end
 
   def update
-    @grid = jira.getBoards
+    @grid = jira.get_boards
     updateModelGrid
     createSprints
     getSprintChanges
@@ -23,7 +23,7 @@ class Grid
   end
 
   def create
-    @grid = jira.getBoards
+    @grid = jira.get_boards
     createModelGrid
     createSprints
     getSprintChanges
@@ -48,7 +48,7 @@ class Grid
 
   def createSprints
     @model_grid.each { |board|
-      sprints = jira.getSprints(board.jid.to_s)
+      sprints = jira.get_sprints(board.jid.to_s)
       sprints['sprints'].each{ |s|
         addOrCreateSprint(board, s)
       }
@@ -75,7 +75,7 @@ class Grid
     @model_grid.each do |board|
       board.sprints.each do |sprint|
         unless sprint.have_all_changes
-          change_set = jira.getSprintChanges board.jid, sprint.jid
+          change_set = jira.get_sprint_changes board.jid, sprint.jid
           sprint.change_set = ChangeSet.new change_set
 
           if sprint.closed
@@ -159,7 +159,7 @@ class Grid
   def getStoryDetailsForSprint(sprint)
     sprint.stories.each do |story|
       unless issue.assignee && issue.reporter
-        issue = jira.getStoryDetail story.jid
+        issue = jira.get_story_detail story.jid
         setAssignee issue, story
         setReporter issue, story
       end

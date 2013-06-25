@@ -6,7 +6,7 @@ namespace :import_data do
   desc 'process data cube'
   task :process_cube => :environment do
     ad = OutputAgileData.new(Board.all())
-    ad.output_to_file('cube.json')
+    ad.output_to_file('app/assets/javascripts/cube.json')
     ad.end()
   end
 
@@ -45,7 +45,7 @@ namespace :import_data do
       puts "Connecting to site: #{ENV['site']} with uid: #{ENV['uid']} and pwd: #{ENV['pwd']}"
 
       rc = RestCaller.new(ENV['uid'], ENV['pwd'])
-      rc.recordIn(cacheFile)
+      rc.record_in(cacheFile)
       jc = JiraCaller.new(rc, ENV['site'])
       ad = AgileData.new (jc)
       ad.create()
@@ -53,6 +53,11 @@ namespace :import_data do
 
   end
 
+  desc 'process_data'
+  task :process_data => :environment do
+    ad = AgileData.new (nil)
+    ad.process_data()
+  end
 
   desc 'import from jira file cached'
   task :jira_from_file => :environment do
@@ -69,7 +74,7 @@ namespace :import_data do
       puts "Will be reading from file #{cacheFile}"
 
       rc = RestCaller.new('foo', 'bar')
-      rc.useDataFrom(cacheFile)
+      rc.use_data_from(cacheFile)
       jc = JiraCaller.new(rc, ENV['site'])
       ad = AgileData.new (jc)
       ad.create()

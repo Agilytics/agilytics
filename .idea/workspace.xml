@@ -6,36 +6,30 @@
     <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" line="176" />
     <bookmark url="file://$PROJECT_DIR$/app/models/sprint_story.rb" line="6" mnemonic="2" />
     <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" line="248" />
-    <bookmark url="file://$PROJECT_DIR$/app/services/output_agile_data.rb" line="139" />
-    <bookmark url="file://$PROJECT_DIR$/app/services/output_agile_data.rb" line="45" />
+    <bookmark url="file://$PROJECT_DIR$/app/services/output_agile_data.rb" line="143" />
+    <bookmark url="file://$PROJECT_DIR$/app/services/output_agile_data.rb" line="47" />
+    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" line="114" />
+    <bookmark url="file://$PROJECT_DIR$/app/services/output_agile_data.rb" line="263" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/assignee.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/services/output_agile_data.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/reporter.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/agilytics.iml" afterPath="$PROJECT_DIR$/.idea/agilytics.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/services/agileCubeService2.js.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/cacheData.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130603202514_create_sprints.rb" afterPath="$PROJECT_DIR$/db/migrate/20130603202514_create_sprints.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130603203219_create_subtasks.rb" afterPath="$PROJECT_DIR$/db/migrate/20130603203219_create_subtasks.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130611225046_create_sprint_stories.rb" afterPath="$PROJECT_DIR$/db/migrate/20130611225046_create_sprint_stories.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/services/agileCubeService.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/services/agileCubeService.js.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/agile_data.rb" afterPath="$PROJECT_DIR$/app/services/agile_data.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/agile_user.rb" afterPath="$PROJECT_DIR$/app/models/agile_user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/board.rb" afterPath="$PROJECT_DIR$/app/models/board.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/grid.rb" afterPath="$PROJECT_DIR$/app/models/grid.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/import_data.rake" afterPath="$PROJECT_DIR$/lib/tasks/import_data.rake" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/jira_caller.rb" afterPath="$PROJECT_DIR$/app/services/jira_caller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/sprint.rb" afterPath="$PROJECT_DIR$/app/models/sprint.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/sprint_story.rb" afterPath="$PROJECT_DIR$/app/models/sprint_story.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/story.rb" afterPath="$PROJECT_DIR$/app/models/story.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/subtask.rb" afterPath="$PROJECT_DIR$/app/models/subtask.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/output_agile_data.rb" afterPath="$PROJECT_DIR$/app/services/output_agile_data.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/rest_caller.rb" afterPath="$PROJECT_DIR$/app/services/rest_caller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/sprint.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/sprint.js.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="agilytics.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372120224081" ignored="false" />
-    <file path="/jira_caller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372103310823" ignored="false" />
+    <file path="/Dummy.txt" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372171814994" ignored="false" />
+    <file path="/jira_caller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372128076296" ignored="false" />
     <file path="/sprint_controller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369360013117" ignored="false" />
     <file path="/Gemfile" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370791989467" ignored="false" />
     <file path="/development.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1368641950738" ignored="false" />
@@ -74,18 +68,18 @@
     <file path="/CubeTester_Spec.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370284101810" ignored="false" />
     <file path="/assigneeBoardSummary.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369854944390" ignored="false" />
     <file path="/overrides.css.scss" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369858239613" ignored="false" />
-    <file path="/temp.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372103207769" ignored="false" />
+    <file path="/temp.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372128452641" ignored="false" />
     <file path="/changes.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370092304688" ignored="false" />
     <file path="/import_controller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370188665816" ignored="false" />
     <file path="/cube_controller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370206932051" ignored="false" />
     <file path="/sprint_data.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369942898308" ignored="false" />
     <file path="/jira_user.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369942911710" ignored="false" />
     <file path="/card.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1371042382462" ignored="false" />
-    <file path="/import_data.rake" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372115283437" ignored="false" />
+    <file path="/import_data.rake" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372126109600" ignored="false" />
     <file path="/test.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370094136740" ignored="false" />
     <file path="/test_helper.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370094784663" ignored="false" />
     <file path="/sub_task.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370908745003" ignored="false" />
-    <file path="/agile_data.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372103534615" ignored="false" />
+    <file path="/agile_data.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372126293089" ignored="false" />
     <file path="/change.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1371064122899" ignored="false" />
     <file path="/application.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370285506787" ignored="false" />
     <file path="/20130603202514_create_sprints.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1371683770911" ignored="false" />
@@ -109,7 +103,8 @@
     <file path="/20130603204313_create_agile_users.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1371765604644" ignored="false" />
     <file path="/subtask.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1371766561773" ignored="false" />
     <file path="/assignee.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1371861351497" ignored="false" />
-    <file path="/output_agile_data.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372119101755" ignored="false" />
+    <file path="/output_agile_data.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372185201376" ignored="false" />
+    <file path="/agileCubeService2.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372196085458" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,25 +118,30 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
+  <component name="DatabaseView">
+    <flatten value="false" />
+    <groupTables value="false" />
+    <sortChildren value="false" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="agilytics" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="import_data.rake" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/tasks/import_data.rake">
+      <file leaf-file-name="20130603203219_create_subtasks.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20130603203219_create_subtasks.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="21" selection-start="188" selection-end="188" vertical-scroll-proportion="0.0">
+            <state line="23" column="45" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20130603203219_create_subtasks.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20130603203219_create_subtasks.rb">
+      <file leaf-file-name="agileCubeService.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/services/agileCubeService.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="45" selection-start="513" selection-end="513" vertical-scroll-proportion="0.5493631">
+            <state line="9" column="98" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -150,52 +150,16 @@
       <file leaf-file-name="output_agile_data.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/services/output_agile_data.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="160" column="83" selection-start="5337" selection-end="5337" vertical-scroll-proportion="0.0">
+            <state line="22" column="12" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rest_caller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/services/rest_caller.rb">
+      <file leaf-file-name="board.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/board.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="assignee.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/assignee.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="27" selection-end="102" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="change.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/change.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="31" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reporter.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/reporter.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="27" selection-end="74" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="work_activity.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/work_activity.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="102" selection-start="138" selection-end="138" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -205,6 +169,53 @@
         <entry file="file://$PROJECT_DIR$/db/migrate/20130603204313_create_agile_users.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="12" column="51" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="agileCubeService2.js.coffee" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/services/agileCubeService2.js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="16" selection-start="524" selection-end="524" vertical-scroll-proportion="0.29220778">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sprint.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/sprint.js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="22" selection-start="1" selection-end="3156" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="angularApp.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angularApp.js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="0" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="metrics.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/controllers/metrics.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="4" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -231,22 +242,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/reporter.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20130611225046_create_sprint_stories.rb" />
-        <option value="$PROJECT_DIR$/app/models/sprint_story.rb" />
-        <option value="$PROJECT_DIR$/db/schema.rb" />
         <option value="$PROJECT_DIR$/app/models/board.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130603204313_create_agile_users.rb" />
-        <option value="$PROJECT_DIR$/app/services/rest_caller.rb" />
         <option value="$PROJECT_DIR$/app/models/sprint.rb" />
         <option value="$PROJECT_DIR$/app/models/agile_user.rb" />
-        <option value="$PROJECT_DIR$/app/services/jira_caller.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130619232726_create_work_activities.rb" />
         <option value="$PROJECT_DIR$/app/models/work_activity.rb" />
-        <option value="$PROJECT_DIR$/app/services/agile_data.rb" />
-        <option value="$PROJECT_DIR$/lib/tasks/import_data.rake" />
-        <option value="$PROJECT_DIR$/app/services/output_agile_data.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130603203219_create_subtasks.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/angular/services/agileCubeService.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/cacheData.json" />
+        <option value="$PROJECT_DIR$/lib/tasks/import_data.rake" />
+        <option value="$PROJECT_DIR$/app/services/agile_data.rb" />
+        <option value="$PROJECT_DIR$/app/services/rest_caller.rb" />
+        <option value="$PROJECT_DIR$/app/services/jira_caller.rb" />
+        <option value="$PROJECT_DIR$/app/services/output_agile_data.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/sprint.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/angular/services/agileCubeService2.js.coffee" />
       </list>
     </option>
   </component>
@@ -260,7 +271,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1280" />
-    <option name="height" value="774" />
+    <option name="height" value="1414" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -305,6 +316,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -757,24 +769,79 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agilytics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agilytics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agilytics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agilytics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../si/duke" />
+    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../si/duke" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="dynamic.classpath" value="false" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -939,13 +1006,6 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
-      <JSRemoteDebuggerConfigurationSettings>
-        <option name="engineId" value="chrome" />
-        <option name="fileUrl" value="http://localhost:3000/" />
-      </JSRemoteDebuggerConfigurationSettings>
-      <method />
-    </configuration>
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
       <module name="" />
@@ -979,6 +1039,13 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" value="chrome" />
+        <option name="fileUrl" value="http://localhost:3000/" />
+      </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
@@ -1170,23 +1237,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="774" extended-state="6" />
+    <frame x="0" y="22" width="1280" height="1414" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32791728" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32892805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959481" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30469373" sideWeight="0.36524302" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30875203" sideWeight="0.67893964" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4138439" sideWeight="0.99841267" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30470017" sideWeight="0.42562592" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.634757" sideWeight="0.50039154" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22131148" sideWeight="0.49960846" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22091311" sideWeight="0.49960846" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953683" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32210836" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3210604" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1280,85 +1347,49 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130603204313_create_agile_users.rb">
+    <entry file="file://$PROJECT_DIR$/app/services/rest_caller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="51" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/services/agile_data.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="21" selection-start="1755" selection-end="1755" vertical-scroll-proportion="0.0" />
+        <state line="63" column="7" selection-start="1031" selection-end="1031" vertical-scroll-proportion="0.90082645" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/services/jira_caller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="6" selection-start="3050" selection-end="3050" vertical-scroll-proportion="0.0">
+        <state line="255" column="47" selection-start="6411" selection-end="6411" vertical-scroll-proportion="0.50406504">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/sprint.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="30" selection-start="757" selection-end="757" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/story.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="42" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/agile_user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="57" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/assignee.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="27" selection-end="102" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/change.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="31" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/reporter.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="27" selection-end="74" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/work_activity.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="102" selection-start="138" selection-end="138" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/import_data.rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="21" selection-start="188" selection-end="188" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/services/rest_caller.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/cube.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/sprint_story.rb">
+    <entry file="file://$PROJECT_DIR$/lib/tasks/import_data.rake">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="45" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0955414">
+        <state line="53" column="5" selection-start="1487" selection-end="1487" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/agile_data.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="33" selection-start="1227" selection-end="1227" vertical-scroll-proportion="-14.90196">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130603203219_create_subtasks.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="45" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/board.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1370,16 +1401,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/services/output_agile_data.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/services/agileCubeService.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="160" column="83" selection-start="5337" selection-end="5337" vertical-scroll-proportion="0.0">
+        <state line="9" column="98" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130603203219_create_subtasks.rb">
+    <entry file="file://$PROJECT_DIR$/app/services/output_agile_data.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="45" selection-start="513" selection-end="513" vertical-scroll-proportion="0.5493631">
+        <state line="22" column="12" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/controllers/sprints.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/sprint.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="22" selection-start="1" selection-end="3156" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angularApp.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/controllers/metrics.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="4" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/services/agileCubeService2.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="16" selection-start="524" selection-end="524" vertical-scroll-proportion="0.29220778">
           <folding />
         </state>
       </provider>
