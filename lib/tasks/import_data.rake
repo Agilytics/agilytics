@@ -3,41 +3,19 @@ require 'json'
 
 namespace :import_data do
 
+  desc 'process data cube'
+  task :process_cube => :environment do
+    ad = OutputAgileData.new(Board.all())
+    ad.output_to_file('cube.json')
+    ad.end()
+  end
+
   def usage(from_here)
     puts "Please pass in userid (uid), password (pwd) and root URL to Jira Rest API. \n   ex: rake  import_data:#{from_here} uid=ahuffman pwd=foopass site=shareableink.atlassian.com"
   end
 
-  task :write_file => :environment do
-    file_name = 'foooze_bar.txt'
-    rio = File.open(file_name, 'w')
-    #rio = IO.write('foooze_bar.txt', 'w')
 
-    a = Hash.new()
-    a['a'] = 1
-    a['b'] = 1
-    a['c'] = Hash.new()
-
-    ac = a['c']
-
-    ac['x'] = 'this is x'
-    ac['y'] = 'this is y'
-    ac['z'] = 'this is z'
-
-    rio.write(a.to_json)
-    rio.close()
-
-    f = File.open(file_name, 'r')
-    new_hash = JSON.load(f)
-    #JSON.parse(f.readlines.to_s)
-
-    puts(new_hash)
-    puts(new_hash.to_json)
-
-    f.close()
-  end
-
-
-  desc "import from jira"
+  desc 'import from jira'
   task :jira => :environment do
       if !ENV['uid'] || !ENV['pwd'] || !ENV['site']
         usage('jira')
@@ -52,7 +30,7 @@ namespace :import_data do
       ad.create()
   end
 
-  desc "import from jira and write to cache file"
+  desc 'import from jira and write to cache file'
   task :jira_to_file => :environment do
       if !ENV['uid'] || !ENV['pwd'] || !ENV['site']
         usage('jira')
@@ -76,7 +54,7 @@ namespace :import_data do
   end
 
 
-  desc "import from jira file cached"
+  desc 'import from jira file cached'
   task :jira_from_file => :environment do
       if !ENV['site']
         puts 'Need to specify the site.... site=https://shareableink.atlassian.net'

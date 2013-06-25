@@ -23,7 +23,6 @@
     @boards = @dataProvider.getBoards
     @sprintChanges = @dataProvider.sprintChangesFor(@boards)
 
-
     ################
     #createModelGrid
     #createSprints
@@ -31,88 +30,63 @@
     #processAllChanges
   end
 
-  protected
+  def produceCube
 
-    def updateModelGrid
-      @model_grid.where(jid: key).first
-      @grid.each{ | json_board |
-        unless @model_grid.where(pid: key).exists?
-          @model_grid << Board.new( jId(json_board) )
-        end
-      }
-    end
+      # cube
+      @cube = {}
+      @cube['boards'] = Hash.new()
+      @cube['assignees'] = Hash.new()
+      @cube['sprints'] = Hash.new()
 
-    def createModelGrid
-      @model_grid = Array.new unless @model_grid
-      @grid.each { |json_board|
-         @model_grid << Board.new( jId(json_board) )
-      }
-    end
+      boards = Board.includes(:stories, :sprints => [:sprint_stories, :changes])
+      boards.each &method(:process_board)
 
-    def jId o
-      o[:jid] = o['id']
-      o['id'] = nil
-      o
-    end
+      output_to_file("foo.json", boards)
 
-    def processAllChanges
-      @model_grid.each{|board|
-        board.sprints.each{ |sprint|
-          unless sprint.have_processed_all_changes
-            processChanges sprint
-            getStoryDetailsForSprint sprint
-            sprint.have_processed_all_changes = true
+  end
+
+
+  def processBoard(board)
+      board.sprints.each &method(:process_sprint)
+  end
+
+  def processSprint(sprint)
+
+      sprint.init_velocity = 0
+      sprint.total_velocity = 0
+      sprint.estimate_changed_velocity = 0
+      sprint.added_velocity = 0
+
+      sprint.init_commitment = 0
+      sprint.total_commitment = 0
+
+      sprint.sprint_stories.each { |sstory|
+
+        sprint.init_commitment += (sstory.init_size || 0) unless sstory.was_added
+        sprint.total_commitment += (sstory.size || 0)
+
+        if sstory.is_done && sstory.assignee
+
+          wa = WorkActivity.find_by_assignee_id_and_sprint_id(sstory.assignee.id, sprint.id)
+
+          unless wa
+            wa = WorkActivity.new()
+            wa.story_points = 0
+            wa.task_hours = 0
+            wa.assignee = sstory.assignee
+            wa.board = sprint.board
+            wa.sprint = sprint
+            wa.pid = board.pid + '_' + sprint.pid + '_' + sstory.assignee.pid
           end
-        }
-      }
-    end
 
-    def getOrCreateStoryOnSprint(sprint, key, timestamp)
-      if sprint.stories.where(jid: key).exists?
-        curStory = sprint.stories.where(jid: key).first
-      else
-        curStory = Story.new unless sprint.stories.where(jid: key).exists?
-        curStory[:jid] = key
-        curStory.init_date = Time.at Integer(timestamp)
-        sprint.stories << curStory
-      end
-      curStory
-    end
-
-    def setAssignee(issue, story)
-      assignee = issue['fields']['assignee']
-      if assignee
-        story.assignee = AgileUser.new unless story.assignee
-        populateUser story.assignee, assignee
-      else
-        story.assignee = nil
-      end
-    end
-
-    def setReporter(issue, story)
-      reporter = issue['fields']['reporter']
-      if reporter
-        story.reporter = AgileUser.new unless story.reporter
-        populateUser story.reporter, reporter
-      else
-        story.assignee = nil
-      end
-    end
-
-    def populateUser user, obj
-      user.name = obj['name']
-      user.email_address = obj['emailAddress']
-      user.display_name =  obj['displayName']
-    end
-
-    def getStoryDetailsForSprint(sprint)
-      sprint.stories.each do |story|
-        unless issue.assignee && issue.reporter
-          issue = @dataProvider.getStoryDetail story.jid
-          setAssignee issue, story
-          setReporter issue, story
+          wa.story_points += sstory.size
+          wa.save()
         end
-      end
-    end
+        sstory.save()
+      }
+      sprint.save()
+
+  end
+
 
 end

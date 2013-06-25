@@ -15,7 +15,7 @@ class CreateSubtasks < ActiveRecord::Migration
       t.integer :sprint_id
       t.integer :assignee_id
       t.integer :reporter_id
-
+      t.integer :story_id
 
       t.timestamps
     end

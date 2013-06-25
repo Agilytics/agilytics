@@ -11,6 +11,6 @@ class Subtask < ActiveRecord::Base
                   :reporter_id
 
   belongs_to :story
-  has_one :assignee, :class_name => 'AgileUser', :foriegn_key => 'assignee_id'
-  has_one :reporter, :class_name => 'AgileUser', :foriegn_key => 'reporter_id'
+  has_one :assignee
+  has_one :reporter
 end

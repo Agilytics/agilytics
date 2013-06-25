@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130611225046) do
+ActiveRecord::Schema.define(:version => 20130619232726) do
 
   create_table "agile_users", :force => true do |t|
     t.string   "pid"
@@ -54,8 +54,8 @@ ActiveRecord::Schema.define(:version => 20130611225046) do
     t.string   "acuity"
     t.datetime "create_date"
     t.boolean  "is_done"
-    t.integer  "size",           :default => 0
-    t.integer  "init_size"
+    t.integer  "size",             :default => 0
+    t.integer  "init_size",        :default => 0
     t.string   "location"
     t.string   "status"
     t.datetime "init_date"
@@ -64,8 +64,11 @@ ActiveRecord::Schema.define(:version => 20130611225046) do
     t.boolean  "is_initialized"
     t.integer  "story_id"
     t.integer  "sprint_id"
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
+    t.integer  "assignee_id"
+    t.integer  "reporter_id"
+    t.integer  "work_activity_id"
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
   end
 
   create_table "sprints", :force => true do |t|
@@ -78,6 +81,12 @@ ActiveRecord::Schema.define(:version => 20130611225046) do
     t.datetime "start_date"
     t.datetime "end_date"
     t.integer  "board_id"
+    t.integer  "init_velocity"
+    t.integer  "total_velocity"
+    t.integer  "estimate_changed_velocity"
+    t.integer  "added_velocity"
+    t.integer  "init_commitment"
+    t.integer  "total_commitment"
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
   end
@@ -118,8 +127,21 @@ ActiveRecord::Schema.define(:version => 20130611225046) do
     t.integer  "sprint_id"
     t.integer  "assignee_id"
     t.integer  "reporter_id"
+    t.integer  "story_id"
     t.datetime "created_at",             :null => false
     t.datetime "updated_at",             :null => false
+  end
+
+  create_table "work_activities", :force => true do |t|
+    t.string   "pid"
+    t.integer  "story_points"
+    t.integer  "task_hours"
+    t.string   "story_type"
+    t.integer  "sprint_id"
+    t.integer  "board_id"
+    t.integer  "assignee_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
 end

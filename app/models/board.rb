@@ -6,4 +6,5 @@ class Board < ActiveRecord::Base
   has_many :sprints
   has_many :stories
   has_many :changes
+  has_many :work_activities
 end

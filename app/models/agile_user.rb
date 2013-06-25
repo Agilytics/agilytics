@@ -4,3 +4,4 @@ class AgileUser < ActiveRecord::Base
                   :name,
                   :pid
 end
+

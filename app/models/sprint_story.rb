@@ -7,7 +7,7 @@ class SprintStory < ActiveRecord::Base
   attr_accessible :acuity,
                 :is_done,
                 :location,
-                :size ,
+                :size,
                 :init_size,
                 :init_date,
                 :status,
@@ -18,6 +18,9 @@ class SprintStory < ActiveRecord::Base
 
   belongs_to :story
   belongs_to :sprint
+  belongs_to :assignee
+  belongs_to :reporter
+  belongs_to :work_activity
 
 end
 

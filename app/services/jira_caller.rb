@@ -65,8 +65,12 @@ class JiraCaller
 
       changes = Array.new()
       boards.each do |board|
-          board.sprints.each do |sprint|
-            process_sprint(board, changes, sprint)
+###############################################################
+          if(board.pid == '17')
+###############################################################
+            board.sprints.each do |sprint|
+              process_sprint(board, changes, sprint)
+            end
           end
       end
 
@@ -76,6 +80,8 @@ class JiraCaller
     unless sprint.have_all_changes
       stories = Hash.new
       subtasks = Hash.new
+      @assignees = Hash.new
+      @reporters = Hash.new
 
       change_set = getSprintChanges(board.pid, sprint)
 
@@ -98,9 +104,11 @@ class JiraCaller
         sprint.have_all_changes = true
       end
 
-      board.save()
+      sprint.save()
 
     end
+
+    board.save()
   end
 
   def process_change(board, change, changes, sprint, stories, subtasks, time)
@@ -123,38 +131,45 @@ class JiraCaller
 
     else
       stories[story_pid] = story
-      board.stories << story
       sprint_story = getOrCreateSprintStory(sprint, story, time)
-      setSizeOfStory(sprint_story, change)
-      setIsStoryDone(sprint_story, change)
-      setIfAddedOrRemoved(sprint_story, change, time, sprint)
+
+      sprint_story.pid = story_pid
+      sprint_story.assignee = story.assignee
+      sprint_story.reporter = story.reporter
+
+      set_size_of_story(sprint_story, change)
+      set_is_story_done(sprint_story, change)
+      set_if_added_or_removed(sprint_story, change, time, sprint)
+      sprint_story.save()
 
     end
+    story.save()
 
     change.associated_story_pid = story.pid
   end
 
   protected
 
-  def setIfAddedOrRemoved(sprint_story, change, time, sprint)
+  def set_if_added_or_removed(sprint_story, change, time, sprint)
       sprint_story.was_added = change.action == Change::ADDED
       sprint_story.was_removed = change.action == Change::REMOVED
   end
 
-  def setIsStoryDone(sprint_story, change)
+  def set_is_story_done(sprint_story, change)
       if change.action == Change::STATUS_LOCATION_CHANGE
         # assumption being that the events are happening in order of time, last status is current
         sprint_story.is_done = change.is_done
       end
   end
 
-  def setSizeOfStory(sprintStory, change)
+  def set_size_of_story(sprint_story, change)
     if change.action == Change::ESTIMATE_CHANGED
-      sprintStory.size = 0 unless sprintStory.size
-      sprintStory.size += change.new_value.to_i
-      unless sprintStory.is_initialized
-        sprintStory.init_size = change.new_value.to_i
-        sprintStory.is_initialized = true
+      #binding.pry
+      sprint_story.size = 0 unless sprint_story.size
+      sprint_story.size += change.new_value.to_i
+      unless sprint_story.is_initialized
+        sprint_story.init_size = change.new_value.to_i
+        sprint_story.is_initialized = true
       end
     end
   end
@@ -166,7 +181,10 @@ class JiraCaller
       sprintStory = SprintStory.new
       sprintStory.pid = story.pid
       sprintStory.init_date = Time.at time.to_i
+      sprintStory.init_size = 0
+
       sprint.sprint_stories << sprintStory
+      story.sprint_stories << sprintStory
     end
     sprintStory
   end
@@ -179,8 +197,8 @@ class JiraCaller
       story.subtasks << st
     end
 
-    st.assignee = getOrCreateUser(fields['reporter'])
-    st.reporter = getOrCreateUser(fields['assignee'])
+    st.assignee = getOrCreateUser(fields['reporter'], Assignee, @assignees)
+    st.reporter = getOrCreateUser(fields['assignee'], Reporter, @reporters)
     st.name = fields['name']
     st.type = Story::STORY
     st.description = fields['description']
@@ -195,7 +213,6 @@ class JiraCaller
   def getOrCreateStory(story_pid, board)
 
       # it's active record so just
-#      c = Card.find_by_pid(story_pid)
       story = Story.find_by_pid(story_pid)
       unless story
         story = Story.new()
@@ -203,8 +220,9 @@ class JiraCaller
 
         fields = s['fields']
 
-        story.assignee = getOrCreateUser(fields['reporter'])
-        story.reporter = getOrCreateUser(fields['assignee'])
+        story.size = fields['customfield_10004']
+        story.reporter = getOrCreateUser(fields['reporter'], Reporter, @reporters)
+        story.assignee = getOrCreateUser(fields['assignee'], Assignee, @assignees)
         story.name = fields['summary']
         story.story_type = Story::STORY
         story.description = fields['description']
@@ -219,6 +237,8 @@ class JiraCaller
 
         story.create_date = fields['created'].to_date()
 
+        board.stories << story
+
       end
 
       story.pid = story_pid
@@ -226,21 +246,26 @@ class JiraCaller
       story
   end
 
-  def getOrCreateUser(user_blob)
+  def getOrCreateUser(user_blob, userClass, collectionOfUserType)
 
     unless user_blob
       return nil
     end
+    user_name = user_blob['name']
 
-    user = AgileUser.find_by_pid(user_blob['name'])
+    user = collectionOfUserType[user_name]
+    user = userClass.find_by_pid(user_name) unless user
     unless user
-      user = AgileUser.new()
-      user.pid = user_blob['name']
+      user = userClass.new()
+      user.pid = user_name
+      collectionOfUserType[user_name] = user
     end
     user.display_name = user_blob['displayName']
     user.email_address = user_blob['emailAddress']
     user.name = user_blob['name']
     user.pid = user.name
+
+    user.save()
 
     user
   end
@@ -313,6 +338,8 @@ class JiraCaller
         new_change.sprint_pid = sprint.pid
 
         determineTypeAndApply(new_change, change)
+
+        new_change.save()
 
         new_change
   end
