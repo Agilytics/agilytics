@@ -3,5 +3,7 @@ class AgileUser < ActiveRecord::Base
                   :email_address,
                   :name,
                   :pid
+
+
 end
 

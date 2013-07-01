@@ -4,18 +4,17 @@ module.directive('assigneeBoardSummary', [ "$http", "$timeout", ($http, $timeout
       # options { days, board }
 
       if(options.days)
-        dateFilter = new Date
-        time = dateFilter.setDate(dateFilter.getDate() - options.days)
+        dateFilter = new Date(scope.enddatetime)
+        dateTimeFilter = new Date(dateFilter.setDate(dateFilter.getDate() - options.days))
 
       # filter on a specific board
       thereIsABoardFilter = !!options.board
       thereIsNoBoardFilter =  !thereIsABoardFilter
 
-
       if(thereIsABoardFilter)
         scope.spanWidth = "span12"
         newBoards = []
-        newBoards.push board for board in boards when board.jid == options.board.jid
+        newBoards.push board for board in boards when board.pid == options.board.pid
         boards = newBoards
       else
         scope.spanWidth = "span6"
@@ -23,29 +22,36 @@ module.directive('assigneeBoardSummary', [ "$http", "$timeout", ($http, $timeout
       seriesObj = { series: [], seriesBoardWork: [], boardSeries: {}, workSeries: {} }
 
       _.each(boards,(b)->
-          seriesObj.boardSeries[b.jid] =
+          seriesObj.boardSeries[b.pid] =
                                   name: b.name
                                   data: []
 
-          seriesObj.workSeries[b.jid] =
+          seriesObj.workSeries[b.pid] =
                                   name: b.name
                                   data: []
 
-          seriesObj.series.push seriesObj.boardSeries[b.jid]
-          seriesObj.seriesBoardWork.push seriesObj.workSeries[b.jid]
+          seriesObj.series.push seriesObj.boardSeries[b.pid]
+          seriesObj.seriesBoardWork.push seriesObj.workSeries[b.pid]
 
       )
 
       _.each( assignees, (assignee)->
-        filteredVelocities = []
+
+        filteredWorkActivities = []
         if(dateFilter)
-          filteredVelocities = _.filter(assignee.velocities, (v)->
-                        v.sprintStartDate >= time &&
-                        ( thereIsNoBoardFilter ||  v.boardId == options.board.jid )
+          filteredWorkActivities = _.filter(assignee.workActivities,
+            (v)->
+                if(!v.sprint)
+                  debugger
+
+                filter = new Date(v.sprint.startDate) >= dateTimeFilter &&
+                ( thereIsNoBoardFilter ||  v.board.pid == options.board.pid )
+
+                filter
           )
         else
-          filteredVelocities = _.filter(assignee.velocities, (v)->
-            ( thereIsNoBoardFilter ||  v.boardId == options.board.jid )
+          filteredWorkActivities = _.filter(assignee.workActivities, (v)->
+            ( thereIsNoBoardFilter ||  v.board.pid == options.board.pid )
           )
 
 
@@ -55,22 +61,20 @@ module.directive('assigneeBoardSummary', [ "$http", "$timeout", ($http, $timeout
         assignee.relativeBoardVelocities = {}
 
 
-        sum = (memo, velocity)-> memo + velocity.velocity
+        sum = (memo, velocity)-> memo + velocity.storyPoints
 
-        groupedFilteredVelocities = _.groupBy( filteredVelocities, (fv) -> fv.boardId )
+        groupedFilteredWorkActivities = _.groupBy( filteredWorkActivities, (fwa) -> fwa.board.pid )
 
-        _.each(groupedFilteredVelocities, (velocities, boardId) ->
+        _.each(groupedFilteredWorkActivities, (workActivities, boardId) ->
 
-            boardVelocity = _.reduce(velocities, sum, 0)
+            boardVelocity = _.reduce(workActivities, sum, 0)
 
             assignee.boardVelocities[boardId] = boardVelocity
 
             assignee.velocity += boardVelocity
+            console.log assignee.name + " " + boardVelocity + " BoardID:  " + boardId
         )
-
       )
-
-
 
       assigneesWithVelocity = _.filter(assignees, (a)-> a.velocity )
       scope.assigneesLength = assigneesWithVelocity.length
@@ -159,7 +163,7 @@ module.directive('assigneeBoardSummary', [ "$http", "$timeout", ($http, $timeout
         cols = []
         cols.push assignee.name
         sum = (memo, velocity)-> memo + velocity.velocity
-        cols.push _.reduce(assignee.velocities, sum, 0)
+        cols.push _.reduce(assignee.workActivities, sum, 0)
         assigneeRows.push cols
       )
 
@@ -176,7 +180,7 @@ module.directive('assigneeBoardSummary', [ "$http", "$timeout", ($http, $timeout
         "Completed Story Points (Velocity)"
     ]
 
-    scope.boardId = if scope.board then scope.board.jid else "no-board"
+    scope.boardId = if scope.board then scope.board.pid else "no-board"
 
     if scope.assignees
       processAssignees(scope)
@@ -192,6 +196,7 @@ module.directive('assigneeBoardSummary', [ "$http", "$timeout", ($http, $timeout
       boards: "="
       assignees: "="
       board: "="
+      enddatetime: "="
 
   templateUrl: "/assets/directives/assigneeBoardSummary.html"
 ])

@@ -31,9 +31,12 @@ class @AgileCubeService
     @cube.changes = []
     @cube.subtasks = []
 
+    @cube.endOfLastSprint = new Date(srcCube.endOfLastSprint)
+
     for boardId of @srcCube.boards
       srcBoard = srcCube.boards[boardId]
       @createBoard(srcBoard)
+      @cube.boardsWithSprints.push srcBoard if srcBoard.isSprintBoard
 
     @cube
 
@@ -120,6 +123,7 @@ class @AgileCubeService
       using: (createFn)->
         andPutOn: (srcName, object)->
           object[collectionName] = [] unless object[collectionName]
+
           _.each(ids, (id)->
             createdObj = createFn(id)
             createdObj[srcName] = object

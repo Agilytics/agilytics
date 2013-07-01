@@ -7,13 +7,22 @@ class Sprint < ActiveRecord::Base
                   :have_processed_all_changes,
                   :name,
                   :pid,
-                  :velocity,
+
                   :init_velocity,
-                  :total_velocity,
-                  :estimate_changed_velocity,
                   :added_velocity,
+                  :estimate_changed_velocity,
+                  :total_velocity,
+
                   :init_commitment,
-                  :total_commitment
+                  :added_commitment,
+                  :estimate_changed,
+                  :total_commitment,
+
+                  :missed_init_commitment,
+                  :missed_added_commitment,
+                  :missed_estimate_changed,
+                  :missed_total_commitment
+
 
   has_many :changes
   has_many :sprint_stories

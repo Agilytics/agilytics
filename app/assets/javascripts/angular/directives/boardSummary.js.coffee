@@ -5,17 +5,21 @@ module.directive('boardSummary', [ "$http", "$timeout", ($http, $timeout) ->
     scope.headers = [
         "Sprint Name",
         "Start Date",
-        "Initial Commitment",
-        "Total Commitment",
-        "Initial Velocity",
+        "Commitment",
+        "Total Work",
+        "Committed Velocity",
         "Total Velocity"
       ]
 
   showGraph = (boardId, sprints, boardName)=>
 
     series = [
-                name: "Missed"
+                name: "Missed Added"
                 color: "#fad2d2"
+                data: []
+              ,
+                name: "Missed Commitment"
+                color: "#fa3939"
                 data: []
               ,
                 name: "Added"
@@ -33,15 +37,17 @@ module.directive('boardSummary', [ "$http", "$timeout", ($http, $timeout) ->
 
     categories = []
 
-    sprintHadSomeActivity = (sprint)-> sprint.totalCommitment || sprint.addedVelocity || sprint.estimateChangedVelocity || sprint.initVelocity
+    sprintHadSomeActivity = (sprint)-> !!(sprint.totalCommitment || sprint.addedVelocity || sprint.estimateChangedVelocity || sprint.initVelocity)
 
     for sprint in sprints when sprintHadSomeActivity(sprint)
-        series[0].data.push sprint.totalCommitment - sprint.totalVelocity
-        series[1].data.push sprint.addedVelocity
-        series[2].data.push sprint.estimateChangedVelocity
-        series[3].data.push sprint.initVelocity
+        series[0].data.push sprint.missedAddedCommitment
+        series[1].data.push sprint.missedInitCommitment
+        series[2].data.push sprint.addedVelocity
+        series[3].data.push sprint.estimateChangedVelocity
+        series[4].data.push sprint.initVelocity
 
         categories.push sprint.name
+
 
     $("#" + boardId + "-sprints-graph").highcharts
       chart:
@@ -70,7 +76,7 @@ module.directive('boardSummary', [ "$http", "$timeout", ($http, $timeout) ->
 
   processSprint = (sprint, scope)->
 
-    startDate = new Date(sprint.change_set.startTime)
+    startDate = new Date(sprint.startDate)
     month = startDate.getMonth() + 1
     year =  startDate.getFullYear()
     date =  startDate.getDate()
@@ -95,14 +101,14 @@ module.directive('boardSummary', [ "$http", "$timeout", ($http, $timeout) ->
         for sprint in sprints
           processSprint sprint, scope
 
-        sg = -> showGraph( scope.board.jid, sprints, scope.board.name )
+        sg = -> showGraph( scope.board.pid, sprints, scope.board.name )
         $timeout(sg, 0)
 
       scope.goToBoard = =>
         debugger
-        window.location = "#/boards/" + scope.board.jid
+        window.location = "#/boards/" + scope.board.pid
 
-      scope.filter = -> showGraph(scope.board.jid, sprints)
+      scope.filter = -> showGraph(scope.board.pid, sprints)
     )
 
     this

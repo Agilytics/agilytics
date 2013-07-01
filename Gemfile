@@ -21,7 +21,7 @@ gem 'angular-gem'
 gem 'angular-ui-bootstrap-rails'
 
 gem 'chosen-rails'
-gem 'yahoofinance'
+gem 'caseconverter'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -38,6 +38,8 @@ group :assets do
   gem 'pry-plus'
   gem 'pry-rails'
   gem 'pry-debugger'
+  gem 'pry-stack_explorer'
+
 
   gem 'jasmine-rails'
 end

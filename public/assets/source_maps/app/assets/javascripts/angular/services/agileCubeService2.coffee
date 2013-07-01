@@ -31,11 +31,13 @@ class @AgileCubeService
     @cube.changes = []
     @cube.subtasks = []
 
+    @cube.endOfLastSprint = new Date(srcCube.endOfLastSprint)
+
     for boardId of @srcCube.boards
       srcBoard = srcCube.boards[boardId]
       @createBoard(srcBoard)
+      @cube.boardsWithSprints.push srcBoard if srcBoard.isSprintBoard
 
-    debugger
     @cube
 
   process: (obj, fn)->
@@ -121,6 +123,7 @@ class @AgileCubeService
       using: (createFn)->
         andPutOn: (srcName, object)->
           object[collectionName] = [] unless object[collectionName]
+
           _.each(ids, (id)->
             createdObj = createFn(id)
             createdObj[srcName] = object
@@ -130,26 +133,13 @@ class @AgileCubeService
   alter: (name, src)=>
     self = @
     ops =
-      addSprints: ->
-        self.withIds(src.sprintIds).make('sprints').using(self.createSprint).andPutOn(name, src); ops;
-
-      addStories: ->
-        self.withIds(src.storyIds).make('stories').using(self.createStory).andPutOn(name, src); ops;
-
-      addSprintStories: ->
-        self.withIds(src.sprintStoryIds).make('sprintStories').using(self.createSprintStory).andPutOn(name, src); ops;
-
-      addChanges: ->
-        self.withIds(src.changeIds).make('changes').using(self.createChange).andPutOn(name, src); ops;
-
-      addAssignees: ->
-        self.withIds(src.assigneeIds).make('assignees').using(self.createAssignee).andPutOn(name, src); ops;
-
-      addReporters: ->
-        self.withIds(src.reporterIds).make('reporters').using(self.createReporter).andPutOn(name, src); ops;
-
-      addWorkActivities: ->
-        self.withIds(src.workActivityIds).make('workActivities').using(self.createWorkActivity).andPutOn(name, src); ops;
+      addSprints: -> self.withIds(src.sprintIds).make('sprints').using(self.createSprint).andPutOn(name, src); ops;
+      addStories: -> self.withIds(src.storyIds).make('stories').using(self.createStory).andPutOn(name, src); ops;
+      addSprintStories: -> self.withIds(src.sprintStoryIds).make('sprintStories').using(self.createSprintStory).andPutOn(name, src); ops;
+      addChanges: -> self.withIds(src.changeIds).make('changes').using(self.createChange).andPutOn(name, src); ops;
+      addAssignees: -> self.withIds(src.assigneeIds).make('assignees').using(self.createAssignee).andPutOn(name, src); ops;
+      addReporters: -> self.withIds(src.reporterIds).make('reporters').using(self.createReporter).andPutOn(name, src); ops;
+      addWorkActivities: -> self.withIds(src.workActivityIds).make('workActivities').using(self.createWorkActivity).andPutOn(name, src); ops;
 
     ops
 

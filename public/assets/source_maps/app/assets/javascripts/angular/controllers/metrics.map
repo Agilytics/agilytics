@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "",
+  "sourceRoot": "",
+  "sources": [
+    "/assets/source_maps/app/assets/javascripts/angular/controllers/metrics.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA;CAAA,CAAM,EAAC;CAEQ,CAAS,CAAT,CAAA,EAAA,UAAA,WAAC;CAEZ,EAA0B,CAAA,EAA1B,CAAA,EAA2B,OAAX;CAEd,EAAc,CAAd,EAAM,EAAN;CACO,EAAO,CAAd,EAAM,SAAN;CAHF,MAA0B;CAA1B,GAAA,EAKA;CAPF,IAAa;;CAAb;;CAFF;;CAAA,CAWA,CAA6B,CAA5B,GAAD,CAA6B,SAAX,CAAW;CAX7B"
+}

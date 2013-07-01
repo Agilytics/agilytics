@@ -3,7 +3,9 @@ class @MetricsController
   constructor: ($scope, agileCubeService)->
 
     agileCubeService.getCube( (cube)->
-        $scope.cube = cube
+      #todo temporary
+      window.cube = cube
+      $scope.cube = cube
     )
     this
 

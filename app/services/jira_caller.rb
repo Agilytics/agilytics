@@ -10,7 +10,9 @@ class JiraCaller
   end
 
   def get_sprint_changes(boardId, sprint)
-    response = http_get("#{@site}/rest/greenhopper/1.0/rapid/charts/scopechangeburndownchart.json?rapidViewId=#{boardId}&sprintId=#{sprint.pid}")
+    # jira sprint ids are not unique across boards... so have to do this
+    sprintpid = sprint.pid[boardId.length..sprint.pid.length]
+    response = http_get("#{@site}/rest/greenhopper/1.0/rapid/charts/scopechangeburndownchart.json?rapidViewId=#{boardId}&sprintId=#{sprintpid}")
 
     case response.code
       when 200
@@ -19,7 +21,7 @@ class JiraCaller
         []
       else
         []
-      end
+    end
   end
 
   def get_story_detail(storyId)
@@ -32,8 +34,8 @@ class JiraCaller
         Object.new
       else
         Object.new
-      end
     end
+  end
 
   def get_sprints(boardId)
     response = http_get("#{@site}/rest/greenhopper/1.0/sprints/#{boardId}")
@@ -45,7 +47,7 @@ class JiraCaller
         []
       else
         []
-      end
+    end
   end
 
   def get_boards
@@ -58,22 +60,16 @@ class JiraCaller
         []
       else
         []
-      end
+    end
   end
 
   def sprint_changes_for(boards)
-
-      changes = Array.new()
-      boards.each do |board|
-###############################################################
-          if(board.pid == '17')
-###############################################################
-            board.sprints.each do |sprint|
-              process_sprint(board, changes, sprint)
-            end
-          end
+    changes = Array.new()
+    boards.each do |board|
+      board.sprints.each do |sprint|
+        process_sprint(board, changes, sprint)
       end
-
+    end
   end
 
   def process_sprint(board, changes, sprint)
@@ -89,21 +85,14 @@ class JiraCaller
 
         val = change_set['changes'][time]
 
-        sprint.end_date = Time.at(change_set['endTime'])
-        sprint.start_date = Time.at(change_set['startTime'])
+        sprint.end_date = Time.at(change_set['endTime']/1000)
+        sprint.start_date = Time.at(change_set['startTime']/1000)
 
-        val.each do |change|
-
-          process_change(board, change, changes, sprint, stories, subtasks, time)
-
-        end
+        val.each { |change| process_change(board, change, changes, sprint, stories, subtasks, time) }
 
       end
 
-      if sprint.closed
-        sprint.have_all_changes = true
-      end
-
+      sprint.have_all_changes = true if sprint.closed
       sprint.save()
 
     end
@@ -112,75 +101,59 @@ class JiraCaller
   end
 
   def process_change(board, change, changes, sprint, stories, subtasks, time)
+
     change = make_change(time, change, board, sprint)
     changes << change
 
-    story_pid = change.associated_story_pid
+    pid = change.associated_story_pid
 
-    if stories.key?(story_pid)
-      story = stories[story_pid]
-    elsif subtasks.key?(story_pid)
-      story = subtasks[story_pid]
+    if stories.key?(pid)
+      story_or_subtask = stories[pid]
+    elsif subtasks.key?(pid)
+      story_or_subtask = subtasks[pid]
     else
-      story = get_or_create_story(change.associated_story_pid, board)
+      story_or_subtask = get_or_create_story_or_task(change.associated_story_pid, board)
     end
 
-    if change.associated_subtask_pid
-      subtasks[story_pid] = story
-      get_or_create_subtask(story, change.associated_subtask_pid)
-
+    if story_or_subtask.instance_of? Subtask
+      subtasks[pid] = story_or_subtask
+      change.associated_story_pid = story_or_subtask.story.pid
+      change.associated_subtask_pid = story_or_subtask.pid
     else
-      stories[story_pid] = story
-      sprint_story = get_or_create_sprint_story(sprint, story, time)
+      stories[pid] = story_or_subtask
+      sprint_story = get_or_create_sprint_story(sprint, story_or_subtask, time)
 
-      sprint_story.pid = story_pid
-      sprint_story.assignee = story.assignee
-      sprint_story.reporter = story.reporter
+      # sprint story pid is a combination of the story & sprint
+      sprint_story.pid = sprint.pid + pid
+      sprint_story.assignee = story_or_subtask.assignee
+      sprint_story.reporter = story_or_subtask.reporter
 
-      set_size_of_story(sprint_story, change)
-      set_is_story_done(sprint_story, change)
-      set_if_added_or_removed(sprint_story, change, time, sprint)
+      sprint_story.set_size_of_story(change)
+      sprint_story.set_is_story_done(change)
+      sprint_story.set_if_added_or_removed(change)
+
       sprint_story.save()
 
     end
-    story.save()
+    story_or_subtask.save()
 
-    change.associated_story_pid = story.pid
+    change.associated_story_pid = story_or_subtask.pid
   end
 
   protected
 
-  def set_if_added_or_removed(sprint_story, change, time, sprint)
-      sprint_story.was_added = change.action == Change::ADDED
-      sprint_story.was_removed = change.action == Change::REMOVED
-  end
-
-  def set_is_story_done(sprint_story, change)
-      if change.action == Change::STATUS_LOCATION_CHANGE
-        # assumption being that the events are happening in order of time, last status is current
-        sprint_story.is_done = change.is_done
-      end
-  end
-
-  def set_size_of_story(sprint_story, change)
-    if change.action == Change::ESTIMATE_CHANGED
-      #binding.pry
-      sprint_story.size = 0 unless sprint_story.size
-      sprint_story.size += change.new_value.to_i
-      unless sprint_story.is_initialized
-        sprint_story.init_size = change.new_value.to_i
-        sprint_story.is_initialized = true
-      end
-    end
-  end
 
   def get_or_create_sprint_story(sprint, story, time)
-    if sprint.sprint_stories.where(pid: story.pid).exists?
-      sprintStory = sprint.sprint_stories.where(pid: story.pid).first
+
+    # sprint_story pid is a combination of sprint & story pids
+    sprint_story_pid = sprint.pid + story.pid
+
+    if sprint.sprint_stories.where(pid: sprint_story_pid).exists?
+      sprintStory = sprint.sprint_stories.where(pid: sprint_story_pid).first
     else
       sprintStory = SprintStory.new
-      sprintStory.pid = story.pid
-      sprintStory.init_date = Time.at time.to_i
+      sprintStory.pid = sprint_story_pid
+      sprintStory.init_date = Time.at time.to_i / 1000
       sprintStory.init_size = 0
 
       sprint.sprint_stories << sprintStory
@@ -189,61 +162,72 @@ class JiraCaller
     sprintStory
   end
 
-  def get_or_create_subtask(story, subtask_pid)
+  def get_or_create_story_or_task(pid, board)
 
-    st = Subtask.find_by_pid(subtask_pid)
-    unless st
-      st = Subtask.new()
-      story.subtasks << st
+    # it's active record so just
+    story_or_task = Story.find_by_pid(pid) if Story.where(pid: pid).exists?
+    unless story_or_task
+      story_or_task = Subtask.find_by_pid(pid) if Subtask.where(pid: pid).exists?
     end
 
-    st.assignee = get_or_create_user(fields['reporter'], Assignee, @assignees)
-    st.reporter = get_or_create_user(fields['assignee'], Reporter, @reporters)
-    st.name = fields['name']
-    st.type = Story::STORY
-    st.description = fields['description']
-    st.acuity = fields['priority']['name']
-    st.done = fields['status']['name'] == 'Closed'
-    st.created_date = Time.at(Integer(fields['created']))
+    unless story_or_task
+      s = get_story_detail(pid)
+      fields = s['fields']
 
-    st
+      if (fields['issuetype']['id']['subtask'])
+        story_or_task = create_subtask(pid, fields, board)
+      else
+        story_or_task = create_story(pid, fields, board)
+      end
+
+    end
+
+    story_or_task
+  end
+
+  def create_subtask(pid, fields, board)
+    subtask = Subtask.new()
+
+    story = get_or_create_story_or_task(fields['parient']['key'], board)
+    story.subtasks << subtask
+
+    subtask.reporter = get_or_create_user(fields['reporter'], Reporter, @reporters)
+    subtask.assignee = get_or_create_user(fields['assignee'], Assignee, @assignees)
+    subtask.pid = pid
+    subtask.name = fields['name']
+    subtask.description = fields['description']
+    subtask.acuity = fields['priority']['name']
+    subtask.done = fields['status']['name'] == 'Closed'
+    subtask.created_date = Time.at(Integer(fields['created'])/1000)
+
+    subtask
 
   end
 
-  def get_or_create_story(story_pid, board)
+  def create_story(pid, fields, board)
+    story = Story.new()
 
-      # it's active record so just
-      story = Story.find_by_pid(story_pid)
-      unless story
-        story = Story.new()
-        s = get_story_detail(story_pid)
+    story.size = fields['customfield_10004']
+    story.reporter = get_or_create_user(fields['reporter'], Reporter, @reporters)
+    story.assignee = get_or_create_user(fields['assignee'], Assignee, @assignees)
+    story.name = fields['summary']
+    story.story_type = Story::STORY
+    story.description = fields['description']
 
-        fields = s['fields']
+    if (fields['priority'])
+      story.acuity = fields['priority']['name']
+    end
 
-        story.size = fields['customfield_10004']
-        story.reporter = get_or_create_user(fields['reporter'], Reporter, @reporters)
-        story.assignee = get_or_create_user(fields['assignee'], Assignee, @assignees)
-        story.name = fields['summary']
-        story.story_type = Story::STORY
-        story.description = fields['description']
+    if (fields['status'])
+      story.done = fields['status']['name'] == 'Closed'
+    end
 
-        if(fields['priority'])
-          story.acuity = fields['priority']['name']
-        end
+    story.create_date = fields['created'].to_date()
+    story.pid = pid
 
-        if(fields['status'])
-          story.done = fields['status']['name'] == 'Closed'
-        end
+    board.stories << story
+    story
 
-        story.create_date = fields['created'].to_date()
-
-        board.stories << story
-
-      end
-
-      story.pid = story_pid
-
-      story
   end
 
   def get_or_create_user(user_blob, userClass, collectionOfUserType)
@@ -253,8 +237,7 @@ class JiraCaller
     end
 
     # remove spaces
-    user_name = user_blob['name'].gsub!(/\s/,'+')
-
+    user_name = user_blob['name'].tr(' ', '+')
     user = collectionOfUserType[user_name]
     user = userClass.find_by_pid(user_name) unless user
     unless user
@@ -277,7 +260,7 @@ class JiraCaller
     jira_boards.each do |jb|
       b = Board.find_by_pid(jb['id'])
 
-      if(!b)
+      if (!b)
         b = Board.new()
       end
 
@@ -293,100 +276,54 @@ class JiraCaller
   def add_sprints(boards)
     boards.each { |board|
       sprints = get_sprints(board.pid)
-      sprints['sprints'].each{ |s|
+      sprints['sprints'].each { |s|
         add_or_create_sprint(board, s)
       }
     }
   end
 
-  def add_or_create_sprint( board, sprint )
-    s = nil
-    board.sprints.each { |ls|
-      if ls.pid == sprint['id'].to_s()
-        s = ls
+  def add_or_create_sprint(board, sprint_json)
+    sprint = nil
+    sprint_json_pid = board.pid + sprint_json['id'].to_s()
+    board.sprints.each { |local_sprint|
+      # sprint ids are not unique across boards in JIRA
+      if local_sprint.pid == sprint_json_pid
+        sprint = local_sprint
       end
     }
 
-    unless s
-      s = Sprint.new()
-      s.pid = sprint['id'].to_s()
-      board.sprints << s
+    unless sprint
+      sprint = Sprint.new()
+      # sprint ids are not unique across boards in JIRA
+      sprint.pid = sprint_json_pid
+      board.sprints << sprint
     end
 
-    s.name = sprint['name']
-    s.closed = sprint['closed']
-
+    sprint.name = sprint_json['name']
+    sprint.closed = sprint_json['closed']
   end
 
 
   def make_change(timestamp, change, board, sprint)
 
-        issueId = change['key']
-        thisParentStoryId = change['issueToParentKeys'][issueId] if change['issueToParentKeys']
+    issueId = change['key']
 
-        new_change = Change.new()
-        new_change.pid = "#{timestamp.to_s}_#{board.pid}_#{sprint.pid}"
+    new_change = Change.new()
+    new_change.pid = "#{timestamp.to_s}_#{board.pid}_#{sprint.pid}"
 
-        if thisParentStoryId then
-          new_change.associated_story_pid = thisParentStoryId
-          new_change.associated_subtask_pid = issueId
-        else
-          new_change.associated_story_pid = issueId
-        end
+    new_change.time = Time.at(Integer(timestamp)/1000)
+    new_change.board = board
+    new_change.board_pid = board.pid
+    new_change.sprint = sprint
+    new_change.sprint_pid = sprint.pid
 
-        new_change.time = Time.at(Integer(timestamp))
-        new_change.board = board
-        new_change.board_pid = board.pid
-        new_change.sprint = sprint
-        new_change.sprint_pid = sprint.pid
+    new_change.associated_story_pid = issueId
 
-        determine_type_and_apply(new_change, change)
+    new_change.determine_type_and_apply(change, sprint)
 
-        new_change.save()
+    new_change.save()
 
-        new_change
-  end
-
-  def determine_type_and_apply(new_change, change)
-
-      if_size_type_set(new_change, change)
-      if_done_set(new_change, change)
-      if_added_removed_set(new_change, change)
-
-  end
-
-  def if_size_type_set(new_change, change)
-
-      if change['statC']
-
-        new_change.action = Change::ESTIMATE_CHANGED
-        if change['statC']['noStatsValue']
-            new_change.new_value = change['statC']['newValue'] = 0
-        end
-        if change['statC']['newValue']
-          new_change.new_value = change['statC']['newValue']
-        end
-
-      end
-
-  end
-
-  def if_done_set(new_change, change)
-      if change['column']
-        new_change.action = Change::STATUS_LOCATION_CHANGE
-        new_change.is_done = !change['column']['notDone']
-        new_change.location = change['column']['newStatus']
-      end
-  end
-
-  def if_added_removed_set(new_change, change)
-      if change['added'] == true
-        new_change.action = Change::ADDED
-
-      end
-      if change['added'] == false
-        new_change.action = Change::REMOVED
-      end
+    new_change
   end
 
 end

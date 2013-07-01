@@ -3,6 +3,8 @@ require 'json'
 
 namespace :import_data do
 
+  ##############
+  # CREATE CUBE
   desc 'process data cube'
   task :process_cube => :environment do
     ad = OutputAgileData.new(Board.all())
@@ -14,7 +16,8 @@ namespace :import_data do
     puts "Please pass in userid (uid), password (pwd) and root URL to Jira Rest API. \n   ex: rake  import_data:#{from_here} uid=ahuffman pwd=foopass site=shareableink.atlassian.com"
   end
 
-
+  #######
+  # JIRA
   desc 'import from jira'
   task :jira => :environment do
       if !ENV['uid'] || !ENV['pwd'] || !ENV['site']
@@ -30,6 +33,8 @@ namespace :import_data do
       ad.create()
   end
 
+  ##############
+  # JIRA TO FILE
   desc 'import from jira and write to cache file'
   task :jira_to_file => :environment do
       if !ENV['uid'] || !ENV['pwd'] || !ENV['site']
@@ -53,12 +58,16 @@ namespace :import_data do
 
   end
 
+  ##############
+  # PROCESS DATA
   desc 'process_data'
   task :process_data => :environment do
     ad = AgileData.new (nil)
     ad.process_data()
   end
 
+  ######################
+  # JIRA FROM CACHE FILE
   desc 'import from jira file cached'
   task :jira_from_file => :environment do
       if !ENV['site']
@@ -81,7 +90,5 @@ namespace :import_data do
       rc.end()
 
   end
-
-
 
 end

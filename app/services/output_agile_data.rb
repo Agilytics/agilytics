@@ -1,3 +1,4 @@
+require 'caseconverter'
 class OutputAgileData
 
   def initialize(boards)
@@ -30,6 +31,14 @@ class OutputAgileData
     output['workActivities'] = @out_work_activities
     output['changes'] = @out_changes
 
+
+    max_date = Date.parse('01-01-1970')
+    @out_sprints.keys.each do |key|
+        max_date = @out_sprints[key]['endDate'] if @out_sprints[key]['endDate'] > max_date
+    end
+
+    output['endOfLastSprint'] = max_date
+
     @file.write(output.to_json)
   end
 
@@ -43,7 +52,7 @@ class OutputAgileData
     output_name = src_symbol.to_s unless output_name
     output_name = "#{output_name.singularize()}Ids"
 
-    destination[output_name] = Array.new()
+    destination[output_name] = Array.new() unless destination[output_name]
 
     src_object.send(src_symbol).each do |object|
       unless destination[output_name].include? object.pid
@@ -75,27 +84,20 @@ class OutputAgileData
     output
   end
 
+  def writeOutAttributes(src, output)
+    src.attributes.each do |attr_name, attr_value|
+      output[CaseConverter.to_lower_camel_case(attr_name)] = attr_value
+    end
+  end
+
   def process_sprint(sprint)
     if @out_sprints[sprint.pid]
       return @out_sprints[sprint.pid]
     end
 
     output = Hash.new()
-    output['id'] = sprint.id
-    output['pid'] = sprint.pid
-    output['closed'] = sprint.closed
-    output['startDate'] = sprint.start_date
-    output['endDate'] = sprint.end_date
-    output['haveAllChanges'] = sprint.have_all_changes
-    output['haveProcessedAllChanges'] = sprint.have_processed_all_changes
-    output['name'] = sprint.name
-    output['velocity'] = sprint.velocity
-    output['initVelocity'] = sprint.init_velocity
-    output['totalVelocity'] = sprint.total_velocity
-    output['estimateChangedVelocity'] = sprint.estimate_changed_velocity
-    output['addedVelocity'] = sprint.added_velocity
-    output['initCommitment'] = sprint.init_commitment
-    output['totalCommitment'] = sprint.total_commitment
+
+    writeOutAttributes(sprint, output)
 
     assign_ids_and_process(sprint, output,  method(:process_sprint_story), :sprint_stories, 'sprintStories')
     assign_ids_and_process(sprint, output,  method(:process_change), :changes)
@@ -115,25 +117,7 @@ class OutputAgileData
 
     output = Hash.new()
 
-    output['id'] = sprint_story.id
-    output['pid'] = sprint_story.pid
-    output['acuity'] = sprint_story.acuity
-    output['isDone'] = sprint_story.is_done
-    output['location'] = sprint_story.location
-    output['size'] = sprint_story.size
-    output['initSize'] = sprint_story.init_size
-    output['initDate'] = sprint_story.init_date
-    output['status'] = sprint_story.status
-    output['wasAdded'] = sprint_story.was_added
-    output['wasRemoved'] = sprint_story.was_removed
-    output['isInitialized'] = sprint_story.is_initialized
-
-    output['storyId'] = sprint_story.story.id
-    output['sprintId'] = sprint_story.sprint.id
-
-    output['assigneeId'] = sprint_story.assignee.id if sprint_story.assignee
-    output['reporterId'] = sprint_story.reporter.id if sprint_story.reporter
-    output['workActivityId'] = sprint_story.work_activity.id if sprint_story.work_activity
+    writeOutAttributes(sprint_story, output)
 
     @out_sprint_stories[sprint_story.pid] = output
 
@@ -146,21 +130,7 @@ class OutputAgileData
     end
 
     output = Hash.new()
-    output['id'] = story.id
-    output['pid'] = story.pid
-    output['acuity'] = story.acuity
-    output['create_date'] = story.create_date
-    output['done'] = story.done
-    output['doneDate'] = story.done_date
-    output['location'] = story.location
-    output['pid'] = story.pid
-    output['size'] = story.size
-    output['name'] = story.name
-    output['description'] = story.description
-    output['status'] = story.status
-    output['assigneeId'] = story.assignee_id
-    output['reporterId'] = story.reporter_id
-    output['storyType'] = story.story_type
+    writeOutAttributes(story, output)
 
     assign_ids_and_process(story, output,  method(:process_sprint_story), :sprint_stories, 'sprintStories')
     assign_ids_and_process(story, output,  method(:process_subtask), :subtasks)
@@ -176,8 +146,7 @@ class OutputAgileData
     end
 
     output = Hash.new()
-
-    process_agile_user(assignee, output)
+    writeOutAttributes(assignee, output)
 
     assign_ids_and_process(assignee, output,  method(:process_work_activity), :work_activities, 'workActivities')
     assign_ids_and_process(assignee, output,  method(:process_sprint_story), :sprint_stories, 'sprintStories')
@@ -194,8 +163,7 @@ class OutputAgileData
     end
 
     output = Hash.new()
-
-    process_agile_user(reporter, output)
+    writeOutAttributes(reporter, output)
 
     assign_ids_and_process(reporter, output,  method(:process_sprint_story), :sprint_stories, 'sprintStories')
     assign_ids_and_process(reporter, output,  method(:process_story), :stories)
@@ -206,38 +174,13 @@ class OutputAgileData
   end
 
 
-  def process_agile_user(user, output)
-    output['id'] = user.id
-    output['pid'] = user.pid
-    output['displayName'] = user.display_name
-    output['emailAddress'] = user.email_address
-    output['name'] = user.name
-  end
-
   def process_change(change)
     if @out_changes[change.pid]
       return @out_changes[change.pid]
     end
 
     output = Hash.new()
-
-    output['id'] = change.id
-    output['pid'] = change.pid
-    output['action'] = change.action
-
-    output['associatedStoryPid'] = change.associated_story_pid
-    output['associatedSubtaskPid'] = change.associated_subtask_pid
-
-    output['location'] = change.location
-    output['newValue'] = change.new_value
-    output['oldValue'] = change.old_value
-
-    output['boardPid'] = change.board_pid
-    output['sprintPid'] = change.sprint_pid
-    output['status'] = change.status
-    output['isDone'] = change.is_done
-    output['time'] = change.time
-
+    writeOutAttributes(change, output)
     @out_changes[change.pid] = output
 
     output
@@ -250,14 +193,7 @@ class OutputAgileData
     end
 
     output = Hash.new()
-    output['id'] = work_activity.id
-    output['pid'] = work_activity.pid
-    output['storyPoints'] = work_activity.story_points
-    output['taskHours'] = work_activity.task_hours
-
-    output['assigneeId'] = work_activity.assignee_id
-    output['boardId'] = work_activity.board_id
-    output['sprintId'] = work_activity.sprint_id
+    writeOutAttributes(work_activity, output)
 
     assign_ids_and_process(work_activity, output,  method(:process_sprint_story), :sprint_stories, 'sprintStories')
 
@@ -266,6 +202,10 @@ class OutputAgileData
     output
   end
 
-  def process_subtask(subtask) end
+  def process_subtask(subtask)
+    output = Hash.new()
+    writeOutAttributes(subtask, output)
+    output
+  end
 
 end

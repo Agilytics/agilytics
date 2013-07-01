@@ -40,6 +40,7 @@ GEM
       debug_inspector (>= 0.0.1)
     bond (0.4.3)
     builder (3.0.4)
+    caseconverter (0.1.1)
     chosen-rails (0.9.14)
       coffee-rails (>= 3.2)
       railties (>= 3.0)
@@ -211,7 +212,6 @@ GEM
     underscore-rails (1.4.4)
     vegas (0.1.11)
       rack (>= 1.0.0)
-    yahoofinance (1.2.2)
     yard (0.8.6.1)
 
 PLATFORMS
@@ -221,6 +221,7 @@ DEPENDENCIES
   angular-gem
   angular-ui-bootstrap-rails
   better_errors
+  caseconverter
   chosen-rails
   coffee-rails (~> 3.2.1)
   coffee-rails-source-maps
@@ -233,6 +234,7 @@ DEPENDENCIES
   pry-debugger
   pry-plus
   pry-rails
+  pry-stack_explorer
   rails (= 3.2.13)
   resque
   sass-rails (~> 3.2.3)
@@ -240,4 +242,3 @@ DEPENDENCIES
   therubyracer
   uglifier (>= 1.0.3)
   underscore-rails
-  yahoofinance
