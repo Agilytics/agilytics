@@ -14,6 +14,13 @@ class JiraCaller
     sprintpid = sprint.pid[boardId.length..sprint.pid.length]
     response = http_get("#{@site}/rest/greenhopper/1.0/rapid/charts/scopechangeburndownchart.json?rapidViewId=#{boardId}&sprintId=#{sprintpid}")
 
+    #response['changes'].each{ |d| d[1].each { |c|
+    #    if c['key'] == 'AP-40'
+    #      puts c
+    #    end
+    #  }
+    #};
+
     case response.code
       when 200
         response
@@ -26,7 +33,6 @@ class JiraCaller
 
   def get_story_detail(storyId)
     response = http_get("#{@site}/rest/api/2/issue/#{storyId}")
-
     case response.code
       when 200
         response
@@ -66,9 +72,9 @@ class JiraCaller
   def sprint_changes_for(boards)
     changes = Array.new()
     boards.each do |board|
-      board.sprints.each do |sprint|
-        process_sprint(board, changes, sprint)
-      end
+        board.sprints.each do |sprint|
+          process_sprint(board, changes, sprint)
+        end
     end
   end
 
@@ -84,8 +90,8 @@ class JiraCaller
       change_set['changes'].keys.each do |time|
 
         val = change_set['changes'][time]
-
-        sprint.end_date = Time.at(change_set['endTime']/1000)
+        sprint.end_date = Time.now()
+        sprint.end_date = Time.at(change_set['completeTime']/1000) if change_set['completeTime']
         sprint.start_date = Time.at(change_set['startTime']/1000)
 
         val.each { |change| process_change(board, change, changes, sprint, stories, subtasks, time) }
@@ -117,24 +123,32 @@ class JiraCaller
 
     if story_or_subtask.instance_of? Subtask
       subtasks[pid] = story_or_subtask
-      change.associated_story_pid = story_or_subtask.story.pid
       change.associated_subtask_pid = story_or_subtask.pid
+      change.subtask = story_or_subtask
     else
       stories[pid] = story_or_subtask
-      sprint_story = get_or_create_sprint_story(sprint, story_or_subtask, time)
+      timeDate = Time.at time.to_i / 1000
+      #if timeDate > sprint.start_date
+        sprint_story = get_or_create_sprint_story(sprint, story_or_subtask, timeDate)
 
-      # sprint story pid is a combination of the story & sprint
-      sprint_story.pid = sprint.pid + pid
-      sprint_story.assignee = story_or_subtask.assignee
-      sprint_story.reporter = story_or_subtask.reporter
+        # sprint story pid is a combination of the story & sprint
+        change.sprint_story = sprint_story
 
-      sprint_story.set_size_of_story(change)
-      sprint_story.set_is_story_done(change)
-      sprint_story.set_if_added_or_removed(change)
+        sprint_story.pid = sprint.pid + pid
+        sprint_story.assignee = story_or_subtask.assignee
+        sprint_story.reporter = story_or_subtask.reporter
 
-      sprint_story.save()
+        sprint_story.set_size_of_story(change)
+        sprint_story.set_is_story_done(change)
+        sprint_story.set_if_added_or_removed(change)
+
+        sprint_story.save()
+
+      #end
+
 
     end
+    change.save()
     story_or_subtask.save()
 
     change.associated_story_pid = story_or_subtask.pid
@@ -143,7 +157,7 @@ class JiraCaller
   protected
 
 
-  def get_or_create_sprint_story(sprint, story, time)
+  def get_or_create_sprint_story(sprint, story, timeDate)
 
     # sprint_story pid is a combination of sprint & story pids
     sprint_story_pid = sprint.pid + story.pid
@@ -153,7 +167,7 @@ class JiraCaller
     else
       sprintStory = SprintStory.new
       sprintStory.pid = sprint_story_pid
-      sprintStory.init_date = Time.at time.to_i / 1000
+      sprintStory.init_date = timeDate
       sprintStory.init_size = 0
 
       sprint.sprint_stories << sprintStory
@@ -174,7 +188,7 @@ class JiraCaller
       s = get_story_detail(pid)
       fields = s['fields']
 
-      if (fields['issuetype']['id']['subtask'])
+      if fields['issuetype']['subtask']
         story_or_task = create_subtask(pid, fields, board)
       else
         story_or_task = create_story(pid, fields, board)
@@ -188,7 +202,7 @@ class JiraCaller
   def create_subtask(pid, fields, board)
     subtask = Subtask.new()
 
-    story = get_or_create_story_or_task(fields['parient']['key'], board)
+    story = get_or_create_story_or_task(fields['parent']['key'], board)
     story.subtasks << subtask
 
     subtask.reporter = get_or_create_user(fields['reporter'], Reporter, @reporters)
@@ -198,7 +212,8 @@ class JiraCaller
     subtask.description = fields['description']
     subtask.acuity = fields['priority']['name']
     subtask.done = fields['status']['name'] == 'Closed'
-    subtask.created_date = Time.at(Integer(fields['created'])/1000)
+
+    subtask.create_date = fields['created'].to_date
 
     subtask
 

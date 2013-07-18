@@ -1,7 +1,0 @@
-%div.ng-cloak
-  %select( data-placeholder="Choose a scrum board" multiple
-           class="span10 chzn-select" ng-model="boards" ng-options="board.name for board in boardList" )
-  %div( class="chosen-buttons" )
-    %button( class="btn-inverse" ng-click="allBoards()" ) All
-    %button( class="btn-inverse" ng-click="noBoards()" ) None
-    %button( class="btn-primary" ng-click="selectedBoards()" ) Ok

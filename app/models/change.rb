@@ -11,6 +11,7 @@ class Change < ActiveRecord::Base
   STATUS_LOCATION_CHANGE = 'status_location'
   ADDED = 'added'
   REMOVED = 'removed'
+  FINISHED = 'finished'
   NA = 'na'
 
   attr_accessible :action,
@@ -28,6 +29,8 @@ class Change < ActiveRecord::Base
 
   belongs_to :sprint
   belongs_to :board
+  belongs_to :sprint_story
+  belongs_to :subtask
 
   def if_of_action(action)
     self.action.index(action)
@@ -36,6 +39,8 @@ class Change < ActiveRecord::Base
 
     if change['statC']
       if self.time < sprint.start_date # before sprint started
+        # then set to the start date
+        self.time = sprint.start_date
         self.action += Change::INITIAL_ESTIMATE
       else
         self.action += Change::ESTIMATE_CHANGED
@@ -55,8 +60,12 @@ class Change < ActiveRecord::Base
   def if_done_set(change)
     if change['column']
       self.action += Change::STATUS_LOCATION_CHANGE
-      self.is_done = !change['column']['notDone']
       self.location = change['column']['newStatus']
+
+      if(!change['column']['notDone'])
+        self.is_done = true
+        self.action += Change::FINISHED
+      end
     end
   end
 

@@ -14,6 +14,8 @@ class CreateChanges < ActiveRecord::Migration
       t.string :old_value
       t.integer :board_id
       t.integer :sprint_id
+      t.integer :sprint_story_id
+      t.integer :subtask_id
       t.boolean :is_done
 
       t.timestamps

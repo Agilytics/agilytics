@@ -20,6 +20,8 @@ class @AgileCubeService
     @srcCube = srcCube
 
     @cube = {}
+
+    @cube.origCube = srcCube
     @cube.boards = []
     @cube.boardsWithSprints = []
     @cube.sprints = []
@@ -47,7 +49,6 @@ class @AgileCubeService
 
     obj
 
-
   createBoard: (board)=>
     @process board, (board)=>
 
@@ -71,7 +72,6 @@ class @AgileCubeService
         .addReporters()
 
       @cube.sprints.push(sprint)
-
 
   createStory: (storyId)=>
     @process @srcCube.stories[storyId], (story)=>
@@ -102,6 +102,7 @@ class @AgileCubeService
 
   createChange: (changeId)=>
     @process @srcCube.changes[changeId], (change)=>
+
       @cube.changes.push(change)
 
   createWorkActivity: (workActivityId)=>
@@ -110,6 +111,10 @@ class @AgileCubeService
 
   createSprintStory: (sprintStoryId)=>
     @process @srcCube.sprintStories[sprintStoryId], (sprintStory)=>
+
+      @alter('sprintStory', sprintStory )
+        .addChanges()
+
       @cube.sprintStories.push sprintStory
 
   createSubtask: (subtaskId)=>

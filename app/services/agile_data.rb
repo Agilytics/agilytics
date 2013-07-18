@@ -54,7 +54,8 @@
       sprint.added_velocity = 0
       sprint.estimate_changed_velocity = 0
       sprint.total_velocity = 0
-
+      sprint.removed_committed_velocity = 0
+      sprint.removed_added_velocity = 0
 
       sprint.missed_added_commitment = 0
       sprint.missed_init_commitment  = 0
@@ -63,42 +64,56 @@
 
       sprint.sprint_stories.each { |sstory|
 
-        sprint.init_commitment += sstory.init_size unless sstory.was_added
-        sprint.added_commitment += sstory.size if sstory.was_added
-        sprint.estimate_changed += sstory.size - sstory.init_size
+        if sstory.was_added
+          sprint.added_commitment += sstory.size
+        else
+          sprint.init_commitment += sstory.init_size
+          sprint.estimate_changed += sstory.size - sstory.init_size
+        end
+
         sprint.total_commitment += sstory.size
 
+        if sstory.is_done
 
-        if sstory.is_done && sstory.assignee
-
-          sprint.init_velocity += (sstory.init_size || 0) unless sstory.was_added
-          sprint.added_velocity += (sstory.size || 0) if sstory.was_added
-          sprint.estimate_changed_velocity += sstory.size - sstory.init_size if sstory.size - sstory.init_size != 0
+          if sstory.was_added
+            sprint.added_velocity += (sstory.size || 0)
+          else
+            sprint.init_velocity += (sstory.init_size || 0)
+            sprint.estimate_changed_velocity += sstory.size - sstory.init_size if sstory.size - sstory.init_size != 0
+          end
           sprint.total_velocity += (sstory.size || 0)
 
-          wa = WorkActivity.find_by_assignee_id_and_sprint_id(sstory.assignee.id, sprint.id)
+          if sstory.assignee
+            wa = WorkActivity.find_by_assignee_id_and_sprint_id(sstory.assignee.id, sprint.id)
 
-          unless wa
-            wa = WorkActivity.new()
-            wa.story_points = 0
-            wa.task_hours = 0
-            wa.assignee = sstory.assignee
-            wa.board = sprint.board
-            wa.sprint = sprint
-            wa.pid = sprint.board.pid + '_' + sprint.pid + '_' + sstory.assignee.pid
+            unless wa
+              wa = WorkActivity.new()
+              wa.story_points = 0
+              wa.task_hours = 0
+              wa.assignee = sstory.assignee
+              wa.board = sprint.board
+              wa.sprint = sprint
+              wa.pid = sprint.board.pid + '_' + sprint.pid + '_' + sstory.assignee.pid
+            end
+
+            wa.story_points += sstory.size
+            wa.save()
           end
+        end
 
-          wa.story_points += sstory.size
-          wa.save()
+        if sstory.was_removed
+          sprint.removed_committed_velocity += sstory.size unless sstory.was_added
+          sprint.removed_added_velocity += sstory.size if sstory.was_added
         end
 
         sprint.missed_added_commitment = sprint.added_commitment - sprint.added_velocity
         sprint.missed_init_commitment = sprint.init_commitment - sprint.init_velocity
         sprint.missed_estimate_changed = sprint.estimate_changed - sprint.estimate_changed_velocity
-        sprint.missed_total_commitment = sprint.total_commitment - sprint.total_velocity
+        sprint.missed_total_commitment = sprint.total_commitment - sprint.total_velocity - sprint.removed_added_velocity - sprint.removed_committed_velocity
 
         sstory.save()
       }
+
       sprint.save()
 
   end

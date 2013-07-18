@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "",
+  "sourceRoot": "",
+  "sources": [
+    "/assets/source_maps/app/assets/javascripts/angular/controllers/sprint_controller.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA;CAAA,CAAM,EAAC;CAEQ,CAAS,CAAT,CAAA,EAAA,MAAA,IAAA,UAAC;CACZ,EAA0B,CAAA,EAA1B,CAAA,EAA2B,OAAX;CACd,EAAgB,CAAI,EAAd,CAAgC,CAAtC,IAAkD;CAC3C,EAAS,GAAV,SAAN;CAFF,MAA0B;CAA1B,GAAA,EAIA;CALF,IAAa;;CAAb;;CAFF;;CAAA,CASA,CAA4B,CAA3B,GAAD,CAA4B,MAAA,EAAX,EAAW;CAT5B"
+}

@@ -9,8 +9,8 @@ class Subtask < ActiveRecord::Base
                   :status,
                   :assignee_id,
                   :reporter_id
-
+  has_many :changes
   belongs_to :story
-  has_one :assignee
-  has_one :reporter
+  belongs_to :assignee
+  belongs_to :reporter
 end

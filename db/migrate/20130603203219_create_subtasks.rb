@@ -3,6 +3,8 @@ class CreateSubtasks < ActiveRecord::Migration
     create_table :subtasks do |t|
 
       t.string :pid
+      t.string :name
+      t.string :description
       t.string :acuity
       t.string :associated_story_pid
       t.string :associated_subtask_pid

@@ -118,6 +118,7 @@ class OutputAgileData
     output = Hash.new()
 
     writeOutAttributes(sprint_story, output)
+    assign_ids_and_process(sprint_story, output,  method(:process_change), :changes)
 
     @out_sprint_stories[sprint_story.pid] = output
 
@@ -181,6 +182,7 @@ class OutputAgileData
 
     output = Hash.new()
     writeOutAttributes(change, output)
+
     @out_changes[change.pid] = output
 
     output
@@ -205,6 +207,7 @@ class OutputAgileData
   def process_subtask(subtask)
     output = Hash.new()
     writeOutAttributes(subtask, output)
+    assign_ids_and_process(subtask, output,  method(:process_change), :changes)
     output
   end
 

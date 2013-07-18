@@ -1,0 +1,98 @@
+%div.ng-cloak
+  %br
+  %select(ng-model="selectedSprint" ng-options="lsprint as lsprint.name for lsprint in sprints" ng-change="gotoSprint(selectedSprint)")
+  %div(id="sprint-{{sprint.pid}}")
+  %h3
+    {{sprint.board.name}} {{sprint.name}} {{sprint.pid}}
+    Begin:{{sprint.startDate}} End:{{sprint.endDate}} Missed:{{sprint.missedTotalCommitment}}
+    ({{count}})
+  %div(ng-repeat="co in changeDates")
+    %h3 {{co.date}} || {{co.netValue}} || {{co.netVelocity}}
+    %p
+      %div(ng-repeat="c in co.changes")
+        %div(ng-class="{strong: !!c.value}" )
+          {{c.value}} : {{c.name}} || {{c.netVelocity}}
+
+
+
+  -#%hr
+  -#%h3 SprintStories
+  -#%div(ng-repeat="ss in sprint.sprintStories")
+  -#  %br
+  -#  closed : {{sprint.closed}}
+  -#  %br
+  -#  start_date : {{sprint.startDate}}
+  -#  %br
+  -#  end_date : {{sprint.endDate}}
+  -#  %br
+  -#  have_all_changes : {{sprint.haveAllChanges}}
+  -#  %br
+  -#  have_processed_all_changes : {{sprint.haveProcessedAllChanges}}
+  -#  %br
+  -#  name : {{sprint.name}}
+  -#  %br
+  -#  pid : {{sprint.pid}}
+  -#
+  -#
+  -#  init_velocity {{sprint.initVelocity}}
+  -#  %br
+  -#  added_velocity {{sprint.addedVelocity}}
+  -#  %br
+  -#  estimate_changed_velocity {{sprint.estimateChangedVelocity}}
+  -#  %br
+  -#  total_velocity {{sprint.totalVelocity}}
+  -#  %br
+  -#  %br
+  -#  init_commitment: {{sprint.initCommitment}}
+  -#  %br
+  -#  added_commitment: {{sprint.addedCommitment}}
+  -#  %br
+  -#  estimate_changed: {{sprint.estimateChanged}}
+  -#  %br
+  -#  total_commitment: {{sprint.totalCommitment}}
+  -#  %hr
+  -#
+  -#  missed_init_commitment {{sprint.missedInitCommitment}}
+  -#  %br
+  -#  missed_added_commitment {{sprint.missedAddedCommitment}}
+  -#  %br
+  -#  missed_estimate_changed {{sprint.missedEstimateChanged}}
+  -#  %br
+  -#  missed_total_commitment {{sprint.missedTotalCommitment}}
+  -#
+  -#
+  -#  %hr
+  -#  ss.id : {{ss.id}}
+  -#  %br
+  -#  ss.acuity : {{ss.acuity}}
+  -#  %br
+  -#  ss.is_done : {{ss.isDone}}
+  -#  %br
+  -#  ss.location : {{ss.location}}
+  -#  %br
+  -#  ss.size : {{ss.size}}
+  -#  %br
+  -#  ss.init_size : {{ss.initSize}}
+  -#  %br
+  -#  ss.init_date : {{ss.initDate}}
+  -#  %br
+  -#  ss.status : {{ss.status}}
+  -#  %br
+  -#  ss.was_added : {{ss.wasAdded}}
+  -#  %br
+  -#  ss.was_removed : {{ss.wasRemoved}}
+  -#  %br
+  -#  ss.pid : {{ss.pid}}
+  -#  %br
+  -#  ss.is_initialized : {{ss.isInitialized}}
+  -#  %br
+  -#  ss.story_id : {{ss.storyId}}
+  -#  %br
+  -#  ss.sprint_id : {{ss.sprintId}}
+  -#  %br
+  -#  ss.assignee_id : {{ss.assigneeId}}
+  -#  %br
+  -#  ss.reporter_id : {{ss.reporterId}}
+  -#  %br
+  -#  ss.work_activity_id}}% : {{ss.workActivityId}}
+  -#  %br

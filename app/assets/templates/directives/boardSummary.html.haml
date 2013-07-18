@@ -1,8 +1,0 @@
-%div.ng-cloak
-  %hr
-  %div.board-panel(ng-click="goToBoard()" id="{{board.pid}}-sprints-graph" style="min-width: 400px; height: {{ board.sprints.length * 15 + 125}}px; margin: 0 auto")
-  %table.table.table-striped
-    %tr
-      %th(ng-repeat="header in headers") {{header}}
-    %tr(ng-repeat="sprint in sprintRows" )
-      %td(ng-repeat="col in sprint") {{col}}

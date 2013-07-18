@@ -1,7 +1,7 @@
 class SprintStory < ActiveRecord::Base
 
   def initialization
-    @size = 0
+    self.size = 0
   end
 
   attr_accessible :acuity,
@@ -20,7 +20,7 @@ class SprintStory < ActiveRecord::Base
                 :assignee_id
                 :reporter_id
                 :work_activity_id
-
+  has_many :changes
   belongs_to :story
   belongs_to :sprint
   belongs_to :assignee
@@ -49,7 +49,8 @@ class SprintStory < ActiveRecord::Base
       self.is_initialized = true
 
     elsif change.if_of_action(Change::ESTIMATE_CHANGED)
-      self.size = 0 unless @size
+      self.size = 0 unless self.size
+      change.old_value = self.size.to_s
       self.size = change.new_value.to_i
       unless self.is_initialized
         self.init_size = 0

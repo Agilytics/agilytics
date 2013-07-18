@@ -12,11 +12,14 @@ class Sprint < ActiveRecord::Base
                   :added_velocity,
                   :estimate_changed_velocity,
                   :total_velocity,
+                  :removed_added_velocity,
+                  :removed_committed_velocity,
 
                   :init_commitment,
                   :added_commitment,
                   :estimate_changed,
                   :total_commitment,
+
 
                   :missed_init_commitment,
                   :missed_added_commitment,

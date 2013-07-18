@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(:version => 20130619232726) do
     t.string   "old_value"
     t.integer  "board_id"
     t.integer  "sprint_id"
+    t.integer  "sprint_story_id"
+    t.integer  "subtask_id"
     t.boolean  "is_done"
     t.datetime "created_at",             :null => false
     t.datetime "updated_at",             :null => false
@@ -84,6 +86,8 @@ ActiveRecord::Schema.define(:version => 20130619232726) do
     t.integer  "added_velocity"
     t.integer  "estimate_changed_velocity"
     t.integer  "total_velocity"
+    t.integer  "removed_committed_velocity"
+    t.integer  "removed_added_velocity"
     t.integer  "init_commitment"
     t.integer  "added_commitment"
     t.integer  "estimate_changed"
@@ -120,6 +124,8 @@ ActiveRecord::Schema.define(:version => 20130619232726) do
 
   create_table "subtasks", :force => true do |t|
     t.string   "pid"
+    t.string   "name"
+    t.string   "description"
     t.string   "acuity"
     t.string   "associated_story_pid"
     t.string   "associated_subtask_pid"

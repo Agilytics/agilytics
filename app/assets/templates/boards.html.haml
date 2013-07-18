@@ -1,5 +1,10 @@
-%div(ng-repeat="board in cube.boardsWithSprints")
-  %board-summary(board="board")
-  %br(style="margin-top:10px")
-  %assignee-board-summary(boards="cube.boardsWithSprints" assignees="cube.assignees" board="board")
+%div.ng-cloak
+  %div.hero-unit(ng-repeat="board in cube.boardsWithSprints")
+    %assignee-board-summary(boards="cube.boardsWithSprints" assignees="cube.assignees" board="board")
+    %br
+    %board-summary(board="board")
+    %br(style="margin-top:10px")
+
+
+
 

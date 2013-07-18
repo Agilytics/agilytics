@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "",
+  "sourceRoot": "",
+  "sources": [
+    "/assets/source_maps/app/assets/javascripts/angular/controllers/boards_controller.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA;CAAA,CAAM,EAAC;CAEQ,CAAS,CAAT,CAAA,EAAA,UAAA,UAAC;CACZ,EAA0B,CAAA,EAA1B,CAAA,EAA2B,OAAX;CACP,EAAO,CAAd,EAAM,SAAN;CADF,MAA0B;CAA1B,GAAA,EAGA;CAJF,IAAa;;CAAb;;CAFF;;CAAA,CAQA,CAA4B,CAA3B,GAAD,CAA4B,QAAX,EAAW;CAR5B"
+}

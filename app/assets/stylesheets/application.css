@@ -15,5 +15,10 @@
  *= require overrides
  */
 
+.strong { font-weight: bold; }
+.red { color: red}
+.red { color: darkgray}
+.red { color: green}
+
 
 

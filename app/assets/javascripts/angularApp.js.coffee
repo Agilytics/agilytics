@@ -14,6 +14,13 @@ window.module = angular.module('agilytics',['ui.compat'])
           }
         )
         .state(
+          'sprints', {
+            url: '/sprints/:sprintId',
+            templateUrl: '/assets/sprint.html'
+            controller: SprintController
+          }
+        )
+        .state(
           'boards', {
             url: '/boards',
             templateUrl: '/assets/boards.html'

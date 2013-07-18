@@ -1,0 +1,13 @@
+%div
+  %div.row.ng-cloak
+    %div.span11.board-panel(ng-click="goToBoard()" id="{{board.pid}}-sprints-graph" style="min-width: 400px; height: {{ board.sprints.length * 15 + 125}}px; margin: 0 auto")
+  %br
+  %div.row
+    %div.span11(style="margin-left:0")
+      %table.table.table-striped
+        %tr
+          %th(ng-repeat="header in headers") {{header}}
+        %tr(ng-repeat="sprint in sprintRows")
+          %td(ng-repeat="col in sprint.cols")
+            %a(href="#/sprints/{{sprint.pid}}")
+              {{col}}

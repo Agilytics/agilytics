@@ -12,7 +12,7 @@ module.directive('assigneeBoardSummary', [ "$http", "$timeout", ($http, $timeout
       thereIsNoBoardFilter =  !thereIsABoardFilter
 
       if(thereIsABoardFilter)
-        scope.spanWidth = "span12"
+        scope.spanWidth = "span11"
         newBoards = []
         newBoards.push board for board in boards when board.pid == options.board.pid
         boards = newBoards
@@ -72,7 +72,6 @@ module.directive('assigneeBoardSummary', [ "$http", "$timeout", ($http, $timeout
             assignee.boardVelocities[boardId] = boardVelocity
 
             assignee.velocity += boardVelocity
-            console.log assignee.name + " " + boardVelocity + " BoardID:  " + boardId
         )
       )
 

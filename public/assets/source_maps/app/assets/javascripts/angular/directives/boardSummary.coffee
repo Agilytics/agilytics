@@ -45,9 +45,10 @@ module.directive('boardSummary', [ "$http", "$timeout", ($http, $timeout) ->
         series[2].data.push sprint.addedVelocity
         series[3].data.push sprint.estimateChangedVelocity
         series[4].data.push sprint.initVelocity
+        for i in [0,1,2,3,4]
+          series[i].sprintId = sprint.pid
 
         categories.push sprint.name
-
 
     $("#" + boardId + "-sprints-graph").highcharts
       chart:
@@ -58,6 +59,10 @@ module.directive('boardSummary', [ "$http", "$timeout", ($http, $timeout) ->
 
       xAxis:
         categories: categories
+
+      tooltip:
+        enabled: true
+        formatter: -> "#{this.series.name}: points: #{this.y}"
 
       yAxis:
         min: 0
@@ -71,6 +76,10 @@ module.directive('boardSummary', [ "$http", "$timeout", ($http, $timeout) ->
       plotOptions:
         series:
           stacking: "normal"
+          cursor: 'pointer'
+          point:
+            events:
+              click: -> window.location.hash = "/sprints/#{this.series.userOptions.sprintId}"
 
       series: series
 
@@ -105,7 +114,6 @@ module.directive('boardSummary', [ "$http", "$timeout", ($http, $timeout) ->
         $timeout(sg, 0)
 
       scope.goToBoard = =>
-        debugger
         window.location = "#/boards/" + scope.board.pid
 
       scope.filter = -> showGraph(scope.board.pid, sprints)
