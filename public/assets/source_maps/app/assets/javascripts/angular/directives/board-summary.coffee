@@ -1,6 +1,7 @@
 module.directive('boardSummary', [ "$http", "$timeout", ($http, $timeout) ->
 
   init = (scope)->
+    @colors = scope.colors ||   {}
     scope.sprintRows = []
     scope.headers = [
         "Sprint Name",
@@ -13,35 +14,35 @@ module.directive('boardSummary', [ "$http", "$timeout", ($http, $timeout) ->
         "Removed Added"
     ]
 
-  showGraph = (boardId, sprints, boardName)=>
+  showGraph = (boardId, sprints, boardName, onlySprintToShow)=>
 
     series = [
                 name: "Removed Added"
-                color: "#FDE0B5"
+                color: @colors.removedAdded || "purple"
                 data: []
               ,
                 name: "Missed Added"
-                color: "#fad2d2"
+                color: @colors.missedAdded || "purple"
                 data: []
               ,
                 name: "Removed Committed"
-                color: "#f90"
+                color: @colors.removedCommitted || "purple"
                 data: []
               ,
                 name: "Missed Commitment"
-                color: "#fa3939"
+                color: @colors.missedCommitted || "purple"
                 data: []
               ,
                 name: "Added"
-                color: "black"
+                color: @colors.addedVelocity || "purple"
                 data: []
               ,
                 name: "Changed"
-                color: "gray"
+                color: @colors.changedVelocity || "purple"
                 data: []
               ,
                 name: "Committed"
-                color: "green"
+                color: @colors.committedVelocity || "purple"
                 data: []
             ]
 
@@ -49,7 +50,7 @@ module.directive('boardSummary', [ "$http", "$timeout", ($http, $timeout) ->
 
     sprintHadSomeActivity = (sprint)-> !!(sprint.totalCommitment || sprint.addedVelocity || sprint.estimateChangedVelocity || sprint.initVelocity)
 
-    for sprint in sprints when sprintHadSomeActivity(sprint)
+    for sprint in sprints when sprintHadSomeActivity(sprint) && (!onlySprintToShow || sprint == onlySprintToShow)
 
         series[0].data.push { y: sprint.removedAddedVelocity || 0, sprintId: sprint.pid }
         series[1].data.push { y: sprint.missedAddedCommitment - sprint.removedAddedVelocity, sprintId: sprint.pid }
@@ -60,7 +61,7 @@ module.directive('boardSummary', [ "$http", "$timeout", ($http, $timeout) ->
         series[6].data.push { y: sprint.initVelocity, sprintId: sprint.pid }
         categories.push sprint.name
 
-    $("#" + boardId + "-sprints-graph").highcharts
+    highchartsOptions =
       chart:
         type: "bar"
 
@@ -94,6 +95,10 @@ module.directive('boardSummary', [ "$http", "$timeout", ($http, $timeout) ->
 
       series: series
 
+    highchartsOptions.plotOptions.series.animation = false if onlySprintToShow
+
+    $("#" + boardId + "-sprints-graph").highcharts highchartsOptions
+
   processSprint = (sprint, scope)->
 
     startDate = new Date(sprint.startDate)
@@ -115,15 +120,21 @@ module.directive('boardSummary', [ "$http", "$timeout", ($http, $timeout) ->
   linker = (scope, element, attr) ->
 
     scope.$watch("board.sprints", ->
-      sprints = scope.board.sprints
 
-      init(scope)
+      if(scope.board && scope.board.sprints)
 
-      if(sprints)
-        for sprint in sprints
+        init(scope)
+        sprints = scope.board.sprints
+
+        if scope.sprint
+          scope.height = 1 * 15 + 125
+        else
+          scope.height = scope.board.sprints.length * 15 + 125
+
+        for sprint in sprints when !scope.sprint || scope.sprint == sprint
           processSprint sprint, scope
 
-        sg = -> showGraph( scope.board.pid, sprints, scope.board.name )
+        sg = -> showGraph( scope.board.pid, sprints, scope.board.name, scope.sprint )
         $timeout(sg, 0)
 
       scope.goToBoard = =>
@@ -139,5 +150,6 @@ module.directive('boardSummary', [ "$http", "$timeout", ($http, $timeout) ->
   templateUrl: "/assets/directives/board-summary.html"
   scope:
       board: "="
-
+      sprint: "="
+      colors: "="
 ])

@@ -12,6 +12,7 @@ class Change < ActiveRecord::Base
   ADDED = 'added'
   REMOVED = 'removed'
   FINISHED = 'finished'
+  REOPENED = 'reopened'
   NA = 'na'
 
   attr_accessible :action,
@@ -19,7 +20,7 @@ class Change < ActiveRecord::Base
                   :associated_subtask_pid,
                   :location,
                   :new_value,
-                  :old_value,
+                  :current_story_value,
                   :pid,
                   :board_pid,
                   :sprint_pid,
@@ -35,6 +36,14 @@ class Change < ActiveRecord::Base
   def if_of_action(action)
     self.action.index(action)
   end
+
+  def check_if_reopened(sprint_story)
+    if(sprint_story.is_done && !self.is_done)
+      self.action += Change::REOPENED
+    end
+
+  end
+
   def if_size_type_set(change, sprint)
 
     if change['statC']

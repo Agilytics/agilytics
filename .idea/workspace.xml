@@ -4,60 +4,267 @@
     <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" />
     <bookmark url="file://$PROJECT_DIR$/app/models/sprint_story.rb" line="6" mnemonic="2" />
     <bookmark url="file://$PROJECT_DIR$/app/services/output_agile_data.rb" line="128" />
-    <bookmark url="file://$PROJECT_DIR$/app/assets/javascripts/angular/directives/assignee-board-summary.js.coffee" line="42" />
-    <bookmark url="file://$PROJECT_DIR$/app/assets/javascripts/angular/controllers/sprint_controller.js.coffee" line="6" mnemonic="3" />
-    <bookmark url="file://$PROJECT_DIR$/app/assets/javascripts/angular/directives/sprint-summary.js.coffee" line="8" />
-    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" line="321" />
-    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" line="130" />
+    <bookmark url="file://$PROJECT_DIR$/angular/app/scripts/directives/assignee-board-summary.js.coffee" line="42" />
+    <bookmark url="file://$PROJECT_DIR$/angular/app/scripts/controllers/sprint_controller.js.coffee" line="6" mnemonic="3" />
+    <bookmark url="file://$PROJECT_DIR$/angular/app/scripts/directives/sprint-summary.js.coffee" line="30" />
+    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" line="327" />
+    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" line="132" />
+    <bookmark url="file://$PROJECT_DIR$/angular/app/scripts/directives/sprint-summary.js.coffee" line="43" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/templates/directives/assignee-board-summary.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/templates/directives/board-summary.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/templates/directives/sprint-summary.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/directives/sprint-summary.js.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/templates/sprint.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/controllers/sprint_controller.js.coffee" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/templates/directives/assigneeBoardSummary.html.haml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/templates/directives/boardSummary.html.haml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/controllers/BoardsController.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/controllers/boards_controller.js.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/controllers/boardsSelector.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/controllers/boards_selector.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/controllers/refreshSprintData.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/controllers/refresh_sprint_data.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/directives/assigneeBoardSummary.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/directives/assignee-board-summary.js.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/directives/boardSummary.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/directives/board-summary.js.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/directives/chosenBoards.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/directives/chosen-boards.js.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/directives/chosenSprints.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/directives/chosen-sprints.js.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/directives/sprintGrid.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/directives/sprint-grid.js.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/templates/directives/chosenBoards.html.haml" afterPath="$PROJECT_DIR$/app/assets/templates/directives/chosen-boards.html.haml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/templates/directives/chosenSprints.html.haml" afterPath="$PROJECT_DIR$/app/assets/templates/directives/chosen-sprints.html.haml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/templates/directives/sprintGrid.html.haml" afterPath="$PROJECT_DIR$/app/assets/templates/directives/sprint-grid.html.haml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/templates/refreshSprintData.html.haml" afterPath="$PROJECT_DIR$/app/assets/templates/refresh-sprint-data.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130603202514_create_sprints.rb" afterPath="$PROJECT_DIR$/db/migrate/20130603202514_create_sprints.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/img/ajax-loader-1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/img/ajax-loader-2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/page/background.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/docs/images/background.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/vendor/closure-compiler.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/docs/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/img/glyphicons-halflings-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/img/glyphicons-halflings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/es5-shim/tests/lib/jasmine_favicon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/page/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/benchmark/assets/nano.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/docs/images/underscore.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/.bowerrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/.buildignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/.editorconfig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/es5-shim/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/jquery/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/.gitmodules" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/.htaccess" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/.jshintrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/.jshintrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/404.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/es5-shim/CHANGES" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/CNAME" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/es5-shim/CONTRIBUTORS.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/es5-shim/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/angular-cookies/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/angular-mocks/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/angular-resource/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/angular-sanitize/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/angular-scenario/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/es5-shim/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/jquery/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/Rakefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/angular-cookies/angular-cookies.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/angular-cookies/angular-cookies.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/angular-mocks/angular-mocks.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/angular-resource/angular-resource.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/angular-resource/angular-resource.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/angular-sanitize/angular-sanitize.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/angular-sanitize/angular-sanitize.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/angular-scenario/angular-scenario.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/angular/angular.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/angular/angular.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/test/arrays.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/vendor/benchmark.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/benchmark/benchmark_browser.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/benchmark/benchmark_json3.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/styles/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/angular/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/angular-cookies/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/angular-mocks/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/angular-resource/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/angular-sanitize/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/angular-scenario/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/jquery/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/build.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/highcharts/modules/canvas-tools.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/highcharts/modules/canvas-tools.src.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/test/chaining.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/test/collections.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/highcharts/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/jquery/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/jquery/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/cubes/cube.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/vendor/curl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/highcharts/themes/dark-blue.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/highcharts/themes/dark-green.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/highcharts/modules/data.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/highcharts/modules/data.src.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/docs/docco.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/es5-shim/es5-sham.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/es5-shim/es5-sham.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/es5-shim/es5-sham.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/es5-shim/es5-shim.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/es5-shim/es5-shim.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/es5-shim/es5-shim.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/vendor/evalJSON.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/highcharts/modules/exporting.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/highcharts/modules/exporting.src.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/test/functions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/highcharts/modules/funnel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/highcharts/modules/funnel.src.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/highcharts/themes/gray.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/highcharts/themes/grid.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/es5-shim/tests/helpers/h-kill.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/es5-shim/tests/helpers/h-matchers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/es5-shim/tests/helpers/h.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/highcharts/highcharts-more.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/highcharts/highcharts-more.src.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/highcharts/highcharts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/highcharts/highcharts.src.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/benchmark/assets/html5.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/index.html.haml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/es5-shim/tests/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/test/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/es5-shim/tests/index.min.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/es5-shim/tests/lib/jasmine-html.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/es5-shim/tests/lib/jasmine.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/es5-shim/tests/lib/jasmine.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/jquery/jquery-migrate.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/jquery/jquery-migrate.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/jquery/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/test/vendor/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/jquery/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/jquery/jquery.min.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/test/vendor/jslitmus.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/es5-shim/tests/lib/json2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/vendor/json2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/lib/json3.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/lib/json3.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/vendor/json_parse.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/vendor/json_parse_state.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/vendor/json_sans_eval.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/benchmark/assets/jsperf.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/angular-scenario/jstd-scenario-adapter-config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/angular-scenario/jstd-scenario-adapter.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/karma-e2e.conf.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/karma.conf.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/vendor/lodash.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/styles/main.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/highcharts/adapters/mootools-adapter.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/highcharts/adapters/mootools-adapter.src.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/test/objects.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/es5-shim/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/jquery/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/page/page.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/vendor/platform.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/highcharts/adapters/prototype-adapter.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/highcharts/adapters/prototype-adapter.src.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/vendor/prototype.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/test/vendor/qunit.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/test/vendor/qunit.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/vendor/require.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/robots.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/test/vendor/runner.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/es5-shim/tests/spec/s-array.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/es5-shim/tests/spec/s-date.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/es5-shim/tests/spec/s-function.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/es5-shim/tests/spec/s-number.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/es5-shim/tests/spec/s-object.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/es5-shim/tests/spec/s-string.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/highcharts/themes/skies.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/test/speed.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/views/directives/sprint-summary.html.haml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/scripts/directives/sprint-summary.js.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/views/sprint.html.haml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/scripts/controllers/sprint_controller.js.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/scripts/directives/sprint_unstacked_bar_graph.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/views/directives/sprint_unstacked_bar_graph.html.haml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/page/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/test/test_browser.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/test/test_extendscript.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/test/test_json3.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/json3/benchmark/assets/ui.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/underscore-min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/docs/underscore.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/underscore.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/usage_stats.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/components/underscore/test/utility.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/app/scripts/services/utils.js.coffee" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/arrow_down.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/arrow_left.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/arrow_right.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/arrow_up.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/monotone_plus_add_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/rails.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/round_minus.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/controllers/boards_selector.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/controllers/sprint_controller.js.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/controllers/sprints.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/directives/sprint-summary.js.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/services/agileCubeService.js.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/widgets/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/cube.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/utils/col_utils.js.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/boards.css.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/overrides.css.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sprint.css.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sprints.css.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/templates/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/templates/directives/sprint-summary.html.haml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/templates/sprint.html.haml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/logo.gif" afterPath="$PROJECT_DIR$/angular/app/img/logo.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/controllers/.gitkeep" afterPath="$PROJECT_DIR$/angular/app/scripts/controllers/.gitkeep" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/controllers/Boards_controller.js.coffee" afterPath="$PROJECT_DIR$/angular/app/scripts/controllers/boards_controller.js.coffee" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/controllers/metrics.coffee" afterPath="$PROJECT_DIR$/angular/app/scripts/controllers/metrics.coffee" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/controllers/refresh_sprint_data.coffee" afterPath="$PROJECT_DIR$/angular/app/scripts/controllers/refresh_sprint_data.coffee" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/directives/assignee-board-summary.js.coffee" afterPath="$PROJECT_DIR$/angular/app/scripts/directives/assignee-board-summary.js.coffee" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/directives/board-summary.js.coffee" afterPath="$PROJECT_DIR$/angular/app/scripts/directives/board-summary.js.coffee" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/directives/chosen-boards.js.coffee" afterPath="$PROJECT_DIR$/angular/app/scripts/directives/chosen-boards.js.coffee" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/directives/chosen-sprints.js.coffee" afterPath="$PROJECT_DIR$/angular/app/scripts/directives/chosen-sprints.js.coffee" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/directives/sprint-grid.js.coffee" afterPath="$PROJECT_DIR$/angular/app/scripts/directives/sprint-grid.js.coffee" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/filters/.gitkeep" afterPath="$PROJECT_DIR$/angular/app/scripts/filters/.gitkeep" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/services/.gitkeep" afterPath="$PROJECT_DIR$/angular/app/scripts/services/.gitkeep" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/services/agileCubeService2.js.coffee" afterPath="$PROJECT_DIR$/angular/app/scripts/services/agileCubeService.js.coffee" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/angularApp.js.coffee" afterPath="$PROJECT_DIR$/angular/app/scripts/angularApp.js.coffee" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/angular/app/scripts/application.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/application_test.js" afterPath="$PROJECT_DIR$/angular/app/scripts/application_test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/boards.js.coffee" afterPath="$PROJECT_DIR$/angular/app/scripts/boards.js.coffee" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/cacheData.json" afterPath="$PROJECT_DIR$/angular/app/scripts/cacheData.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/changes.json" afterPath="$PROJECT_DIR$/angular/app/scripts/changes.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/sprint.js.coffee" afterPath="$PROJECT_DIR$/angular/app/scripts/sprint.js.coffee" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/sprints.js.coffee" afterPath="$PROJECT_DIR$/angular/app/scripts/sprints.js.coffee" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/tests/col_utils_Spec.coffee" afterPath="$PROJECT_DIR$/angular/app/scripts/tests/col_utils_Spec.coffee" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/tests/karma.conf.js" afterPath="$PROJECT_DIR$/angular/app/scripts/tests/karma.conf.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/tests/services/CubeTester_Spec.coffee" afterPath="$PROJECT_DIR$/angular/app/scripts/tests/services/CubeTester_Spec.coffee" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/tests/testdata/grid.js.coffee" afterPath="$PROJECT_DIR$/angular/app/scripts/tests/testdata/grid.js.coffee" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/templates/boards.html.haml" afterPath="$PROJECT_DIR$/angular/app/views/boards.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/templates/directives/assignee-board-summary.html.haml" afterPath="$PROJECT_DIR$/angular/app/views/directives/assignee-board-summary.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/templates/directives/board-summary.html.haml" afterPath="$PROJECT_DIR$/angular/app/views/directives/board-summary.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/templates/directives/chosen-boards.html.haml" afterPath="$PROJECT_DIR$/angular/app/views/directives/chosen-boards.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/templates/directives/chosen-sprints.html.haml" afterPath="$PROJECT_DIR$/angular/app/views/directives/chosen-sprints.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/templates/directives/sprint-grid.html.haml" afterPath="$PROJECT_DIR$/angular/app/views/directives/sprint-grid.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/templates/metrics.html.haml" afterPath="$PROJECT_DIR$/angular/app/views/metrics.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/templates/refresh-sprint-data.html.haml" afterPath="$PROJECT_DIR$/angular/app/views/refresh-sprint-data.html.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130603202915_create_changes.rb" afterPath="$PROJECT_DIR$/db/migrate/20130603202915_create_changes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130603203219_create_subtasks.rb" afterPath="$PROJECT_DIR$/db/migrate/20130603203219_create_subtasks.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/services/agileCubeService2.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/services/agileCubeService2.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/agile_data.rb" afterPath="$PROJECT_DIR$/app/services/agile_data.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/angularApp.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/angularApp.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/assignee.rb" afterPath="$PROJECT_DIR$/app/models/assignee.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/templates/boards.html.haml" afterPath="$PROJECT_DIR$/app/assets/templates/boards.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/agilytics.iml" afterPath="$PROJECT_DIR$/.idea/agilytics.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/change.rb" afterPath="$PROJECT_DIR$/app/models/change.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/cube.json" afterPath="$PROJECT_DIR$/app/assets/javascripts/cube.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/jira_caller.rb" afterPath="$PROJECT_DIR$/app/services/jira_caller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/templates/metrics.html.haml" afterPath="$PROJECT_DIR$/app/assets/templates/metrics.html.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/output_agile_data.rb" afterPath="$PROJECT_DIR$/app/services/output_agile_data.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/reporter.rb" afterPath="$PROJECT_DIR$/app/models/reporter.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/sprint.rb" afterPath="$PROJECT_DIR$/app/models/sprint.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/sprint_story.rb" afterPath="$PROJECT_DIR$/app/models/sprint_story.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/subtask.rb" afterPath="$PROJECT_DIR$/app/models/subtask.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="agilytics.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373807638216" ignored="false" />
-    <file path="/jira_caller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1374103855674" ignored="false" />
+    <file path="/Dummy.txt" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375125481640" ignored="false" />
+    <file path="/jira_caller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1374866454001" ignored="false" />
     <file path="/sprint_controller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369360013117" ignored="false" />
     <file path="/Gemfile" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372524672521" ignored="false" />
     <file path="/development.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1368641950738" ignored="false" />
@@ -74,11 +281,11 @@
     <file path="/metrics.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372286036872" ignored="false" />
     <file path="/assigneeSummary.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369326824945" ignored="false" />
     <file path="/assigneeSummary.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369325741029" ignored="false" />
-    <file path="/metrics.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373153791704" ignored="false" />
+    <file path="/metrics.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375124721320" ignored="false" />
     <file path="/application.js" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369765560953" ignored="false" />
     <file path="/boardSummary.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373153651520" ignored="false" />
     <file path="/assigneeVelocityService.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369257543180" ignored="false" />
-    <file path="/angularApp.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373160725375" ignored="false" />
+    <file path="/angularApp.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375190697297" ignored="false" />
     <file path="/boardsSelector.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369258418358" ignored="false" />
     <file path="/boardsController.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369769283352" ignored="false" />
     <file path="/boards.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373153231242" ignored="false" />
@@ -88,7 +295,7 @@
     <file path="/test.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369427154957" ignored="false" />
     <file path="/test_Spec.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369607893462" ignored="false" />
     <file path="/grid.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369608945617" ignored="false" />
-    <file path="/agileCubeService.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370283929447" ignored="false" />
+    <file path="/agileCubeService.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375136798419" ignored="false" />
     <file path="/jasmine.yml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369607983986" ignored="false" />
     <file path="/test_Spec.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369657648476" ignored="false" />
     <file path="/ColUtils.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369670450943" ignored="false" />
@@ -96,7 +303,7 @@
     <file path="/CubeTester_Spec.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370284101810" ignored="false" />
     <file path="/assigneeBoardSummary.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373152934138" ignored="false" />
     <file path="/overrides.css.scss" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369858239613" ignored="false" />
-    <file path="/temp.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372373025049" ignored="false" />
+    <file path="/temp.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1374679017033" ignored="false" />
     <file path="/changes.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370092304688" ignored="false" />
     <file path="/import_controller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370188665816" ignored="false" />
     <file path="/cube_controller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370206932051" ignored="false" />
@@ -108,17 +315,17 @@
     <file path="/test_helper.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370094784663" ignored="false" />
     <file path="/sub_task.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370908745003" ignored="false" />
     <file path="/agile_data.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1374096893146" ignored="false" />
-    <file path="/change.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373331514107" ignored="false" />
+    <file path="/change.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1374852818055" ignored="false" />
     <file path="/application.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370285506787" ignored="false" />
     <file path="/20130603202514_create_sprints.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373932615578" ignored="false" />
-    <file path="/20130603202915_create_changes.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373330893207" ignored="false" />
+    <file path="/20130603202915_create_changes.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1374852813783" ignored="false" />
     <file path="/20130603203140_create_cards.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370987065012" ignored="false" />
     <file path="/20130603203219_create_sub_tasks.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370898334317" ignored="false" />
     <file path="/20130603191155_create_boards.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370898527496" ignored="false" />
-    <file path="/a.dummy" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373926354945" ignored="false" />
+    <file path="/a.dummy" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375110500073" ignored="false" />
     <file path="/yahoofinance.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370793959960" ignored="false" />
     <file path="/20130603203219_create_subtasks.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373145521826" ignored="false" />
-    <file path="/sprint_story.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373931071745" ignored="false" />
+    <file path="/sprint_story.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1374865745270" ignored="false" />
     <file path="/20130603203140_create_stories.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1371150172190" ignored="false" />
     <file path="/20130611225046_create_sprint_stories.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1371911557573" ignored="false" />
     <file path="/rest_caller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372081974787" ignored="false" />
@@ -132,12 +339,12 @@
     <file path="/subtask.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373330912958" ignored="false" />
     <file path="/assignee.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373145430761" ignored="false" />
     <file path="/output_agile_data.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373331374163" ignored="false" />
-    <file path="/agileCubeService2.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373332257124" ignored="false" />
+    <file path="/agileCubeService2.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1374679461999" ignored="false" />
     <file path="$PROJECT_DIR$/../yeoman-angular-haml/app/scripts/controllers/main.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373059536653" ignored="false" />
     <file path="/main.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373059536653" ignored="false" />
     <file path="$PROJECT_DIR$/../yeoman-angular-haml/app/usage_stats.json" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372715343729" ignored="false" />
     <file path="$PROJECT_DIR$/../yeoman-angular-haml/app/index.html" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373047355553" ignored="false" />
-    <file path="/index.html" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373047355123" ignored="false" />
+    <file path="/index.html" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375136438127" ignored="false" />
     <file path="$PROJECT_DIR$/../yeoman-angular-haml/app/views/main.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373126717983" ignored="false" />
     <file path="/main.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373124415358" ignored="false" />
     <file path="$PROJECT_DIR$/../yeoman-angular-haml/.tmp/scripts/controllers/main.js" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373059544342" ignored="false" />
@@ -153,14 +360,22 @@
     <file path="$PROJECT_DIR$/../yeoman-angular-haml/app/styles/main.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373057664422" ignored="false" />
     <file path="/main.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373057664422" ignored="false" />
     <file path="/reporter.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373145421201" ignored="false" />
-    <file path="/sprint_controller.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373810126668" ignored="false" />
-    <file path="/sprint.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373812709514" ignored="false" />
-    <file path="/sprint-summary.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1374116186372" ignored="false" />
-    <file path="/sprint-summary.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1374116033580" ignored="false" />
-    <file path="/board-summary.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373934101712" ignored="false" />
+    <file path="/sprint_controller.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375030806097" ignored="false" />
+    <file path="/sprint.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375030462536" ignored="false" />
+    <file path="/sprint-summary.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375115673988" ignored="false" />
+    <file path="/sprint-summary.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375115543870" ignored="false" />
+    <file path="/board-summary.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375032775937" ignored="false" />
     <file path="/fragment.js2" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373839445043" ignored="false" />
     <file path="/application.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373841751169" ignored="false" />
-    <file path="/board-summary.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373934113088" ignored="false" />
+    <file path="/board-summary.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1374788824268" ignored="false" />
+    <file path="/assignee-board-summary.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1374675851078" ignored="false" />
+    <file path="/sprint_unstacked_bar_graph.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375030819831" ignored="false" />
+    <file path="/sprint_unstacked_bar_graph.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1374938032174" ignored="false" />
+    <file path="/utils.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375111149431" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/bower.json" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375134210096" ignored="false" />
+    <file path="/bower.json" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375134339232" ignored="false" />
+    <file path="/Gruntfile.js" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375318744696" ignored="false" />
+    <file path="/index.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375307468110" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,96 +401,94 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="sprint-summary.js.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/directives/sprint-summary.js.coffee">
+        <entry file="file://$PROJECT_DIR$/angular/app/scripts/directives/sprint-summary.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="75" selection-start="3533" selection-end="3533" vertical-scroll-proportion="0.0">
+            <state line="0" column="27" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0">
               <folding>
-                <marker date="1374116130000" expanded="true" signature="3479:3492" placeholder="..." />
+                <marker date="1375136285000" expanded="false" signature="9655:9668" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sprint.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/templates/sprint.html.haml">
+      <file leaf-file-name="angularApp.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular/app/scripts/angularApp.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="26" column="31" selection-start="770" selection-end="770" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jira_caller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/services/jira_caller.rb">
+      <file leaf-file-name="metrics.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular/app/scripts/controllers/metrics.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="132" column="47" selection-start="3252" selection-end="3252" vertical-scroll-proportion="0.0">
+            <state line="10" column="0" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.haml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/angular/app/index.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="0" selection-start="1712" selection-end="1712" vertical-scroll-proportion="0.77574754">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/boards/index.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="0" selection-start="440" selection-end="440" vertical-scroll-proportion="-14.375">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application_test.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular/app/scripts/application_test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding>
-                <marker date="1374104194000" expanded="true" signature="16:3829" placeholder=" ... end" />
-                <marker date="1374104194000" expanded="true" signature="2499:3721" placeholder=" ... end" />
-                <marker date="1374104194000" expanded="true" signature="2859:3711" placeholder="if ... end" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="boards.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular/app/scripts/boards.js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="0" selection-start="0" selection-end="229" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="agileCubeService.js.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/services/agileCubeService.js.coffee">
+        <entry file="file://$PROJECT_DIR$/angular/app/scripts/services/agileCubeService.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="115" column="30" selection-start="2723" selection-end="2723" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="output_agile_data.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/services/output_agile_data.rb">
+      <file leaf-file-name="Gruntfile.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular/Gruntfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="11" selection-start="459" selection-end="459" vertical-scroll-proportion="0.0">
+            <state line="142" column="4" selection-start="3377" selection-end="3377" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="change.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/change.rb">
+      <file leaf-file-name="utils.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular/app/scripts/services/utils.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sprint-summary.html.haml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/assets/templates/directives/sprint-summary.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="5" selection-start="19" selection-end="19" vertical-scroll-proportion="0.025906736">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="agile_data.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/services/agile_data.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="26" selection-start="2110" selection-end="2110" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sprint.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/sprint.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="29" selection-start="81" selection-end="91" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20130603202514_create_sprints.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20130603202514_create_sprints.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="43" selection-start="475" selection-end="501" vertical-scroll-proportion="0.0">
+            <state line="19" column="40" selection-start="672" selection-end="672" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -302,22 +515,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/services/output_agile_data.rb" />
-        <option value="$PROJECT_DIR$/app/models/change.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/angular/services/agileCubeService2.js.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/angular/directives/chosen-boards.js.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/angular/controllers/sprint_controller.js.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-        <option value="$PROJECT_DIR$/app/models/sprint_story.rb" />
-        <option value="$PROJECT_DIR$/app/models/sprint.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20130603202514_create_sprints.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/angular/directives/board-summary.js.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/templates/directives/board-summary.html.haml" />
-        <option value="$PROJECT_DIR$/app/services/agile_data.rb" />
-        <option value="$PROJECT_DIR$/app/services/jira_caller.rb" />
-        <option value="$PROJECT_DIR$/app/assets/templates/sprint.html.haml" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/angular/directives/sprint-summary.js.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/templates/directives/sprint-summary.html.haml" />
+        <option value="$PROJECT_DIR$/angular/.tmp/scripts/angularApp.js" />
+        <option value="$PROJECT_DIR$/angular/app/scripts/directives/assignee-board-summary.js.coffee" />
+        <option value="$PROJECT_DIR$/angular/app/scripts/directives/board-summary.js.coffee" />
+        <option value="$PROJECT_DIR$/angular/app/scripts/directives/chosen-boards.js.coffee" />
+        <option value="$PROJECT_DIR$/angular/app/scripts/directives/chosen-sprints.js.coffee" />
+        <option value="$PROJECT_DIR$/angular/app/scripts/directives/sprint-grid.js.coffee" />
+        <option value="$PROJECT_DIR$/angular/app/scripts/directives/sprint-summary.js.coffee" />
+        <option value="$PROJECT_DIR$/angular/app/scripts/services/agileCubeService2.js.coffee" />
+        <option value="$PROJECT_DIR$/angular/app/scripts/controllers/metrics.coffee" />
+        <option value="$PROJECT_DIR$/angular/app/scripts/services/agileCubeService.js.coffee" />
+        <option value="$PROJECT_DIR$/angular/app/scripts/services/utils.js.coffee" />
+        <option value="$PROJECT_DIR$/angular/app/scripts/angularApp.js.coffee" />
+        <option value="$PROJECT_DIR$/angular/app/scripts/directives/sprint_unstacked_bar_graph.coffee" />
+        <option value="$PROJECT_DIR$/angular/app/index.html" />
+        <option value="$PROJECT_DIR$/angular/Gruntfile.js" />
+        <option value="$PROJECT_DIR$/angular/app/index.html.haml" />
       </list>
     </option>
   </component>
@@ -404,95 +617,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sprints" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="import" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -517,106 +642,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="directives" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -634,60 +659,18 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="angular" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="directives" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
       <pane id="Scope" />
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -705,15 +688,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/assets/templates/directives" />
-      <recent name="$PROJECT_DIR$/app/assets/javascripts/angular/directives" />
+      <recent name="$PROJECT_DIR$/angular/.tmp" />
+      <recent name="$PROJECT_DIR$/angular" />
+      <recent name="$PROJECT_DIR$/angular/app/img" />
+      <recent name="$PROJECT_DIR$/angular/app/components" />
+      <recent name="$PROJECT_DIR$/angular/app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/assets/templates" />
-      <recent name="$PROJECT_DIR$/app/services" />
-      <recent name="$PROJECT_DIR$/app/assets/javascripts/utils" />
-      <recent name="$PROJECT_DIR$/app/assets/javascripts" />
-      <recent name="$PROJECT_DIR$/app/assets/javascripts/angular/tests/services" />
+      <recent name="$PROJECT_DIR$/angular/app/cubes" />
+      <recent name="$PROJECT_DIR$/angular/.tmp" />
+      <recent name="$PROJECT_DIR$/angular/app/views" />
+      <recent name="$PROJECT_DIR$/angular/app/img" />
+      <recent name="$PROJECT_DIR$/angular/app/scripts" />
     </key>
   </component>
   <component name="RunManager" selected="Ruby.import_data">
@@ -1098,15 +1084,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="774" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="22" width="1280" height="774" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32791728" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32892805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3206975" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3204461" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959481" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3071313" sideWeight="0.6793025" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33468395" sideWeight="0.6793025" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4138439" sideWeight="0.99841267" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30470017" sideWeight="0.42562592" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.634757" sideWeight="0.50039154" order="9" side_tool="true" content_ui="tabs" />
@@ -1181,12 +1167,12 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/app/assets/javascripts/tests/services/CubeTester_Spec.coffee</url>
+          <url>file://$PROJECT_DIR$/angular/app/scripts/tests/services/CubeTester_Spec.coffee</url>
           <line>58</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/app/assets/javascripts/tests/services/CubeTester_Spec.coffee</url>
+          <url>file://$PROJECT_DIR$/angular/app/scripts/tests/services/CubeTester_Spec.coffee</url>
           <line>54</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
@@ -1203,120 +1189,120 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/directives/chosen-sprints.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="649" selection-end="713" vertical-scroll-proportion="0.0">
+        <state line="0" column="27" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/controllers/sprint_controller.js.coffee">
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/directives/sprint-grid.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="38" selection-start="121" selection-end="121" vertical-scroll-proportion="0.0">
+        <state line="0" column="27" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/sprint_story.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="150" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.6395817">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/directives/board-summary.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="56" selection-start="3384" selection-end="3384" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/templates/directives/board-summary.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="70" selection-start="517" selection-end="517" vertical-scroll-proportion="-7.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/services/output_agile_data.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="11" selection-start="459" selection-end="459" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/services/agile_data.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="26" selection-start="2110" selection-end="2110" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130603202514_create_sprints.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="43" selection-start="475" selection-end="501" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/cube.json">
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/services/jira_caller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="47" selection-start="3252" selection-end="3252" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1374104194000" expanded="true" signature="16:3829" placeholder=" ... end" />
-            <marker date="1374104194000" expanded="true" signature="2499:3721" placeholder=" ... end" />
-            <marker date="1374104194000" expanded="true" signature="2859:3711" placeholder="if ... end" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/services/agileCubeService.js.coffee">
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/application_test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/change.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/sprint.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="29" selection-start="81" selection-end="91" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/templates/sprint.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/directives/sprint-summary.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="75" selection-start="3533" selection-end="3533" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1374116130000" expanded="true" signature="3479:3492" placeholder="..." />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/templates/directives/sprint-summary.html.haml">
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/boards.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="5" selection-start="19" selection-end="19" vertical-scroll-proportion="0.025906736">
+        <state line="3" column="0" selection-start="0" selection-end="229" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/controllers/metrics.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/components/angular-ui-router/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="28" selection-start="573" selection-end="573" vertical-scroll-proportion="0.20531401">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/services/agileCubeService.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="30" selection-start="2723" selection-end="2723" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/services/utils.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="40" selection-start="672" selection-end="672" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/angularApp.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="31" selection-start="770" selection-end="770" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/directives/sprint-summary.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="27" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1375136285000" expanded="false" signature="9655:9668" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/directives/sprint_unstacked_bar_graph.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="64" selection-start="2678" selection-end="2678" vertical-scroll-proportion="0.85623">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/boards/index.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="440" selection-end="440" vertical-scroll-proportion="-14.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="142" column="4" selection-start="3377" selection-end="3377" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/index.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="0" selection-start="1712" selection-end="1712" vertical-scroll-proportion="0.77574754">
           <folding />
         </state>
       </provider>

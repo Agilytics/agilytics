@@ -41,9 +41,6 @@ module.directive('assigneeBoardSummary', [ "$http", "$timeout", ($http, $timeout
         if(dateFilter)
           filteredWorkActivities = _.filter(assignee.workActivities,
             (v)->
-                if(!v.sprint)
-                  debugger
-
                 filter = new Date(v.sprint.startDate) >= dateTimeFilter &&
                 ( thereIsNoBoardFilter ||  v.board.pid == options.board.pid )
 
@@ -120,7 +117,7 @@ module.directive('assigneeBoardSummary', [ "$http", "$timeout", ($http, $timeout
           if(!series.length || !series[0].data.length)
             $(id).html("<br><h4>No data</h4>")
           else
-            $(id).highcharts
+            hchartsObj =
               chart:
                 type: "bar"
 
@@ -144,8 +141,12 @@ module.directive('assigneeBoardSummary', [ "$http", "$timeout", ($http, $timeout
               plotOptions:
                 series:
                   stacking: "normal"
+                  color: "#BABABA"
 
               series: series
+
+            delete hchartsObj.plotOptions.series.color unless thereIsABoardFilter
+            $(id).highcharts hchartsObj
 
       sg = ->
           _showGraph("#assignees-velocities-graph-" + scope.boardId, seriesObj.series, categoriesByVelocity, "Assignees velocity" + addBoardTitle, "Story Points")

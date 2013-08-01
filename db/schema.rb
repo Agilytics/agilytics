@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(:version => 20130619232726) do
     t.string   "associated_story_pid"
     t.string   "associated_subtask_pid"
     t.string   "new_value"
-    t.string   "old_value"
+    t.string   "current_story_value"
     t.integer  "board_id"
     t.integer  "sprint_id"
     t.integer  "sprint_story_id"

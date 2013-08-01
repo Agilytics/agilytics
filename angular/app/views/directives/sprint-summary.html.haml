@@ -1,0 +1,65 @@
+%div.ng-cloak
+  %br
+  %h3
+    %span(style="color:#CDCDCD") {{sprint.board.name}} :
+    %select(style="font-size:16px; font-weight:bold; height:32px" ng-model="selectedSprint" ng-options="lsprint as lsprint.name for lsprint in sprints" ng-change="gotoSprint(selectedSprint)")
+  %p
+    %span(style="color:#CDCDCD") From:
+    {{dateFormat(sprint.startDate)}}
+    %span(style="color:#CDCDCD") To:
+    %span(style="color:#565656") {{dateFormat(sprint.endDate)}}
+
+    %span.btn-group(style="float:right")
+      %button.btn.btn-mini(ng-class="{active: showAllSprints}" ng-click="showAllSprints = true; showGraph()" ) Show All Sprints
+      %button.btn.btn-mini(ng-class="{active: !showAllSprints}" ng-click="showAllSprints = false; showGraph()" ) Show only {{sprint.name}}
+
+  %div.hero-unit(style="margin-top:10px; padding:15px; height:500px")
+    %div(id="sprint-{{sprint.pid}}")
+
+  -#%div.hero-unit(style="padding-top:15px; padding-bottom:0px; margin-bottom:-5px")
+
+
+  %div.hero-unit(style="padding-top:15px; padding-bottom:15px; margin-bottom:-5px")
+    %board-summary(board="sprint.board" sprint="sprint" showTable="showTable" colors="colors")
+    %sprint-unstacked-bar-graph(sprint="sprint" colors="colors")
+
+  %div(ng-repeat="suspect in usualSuspects")
+    %div(style="border:solid 1px {{suspect.color}}")
+      %div(style="background-color:{{suspect.color}}") &nbsp;
+      %h4(style="padding:5px")  {{suspect.size}} pts : {{suspect.title}}
+      %table.table.table-striped
+        %tbody
+          %tr
+            %th ID
+            %th Name
+            %th InitSize
+            %th Size
+            %th Reporter
+            %th Assignee
+          %tr(ng-repeat="ss in suspect.sprintStories")
+            %td {{ss.story.pid}}
+            %td {{ss.story.name}}
+            %td {{ss.initSize}}
+            %td {{ss.size}}
+            %td {{ss.reporter.displayName}}
+            %td {{ss.assignee.displayName}}
+    %br
+  %div(style="border:1px solid gray")
+    %h3(style="background-color:#DDD; margin-bottom:0; margin-top:0; padding-left:5px;") Sprint Activity
+    %table.table.table-striped
+      %tbody(ng-repeat="co in changeDates")
+        %tr(style="color:#ABABAB")
+          %th &nbsp;
+          %th {{co.date}} △ {{co.netValue}}
+          %th &nbsp;
+          %th {{co.netVelocity}}
+        %tr( ng-repeat="c in co.changes" ng-class="{strong: !!c.value}" style="font-size:12px; color:gray")
+          %td {{c.value}}
+          %td {{c.name}}
+          %td(style="font-size:.8em; width:50px") {{ c.change.sprintStory.story.pid }}
+          %td {{c.netVelocity}}
+        %tr
+          %td &nbsp;
+          %td &nbsp;
+          %th &nbsp;
+          %td &nbsp;

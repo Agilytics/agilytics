@@ -34,7 +34,7 @@ class OutputAgileData
 
     max_date = Date.parse('01-01-1970')
     @out_sprints.keys.each do |key|
-        max_date = @out_sprints[key]['endDate'] if @out_sprints[key]['endDate'] > max_date
+        max_date = @out_sprints[key]['endDate'] if @out_sprints[key]['endDate'] && @out_sprints[key]['endDate'] > max_date
     end
 
     output['endOfLastSprint'] = max_date

@@ -30,6 +30,7 @@ class SprintStory < ActiveRecord::Base
   def set_if_added_or_removed(change)
     if !! change.if_of_action(Change::ADDED)
       self.was_added = true
+      self.was_removed = false
     elsif !! change.action.index(Change::REMOVED)
       self.was_removed = true
     end
@@ -39,6 +40,7 @@ class SprintStory < ActiveRecord::Base
     if !!change.if_of_action(Change::STATUS_LOCATION_CHANGE)
       # assumption being that the events are happening in order of time, last status is current
       self.is_done = change.is_done
+      change.new_value
     end
   end
 
@@ -50,7 +52,6 @@ class SprintStory < ActiveRecord::Base
 
     elsif change.if_of_action(Change::ESTIMATE_CHANGED)
       self.size = 0 unless self.size
-      change.old_value = self.size.to_s
       self.size = change.new_value.to_i
       unless self.is_initialized
         self.init_size = 0

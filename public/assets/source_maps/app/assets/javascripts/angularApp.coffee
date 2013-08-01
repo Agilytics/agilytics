@@ -15,9 +15,10 @@ window.module = angular.module('agilytics',['ui.compat'])
         )
         .state(
           'sprints', {
-            url: '/sprints/:sprintId',
+            url: '/sprints/:sprintId?all',
             templateUrl: '/assets/sprint.html'
             controller: SprintController
+            onExit: -> $("body").off("keydown");
           }
         )
         .state(

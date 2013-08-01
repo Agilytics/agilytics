@@ -121,6 +121,8 @@ class JiraCaller
       story_or_subtask = get_or_create_story_or_task(change.associated_story_pid, board)
     end
 
+    change.save()
+
     if story_or_subtask.instance_of? Subtask
       subtasks[pid] = story_or_subtask
       change.associated_subtask_pid = story_or_subtask.pid
@@ -133,25 +135,29 @@ class JiraCaller
 
         # sprint story pid is a combination of the story & sprint
         change.sprint_story = sprint_story
-
+        change.associated_story_pid = story_or_subtask.pid
         sprint_story.pid = sprint.pid + pid
         sprint_story.assignee = story_or_subtask.assignee
         sprint_story.reporter = story_or_subtask.reporter
 
-        sprint_story.set_size_of_story(change)
-        sprint_story.set_is_story_done(change)
-        sprint_story.set_if_added_or_removed(change)
-
-        sprint_story.save()
-
+        # if removed, don't update unless we're adding it back
+        if !sprint_story.was_removed || sprint_story.was_removed && change.if_of_action(Change::ADDED)
+          sprint_story.set_size_of_story(change)
+          change.check_if_reopened(sprint_story)
+          change.current_story_value = sprint_story.size
+          sprint_story.set_is_story_done(change)
+          sprint_story.set_if_added_or_removed(change)
+          change.current_story_value = sprint_story.size
+          sprint_story.save()
+          change.save()
+        else
+          change.delete()
+        end
       #end
-
-
     end
-    change.save()
+
     story_or_subtask.save()
 
-    change.associated_story_pid = story_or_subtask.pid
   end
 
   protected

@@ -1,0 +1,78 @@
+<!doctype html>
+/[if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7">
+/[if IE 7] <html class="no-js lt-ie9 lt-ie8">
+/[if IE 8] <html class="no-js lt-ie9">
+/ [if gt IE 8]><!
+%html.no-js
+  / <![endif]
+  %head
+    %meta( charset = "utf-8")/
+    %meta( content = "IE=edge,chrome=1" http-equiv= "X-UA-Compatible")/
+    %title
+    %meta( content = "" name = "description")/
+    %meta( content = "width=device-width" name= "viewport")/
+    / Place favicon.ico and apple-touch-icon.png in the root directory
+    / build:css styles/main.css
+    %link( href = "styles/bootstrap.css" rel = "stylesheet")/
+    %link( href = "styles/main.css" rel = "stylesheet")/
+    / endbuild
+  %body(ng-app= "agilytics" ng-class= "{noScroll:noScroll}")
+    /[if lt IE 7]
+      %p.chromeframe
+        You are using an outdated browser.
+        %a(href="http://browsehappy.com/") Upgrade your browser today
+        or
+        %a(href="http://www.google.com/chromeframe/?redirect=true") install Google Chrome Frame
+        to better experience this site.
+    /[if lt IE 9]
+      %script( src="components/es5-shim/es5-shim.js")
+      %script( src="components/json3/lib/json3.min.js")
+    / Add your site or application content here
+    / Begin Nav
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          %a.brand{:href => "#"}
+            %img{:src => "/assets/logo.gif"}/
+          %ul.nav
+            %li{"ng-class" => "{ active: $state.includes('') }"}
+              %a{:href => "#/all"} All
+            %li{"ng-class" => "{ active: $state.includes('') }"}
+              %a{:href => "#/boards"} Boards
+            %li{"ng-class" => "{ active: $state.includes('') }"}
+              %a{:href => "#/assignees"} Boards
+
+          %p.navbar-text.pull-right{"ui-view" => "hint"}
+    / end Nav
+    .container{:style => "margin-top:40px", "ui-view" => ""}
+    .container( ng-view = "" )
+    %script( src = "components/jquery/jquery.min.js" )
+    %script( src = "components/underscore/underscore-min.js" )
+    %script( src = "components/highcharts/highcharts.js" )
+    %script( src = "components/angular/angular.js" )
+    %script( src = "components/angular-ui-router/release/angular-ui-router.js" )
+    %script( src = "components/angular-resource/angular-resource.js" )
+    %script( src = "components/angular-cookies/angular-cookies.js" )
+    %script( src = "components/angular-sanitize/angular-sanitize.js" )
+    / app
+    %script( src = "scripts/angularApp.js")
+    / build:js scripts/scripts.js
+    / services
+    %script(src = "scripts/services/agileCubeService.js")
+    %script(src = "scripts/services/utils.js")
+    / controllers
+    %script( src = "scripts/controllers/boards_controller.js")
+    %script( src = "scripts/controllers/metrics.js")
+    %script( src = "scripts/controllers/sprint_controller.js")
+    / directives
+    %script(src = "scripts/directives/assignee-board-summary.js")
+    %script(src = "scripts/directives/board-summary.js")
+    %script(src = "scripts/directives/sprint-summary.js")
+    %script(src = "scripts/directives/sprint_unstacked_bar_graph.js")
+    / endbuild
+    / Google Analytics: change UA-XXXXX-X to be your site's ID.
+    :javascript
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
