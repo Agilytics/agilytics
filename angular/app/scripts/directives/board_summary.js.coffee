@@ -147,7 +147,7 @@ angular.module('agilytics').directive('boardSummary', [ "$http", "$timeout", ($h
 
   restrict: 'E',
   link: linker,
-  templateUrl: "views/directives/board-summary.html"
+  templateUrl: "views/directives/board_summary.html"
   scope:
       board: "="
       sprint: "="

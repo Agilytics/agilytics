@@ -3,5 +3,5 @@
 %br
 %div(ng-repeat="board in cube.boardsWithSprints")
   %div.hero-unit
-    %board-summary(board="board")
-
+    %board-summary-trend-line(board="board" colors="colors")
+    -#%board-summary(board="board" colors="colors")

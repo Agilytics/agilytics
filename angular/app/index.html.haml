@@ -45,7 +45,7 @@
           %p.navbar-text.pull-right{"ui-view" => "hint"}
     / end Nav
     .container{:style => "margin-top:40px", "ui-view" => ""}
-    .container( ng-view = "" )
+
     %script( src = "components/jquery/jquery.min.js" )
     %script( src = "components/underscore/underscore-min.js" )
     %script( src = "components/highcharts/highcharts.js" )
@@ -55,7 +55,7 @@
     %script( src = "components/angular-cookies/angular-cookies.js" )
     %script( src = "components/angular-sanitize/angular-sanitize.js" )
     / app
-    %script( src = "scripts/angularApp.js")
+    %script( src = "scripts/angular_app.js")
     / build:js scripts/scripts.js
     / services
     %script(src = "scripts/services/agileCubeService.js")
@@ -65,9 +65,10 @@
     %script( src = "scripts/controllers/metrics.js")
     %script( src = "scripts/controllers/sprint_controller.js")
     / directives
-    %script(src = "scripts/directives/assignee-board-summary.js")
-    %script(src = "scripts/directives/board-summary.js")
-    %script(src = "scripts/directives/sprint-summary.js")
+    %script(src = "scripts/directives/assignee_board_summary.js")
+    %script(src = "scripts/directives/board_summary.js")
+    %script(src = "scripts/directives/board_summary_trend_line.js")
+    %script(src = "scripts/directives/sprint_summary.js")
     %script(src = "scripts/directives/sprint_unstacked_bar_graph.js")
     / endbuild
     / Google Analytics: change UA-XXXXX-X to be your site's ID.

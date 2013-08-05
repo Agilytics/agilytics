@@ -198,5 +198,5 @@ angular.module('agilytics').directive('assigneeBoardSummary', [ "$http", "$timeo
       board: "="
       enddatetime: "="
 
-  templateUrl: "views/directives/assignee-board-summary.html"
+  templateUrl: "views/directives/assignee_board_summary.html"
 ])

@@ -16,11 +16,9 @@
   %div.hero-unit(style="margin-top:10px; padding:15px; height:500px")
     %div(id="sprint-{{sprint.pid}}")
 
-  -#%div.hero-unit(style="padding-top:15px; padding-bottom:0px; margin-bottom:-5px")
-
-
   %div.hero-unit(style="padding-top:15px; padding-bottom:15px; margin-bottom:-5px")
-    %board-summary(board="sprint.board" sprint="sprint" showTable="showTable" colors="colors")
+    %board-summary-trend-line(board="sprint.board" sprint="sprint" showTable="showTable" colors="colors")
+    -#%board-summary(board="sprint.board" sprint="sprint" showTable="showTable" colors="colors")
     %sprint-unstacked-bar-graph(sprint="sprint" colors="colors")
 
   %div(ng-repeat="suspect in usualSuspects")

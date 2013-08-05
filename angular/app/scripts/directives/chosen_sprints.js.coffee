@@ -27,5 +27,5 @@ angular.module('agilytics').directive('chosenSprints', [ "$http", ($http) ->
 
   restrict: 'E',
   link: linker,
-  templateUrl: "views/directives/chosenSprints.html"
+  templateUrl: "views/directives/chosen_sprints.html"
 ])

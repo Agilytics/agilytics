@@ -18,7 +18,7 @@
 //= require angular-ui-bootstrap-tpls
 //
 //= require_tree ./utils
-//= require ./angularApp
+//= require ./angular_app
 //= require_tree ./angular
 //
 //

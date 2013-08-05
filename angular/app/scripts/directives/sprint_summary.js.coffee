@@ -313,7 +313,7 @@ class SprintSummary
   ]
 
   restrict: 'E'
-  templateUrl: "views/directives/sprint-summary.html"
+  templateUrl: "views/directives/sprint_summary.html"
   scope: {
     sprint: "="
     colors: "="

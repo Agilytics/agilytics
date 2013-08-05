@@ -43,5 +43,5 @@ angular.module('agilytics').directive('sprintGrid', [ "$http", ($http) ->
 
   restrict: 'E',
   link: linker,
-  templateUrl: "views/directives/sprintGrid.html"
+  templateUrl: "views/directives/sprint_grid.html"
 ])

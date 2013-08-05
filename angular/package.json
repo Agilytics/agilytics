@@ -26,7 +26,8 @@
     "grunt-google-cdn": "~0.1.1",
     "grunt-ngmin": "~0.0.2",
     "grunt-haml": "~0.5.0",
-    "grunt-connect-proxy": "~0.1.5"
+    "grunt-connect-proxy": "~0.1.5",
+    "grunt-contrib-watch": "~0.5.1"
   },
   "engines": {
     "node": ">=0.8.0"
