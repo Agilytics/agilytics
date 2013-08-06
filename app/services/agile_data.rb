@@ -40,7 +40,11 @@
 
 
   def process_board(board)
-      board.sprints.each &method(:process_sprint)
+      board.sprints.each do |sprint|
+        if sprint.have_all_changes && !sprint.have_processed_all_changes
+          process_sprint sprint
+        end
+      end
   end
 
   def process_sprint(sprint)

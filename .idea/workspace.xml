@@ -7,16 +7,34 @@
     <bookmark url="file://$PROJECT_DIR$/angular/app/scripts/directives/assignee_board_summary.js.coffee" line="42" />
     <bookmark url="file://$PROJECT_DIR$/angular/app/scripts/controllers/sprint_controller.js.coffee" line="6" mnemonic="3" />
     <bookmark url="file://$PROJECT_DIR$/angular/app/scripts/directives/sprint_summary.js.coffee" line="30" />
-    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" line="327" />
-    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" line="132" />
+    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" line="350" />
     <bookmark url="file://$PROJECT_DIR$/angular/app/scripts/directives/sprint_summary.js.coffee" line="43" />
+    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" line="96" />
+    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" line="119" />
+    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" line="175" />
+    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" line="252" />
+    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" line="77" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" name="Default" comment="" />
+    <list default="true" id="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/angular/app/cubes/cube.json" afterPath="$PROJECT_DIR$/angular/app/cubes/cube_2013_8_1.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/Gruntfile.coffee" afterPath="$PROJECT_DIR$/angular/Gruntfile.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/scripts/services/agileCubeService.js.coffee" afterPath="$PROJECT_DIR$/angular/app/scripts/services/agileCubeService.js.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/agile_data.rb" afterPath="$PROJECT_DIR$/app/services/agile_data.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/views/directives/board_summary_trend_line.html.haml" afterPath="$PROJECT_DIR$/angular/app/views/directives/board_summary_trend_line.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/scripts/directives/board_summary_trend_line.js.coffee" afterPath="$PROJECT_DIR$/angular/app/scripts/directives/board_summary_trend_line.js.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/import_data.rake" afterPath="$PROJECT_DIR$/lib/tasks/import_data.rake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/jira_caller.rb" afterPath="$PROJECT_DIR$/app/services/jira_caller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/views/metrics.html.haml" afterPath="$PROJECT_DIR$/angular/app/views/metrics.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/package.json" afterPath="$PROJECT_DIR$/angular/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/views/directives/sprint_summary.html.haml" afterPath="$PROJECT_DIR$/angular/app/views/directives/sprint_summary.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/scripts/directives/sprint_summary.js.coffee" afterPath="$PROJECT_DIR$/angular/app/scripts/directives/sprint_summary.js.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="agilytics.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375737826799" ignored="false" />
-    <file path="/jira_caller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1374866454001" ignored="false" />
+    <file path="/jira_caller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375759466375" ignored="false" />
     <file path="/sprint_controller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369360013117" ignored="false" />
     <file path="/Gemfile" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372524672521" ignored="false" />
     <file path="/development.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1368641950738" ignored="false" />
@@ -33,7 +51,7 @@
     <file path="/metrics.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372286036872" ignored="false" />
     <file path="/assigneeSummary.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369326824945" ignored="false" />
     <file path="/assigneeSummary.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369325741029" ignored="false" />
-    <file path="/metrics.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375325895691" ignored="false" />
+    <file path="/metrics.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375739909719" ignored="false" />
     <file path="/application.js" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369765560953" ignored="false" />
     <file path="/boardSummary.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373153651520" ignored="false" />
     <file path="/assigneeVelocityService.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369257543180" ignored="false" />
@@ -47,7 +65,7 @@
     <file path="/test.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369427154957" ignored="false" />
     <file path="/test_Spec.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369607893462" ignored="false" />
     <file path="/grid.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369608945617" ignored="false" />
-    <file path="/agileCubeService.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375136798419" ignored="false" />
+    <file path="/agileCubeService.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375756706650" ignored="false" />
     <file path="/jasmine.yml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369607983986" ignored="false" />
     <file path="/test_Spec.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369657648476" ignored="false" />
     <file path="/ColUtils.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369670450943" ignored="false" />
@@ -62,11 +80,11 @@
     <file path="/sprint_data.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369942898308" ignored="false" />
     <file path="/jira_user.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369942911710" ignored="false" />
     <file path="/card.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1371042382462" ignored="false" />
-    <file path="/import_data.rake" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372283126053" ignored="false" />
+    <file path="/import_data.rake" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375759157898" ignored="false" />
     <file path="/test.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370094136740" ignored="false" />
     <file path="/test_helper.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370094784663" ignored="false" />
     <file path="/sub_task.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370908745003" ignored="false" />
-    <file path="/agile_data.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1374096893146" ignored="false" />
+    <file path="/agile_data.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375756172211" ignored="false" />
     <file path="/change.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1374852818055" ignored="false" />
     <file path="/application.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370285506787" ignored="false" />
     <file path="/20130603202514_create_sprints.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373932615578" ignored="false" />
@@ -128,10 +146,11 @@
     <file path="/bower.json" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375134339232" ignored="false" />
     <file path="/Gruntfile.js" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375733433140" ignored="false" />
     <file path="/index.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375325340883" ignored="false" />
-    <file path="/board_summary_trend_line.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375733936435" ignored="false" />
-    <file path="/board_summary_trend_line.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375737403182" ignored="false" />
-    <file path="/sprint_summary.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375733466668" ignored="false" />
-    <file path="/Gruntfile.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375736983427" ignored="false" />
+    <file path="/board_summary_trend_line.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375745996513" ignored="false" />
+    <file path="/board_summary_trend_line.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375749406906" ignored="false" />
+    <file path="/sprint_summary.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375739930699" ignored="false" />
+    <file path="/Gruntfile.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375741106640" ignored="false" />
+    <file path="/sprint_summary.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375745602718" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,8 +178,10 @@
       <file leaf-file-name="sprint_summary.js.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/angular/app/scripts/directives/sprint_summary.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="184" column="62" selection-start="7892" selection-end="7892" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="231" column="33" selection-start="9362" selection-end="9362" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1375745637000" expanded="true" signature="9654:9667" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -168,25 +189,34 @@
       <file leaf-file-name="board_summary_trend_line.js.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/angular/app/scripts/directives/board_summary_trend_line.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="155" column="26" selection-start="4690" selection-end="4690" vertical-scroll-proportion="0.0">
+            <state line="99" column="18" selection-start="3182" selection-end="3182" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular/package.json">
+      <file leaf-file-name="jira_caller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/services/jira_caller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="26" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0">
+            <state line="77" column="29" selection-start="1733" selection-end="1733" vertical-scroll-proportion="0.6081081">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gruntfile.coffee" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="import_data.rake" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/tasks/import_data.rake">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="30" selection-start="495" selection-end="495" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gruntfile.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/angular/Gruntfile.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="111" column="135" selection-start="2489" selection-end="2489" vertical-scroll-proportion="0.24701196">
+            <state line="96" column="19" selection-start="2094" selection-end="2094" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -195,16 +225,34 @@
       <file leaf-file-name="board_summary_trend_line.html.haml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/angular/app/views/directives/board_summary_trend_line.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="17" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0">
+            <state line="7" column="32" selection-start="269" selection-end="269" vertical-scroll-proportion="-4.375">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="metrics.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular/app/views/metrics.html.haml">
+      <file leaf-file-name="agile_data.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/services/agile_data.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="60" selection-start="224" selection-end="284" vertical-scroll-proportion="0.0">
+            <state line="123" column="9" selection-start="3423" selection-end="3423" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="agileCubeService.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular/app/scripts/services/agileCubeService.js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="6" selection-start="998" selection-end="998" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sprint.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/sprint.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="45" selection-start="178" selection-end="204" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -213,34 +261,7 @@
       <file leaf-file-name="sprint_summary.html.haml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/angular/app/views/directives/sprint_summary.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="31" selection-start="798" selection-end="798" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sprint_unstacked_bar_graph.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular/app/scripts/directives/sprint_unstacked_bar_graph.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="48" selection-start="1651" selection-end="1664" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="metrics.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular/app/scripts/controllers/metrics.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="board_summary.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular/app/views/directives/board_summary.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="26" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0">
+            <state line="27" column="4" selection-start="1484" selection-end="1484" vertical-scroll-proportion="-16.875">
               <folding />
             </state>
           </provider>
@@ -267,22 +288,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/angular/app/scripts/directives/assignee_board_summary.js.coffee" />
-        <option value="$PROJECT_DIR$/angular/app/scripts/directives/board_summary.js.coffee" />
-        <option value="$PROJECT_DIR$/angular/app/scripts/directives/chosen_boards.js.coffee" />
-        <option value="$PROJECT_DIR$/angular/app/scripts/directives/chosen_sprints.js.coffee" />
-        <option value="$PROJECT_DIR$/angular/app/scripts/directives/sprint_grid.js.coffee" />
-        <option value="$PROJECT_DIR$/angular/app/scripts/directives/sprint_summary.js.coffee" />
         <option value="$PROJECT_DIR$/angular/app/views/directives/board_summary_trend_ine.html.haml" />
         <option value="$PROJECT_DIR$/angular/app/index.html.haml" />
         <option value="$PROJECT_DIR$/angular/app/scripts/controllers/metrics.coffee" />
-        <option value="$PROJECT_DIR$/angular/app/views/metrics.html.haml" />
-        <option value="$PROJECT_DIR$/angular/app/views/directives/sprint_summary.html.haml" />
-        <option value="$PROJECT_DIR$/angular/app/scripts/directives/board_summary_trend_line.js.coffee" />
         <option value="$PROJECT_DIR$/angular/Gruntfile.js" />
         <option value="$PROJECT_DIR$/angular/README.md" />
-        <option value="$PROJECT_DIR$/angular/app/views/directives/board_summary_trend_line.html.haml" />
+        <option value="$PROJECT_DIR$/angular/app/views/metrics.html.haml" />
+        <option value="$PROJECT_DIR$/angular/app/views/directives/sprint_summary.html.haml" />
+        <option value="$PROJECT_DIR$/angular/package.json" />
         <option value="$PROJECT_DIR$/angular/Gruntfile.coffee" />
+        <option value="$PROJECT_DIR$/angular/app/scripts/directives/sprint_summary.js.coffee" />
+        <option value="$PROJECT_DIR$/angular/app/scripts/directives/board_summary_trend_line.js.coffee" />
+        <option value="$PROJECT_DIR$/angular/app/views/directives/board_summary_trend_line.html.haml" />
+        <option value="$PROJECT_DIR$/app/services/agile_data.rb" />
+        <option value="$PROJECT_DIR$/angular/app/scripts/services/agileCubeService.js.coffee" />
+        <option value="$PROJECT_DIR$/lib/tasks/import_data.rake" />
+        <option value="$PROJECT_DIR$/app/services/jira_caller.rb" />
       </list>
     </option>
   </component>
@@ -294,10 +315,9 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1280" />
     <option name="y" value="22" />
     <option name="width" value="1280" />
-    <option name="height" value="1414" />
+    <option name="height" value="774" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -342,6 +362,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -398,6 +419,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agilytics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agilytics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="angular" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -438,114 +477,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="directives" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="directives" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="cubes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -899,12 +837,12 @@
       <method />
     </configuration>
     <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Ruby.import_data" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.CoffeeScript Debug" />
-      <item index="2" class="java.lang.String" itemvalue="Rails.Production: agilytics" />
-      <item index="3" class="java.lang.String" itemvalue="Rails.Development: agilytics" />
-      <item index="4" class="java.lang.String" itemvalue="Rake.test" />
-      <item index="5" class="java.lang.String" itemvalue="Rake.spec" />
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.CoffeeScript Debug" />
+      <item index="1" class="java.lang.String" itemvalue="Rails.Production: agilytics" />
+      <item index="2" class="java.lang.String" itemvalue="Rails.Development: agilytics" />
+      <item index="3" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="4" class="java.lang.String" itemvalue="Rake.spec" />
+      <item index="5" class="java.lang.String" itemvalue="Ruby.import_data" />
     </list>
     <recent_temporary>
       <list size="1">
@@ -959,14 +897,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="22" width="1280" height="1414" extended-state="6" />
+    <frame x="0" y="22" width="1280" height="774" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32791728" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32892805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959481" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33468395" sideWeight="0.6795748" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33468395" sideWeight="0.7790869" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4138439" sideWeight="0.99841267" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30470017" sideWeight="0.42562592" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.634757" sideWeight="0.50039154" order="9" side_tool="true" content_ui="tabs" />
@@ -1064,108 +1002,116 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/angular/app/views/directives/sprint_unstacked_bar_graph.html.haml">
+    <entry file="file://$PROJECT_DIR$/angular/app/views/metrics.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="66" selection-start="290" selection-end="290" vertical-scroll-proportion="-3.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/components/highcharts/component.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/index.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="65" selection-start="2979" selection-end="2979" vertical-scroll-proportion="-16.375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/scripts/directives/board_summary.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="149" column="52" selection-start="4565" selection-end="4615" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/scripts/controllers/sprint_controller.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="189" selection-end="476" vertical-scroll-proportion="0.3482587">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/scripts/controllers/metrics.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/scripts/directives/sprint_summary.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="184" column="62" selection-start="7892" selection-end="7892" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/scripts/directives/sprint_unstacked_bar_graph.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="48" selection-start="1651" selection-end="1664" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/views/directives/board_summary.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="26" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/views/metrics.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="60" selection-start="224" selection-end="284" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/views/directives/sprint_summary.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="31" selection-start="798" selection-end="798" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/components/angular-ui-router/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="64" selection-start="380" selection-end="380" vertical-scroll-proportion="0.13414635" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/scripts/directives/board_summary_trend_line.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="155" column="26" selection-start="4690" selection-end="4690" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/views/directives/board_summary_trend_line.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="17" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="26" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0">
+        <state line="17" column="38" selection-start="583" selection-end="583" vertical-scroll-proportion="0.20498392">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/angular/Gruntfile.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="135" selection-start="2489" selection-end="2489" vertical-scroll-proportion="0.24701196">
+        <state line="96" column="19" selection-start="2094" selection-end="2094" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/directives/sprint_summary.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="231" column="33" selection-start="9362" selection-end="9362" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1375745637000" expanded="true" signature="9654:9667" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/directives/board_summary_trend_line.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="18" selection-start="3182" selection-end="3182" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/views/directives/sprint_summary.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="4" selection-start="1484" selection-end="1484" vertical-scroll-proportion="-16.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/views/directives/board_summary_trend_line.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="32" selection-start="269" selection-end="269" vertical-scroll-proportion="-4.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/story.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/subtask.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/sprint_story.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="31" selection-start="31" selection-end="31" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/sprint.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="45" selection-start="178" selection-end="204" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/agile_data.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="123" column="9" selection-start="3423" selection-end="3423" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/services/agileCubeService.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="6" selection-start="998" selection-end="998" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/import_data.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="30" selection-start="495" selection-end="495" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/jira_caller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="29" selection-start="1733" selection-end="1733" vertical-scroll-proportion="0.6081081">
           <folding />
         </state>
       </provider>

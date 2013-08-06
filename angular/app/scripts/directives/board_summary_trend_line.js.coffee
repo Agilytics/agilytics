@@ -86,7 +86,7 @@ angular.module('agilytics').directive('boardSummaryTrendLine', [ "$http", "$time
 
       tooltip:
         enabled: true
-        formatter: -> "#{this.series.name}: #{this.x}  points: #{this.y} "
+        formatter: -> "#{this.y} "
 
       yAxis:
         min: 0
@@ -102,6 +102,11 @@ angular.module('agilytics').directive('boardSummaryTrendLine', [ "$http", "$time
           cursor: 'pointer'
         line:
           marker:
+            symbol: "circle"
+            states:
+              hover:
+                radius: 4
+                enabled: true
             enabled: false
 
           point:
@@ -143,7 +148,7 @@ angular.module('agilytics').directive('boardSummaryTrendLine', [ "$http", "$time
 
     scope.sprintRows.push({ pid: sprint.pid, cols: cols })
 
-  linker = (scope, element, attr) ->
+  linker = (scope, element, attrs) ->
 
     scope.$watch("board.sprints", ->
 
@@ -152,10 +157,7 @@ angular.module('agilytics').directive('boardSummaryTrendLine', [ "$http", "$time
         init(scope)
         sprints = scope.board.sprints
 
-        if scope.sprint
-          scope.height = 300
-        else
-          scope.height = 500
+        scope.height = scope.$eval(attrs['graphHeight']) || 500
 
         for sprint in sprints when !scope.sprint || scope.sprint == sprint
           processSprint sprint, scope

@@ -8,7 +8,7 @@ namespace :import_data do
   desc 'process data cube'
   task :process_cube => :environment do
     ad = OutputAgileData.new(Board.all())
-    ad.output_to_file('app/assets/javascripts/cube.json')
+    ad.output_to_file('angular/app/cubes/cube.json')
     ad.end()
   end
 

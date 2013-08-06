@@ -1,6 +1,5 @@
 "use strict"
 proxySnippet = require("grunt-connect-proxy/lib/utils").proxyRequest
-lrSnippet = require("grunt-contrib-livereload/lib/utils").livereloadSnippet
 mountFolder = (connect, dir) ->
   connect.static require("path").resolve(dir)
 
@@ -22,35 +21,25 @@ module.exports = (grunt) ->
     yeoman: yeomanConfig
 
     watch:
+      options:
+        nospawn: true
+        livereload: true
+
       haml:
-        files: ["**/*.haml"]
+        files: ["app/**/*.haml"]
         tasks: ["haml:dist"]
-        options:
-          spawn: false
 
       coffee:
-        files: ["**/*.coffee"]
+        files: ["app/**/*.coffee"]
         tasks: ["coffee:dist"]
-        options:
-          spawn: false
 
       coffeeTest:
         files: ["test/**/*.coffee"]
         tasks: ["coffee:test"]
-        options:
-          spawn: false
 
       compass:
         files: ["**/*.scss", "**/*.sass"]
         tasks: ["compass"]
-        options:
-          spawn: false
-
-      livereload:
-        files: [".tmp/**/*{.html,css,js,png,jpg,jpeg,gif,webp,svg}"]
-        tasks: ["livereload"]
-        options:
-          spawn: false
 
     connect:
       options:
@@ -66,10 +55,10 @@ module.exports = (grunt) ->
         https: false
         changeOrigin: false
       ]
-      livereload:
+      server:
         options:
           middleware: (connect) ->
-            [proxySnippet, lrSnippet, mountFolder(connect, ".tmp"), mountFolder(connect, yeomanConfig.app)]
+            [proxySnippet, require('connect-livereload')(), mountFolder(connect, ".tmp"), mountFolder(connect, yeomanConfig.app)]
 
       test:
         options:
@@ -102,13 +91,11 @@ module.exports = (grunt) ->
 
     coffee:
       dist:
-        files: [
-          expand: true
-          cwd: "<%= yeoman.app %>/scripts"
-          src: "{,*/}*.coffee"
-          dest: ".tmp/scripts"
-          ext: ".js"
-        ]
+        expand: true
+        cwd: 'app'
+        src: '**/*.coffee'
+        dest: '.tmp'
+        ext: '.js'
 
       test:
         files: [
@@ -124,25 +111,11 @@ module.exports = (grunt) ->
         language: "ruby"
 
       dist:
-        files: [
-          expand: true
-          cwd: "<%= yeoman.app %>/views"
-          src: "*.haml"
-          dest: ".tmp/views"
-          ext: ".html"
-        ,
-          expand: true
-          cwd: "<%= yeoman.app %>/views/directives"
-          src: "*.haml"
-          dest: ".tmp/views/directives/"
-          ext: ".html"
-        ,
-          expand: true
-          cwd: "<%= yeoman.app %>/"
-          src: "*.haml"
-          dest: ".tmp/"
-          ext: ".html"
-        ]
+        expand: true
+        cwd: 'app'
+        src: '**/*.haml'
+        dest: '.tmp'
+        ext: '.html'
 
     compass:
       options:
@@ -245,15 +218,15 @@ module.exports = (grunt) ->
   grunt.event.on "watch", (action, filepath) ->
 
     if grunt.file.isMatch(grunt.config("watch.haml.files"), filepath)
-      filepath = filepath.replace(grunt.config("haml.all.cwd") + "/", "")
-      grunt.config "haml.all.src", filepath
+      filepath = filepath.replace(grunt.config("haml.dist.cwd") + "/", "")
+      grunt.config "haml.dist.src", filepath
 
     if grunt.file.isMatch(grunt.config("watch.coffee.files"), filepath)
-      filepath = filepath.replace(grunt.config("coffee.all.cwd") + "/", "")
-      grunt.config "coffee.all.src", filepath
+      filepath = filepath.replace(grunt.config("coffee.dist.cwd") + "/", "")
+      grunt.config "coffee.dist.src", filepath
 
-  grunt.renameTask "regarde", "watch"
-  grunt.registerTask "server", ["clean:server", "coffee:dist", "copy:dist", "haml:dist", "compass:server", "configureProxies", "livereload-start", "connect:livereload", "open", "watch"]
+  grunt.registerTask "server", ["clean:server", "coffee:dist", "copy:dist", "haml:dist", "compass:server",
+    "configureProxies", "connect:server", "open", "watch"]
   grunt.registerTask "test", ["clean:server", "coffee", "haml", "compass", "connect:test", "karma"]
   grunt.registerTask "build", ["clean:dist", "jshint", "test", "coffee", "compass:dist", "useminPrepare", "imagemin", "cssmin", "htmlmin", "concat", "copy", "cdnify", "ngmin", "uglify", "rev", "usemin"]
   grunt.registerTask "default", ["build"]

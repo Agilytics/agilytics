@@ -72,9 +72,14 @@ class JiraCaller
   def sprint_changes_for(boards)
     changes = Array.new()
     boards.each do |board|
+      #######################################################################
+      #######################################################################
+
+      if board['pid'] != '33'
         board.sprints.each do |sprint|
           process_sprint(board, changes, sprint)
         end
+      end
     end
   end
 
@@ -87,6 +92,8 @@ class JiraCaller
 
       change_set = get_sprint_changes(board.pid, sprint)
 
+      size_field_key = change_set['statisticField']['fieldId']
+
       change_set['changes'].keys.each do |time|
 
         val = change_set['changes'][time]
@@ -94,7 +101,7 @@ class JiraCaller
         sprint.end_date = Time.at(change_set['completeTime']/1000) if change_set['completeTime']
         sprint.start_date = Time.at(change_set['startTime']/1000)
 
-        val.each { |change| process_change(board, change, changes, sprint, stories, subtasks, time) }
+        val.each { |change| process_change(board, change, changes, sprint, stories, subtasks, time, size_field_key) }
 
       end
 
@@ -106,7 +113,7 @@ class JiraCaller
     board.save()
   end
 
-  def process_change(board, change, changes, sprint, stories, subtasks, time)
+  def process_change(board, change, changes, sprint, stories, subtasks, time, size_field_key)
 
     change = make_change(time, change, board, sprint)
     changes << change
@@ -118,7 +125,7 @@ class JiraCaller
     elsif subtasks.key?(pid)
       story_or_subtask = subtasks[pid]
     else
-      story_or_subtask = get_or_create_story_or_task(change.associated_story_pid, board)
+      story_or_subtask = get_or_create_story_or_task(change.associated_story_pid, board, size_field_key)
     end
 
     change.save()
@@ -182,12 +189,17 @@ class JiraCaller
     sprintStory
   end
 
-  def get_or_create_story_or_task(pid, board)
+  def get_or_create_story_or_task(pid, board, size_field_key)
 
     # it's active record so just
     story_or_task = Story.find_by_pid(pid) if Story.where(pid: pid).exists?
-    unless story_or_task
+    if story_or_task && !story_or_task.done
+      update_story story_or_task, pid, get_story_detail(pid)['fields'], size_field_key
+    else
       story_or_task = Subtask.find_by_pid(pid) if Subtask.where(pid: pid).exists?
+      if story_or_task && !story_or_task.done
+        update_subtask( story_or_task, pid, get_story_detail(pid)['fields'], size_field_key )
+      end
     end
 
     unless story_or_task
@@ -195,9 +207,9 @@ class JiraCaller
       fields = s['fields']
 
       if fields['issuetype']['subtask']
-        story_or_task = create_subtask(pid, fields, board)
+        story_or_task = create_subtask(pid, fields, board, size_field_key)
       else
-        story_or_task = create_story(pid, fields, board)
+        story_or_task = create_story(pid, fields, board, size_field_key)
       end
 
     end
@@ -205,11 +217,16 @@ class JiraCaller
     story_or_task
   end
 
-  def create_subtask(pid, fields, board)
+  def create_subtask(pid, fields, board, size_field_key)
     subtask = Subtask.new()
 
-    story = get_or_create_story_or_task(fields['parent']['key'], board)
+    story = get_or_create_story_or_task(fields['parent']['key'], board, size_field_key)
     story.subtasks << subtask
+
+    update_subtask(subtask, pid, fields, size_field_key)
+  end
+
+  def update_subtask(subtask, pid, fields, size_field_key)
 
     subtask.reporter = get_or_create_user(fields['reporter'], Reporter, @reporters)
     subtask.assignee = get_or_create_user(fields['assignee'], Assignee, @assignees)
@@ -225,28 +242,34 @@ class JiraCaller
 
   end
 
-  def create_story(pid, fields, board)
+  def create_story(pid, fields, board, size_field_key)
     story = Story.new()
+    board.stories << story
+    update_story(story, pid, fields, size_field_key)
+  end
 
-    story.size = fields['customfield_10004']
+  def update_story(story, pid, fields, size_field_key)
+    if !pid
+      binding.pry
+    end
+    story.size = fields[size_field_key]
     story.reporter = get_or_create_user(fields['reporter'], Reporter, @reporters)
     story.assignee = get_or_create_user(fields['assignee'], Assignee, @assignees)
     story.name = fields['summary']
     story.story_type = Story::STORY
     story.description = fields['description']
 
-    if (fields['priority'])
+    if fields['priority']
       story.acuity = fields['priority']['name']
     end
 
-    if (fields['status'])
+    if fields['status']
       story.done = fields['status']['name'] == 'Closed'
     end
 
     story.create_date = fields['created'].to_date()
     story.pid = pid
 
-    board.stories << story
     story
 
   end

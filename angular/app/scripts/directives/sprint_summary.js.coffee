@@ -229,7 +229,7 @@ class SprintSummary
               series:
                 states:
                   hover:
-                    enabled: true,
+                    enabled: true
                     lineWidth: 5
 
           series: series

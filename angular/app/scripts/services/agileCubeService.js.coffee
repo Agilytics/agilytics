@@ -39,6 +39,9 @@ class @AgileCubeService
     @cube
 
   process: (obj, fn)->
+    unless obj
+      debugger
+
     unless(obj.__processed)
       obj.__processed = true
       fn(obj)

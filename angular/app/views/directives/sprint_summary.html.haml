@@ -17,7 +17,7 @@
     %div(id="sprint-{{sprint.pid}}")
 
   %div.hero-unit(style="padding-top:15px; padding-bottom:15px; margin-bottom:-5px")
-    %board-summary-trend-line(board="sprint.board" sprint="sprint" showTable="showTable" colors="colors")
+    %board-summary-trend-line(graph-height="300" board="sprint.board" sprint="sprint" showTable="showTable" colors="colors")
     -#%board-summary(board="sprint.board" sprint="sprint" showTable="showTable" colors="colors")
     %sprint-unstacked-bar-graph(sprint="sprint" colors="colors")
 
