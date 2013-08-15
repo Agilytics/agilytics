@@ -40,7 +40,6 @@ group :assets do
   gem 'pry-debugger'
   gem 'pry-stack_explorer'
 
-
   gem 'jasmine-rails'
 end
 

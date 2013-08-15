@@ -151,7 +151,4 @@ class @AgileCubeService
 
     ops
 
-
 angular.module('agilytics').factory('agileCubeService', ($http, agiliticsUtils)-> new AgileCubeService($http, agiliticsUtils))
-
-
