@@ -47,46 +47,152 @@
       #overview.step(data-scale="200")
 
       #variability.step(data-scale="200" data-x="-5000" data-y="2500" )
-        %div.dimboxed.dim(style="width:230px; float:left; height:250px; margin-left:250px")
-          Avoid LOTS of problems if you
-        %div.boxed(style="width:230px; float:left; height:250px")
-          %h1 REDUCE
-          %h2
+        %div.dimboxed.dim(style="font-size:35px; width:200px; float:left; height:300px; margin-left:250px")
+          3 MOST IMPORTANT THINGS WHEN DESIGNING SOFTWARE
+        %div.boxed(style="width:200px; float:left; height:300px")
+          %h1.dim REDUCE
+          %h2( style="margin-top:25px" )
             %span.dim +
             Ceremony
-          %h2
+          %h2( style="margin-top:25px" )
             %span.dim +
             Complexity
-          %h2
+          %h2( style="margin-top:25px" )
             %span.dim +
             Variation
 
       #cermony.step(data-x="-4500" data-y="-4500")
-        %div(style="margin-top:-200px")
+        %div(style="margin-top:-50px")
           %h1 cer·e·mo·ny
           %h2 /ˈserəˌmōnē/
           %a(href="http://www.merriam-webster.com/dictionary/ceremony" style="font-size:35px") An action performed only formally with no deep significance.
-          %div(style="font-size:35px") The crap we must do with no value received.
 
-      #cermony-1.step(data-x="-3000" data-y="-4500" style="font-size:20px; overflow:auto; height:840px; margin-top:0" )
+          %div(style="float:left; width:500px;")
+            %div(style="font-size:20px; margin-top:20px; width:440px")
+              %div( style="background-color:#999; padding-left:10px; color:white;")Java
+              %div( style="background-color:#EFEFEF; border: 1px solid #999; padding-left:10px")
+                %span(style="color:red")
+                  ArrayList&lt;String&gt;
+                aList = new ArrayList<String>()
+                %span( style="color:red" )>;
+                %br
+                %pre( style="background-color: inherit;" )
+                  :preserve
+
+                    button.addActionListener(
+                      <span style="color:red"> new ActionListener() {</span>
+                          <span style="color:red">public void actionPerformed(ActionEvent e)
+                          {</span>
+                              // do something.
+                          <span style="color:red">}
+                      }</span>
+                    )<span style="color:red">;</span>
+
+
+            %div(style="font-size:20px; padding-top:20px; width:440px;")
+              %div( style="background-color:#999; padding-left:10px; color:white;") C#
+              %pre( style="background-color:#EFEFEF; padding-left:10px; border: 1px solid #999;" )
+                :preserve
+                  public class MyClass
+                  <span style="color:red">{</span>
+                      <span style="color:red">private int _age;</span>
+
+                      public int Age <span style="color:red">{</span>
+                            get<span style="color:red">{ return _age;  }</span>
+                            set<span style="color:red">{ _age = value; }</span>
+                      <span style="color:red">}</span>
+                  <span style="color:red">}</span>
+          %div(style="float:left; width:500px;")
+            %div(style="font-size:20px; margin-top:20px; width:400px")
+              %div(style="font-size:20px; margin-top:20px; width:400px")
+                %div( style="background-color:#999; padding-left:10px; color:white;")Javascript
+                %pre( style="background-color:#EFEFEF; padding-left:10px; border: 1px solid #999;" )
+                  :preserve
+                    $("#mydiv").click(<span style="color:red">function(){</span>
+                      alert<span style="color:red">(</span>"you clicked me"<span style="color:red">);</span>
+                    <span style="color:red">}</span>)<span style="color:red">;</span>
+
+          %div(style="float:left; width:500px;")
+            %div(style="font-size:20px; margin-top:20px; width:400px")
+              %div(style="font-size:20px; margin-top:20px; width:400px")
+                %div( style="background-color:#999; padding-left:10px; color:white;")HTML
+                %pre( style="background-color:#EFEFEF; padding-left:10px; border: 1px solid #999;" )
+                  :preserve
+                      &lt;h1<span style="color:red">&gt;</span> hello world! <span style="color:red">&lt;/h1&gt;</span>
+                      &lt;div<span style="color:red">&gt;</span> ugh, brackets <span style="color:red">&lt;/div&gt;</span>
+
+          %div(style="float:left; width:500px;")
+            %div(style="font-size:20px; margin-top:20px; width:400px")
+              %div(style="font-size:20px; margin-top:20px; width:400px")
+                %div( style="background-color:#999; padding-left:10px; color:white;")CSS
+                %pre( style="background-color:#EFEFEF; padding-left:10px; border: 1px solid #999;" )
+                  :preserve
+                      #header h1 {
+                        font-size: 26px;
+                        font-weight: bold;
+                      }
+                      <span style="color:red">#header</span> p {
+                        font-size: 12px;
+                      }
+                      <span style="color:red">#header p</span> a {
+                        text-decoration: none;
+                      }
+                      <span style="color:red">#header p a</span>:hover {
+                        border-width: 1px;
+                      }
+          %div(style="font-size:15px; float:left; margin-top:-15px;")
+            Links of interest
+            %a( href="http://thinkrelevance.com/blog/2008/04/23/refactoring-from-ceremony-to-essence" ) From Ceremony to Essence
+
+      #ceremony-1.step(data-x="-3000" data-y="-4500" style="font-size:20px; overflow:auto; height:840px; margin-top:0" )
         %div.dim(style="font-size:60px; margin-bottom:35px") Only so many key strokes in life...
-        %div(style="float:left; width:500px; font-size:20px; margin-right:50px; margin-top:-20px")
+        %div.panel(style="float:left; width:500px; font-size:20px; margin-right:50px; margin-top:-20px")
           %h1(style="font-size:25px") JavaScript
-          %div.result( hidden )
           %pre.prettyprint.linenums
             :preserve
-              var x = function(){
-                return "hello world!"
-              }
-              alert( x() )
+              var x, math, answer, square2,
+                  cube2, sqrtCube2;
 
-        %div(style="float:left; width:500px; font-size:20px; margin-top:-20px")
+              x = function(){
+                return "hello math!";
+              }
+
+              math = {
+                hello: x(),
+                root: Math.sqrt,
+                square: function(x){ return x * x; },
+                cube: function(x){ return x * x * x; }
+              }
+
+              square2 = math.square(2);
+              cube2 = math.cube(2);
+              sqrtCube2 = math.root(cube2);
+
+              $out.html( math.hello )
+                  .append( "2*2 = " + square2 )
+                  .append( "2*2*2 = " + cube2 )
+                  .append( "root 6 = " + sqrtCube2 )
+
+        %div.panel(style="float:left; width:500px; font-size:20px; margin-top:-20px")
           %h1(style="font-size:25px") Coffeescript
-          %div.result#csr-0( hidden )
           %pre.prettyprint.coffee.linenums( data-res="jsr-0" )
             :preserve
-              x = -> "hello world!"
-              alert x()
+              x = -> "hello math!"
+
+              math =
+                hello: x()
+                root: Math.sqrt
+                square: (x)-> return x * x
+                cube: (x)-> x * x * x
+
+              square2 = math.square 2
+              cube2 = math.cube 2
+              sqrtCube2 = math.root cube2
+
+              $out.html( math.hello )
+                  .append( "2*2 = " + square2 )
+                  .append( "2*2*2 = " + cube2 )
+                  .append( "root 6 = " + sqrtCube2 )
 
       #cermony-2.step(data-x="-1500" data-y="-4500" style="font-size:20px; overflow:auto; height:840px; margin-top:0" )
         %div.dim(style="font-size:60px; margin-bottom:35px")
@@ -98,42 +204,59 @@
           %h1(style="font-size:25px") JavaScript
           %pre.prettyprint.linenums
             :preserve
-              $out.html("%div here I am \n %h1 fofoaodfadf ");
+              var res, calculator;
+              calculator = function(num) {
+                  return {
+                      plus: function(num2) {
+                          return calculator(num + num2);
+                      },
+                      minus: function(num2) {
+                          return calculator(num - num2);
+                      },
+                      times: function(num2) {
+                          return calculator(num * num2);
+                      },
+                      divideBy: function(num2) {
+                          return calculator(num / num2);
+                      },
+                      result: function() {
+                          return num;
+                      }
+                  };
+              };
+
+                res = (2 + 2 - 1) * 8 / 2;
+
+                $out.html(res + " == " + calculator(2).plus(2).minus(1)
+                                                            .times(8).divideBy(2).result());
 
         %div.panel(style="float:left; width:550px; font-size:20px; margin-top:-20px")
           %h1(style="font-size:25px") Coffeescript
           %pre.prettyprint.coffee.linenums
             :preserve
-              class Person
-                constructor: (name, dobStr) ->
-                  @name = name
-                  @DOB = dobStr
+              calculator = (num)->
+                plus: (num2)-> calculator(num + num2)
+                minus: (num2)-> calculator(num - num2)
+                times: (num2)-> calculator(num * num2)
+                divideBy: (num2)-> calculator(num / num2)
+                result: -> num
 
-                sayName: -> "My name is " + @name
+              res = (2 + 2 - 1) * 8 / 2
 
-                sayAge: -> "My age is " + @calculateAge(this.DOB)
-
-                calculateAge: (dateStr)->
-                  now = new Date()
-                  date = new Date(dateStr)
-                  age = now.getFullYear() - date.getFullYear()
-                  m = now.getMonth() - date.getMonth()
-                  if m < 0 || (m == 0 && now.getDate() < date.getDate())
-                    age--
-                  age
-
-              p = new Person("Alan Huffman", "02/21/1975")
-              $out.html "CoffeeScript: " + p.sayName() + " & " + p.sayAge()
+              $out.html res + " == " + calculator(2).plus(2).minus(1)
+                                                            .times(8).divideBy(2).result()
 
       #cermony-3.step(data-x="0" data-y="-4500" style="font-size:20px; overflow:auto; height:840px; margin-top:0" )
         %div.dim(style="font-size:60px; margin-bottom:35px")
-          Putting class back into the language.
+          Coffiescript is&nbsp;
+          %span(style="color:black")>class
+          ier than javascript
 
         %div.panel(style="float:left; width:550px; font-size:20px; margin-right:50px; margin-top:-20px")
           %h1(style="font-size:25px") JavaScript
-          %pre.prettyprint.linenums
+          %pre.prettyprint.linenums.runMe
             :preserve
-              var Person = function(name, dobStr){
+              Person = function(name, dobStr){
                 this.name = name;
                 this.DOB = dobStr;
               }
@@ -188,6 +311,65 @@
 
               p = new Person("Alan Huffman", "02/21/1975")
               $out.html p.sayAge()
+
+
+      #cermony-4.step(data-x="1500" data-y="-4500" style="font-size:20px; overflow:auto; height:840px; margin-top:0" )
+        %div.dim(style="font-size:60px; margin-bottom:35px")
+          Coffiescript is &nbsp;
+          %span(style="color:black")>class
+          ier and &nbsp;
+          %span(style="color:black")>Safer too!
+
+        %div.panel(style="float:left; width:550px; font-size:20px; margin-right:50px; margin-top:-20px")
+          %h1(style="font-size:25px") JavaScript
+          %pre.prettyprint.linenums
+            :preserve
+
+              var Doctor, p,
+                  __hasProp = {}.hasOwnProperty,
+                  __extends = function(child, parent) {
+                      for (var key in parent) {
+                          if (__hasProp.call(parent, key)) child[key] = parent[key];
+                      }
+
+                      function ctor() {
+                          this.constructor = child;
+                      }
+                      ctor.prototype = parent.prototype;
+                      child.prototype = new ctor();
+                      child.__super__ = parent.prototype;
+                      return child;
+                  };
+                  Doctor = (function(_super) {
+                      __extends(Doctor, _super);
+
+                      function Doctor(specialty, name, dobStr) {
+                          this.specialty = specialty;
+                          Doctor.__super__.constructor.call(this, name, dobStr);
+                      }
+                      Doctor.prototype.saySpecialty = function() {
+                          return "My specialty is " + this.specialty;
+                      };
+                      return Doctor;
+                  })(Person);
+
+              p = new Doctor("Heart", "Alan Huffman", "02/21/1975");
+              $out.html( p.sayAge() + ". " + p.saySpecialty() )
+
+        %div.panel(style="float:left; width:550px; font-size:20px; margin-top:-20px")
+          %h1(style="font-size:25px") Coffeescript
+          %pre.prettyprint.coffee.linenums
+            :preserve
+              class Doctor extends Person
+                constructor: (specialty, name, dobStr) ->
+                  @specialty = specialty
+                  super name, dobStr
+
+                saySpecialty: ->
+                  "My specialty is " + @specialty
+
+              p = new Doctor("Heart", "Alan Huffman", "02/21/1975")
+              $out.html p.sayAge() + ". " + p.saySpecialty()
 
       #deming0.step(data-x="-4500" data-y="0")
         %div(style="margin:0 auto; width:900px")
@@ -506,9 +688,13 @@
        var $this = $(this),
            js = $this.text();
 
-        if( $this.hasClass("coffee") ){
-          js = CoffeeScript.compile(js);
-        }
+       if( $this.hasClass("coffee") ){
+         js = CoffeeScript.compile(js);
+       }
+
+       if($this.hasClass("no")){
+         return;
+       }
 
        $this.data("code", js);
     });
@@ -547,10 +733,12 @@
         window.$out = { html : function(str){
                                   var fn = haml.compileHaml({source: str});
                                   $result.html(fn());
+                                  return $out;
                                 },
                         append: function(str){
                                   var fn = haml.compileHaml({source: str});
-                                  $result.append(fn());
+                                  $result.append("<br/> " + fn());
+                                  return $out;
                                 }
                        };
 
@@ -558,11 +746,13 @@
 
         $this.addClass("clicked");
         js = $this.data("code");
-        console.log(js);
         eval(js);
 
       }
+      return false;
     });
+
+    $(".runMe").click().click();
 
     // pretty format the code
     prettyPrint();
