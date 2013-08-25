@@ -26,11 +26,11 @@ module.exports = (grunt) ->
         livereload: true
 
       haml:
-        files: ["app/**/*.haml"]
+        files: ["<%= yeoman.app %>/**/*.haml"]
         tasks: ["haml:dist"]
 
       coffee:
-        files: ["app/**/*.coffee"]
+        files: ["<%= yeoman.app %>/**/*.coffee"]
         tasks: ["coffee:dist"]
 
       coffeeTest:
@@ -101,7 +101,7 @@ module.exports = (grunt) ->
         files: [
           expand: true
           cwd: "test/spec"
-          src: "{,*/}*.coffee"
+          src: "**/*.coffee"
           dest: ".tmp/spec"
           ext: ".js"
         ]
@@ -225,8 +225,7 @@ module.exports = (grunt) ->
       filepath = filepath.replace(grunt.config("coffee.dist.cwd") + "/", "")
       grunt.config "coffee.dist.src", filepath
 
-  grunt.registerTask "server", ["clean:server", "coffee:dist", "copy:dist", "haml:dist", "compass:server",
-    "configureProxies", "connect:server", "open", "watch"]
+  grunt.registerTask "server", ["clean:server", "coffee:dist", "copy:dist", "haml:dist", "compass:server", "configureProxies", "connect:server", "open", "watch"]
   grunt.registerTask "test", ["clean:server", "coffee", "haml", "compass", "connect:test", "karma"]
   grunt.registerTask "build", ["clean:dist", "jshint", "test", "coffee", "compass:dist", "useminPrepare", "imagemin", "cssmin", "htmlmin", "concat", "copy", "cdnify", "ngmin", "uglify", "rev", "usemin"]
   grunt.registerTask "default", ["build"]

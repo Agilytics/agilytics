@@ -42,112 +42,157 @@
         or
         %b Firefox
         browser.
+    %div.navbar-fixed-top
+      %a.none(href="#/theme-ceremony") Ceremony
+      %a.none.dim(href="#/ceremony-1") code
+      |
+      %a.none(href="#/theme-complexity") Complexity :
+      |
+      %a.none(href="#/theme-variation") Variation :
+      %a.none.dim(href="#/deming0") Deming
+
 
     #impress
-      #overview.step(data-scale="200")
 
-      #variability.step(data-scale="200" data-x="-5000" data-y="2500" )
-        %div.dimboxed.dim(style="font-size:35px; width:200px; float:left; height:300px; margin-left:250px")
-          3 MOST IMPORTANT THINGS WHEN DESIGNING SOFTWARE
-        %div.boxed(style="width:200px; float:left; height:300px")
-          %h1.dim REDUCE
-          %h2( style="margin-top:25px" )
-            %span.dim +
-            Ceremony
-          %h2( style="margin-top:25px" )
-            %span.dim +
-            Complexity
-          %h2( style="margin-top:25px" )
-            %span.dim +
-            Variation
+      #intro.step( data-scale="150" data-x="-150000" data-y="-120000" )
+        %h1(style="font-size:40px; color:black; margin-bottom:20px;") 3 most important things I learned designing software.
+        %h1(style="font-size:30px")
+          %span.dim By
+          Alan Huffman
+          %span.dim : VP of Engineering @
+          %img(src="img/devlink/shareableInk.png" style="height:50px")
+        %div.substep
+          %hr
+          %div(style="clear:both")
+          %div(style="float:left")
+            %div(style="margin-left:0; clear:both; font-size:30px; margin-bottom:50px")
+              Capture
+              %span.dim (digital pens & iPads)
+            %div(style="float:left; font-size:25px; margin-right:15px")
+              %img(src="img/devlink/anoto-pen.jpg" style="height:250px")
+            %div(style="float:left; font-size:25px")
+              %img(src="img/devlink/ipad.png" style="height:250px")
+        %div.substep(style="display:inline-block")
+          %h1(style="float:left; margin-left: 25px; margin-right:25px; margin-top: 115px;")
+            +
+          %div(style="float:left")
+            %div(style="float:left; font-size:30px; margin-right:15px; ")
+              %div(style="margin-left:100px; margin-bottom:40px") Analyze
+              %div(style="width:150px; display:inline-block; padding-left:45px")
+                %img(src="img/devlink/java.png" style="height:125px")
+              %div(style="width:150px; display:inline-block; padding-left:30px; margin-left:-45px")
+                %img(src="img/devlink/rails.png" style="height:125px")
+            %div
+              %img(src="img/devlink/postgres.gif" style="height:125px; width: 150px")
+              %img(src="img/devlink/couchdb.png" style="height:125px; width: 150px")
+        %div.substep(style="display:inline-block")
+          %h1(style="float:left; margin-left: 25px; margin-right:25px; margin-top: 115px;")
+            +
+          %div(style="float:left")
+            %div(style="float:left; font-size:25px; margin-right:15px; ")
+              %div(style="margin-left:75px; margin-bottom:50px; font-size:30px") Visualize
+              %img(src="img/devlink/graph.png" style="height:250px; width:250px" )
 
-      #cermony.step(data-x="-4500" data-y="-4500")
-        %div(style="margin-top:-50px")
-          %h1 cer·e·mo·ny
-          %h2 /ˈserəˌmōnē/
-          %a(href="http://www.merriam-webster.com/dictionary/ceremony" style="font-size:35px") An action performed only formally with no deep significance.
+      #theme-ceremony.theme.step( data-highlight="ceremony" data-scale="150" data-x="-5000" data-y="-20000" )
 
-          %div(style="float:left; width:500px;")
-            %div(style="font-size:20px; margin-top:20px; width:440px")
-              %div( style="background-color:#999; padding-left:10px; color:white;")Java
-              %div( style="background-color:#EFEFEF; border: 1px solid #999; padding-left:10px")
-                %span(style="color:red")
-                  ArrayList&lt;String&gt;
-                aList = new ArrayList<String>()
-                %span( style="color:red" )>;
-                %br
-                %pre( style="background-color: inherit;" )
-                  :preserve
+      #ceremony-0.step(data-x="-3500" data-y="-2000")
+        %div(style="clear:both")
+          %h1(style="font-size:30px; margin-bottom: -20px;")
+            cer·e·mo·ny
+            %span(style="color:gray; margin-left:15px; font-size:25px") /ˈserəˌmōnē/
+          %a(href="http://www.merriam-webster.com/dictionary/ceremony" style="font-size:25px; line-height:inherit")
+            An action performed only formally with no deep significance.
 
-                    button.addActionListener(
-                      <span style="color:red"> new ActionListener() {</span>
-                          <span style="color:red">public void actionPerformed(ActionEvent e)
-                          {</span>
-                              // do something.
-                          <span style="color:red">}
-                      }</span>
-                    )<span style="color:red">;</span>
-
-
-            %div(style="font-size:20px; padding-top:20px; width:440px;")
-              %div( style="background-color:#999; padding-left:10px; color:white;") C#
-              %pre( style="background-color:#EFEFEF; padding-left:10px; border: 1px solid #999;" )
+        %div(style="float:left; width:500px;")
+          %div( data-make-slide="c1" style="font-size:15px; margin-top:20px; width:440px")
+            %div( style="background-color:#999; padding-left:10px; color:white;")Java
+            %div( style="background-color:#EFEFEF; border: 1px solid #999; padding-left:10px")
+              %span(style="color:red")
+                ArrayList&lt;String&gt;
+              aList = new ArrayList&lt;String&gt;()
+              %span( style="color:red" )>;
+              %br
+              %pre( style="background-color: inherit;" )
                 :preserve
-                  public class MyClass
-                  <span style="color:red">{</span>
-                      <span style="color:red">private int _age;</span>
 
-                      public int Age <span style="color:red">{</span>
-                            get<span style="color:red">{ return _age;  }</span>
-                            set<span style="color:red">{ _age = value; }</span>
-                      <span style="color:red">}</span>
-                  <span style="color:red">}</span>
-          %div(style="float:left; width:500px;")
-            %div(style="font-size:20px; margin-top:20px; width:400px")
-              %div(style="font-size:20px; margin-top:20px; width:400px")
-                %div( style="background-color:#999; padding-left:10px; color:white;")Javascript
-                %pre( style="background-color:#EFEFEF; padding-left:10px; border: 1px solid #999;" )
-                  :preserve
-                    $("#mydiv").click(<span style="color:red">function(){</span>
-                      alert<span style="color:red">(</span>"you clicked me"<span style="color:red">);</span>
-                    <span style="color:red">}</span>)<span style="color:red">;</span>
+                  button.addActionListener(
+                    <span style="color:red"> new ActionListener() {</span>
+                        <span style="color:red">public void actionPerformed(ActionEvent e)
+                        {</span>
+                            // do something.
+                        <span style="color:red">}
+                    }</span>
+                  )<span style="color:red">;</span>
 
-          %div(style="float:left; width:500px;")
-            %div(style="font-size:20px; margin-top:20px; width:400px")
-              %div(style="font-size:20px; margin-top:20px; width:400px")
-                %div( style="background-color:#999; padding-left:10px; color:white;")HTML
-                %pre( style="background-color:#EFEFEF; padding-left:10px; border: 1px solid #999;" )
-                  :preserve
-                      &lt;h1<span style="color:red">&gt;</span> hello world! <span style="color:red">&lt;/h1&gt;</span>
-                      &lt;div<span style="color:red">&gt;</span> ugh, brackets <span style="color:red">&lt;/div&gt;</span>
 
-          %div(style="float:left; width:500px;")
-            %div(style="font-size:20px; margin-top:20px; width:400px")
-              %div(style="font-size:20px; margin-top:20px; width:400px")
-                %div( style="background-color:#999; padding-left:10px; color:white;")CSS
-                %pre( style="background-color:#EFEFEF; padding-left:10px; border: 1px solid #999;" )
-                  :preserve
-                      #header h1 {
-                        font-size: 26px;
-                        font-weight: bold;
-                      }
-                      <span style="color:red">#header</span> p {
-                        font-size: 12px;
-                      }
-                      <span style="color:red">#header p</span> a {
-                        text-decoration: none;
-                      }
-                      <span style="color:red">#header p a</span>:hover {
-                        border-width: 1px;
-                      }
-          %div(style="font-size:15px; float:left; margin-top:-15px;")
-            Links of interest
-            %a( href="http://thinkrelevance.com/blog/2008/04/23/refactoring-from-ceremony-to-essence" ) From Ceremony to Essence
+          %div( data-make-slide="c2" style="font-size:15px; padding-top:20px; width:440px;")
+            %div( style="background-color:#999; padding-left:10px; color:white;") C#
+            %pre( style="background-color:#EFEFEF; padding-left:10px; border: 1px solid #999;" )
+              :preserve
+                public class MyClass
+                <span style="color:red">{</span>
+                    <span style="color:red">private int _age;</span>
 
-      #ceremony-1.step(data-x="-3000" data-y="-4500" style="font-size:20px; overflow:auto; height:840px; margin-top:0" )
-        %div.dim(style="font-size:60px; margin-bottom:35px") Only so many key strokes in life...
+                    public int Age <span style="color:red">{</span>
+                          get<span style="color:red">{ return _age;  }</span>
+                          set<span style="color:red">{ _age = value; }</span>
+                    <span style="color:red">}</span>
+                <span style="color:red">}</span>
+        %div(style="float:left; width:500px;")
+          %div( data-make-slide="c3" style="font-size:15px; margin-top:20px; width:400px")
+            %div( style="background-color:#999; padding-left:10px; color:white;")Javascript
+            %pre( style="background-color:#EFEFEF; padding-left:10px; border: 1px solid #999;" )
+              :preserve
+                $("#mydiv").click(<span style="color:red">function(){</span>
+                  alert<span style="color:red">(</span>"you clicked me"<span style="color:red">);</span>
+                <span style="color:red">}</span>)<span style="color:red">;</span>
+
+        %div(style="float:left; width:500px;")
+          %div( data-make-slide="c4" style="font-size:15px; margin-top:20px; width:400px")
+            %div( style="background-color:#999; padding-left:10px; color:white;")HTML
+            %pre( style="background-color:#EFEFEF; padding-left:10px; border: 1px solid #999;" )
+              :preserve
+                  &lt;h1 <span style="color:red">class="</span>foo<span style="color:red">" &gt;</span> hello world! <span style="color:red">&lt;/h1&gt;</span>
+                  &lt;div <span style="color:red">id="</span>bar<span style="color:red">"&gt;</span> ugh, brackets <span style="color:red">&lt;/div&gt;</span>
+
+        %div(style="float:left; width:500px;")
+          %div( data-make-slide="c5" style="margin-top:15px; width:400px; font-size:15px;")
+            %div( style="background-color:#999; padding-left:10px; color:white;")CSS
+            %pre( style="background-color:#EFEFEF; padding-left:10px; border: 1px solid #999;" )
+              :preserve
+                  #header h1 {
+                    font-size: 26px;
+                    font-weight: bold;
+                  }
+                  <span style="color:red">#header</span> p {
+                    font-size: 12px;
+                  }
+                  <span style="color:red">#header p</span> a {
+                    text-decoration: none;
+                  }
+                  <span style="color:red">#header p a</span>:hover {
+                    border-width: 1px;
+                  }
+
+        %div(style="font-size:15px; float:left; margin-top:0;")
+          Links of interest
+          %a( href="http://thinkrelevance.com/blog/2008/04/23/refactoring-from-ceremony-to-essence" ) From Ceremony to Essence
+
+
+      #c1.step(data-x="-2000" data-y="-2000" style="font-size:30px")
+
+      #c2.step(data-x="-500" data-y="-2000" style="font-size:30px")
+
+      #c3.step(data-x="1000" data-y="-2000" style="font-size:30px")
+
+      #c4.step(data-x="2500" data-y="-2000" style="font-size:30px")
+
+      #c5.step(data-x="4000" data-y="-2000" style="font-size:30px")
+
+      #ceremony-1.step(data-x="5500" data-y="-2000" style="font-size:20px; overflow:auto; height:700px; margin-top:0; border:1px solid #DDD; padding-top:0; margin-top:15px" )
+        %div.dim(style="font-size:25px; margin-bottom:35px;") Only so many key strokes in life...
         %div.panel(style="float:left; width:500px; font-size:20px; margin-right:50px; margin-top:-20px")
-          %h1(style="font-size:25px") JavaScript
+          %h1(style="font-size:20px") JavaScript
           %pre.prettyprint.linenums
             :preserve
               var x, math, answer, square2,
@@ -174,7 +219,7 @@
                   .append( "root 6 = " + sqrtCube2 )
 
         %div.panel(style="float:left; width:500px; font-size:20px; margin-top:-20px")
-          %h1(style="font-size:25px") Coffeescript
+          %h1(style="font-size:20px") Coffeescript
           %pre.prettyprint.coffee.linenums( data-res="jsr-0" )
             :preserve
               x = -> "hello math!"
@@ -194,14 +239,14 @@
                   .append( "2*2*2 = " + cube2 )
                   .append( "root 6 = " + sqrtCube2 )
 
-      #cermony-2.step(data-x="-1500" data-y="-4500" style="font-size:20px; overflow:auto; height:840px; margin-top:0" )
-        %div.dim(style="font-size:60px; margin-bottom:35px")
+      #cermony-2.step(data-x="7000" data-y="-2000" style="font-size:20px; overflow:auto; height:700px; margin-top:0; border:1px solid #DDD; padding-top:0; margin-top:15px" )
+        %div.dim(style="font-size:30px; margin-bottom:20px")
           Putting the fun back in to &nbsp;
           %span(style="color:black")> fun
           ction.
 
         %div.panel(style="float:left; width:550px; font-size:20px; margin-right:50px; margin-top:-20px")
-          %h1(style="font-size:25px") JavaScript
+          %h1(style="font-size:20px") JavaScript
           %pre.prettyprint.linenums
             :preserve
               var res, calculator;
@@ -231,7 +276,7 @@
                                                             .times(8).divideBy(2).result());
 
         %div.panel(style="float:left; width:550px; font-size:20px; margin-top:-20px")
-          %h1(style="font-size:25px") Coffeescript
+          %h1(style="font-size:20px") Coffeescript
           %pre.prettyprint.coffee.linenums
             :preserve
               calculator = (num)->
@@ -246,14 +291,14 @@
               $out.html res + " == " + calculator(2).plus(2).minus(1)
                                                             .times(8).divideBy(2).result()
 
-      #cermony-3.step(data-x="0" data-y="-4500" style="font-size:20px; overflow:auto; height:840px; margin-top:0" )
-        %div.dim(style="font-size:60px; margin-bottom:35px")
-          Coffiescript is&nbsp;
+      #cermony-3.step(data-x="8500" data-y="-2000" style="font-size:20px; overflow:auto; height:700px; margin-top:0; border:1px solid #DDD; padding-top:0; margin-top:15px" )
+        %div.dim(style="font-size:30px; margin-bottom:20px")
+          Coffeescript is&nbsp;
           %span(style="color:black")>class
           ier than javascript
 
         %div.panel(style="float:left; width:550px; font-size:20px; margin-right:50px; margin-top:-20px")
-          %h1(style="font-size:25px") JavaScript
+          %h1(style="font-size:20px") JavaScript
           %pre.prettyprint.linenums.runMe
             :preserve
               Person = function(name, dobStr){
@@ -286,7 +331,7 @@
               $out.html(p.sayAge());
 
         %div.panel(style="float:left; width:550px; font-size:20px; margin-top:-20px")
-          %h1(style="font-size:25px") Coffeescript
+          %h1(style="font-size:20px") Coffeescript
           %pre.prettyprint.coffee.linenums
             :preserve
               class Person
@@ -313,15 +358,15 @@
               $out.html p.sayAge()
 
 
-      #cermony-4.step(data-x="1500" data-y="-4500" style="font-size:20px; overflow:auto; height:840px; margin-top:0" )
-        %div.dim(style="font-size:60px; margin-bottom:35px")
-          Coffiescript is &nbsp;
+      #cermony-4.step(data-x="10000" data-y="-2000"  style="font-size:20px; overflow:auto; height:700px; margin-top:0; border:1px solid #DDD; padding-top:0; margin-top:15px" )
+        %div.dim(style="font-size:30px; margin-bottom:20px")
+          CoffeeScript is &nbsp;
           %span(style="color:black")>class
           ier and &nbsp;
           %span(style="color:black")>Safer too!
 
         %div.panel(style="float:left; width:550px; font-size:20px; margin-right:50px; margin-top:-20px")
-          %h1(style="font-size:25px") JavaScript
+          %h1(style="font-size:20px") JavaScript
           %pre.prettyprint.linenums
             :preserve
 
@@ -357,7 +402,7 @@
               $out.html( p.sayAge() + ". " + p.saySpecialty() )
 
         %div.panel(style="float:left; width:550px; font-size:20px; margin-top:-20px")
-          %h1(style="font-size:25px") Coffeescript
+          %h1(style="font-size:20px") Coffeescript
           %pre.prettyprint.coffee.linenums
             :preserve
               class Doctor extends Person
@@ -370,6 +415,254 @@
 
               p = new Doctor("Heart", "Alan Huffman", "02/21/1975")
               $out.html p.sayAge() + ". " + p.saySpecialty()
+
+      #cermony-5.step(data-x="12000" data-y="-2000"  style="font-size:20px; overflow:auto; margin-top:0;" )
+        %div.dim(style="font-size:60px;")
+          By all means,
+          %span(style="color:black") stop doing stuff that sucks.
+        %div.dim(style="font-size:20px") For me that was Java (high ceremony, no closures, un-evolved). I gave it up after 10 years.
+        %div.dim(style="font-size:60px; margin-bottom:35px; margin-top:100px;")
+          Whatever you do...
+          %span(style="color:black")
+            HAVE FUN
+            %span.dim> .
+
+
+      #theme-complexity.theme.step( data-highlight="complexity" data-scale="150" data-x="-6000" data-y="-1000000" )
+
+      #complexity-0.step(data-x="-4500" data-y="-1000")
+        %a(href="http://en.wikipedia.org/wiki/Claude_E._Shannon" style="background:none; float:left;")
+          %img(style="float:left; opacity:0.75" src="img/devlink/claudeshannon.jpg")
+        %div( style="float:left; padding-left:50px;")
+          %div.dim Information is measure of
+          %div
+            %span.dim -
+            Entropy
+          %div
+            %span.dim -
+            Irreducible differences
+          %div
+            %span.dim -
+            Variation
+        %a(href="http://www.amazon.com/The-Information-History-Theory-Flood/dp/1400096235" style="background:none; float:right")
+          %img(style="float:left; opacity:0.65" src="img/devlink/information.jpg")
+
+        %div(style="float:left; font-size:40px; margin-top:50px" )
+          %spin.dim Kolmogorov complexity
+          %div(style="font-size:25px")
+            %div abababababababababababababababababababababababababababababababab = ab * 32
+            %div 4c1j5b2p0cv4w1x8rx2y39umgw5q85s7traquuxdppa0q7nieieqe9noc4cvafzf = self
+
+
+
+      #complexity-2.step(data-x="-3000" data-y="-1000")
+        %a(href="http://www.infoq.com/presentations/Simple-Made-Easy" style="background:none; float:left; width:250px; font-size:30px" )
+          %img(src="img/devlink/rich_hickey.jpeg")
+
+
+        %div(style="float:left; font-size:40px; margin-left:35px; width:645px")
+          %div
+            %span.dim Rich Hickey, the author of Clojure
+            %a.dim(style="font-size: 25px;" href="http://www.infoq.com/presentations/Simple-Made-Easy")Simple Made Easy
+            %div
+              Complect
+              %span.dim :
+            %div(style="margin-top:10px;")To be interwoven.
+
+        %a(href="http://www.infoq.com/presentations/Simple-Made-Easy" style="background:none; float:right;" )
+          %img(style="float:left;" src="img/devlink/complect.png")
+
+      #complexity-3.step(data-x="-1500" data-y="-1000")
+        %div.boxed(style="width:790px")
+          %h1 WEB ARCHITECTURES
+          %h2
+            %span.dim +
+            PRG (post redirect get)
+          %h2
+            %span.dim +
+            PJAX / Partial Rendering
+          %h2
+            %span.dim +
+            AJAX / AJAJ
+          %hr
+          %div.dim(style="font-size:30px")
+            %span(style="float:left; margin-top:15px;")Modern Web Applications (below)
+            %img(src="img/devlink/yeoman.png" style="width: 200px; margin-left: 50px;")
+          %hr(style="margin-top:5px")
+          %h2
+            %span.dim +
+            Single page app + REST API
+          %h2
+            %span.dim +
+            Single page app + Synchronizing services
+
+      #complexity-4-5.step(data-x="0" data-y="-1000")
+        %div(style="font-size:40px; margin-bottom:50px;") The evolution of web applications through the lens of MVC
+        %img(src="img/devlink/yeoman.png" style="width: 272px; margin-left: 538px; margin-top: 140px; position: absolute;")
+        %img(src="img/devlink/web_evolution.png" style="width:1045px")
+
+      #complexity-4.step(data-x="1500" data-y="-1000" style="font-size:30px")
+        %div.dim PRG : Post Redirect Get
+        %dim(style="font-size:30px") Ancient (once powerful... extinction imminenant)
+        %img(style="position: absolute; margin-left: 855px; width: 150px; margin-top: -30px;" src="img/devlink/web_evolution_PRG.png")
+        %hr
+        %div(style="font-size:40px")
+          %div + All HTML (view) is producted on the server.
+          %div + Limited Javascript use (validation, slight DOM manipulation)
+        %br
+          %img(src="img/devlink/aspnet.png" style="width:200px")
+          %img(src="img/devlink/struts.png" style="width:200px")
+          %img(src="img/devlink/aspnetmvc.jpeg" style="width:200px")
+          %img(src="img/devlink/rails.png" style="width:200px")
+          %img(src="img/devlink/php.jpeg" style="width:200px")
+        %div(style="font-size:25px")
+          %div.dim Almost any web framework can produce these ancient web apps.
+          %div.dim They have been around since the dawn of time (aka: 1992)
+          %a(href="http://www.evolutionoftheweb.com/") See Evolution of the Web
+
+      #complexity-5.step(data-x="3000" data-y="-1000" style="font-size:25px")
+        %div.dim PJAX / Partial Rendering : Push State + Ajax
+        %dim Useful for older browser & performant web applications.
+        %img(style="position: absolute; margin-left: 350px; width: 125px; margin-top: -55px;" src="img/devlink/web_evolution_PRG.png")
+        %hr
+        %div
+          %div + All HTML (view) is produced on the server.
+          %div + Javascript is used to render subsequent pages.
+          %div + Significant DOM manipulation via JS.
+          %hr
+        %div.substep
+          %div(style="color: red")
+            %div - Must understand everything (SQL, JS, Ruby/C#.., HTML, ...)
+            %div - Highly "complected"
+            %div(style="color: black; padding-left:440px; margin-top:-25px")
+              %span(style="float:left; margin-top:50px")Some like it:
+              %div(style="float:left; margin-top:20px; margin-left:20px")
+                %img(src="img/devlink/dhh.jpeg" style="height:80px")
+                %img(src="img/devlink/37Signals.gif" style="height:80px")
+                %img(src="img/devlink/github.png" style="height:80px")
+        %div(style="clear:left;")
+        %div.substep
+          %hr(style="margin-top:25px;")
+          %div.dim(style="font-size:30px; margin-top:-15px; margin-bottom:15px")But everyone makes mistakes...
+          %img(style="float:left; height:150px;" src="img/devlink/einstein.jpeg")
+          %div(style="float:left; width:800px; margin-top:30px; margin-left:75px; font-size:30px")
+            Einstein didn't believe in
+            %br
+            Plate tectonics, Quantum Mechanics & The Big Bang.
+            %div.dim :-)
+
+      #complexity-6.step(data-x="4500" data-y="-1000")
+        %img(src="img/devlink/ajax.jpg" style="height:150px")
+        %div(style="font-size:30px") Building sophisticated / performant web apps.
+        %img(style="position: absolute; margin-left: 700px; width: 150px; margin-top: -200px;" src="img/devlink/web_evolution_ajax.png")
+        %hr
+        %div(style="font-size:40px")
+          %div + Some rendering of html on server, some on client.
+          %div + Significant use of Javascript for DOM manipulation
+        %hr
+        %div(style="font-size:30px; color: red")
+          %div - Complected -- requires variable understanding of various parts of the system
+          %div - Variation in the application, when & how parts of the UI are rendered.
+
+      #yeoman.step(data-x="8000" data-y="-1000" data-rotate=180)
+        %img(src="img/devlink/yeoman.png")
+
+      #complexity-7.step(data-x="10000" data-y="-1000" data-rotate=180)
+        %img(src="img/devlink/spa_dna.png" style="height:200px")
+        %div(style="font-size:30px") Single Page Web Application (browser is the application server)
+        %img(style="position: absolute; margin-left: 1000px; width: 125px; margin-top: -310px;" src="img/devlink/web_evolution_spa.png")
+        %hr
+        %div(style="font-size:40px")
+          %div + Almost all HTML production on the client, in browser
+          %div + Very limited page reloads (more responsive & app like)
+          %div + Very significant use of Javascript/CoffeeScript
+        %hr
+        %div(style="font-size:30px")
+          %div(style="color: red") But why?
+
+      #complexity-9.step(data-x="14000" data-y="-1000" data-rotate=180)
+        %div(style="font-size:30px") Clean separation between the Presentation and Control / Model production (server)
+        %div.substep
+          %div(style="margin-top:50px; color:black; font-size:25px")
+            %div(style="float:left")
+              %div(style="padding-left: 75px") Server Tech Stack
+              %div(style="margin-top:30px")
+                %img(src="img/devlink/aspnetmvc.jpeg" style="height:50px; margin-right:50px; margin-left:25px")
+                %img(src="img/devlink/rails.png" style="height:175px")
+              %div
+                %img(src="img/devlink/nodejs.png" style="height:175px")
+            %div(style="float:left; margin-left:70px; margin-right:70px;")
+              %div
+                &#x25C0; REST API &#9654;
+            %div(style="float:left;")
+              %div(style="padding-left: 100px") Client Tech Stack
+              %div(style="margin-top:30px")
+                %img(src="img/devlink/spa_dna.png" style="height:150px")
+          %div.dim(style="margin-top:40px; font-size:30px; clear:both;") REST API isolates server & client side stack.
+
+
+      #complexity-10.step(data-x="16000" data-y="-1000" data-rotate=180)
+        %div(style="font-size:30px") But honestly... it's because there is a server in them there browsers!
+        %div.substep( style="margin-top:30px" )
+          %img(src="img/devlink/chrome.png" style="height:200px;")
+          %img(src="img/devlink/chromeV8.jpg" style="height:200px; margin-left:60px; margin-right:60px")
+          %img(src="img/devlink/nodejs.png" style="height:200px")
+          %div.dim(style="font-size:20px")
+            %a(href="http://www.youtube.com/watch?v=ztspvPYybIY") Ryan Dahl
+            put V8 on the server, creating a non-blocking IO, javascript based application server.
+
+      #complexity-11.step(data-x="18000" data-y="-1000" data-rotate=180)
+        %div(style="font-size:35px") Growing array of server capabilities...
+        %div(style="margin-top:50px")
+          %div(style="float:left")
+            %div.dim(style="font-size:30px") DB
+            %img(src="img/devlink/chrome-DB.png" style="height:275px;")
+          %div(style="float:left; margin-left: 30px; margin-right:30px;")
+            %div.dim(style="font-size:30px") Profiling
+            %img(src="img/devlink/chrome-profiling.png" style="height:275px; width:400px")
+          %div(style="float:left")
+            %div.dim(style="font-size:30px") IDE
+            %img(src="img/devlink/chrome-IDE.png" style="height:275px")
+        %div.dim(style="margin-top:50px; font-size:30px; clear:both")
+          Best real time debugging experience (IMO)
+
+      #complexity-12.step(data-x="20000" data-y="-1000" data-rotate=180)
+        The 3 most important things
+        %span.dim I've learned
+        in software design.
+        %div.vdim by Alan Huffman
+        %div(style="margin-top:15px")
+          %hr
+        %div(style="margin-top:15px")
+          %span.dim(style="font-size:30px") Built using:
+          %div(style="margin-top:10px;")
+            %a(style="float:left" href="https://github.com/bartaz/impress.js/")
+              impress.js
+              %sup *
+            %a(style="float:left; background:none; margin-left:200px" href="http://yeoman.io/")
+              %img( style="width:250px;" src="img/devlink/yeoman.png")
+            %a(style="float:left; background:none; margin-left:200px" href="http://coffeescript.org/")
+              %img( style="width:250px;" src="img/devlink/coffeescript.png")
+          %div(style="clear:left; padding-top:20px")
+            %a(style="float:left; background:none" href="http://haml.info/")
+              %img( style="width:250px;" src="img/devlink/haml.png")
+            %a(style="float:left; background:none; margin-left:200px" href="http://jquery.com/")
+              %img( style="width:250px;" src="img/devlink/jquery.png")
+            %a(style="float:left; margin-left:200px;" href="https://code.google.com/p/google-code-prettify/")
+              prettify.js
+          %div(style="clear:left; padding-top:20px; font-size:25px")
+            &:
+            %a(style="background:none" href="https://github.com/uglyog/clientside-haml-js") HAML Compiler
+            ,
+            %a(style="background:none" href="http://jashkenas.github.io/coffee-script/#scripts") Coffescript Compiler
+
+
+      #theme-variation.theme.step( data-highlight="variation" data-scale="150" data-x="-200000" data-y="-8000" )
+
+      #variation-0.step(data-x="-6000" data-y="0")
+        Variation is the root of evil....
+        %br
+        %div.dim "There are a thousand hacking at the branches of evil to one who is striking at the root." - Henry David Thoreau
 
       #deming0.step(data-x="-4500" data-y="0")
         %div(style="margin:0 auto; width:900px")
@@ -384,12 +677,9 @@
           %img(src="img/devlink/deming/D1.jpg" style="height:200px")
           %img(src="img/devlink/deming/D2.gif" style="height:200px")
           %img(src="img/devlink/deming/D3.jpeg" style="height:200px")
-        %h2(style="margin:0 auto; width:900px") He mastered statistics without losing his humanity.
+        %h2(style="margin:0 auto; width:800px") He mastered statistics without losing his humanity.
 
-      #deming2.step(data-x="-1500" data-y="0" style="height:500px")
-        %div.vdim(style="position:absolute; margin-top:-175px;")
-          %img(src="img/devlink/deming/D0.gif" style="width:50px; margin-right:15px")
-          %span(style="font-size:2em;") Deming
+      #deming2.deming.step(data-x="-1500" data-y="0" style="height:500px")
         %div( style="margin-top:-20px; font-size:40px" )
           %h1(style="font-size:40px") Lead an extraordinary life quietly filled with accolades.
           %div.vdim The early years:
@@ -414,11 +704,7 @@
           %div(style="margin-bottom:15px") 1950: Assistant to the Supreme Commander of the Allied Powers.
 
 
-
-      #deming3.step(data-x="0" data-y="0" style="height:500px")
-        %div.vdim(style="position:absolute; margin-top:-175px;")
-          %img(src="img/devlink/deming/D0.gif" style="width:50px; margin-right:15px")
-          %span(style="font-size:2em;") Deming
+      #deming3.deming.step(data-x="0" data-y="0" style="height:500px")
         %img( src="img/devlink/deming/japan-surrenders-world-war-2-ends-8.jpg" )
         %div(style="color: #666; font-size:125px; float:right; margin-right:120px")
           %span.vdim WWII
@@ -427,11 +713,7 @@
           %br
           Surrenders
 
-      #deming4.step(data-x="1500" data-y="0" style="height:500px")
-        %div.vdim(style="position:absolute; margin-top:-175px;")
-          %img(src="img/devlink/deming/D0.gif" style="width:50px; margin-right:15px")
-          %span(style="font-size:2em;") Deming
-        %br
+      #deming4.deming.step(data-x="1500" data-y="0" style="height:500px")
         %b 1950:
         Taught the Japanese Statistical Process Control
         %br
@@ -451,11 +733,8 @@
             Japan's manufacturing was the envy of the world.
 
 
-      #deming5.step(data-x="-4500" data-y="1000" style="height:500px")
+      #deming5.deming.step(data-x="3000" data-y="0" style="height:500px")
         %div(style="float:left")
-          %div.vdim(style="position:absolute; margin-top:-175px;")
-            %img(src="img/devlink/deming/D0.gif" style="width:50px; margin-right:15px")
-            %span(style="font-size:2em;") Deming
           %div(style="margin-top:50px;")
             %a( href="http://en.wikipedia.org/wiki/Quality_management" ) Quality Management
           %div
@@ -465,7 +744,7 @@
             %span(style="font-size:30px")Constantly strive to reduce variation.
         %img(src="img/devlink/deming/DemingCloud.png" style="float:right; width:500px; margin-top:0px")
 
-      #variation-shipping.step(data-x="-3000" data-y="1000" style="height:500px")
+      #variation-shipping.step(data-x="4500" data-y="0" style="height:500px")
         %div.vdim(style="position:absolute; margin-top:-175px;")
           Example of Variation
         %div(style="margin-top:-100px")
@@ -479,7 +758,7 @@
             %img( style="width:800px" src="img/devlink/deming/break-bulk-2.jpg" )
 
 
-      #variation-shipping-1.step(data-x="-1500" data-y="1000" style="height:500px")
+      #variation-shipping-1.step(data-x="6000" data-y="0" style="height:500px")
         %div.vdim(style="position:absolute; margin-top:-175px;")
           Example of Variation
         %div(style="margin-top:-100px")
@@ -490,7 +769,7 @@
             %img( style="width:500px; height:275px" src="img/devlink/deming/containers_trains.jpg" )
             %img( style="width:500px; height:275px" src="img/devlink/deming/containers_trucks.jpg" )
 
-      #variation-2.step(data-x="0" data-y="1000" style="height:500px")
+      #variation-2.step(data-x="7500" data-y="0" style="height:500px")
         %div.vdim(style="position:absolute; margin-top:-175px;")
           Other Example of Variation
         %div(style="margin-top:-100px")
@@ -503,7 +782,7 @@
             %img( style="width:500px; height:275px" src="img/devlink/deming/Volkswagen-MQB-Platform.jpg" )
             %img( style="width:500px; height:275px" src="img/devlink/deming/Nissan-Common-Module-Family-diagram-1500x996.jpg" )
 
-      #variation-3.step(data-x="1500" data-y="1000" style="height:500px")
+      #variation-3.step(data-x="9000" data-y="0" style="height:500px")
         %div.dim(style="position:absolute; margin-top:-175px;")
           Software solutions scale when variation is reduced.
         %div(style="margin-top:-100px")
@@ -513,148 +792,27 @@
             %div( style="font-size:60px; padding-left:10px; color:#666")Internet is the largest application ever built.
           %img( style="height:500px; float:right; margin-right:75px" src="img/devlink/deming/internet.jpg" )
 
-      #variation-4.step(data-x="3000" data-y="1000" style="height:500px")
+      #variation-4.step(data-x="10500" data-y="0" style="height:500px")
         %div(style="position:absolute; margin-top:-175px; color:#666;")
           Spent the last 3 years reducing variation.
         %div(style="margin-top:-75px")
           %img( style="height:550px" src="img/devlink/deming/PreviousCompany.png" )
 
-      #variation-5.step(data-x="3000" data-y="1000" style="height:500px")
+      #variation-5.step(data-x="10500" data-y="0" style="height:500px")
         %div(style="position:absolute; margin-top:-175px; color:#666;")
           Hardest years of my career... to get here:
         %div(style="margin-top:-75px")
           %img( style="height:550px" src="img/devlink/deming/PreviousCompanyAfter.png" )
 
-      #modern-web-designs.step(data-scale="150" data-x="60000" data-y="12000" data-rotate=90)
-        %div.boxed(style="width:790px")
-          %h1 WEB ARCHITECTURES
-          %h2
-            %span.dim +
-            PRG (post redirect get)
-          %h2
-            %span.dim +
-            PJAX / Partial Rendering
-          %h2
-            %span.dim +
-            AJAX / AJAJ
-          %h2
-            %span.dim +
-            Single page app + REST API
-          %h2
-            %span.dim +
-            Single page app + Synchronizing services
-
-
-      #yeoman.step(data-scale="100" data-x="500000" data-y="50000" data-rotate=180)
-        %img(src="img/devlink/yeoman.png")
-
-      -##bored.step(data-x="-1000" data-y = "-1500")
-      -#  %q
-      -#    Aren't you just
-      -#    %b bored
-      -#    with all those slides-based presentations?
-      -#  %h1.line Did you notice?
-      -#  #works-on-divs-too
-      -#    .substep You can go backward still!
-      -#    .substep If you can't figure out how
-      -#    .substep look at the arrow keys
-      -#    .substep and think about it real hard...
-      -#
-      -#.step.slide( data-x="0" data-y="-1500")
-      -#  %q
-      -#    Don't you think that presentations given
-      -#    %strong in modern browsers
-      -#    shouldn't
-      -#    %strong copy the limits
-      -#    of 'classic' slide decks?
-      -#
-      -#.step.slide( data-x = "1000" data-y = "-1500")
-      -#  %q
-      -#    Would you like to
-      -#    %strong impress your audience
-      -#    with
-      -#    %strong stunning visualization
-      -#    of your talk?
-      -#
-      -##title.step( data-scale = "3" data-x = "0" data-y = "0")
-      -#  %span.try then you should try
-      -#  %h1
-      -#    impress.js
-      -#    %sup *
-      -#  %span.footnote
-      -#    %sup *
-      -#    no rhyme intended
-      -#
-      -##its.step(data-rotate = "90" data-scale = "5" data-x = "850" data-y = "3000")
-      -#  %p
-      -#    It's a
-      -#    %strong presentation tool
-      -#    %br/
-      -#    inspired by the idea behind
-      -#    %a(href = "http//prezi.com") prezi.com
-      -#    %br/
-      -#    and based on the
-      -#    %strong power of CSS3 transforms and transitions
-      -#    in modern browsers.
-      -#
-      -##big.step(data-rotate="180" data-scale="6" data-x="3500" data-y= "2100")
-      -#  %p
-      -#    visualize your
-      -#    %b big
-      -#    %span.thoughts thoughts
-      -#
-      -##tiny.step(data-rotate="300" data-scale="1" data-x="2825" data-y="2325" data-z="-3000")
-      -#  %p
-      -#    and
-      -#    %b tiny
-      -#    ideas
-      -#
-      -##ing.step(data-rotate="270" data-scale="6" data-x="3500" data-y="-850")
-      -#  %p
-      -#    by
-      -#    = succeed "," do
-      -#      %b.positioning positioning
-      -#    %b.rotating rotating
-      -#    and
-      -#    %b.scaling scaling
-      -#    them on an infinite canvas
-      -#
-      -##imagination.step(data-scale="6" data-x="6700" data-y="-300")
-      -#  %p
-      -#    the only
-      -#    %b limit
-      -#    is your
-      -#    %b.imagination imagination
-      -#
-      -##source.step(data-rotate="20" data-scale="4" data-x="6300" data-y="2000")
-      -#  %p want to know more?
-      -#  %q
-      -#    %a(href = "http//github.com/bartaz/impress.js")> use the source
-      -#    , Luke!
-      -#
-      -##one-more-thing.step(data-scale = "2" data-x = "6000" data-y = "4000")
-      -#  %p one more thing...
-      -#
-      -##its-in-3d.step(data-rotate-x = "-40" data-rotate-y = "10" data-scale = "2" data-x = "6200" data-y = "4300" data-z = "-100")
-      -#  %p
-      -#    %span.have have
-      -#    %span.you you
-      -#    %span.noticed noticed
-      -#    %span.its it's
-      -#    %span.in in
-      -#    = succeed "?" do
-      -#      %b
-      -#        3D
-      -#        %sup *
-      -#  %span.footnote * beat that, prezi ;)
-
-
-    .hint
-      %p Use a spacebar or arrow keys to navigate
-      :javascript
-        if ("ontouchstart" in document.documentElement) (
-          document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>"
-        )
+      #variation-6.step( data-x="12000" data-y="0" )
+        %div(style="background:white; width:750px; margin: 0 auto; padding-top:10px; padding-bottom:10px")
+          %div(style="background:white; width:600px; margin: 0 auto;")
+            %a(href="http://localhost:9000/#/all" target="blank" style="background:none; font-size:25px") Low variation supports productivity & insight.
+            %div(style="margin-top:-30px")
+              %a(href="http://localhost:9000/#/all" target="blank" style="background:none; font-size:20px;") Subtle connections & pattern are hard found in complexity.
+            %div(style="margin-top:25px")
+              %a(href="http://localhost:9000/#/all" target="blank" style="background:none")
+                %img(src="img/devlink/agilytics.png" style="width:600px")
 
   %script(src = "components/impressjs/js/impress.js")
   %script(src = "components/google-code-prettify/src/prettify.js")
@@ -753,6 +911,34 @@
     });
 
     $(".runMe").click().click();
+    $("[data-make-slide]").each(function(){
+      var $this = $(this);
+      $("#" + $this.attr("data-make-slide")).html($this.html());
+    })
+
+    $(".deming").prepend(
+            '<div class="vdim" style="position:absolute; margin-top:-175px;">' +
+              '<img src="img/devlink/deming/D0.gif" style="width:50px; margin-right:15px"></img>' +
+              '<span style="font-size:2em;">Deming</span>' +
+            '</div>'
+    );
+
+    var theme = '<div class="dimboxed dim" style="font-size:35px; width:200px; float:left; height:300px; margin-left:250px"> \
+                  3 MOST IMPORTANT THINGS WHEN DESIGNING SOFTWARE \
+                </div> \
+                  <div class="boxed" style="width:220px; float:left; height:300px"> \
+                  <h1 class="dim"> REDUCE </h1>\
+                  <h2 style="margin-top:25px" > <span class="vdim"> +</span> <span class="dim ceremony">Ceremony</span> \
+                  <h2 style="margin-top:25px" > <span class="vdim"> +</span> <span class="dim complexity">Complexity</span> \
+                  <h2 style="margin-top:25px" > <span class="vdim"> +</span> <span class="dim variation">Variation</span>\
+                </div>';
+
+
+    $(".theme").each(function(){
+      var $this = $(this);
+      $this.html(theme);
+      $("." + $this.attr("data-highlight"), $this).removeClass("dim");
+    });
 
     // pretty format the code
     prettyPrint();

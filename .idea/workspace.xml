@@ -14,17 +14,19 @@
     <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" line="175" />
     <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" line="252" />
     <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" line="77" />
-    <bookmark url="file://$PROJECT_DIR$/angular/app/presentation.html.haml" line="324" />
+    <bookmark url="file://$PROJECT_DIR$/angular/app/presentation.html.haml" line="432" />
+    <bookmark url="file://$PROJECT_DIR$/angular/app/presentation.html.haml" line="663" />
+    <bookmark url="file://$PROJECT_DIR$/angular/app/presentation.html.haml" line="566" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/cubes/cube.json" afterPath="$PROJECT_DIR$/angular/app/cubes/cube.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/Gruntfile.coffee" afterPath="$PROJECT_DIR$/angular/Gruntfile.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/presentation.html.haml" afterPath="$PROJECT_DIR$/angular/app/presentation.html.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="agilytics.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376582822610" ignored="false" />
+    <file path="/Dummy.txt" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377023036472" ignored="false" />
     <file path="/jira_caller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375759466375" ignored="false" />
     <file path="/sprint_controller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369360013117" ignored="false" />
     <file path="/Gemfile" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372524672521" ignored="false" />
@@ -83,7 +85,7 @@
     <file path="/20130603203140_create_cards.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370987065012" ignored="false" />
     <file path="/20130603203219_create_sub_tasks.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370898334317" ignored="false" />
     <file path="/20130603191155_create_boards.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370898527496" ignored="false" />
-    <file path="/a.dummy" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375822373861" ignored="false" />
+    <file path="/a.dummy" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377026436893" ignored="false" />
     <file path="/yahoofinance.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370793959960" ignored="false" />
     <file path="/20130603203219_create_subtasks.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373145521826" ignored="false" />
     <file path="/sprint_story.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1374865745270" ignored="false" />
@@ -102,16 +104,16 @@
     <file path="/output_agile_data.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373331374163" ignored="false" />
     <file path="/agileCubeService2.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1374679461999" ignored="false" />
     <file path="$PROJECT_DIR$/../yeoman-angular-haml/app/scripts/controllers/main.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373059536653" ignored="false" />
-    <file path="/main.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373059536653" ignored="false" />
+    <file path="/main.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377026528190" ignored="false" />
     <file path="$PROJECT_DIR$/../yeoman-angular-haml/app/usage_stats.json" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372715343729" ignored="false" />
     <file path="$PROJECT_DIR$/../yeoman-angular-haml/app/index.html" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373047355553" ignored="false" />
-    <file path="/index.html" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375136438127" ignored="false" />
+    <file path="/index.html" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377113554113" ignored="false" />
     <file path="$PROJECT_DIR$/../yeoman-angular-haml/app/views/main.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373126717983" ignored="false" />
     <file path="/main.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373124415358" ignored="false" />
     <file path="$PROJECT_DIR$/../yeoman-angular-haml/.tmp/scripts/controllers/main.js" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373059544342" ignored="false" />
     <file path="$PROJECT_DIR$/../yeoman-angular-haml/app/styles/bootstrap.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372946745980" ignored="false" />
     <file path="/bootstrap.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372798451097" ignored="false" />
-    <file path="/app.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372804678457" ignored="false" />
+    <file path="/app.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377033122426" ignored="false" />
     <file path="$PROJECT_DIR$/../yeoman-angular-haml/app/scripts/app.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372816492142" ignored="false" />
     <file path="$PROJECT_DIR$/../yeoman-angular-haml/app/scripts/services/metric-service.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372804944381" ignored="false" />
     <file path="$PROJECT_DIR$/../yeoman-angular-haml/app/scripts/services/metricService.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372805236437" ignored="false" />
@@ -133,17 +135,17 @@
     <file path="/sprint_unstacked_bar_graph.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375030819831" ignored="false" />
     <file path="/sprint_unstacked_bar_graph.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1374938032174" ignored="false" />
     <file path="/utils.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375111149431" ignored="false" />
-    <file path="$PROJECT_DIR$/../../si/selene/angular/bower.json" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375134210096" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/bower.json" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377050515488" ignored="false" />
     <file path="/bower.json" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375134339232" ignored="false" />
     <file path="/Gruntfile.js" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375733433140" ignored="false" />
     <file path="/index.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375325340883" ignored="false" />
     <file path="/board_summary_trend_line.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375745996513" ignored="false" />
     <file path="/board_summary_trend_line.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375749406906" ignored="false" />
     <file path="/sprint_summary.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375739930699" ignored="false" />
-    <file path="/Gruntfile.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375893196761" ignored="false" />
+    <file path="/Gruntfile.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376927875283" ignored="false" />
     <file path="/sprint_summary.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376085596236" ignored="false" />
-    <file path="/presentation.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376709140391" ignored="false" />
-    <file path="/impress-demo.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376533737243" ignored="false" />
+    <file path="/presentation.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377450404405" ignored="false" />
+    <file path="/impress-demo.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376794671958" ignored="false" />
     <file path="/*.regexp" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376188954679" ignored="false" />
     <file path="/prettify.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376401708160" ignored="false" />
     <file path="$PROJECT_DIR$/../../si/duke/app/assets/javascripts/validations.js" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376501246385" ignored="false" />
@@ -154,7 +156,23 @@
     <file path="$PROJECT_DIR$/../../si/apollo-k/angular/app/scripts/controllers/reporting.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376592593535" ignored="false" />
     <file path="$PROJECT_DIR$/../../si/apollo-k/app/controllers/reports_controller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376592593535" ignored="false" />
     <file path="$PROJECT_DIR$/../../si/apollo-k/app/models/case.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376592593535" ignored="false" />
-    <file path="$PROJECT_DIR$/../../si/selene/angular/app/scripts/controllers/customers.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376592620762" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/app/scripts/controllers/customers.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377033170052" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/README.md" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376927362853" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/Gruntfile.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376950409281" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/package.json" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377024225702" ignored="false" />
+    <file path="/customers.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377033170052" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/duke/app/controllers/validations_controller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377013367983" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/app/scripts/app.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377113830467" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/app/scripts/controllers/main.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377026528190" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/app/index.html" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377113554682" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/app/scripts/controllers/customers.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377113739677" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/app/views/customers.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377115694451" ignored="false" />
+    <file path="/customers.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377115693998" ignored="false" />
+    <file path="/application_controller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377050546444" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/duke/app/controllers/application_controller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377050547160" ignored="false" />
+    <file path="/customers.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377113739677" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/app/scripts/controllers/form_creation_controller.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377113849425" ignored="false" />
+    <file path="/form_creation_controller.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377113818833" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,24 +197,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="sprint_summary.js.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular/app/scripts/directives/sprint_summary.js.coffee">
+      <file leaf-file-name="presentation.html.haml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/angular/app/presentation.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="0" selection-start="2459" selection-end="2459" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#5422#8254#0" expanded="false" />
-                <element signature="e#8309#9741#0" expanded="false" />
-                <element signature="e#9811#10072#0" expanded="false" />
-                <marker date="1376109575000" expanded="false" signature="9655:9668" placeholder="..." />
-              </folding>
+            <state line="87" column="50" selection-start="3912" selection-end="3912" vertical-scroll-proportion="0.7623239">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="presentation.html.haml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/angular/app/presentation.html.haml">
+      <file leaf-file-name="angular_app.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular/app/scripts/angular_app.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="457" column="18" selection-start="20427" selection-end="20427" vertical-scroll-proportion="0.9501661">
+            <state line="12" column="12" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gruntfile.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular/app/components/angular-ui-router/Gruntfile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="0" selection-start="973" selection-end="973" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gruntfile.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular/Gruntfile.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="79" column="0" selection-start="1801" selection-end="1801" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -211,28 +251,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="board_summary.js.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular/app/scripts/directives/board_summary.js.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sprint_summary.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular/app/views/directives/sprint_summary.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="assignee_board_summary.js.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/angular/app/scripts/directives/assignee_board_summary.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="39" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0">
+            <state line="19" column="0" selection-start="698" selection-end="698" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -241,7 +263,7 @@
       <file leaf-file-name="metrics.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/angular/app/scripts/controllers/metrics.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="0" column="24" selection-start="0" selection-end="24" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -260,15 +282,6 @@
         <entry file="file://$PROJECT_DIR$/angular/app/scripts/controllers/refresh_sprint_data.coffee">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sprint.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular/app/views/sprint.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -301,15 +314,15 @@
         <option value="$PROJECT_DIR$/lib/tasks/import_data.rake" />
         <option value="$PROJECT_DIR$/app/services/jira_caller.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/angular/Gruntfile.coffee" />
         <option value="$PROJECT_DIR$/angular/app/scripts/services/agileCubeService.js.coffee" />
         <option value="$PROJECT_DIR$/angular/app/scripts/directives/sprint_summary.js.coffee" />
         <option value="$PROJECT_DIR$/angular/app/scripts/presentation/coffeescript_compiler.js" />
         <option value="$PROJECT_DIR$/angular/app/components/google-code-prettify/src/prettify.js" />
         <option value="$PROJECT_DIR$/angular/app/components/google-code-prettify/src/prettify.css" />
         <option value="$PROJECT_DIR$/angular/app/components/hamljs/hamljs.js" />
-        <option value="$PROJECT_DIR$/angular/app/components/impressjs/css/impress-demo.css" />
         <option value="$PROJECT_DIR$/angular/app/scripts/presentation/hamlmin.js" />
+        <option value="$PROJECT_DIR$/angular/app/components/impressjs/css/impress-demo.css" />
+        <option value="$PROJECT_DIR$/angular/Gruntfile.coffee" />
         <option value="$PROJECT_DIR$/angular/app/presentation.html.haml" />
       </list>
     </option>
@@ -324,7 +337,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1280" />
-    <option name="height" value="774" />
+    <option name="height" value="778" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -369,7 +382,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -452,153 +464,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="directives" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="presentation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="directives" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilytics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="RailsProjectView" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../si/selene" />
+    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../si/selene" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="dynamic.classpath" value="false" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -609,11 +496,11 @@
       <recent name="$PROJECT_DIR$/angular/app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/angular/app/img/devlink" />
       <recent name="$PROJECT_DIR$/angular/app/scripts/presentation" />
       <recent name="$PROJECT_DIR$/angular/app" />
       <recent name="$PROJECT_DIR$/angular/app/components" />
       <recent name="$PROJECT_DIR$/angular/app/cubes" />
-      <recent name="$PROJECT_DIR$/angular/.tmp" />
     </key>
   </component>
   <component name="RunManager" selected="Ruby.import_data">
@@ -767,13 +654,6 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
-      <JSRemoteDebuggerConfigurationSettings>
-        <option name="engineId" value="chrome" />
-        <option name="fileUrl" value="http://localhost:3000/" />
-      </JSRemoteDebuggerConfigurationSettings>
-      <method />
-    </configuration>
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
       <module name="" />
@@ -807,6 +687,13 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" value="chrome" />
+        <option name="fileUrl" value="http://localhost:3000/" />
+      </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
@@ -938,12 +825,12 @@
       <method />
     </configuration>
     <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.CoffeeScript Debug" />
-      <item index="1" class="java.lang.String" itemvalue="Rails.Production: agilytics" />
-      <item index="2" class="java.lang.String" itemvalue="Rails.Development: agilytics" />
-      <item index="3" class="java.lang.String" itemvalue="Rake.test" />
-      <item index="4" class="java.lang.String" itemvalue="Rake.spec" />
-      <item index="5" class="java.lang.String" itemvalue="Ruby.import_data" />
+      <item index="0" class="java.lang.String" itemvalue="Ruby.import_data" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.CoffeeScript Debug" />
+      <item index="2" class="java.lang.String" itemvalue="Rails.Production: agilytics" />
+      <item index="3" class="java.lang.String" itemvalue="Rails.Development: agilytics" />
+      <item index="4" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="5" class="java.lang.String" itemvalue="Rake.spec" />
     </list>
     <recent_temporary>
       <list size="1">
@@ -998,15 +885,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="774" extended-state="0" />
+    <frame x="0" y="22" width="1280" height="778" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32791728" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32892805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3204252" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959481" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23176661" sideWeight="0.7790869" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23581848" sideWeight="0.7790869" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4138439" sideWeight="0.99841267" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30470017" sideWeight="0.42562592" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.634757" sideWeight="0.50039154" order="9" side_tool="true" content_ui="tabs" />
@@ -1015,6 +901,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3204252" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1108,61 +995,69 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/angular/app/scripts/presentation/coffeescript_compiler.js">
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/directives/board_summary.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="660" selection-start="200362" selection-end="200362" vertical-scroll-proportion="0.26916802">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/components/google-code-prettify/src/prettify.js">
+    <entry file="file://$PROJECT_DIR$/angular/app/views/directives/sprint_summary.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1109" column="11" selection-start="41748" selection-end="41748" vertical-scroll-proportion="-0.08319739">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/presentation/coffeescript_compiler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/components/impressjs/css/impress-demo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="609" column="17" selection-start="14739" selection-end="14739" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#7170#8837#2" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/components/google-code-prettify/src/prettify.css">
+    <entry file="file://$PROJECT_DIR$/angular/app/views/sprint.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="28" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.8146965">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/components/impressjs/css/impress-demo.css">
+    <entry file="file://$PROJECT_DIR$/angular/app/components/angular-ui-router/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/scripts/presentation/hamljs.js">
+    <entry file="file://$PROJECT_DIR$/angular/bower.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="2" selection-start="406" selection-end="406" vertical-scroll-proportion="0.44045678">
-          <folding>
-            <marker date="1376519141000" expanded="true" signature="-1:-1" placeholder="//..." />
-            <marker date="1376519141000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
+        <state line="9" column="13" selection-start="223" selection-end="223" vertical-scroll-proportion="0.10869565" />
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/uglyog-clientside-haml-js-6cdf26a 2/lib/haml.min.js">
+    <entry file="file://$PROJECT_DIR$/angular/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="36" selection-start="0" selection-end="35652" vertical-scroll-proportion="0.17128874">
+        <state line="34" column="0" selection-start="973" selection-end="973" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/scripts/presentation/hamlmin.js">
+    <entry file="file://$PROJECT_DIR$/angular/Gruntfile.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="2882" selection-start="35652" selection-end="35652" vertical-scroll-proportion="0.17128874">
+        <state line="79" column="0" selection-start="1801" selection-end="1801" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/views/directives/assignee_board_summary.html.haml">
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/controllers/sprint_controller.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/controllers/refresh_sprint_data.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -1178,49 +1073,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/angular/app/scripts/controllers/metrics.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/views/boards.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="19" selection-start="90" selection-end="95" vertical-scroll-proportion="-1.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/scripts/controllers/refresh_sprint_data.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/scripts/angular_app.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="18" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/scripts/controllers/sprint_controller.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="0" column="24" selection-start="0" selection-end="24" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/angular/app/scripts/directives/assignee_board_summary.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="39" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0">
+        <state line="19" column="0" selection-start="698" selection-end="698" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/angular_app.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="12" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/angular/app/presentation.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="457" column="18" selection-start="20427" selection-end="20427" vertical-scroll-proportion="0.9501661">
+        <state line="87" column="50" selection-start="3912" selection-end="3912" vertical-scroll-proportion="0.7623239">
           <folding />
         </state>
       </provider>
