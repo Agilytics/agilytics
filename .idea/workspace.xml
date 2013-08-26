@@ -14,15 +14,13 @@
     <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" line="175" />
     <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" line="252" />
     <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" line="77" />
-    <bookmark url="file://$PROJECT_DIR$/angular/app/presentation.html.haml" line="432" />
-    <bookmark url="file://$PROJECT_DIR$/angular/app/presentation.html.haml" line="663" />
-    <bookmark url="file://$PROJECT_DIR$/angular/app/presentation.html.haml" line="566" />
+    <bookmark url="file://$PROJECT_DIR$/angular/app/presentation.html.haml" line="434" />
+    <bookmark url="file://$PROJECT_DIR$/angular/app/presentation.html.haml" line="661" />
+    <bookmark url="file://$PROJECT_DIR$/angular/app/presentation.html.haml" line="568" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/Gruntfile.coffee" afterPath="$PROJECT_DIR$/angular/Gruntfile.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/presentation.html.haml" afterPath="$PROJECT_DIR$/angular/app/presentation.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="agilytics.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -144,7 +142,7 @@
     <file path="/sprint_summary.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375739930699" ignored="false" />
     <file path="/Gruntfile.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376927875283" ignored="false" />
     <file path="/sprint_summary.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376085596236" ignored="false" />
-    <file path="/presentation.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377450404405" ignored="false" />
+    <file path="/presentation.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377451075358" ignored="false" />
     <file path="/impress-demo.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376794671958" ignored="false" />
     <file path="/*.regexp" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376188954679" ignored="false" />
     <file path="/prettify.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376401708160" ignored="false" />
@@ -200,7 +198,7 @@
       <file leaf-file-name="presentation.html.haml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/angular/app/presentation.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="50" selection-start="3912" selection-end="3912" vertical-scroll-proportion="0.7623239">
+            <state line="631" column="51" selection-start="29473" selection-end="29473" vertical-scroll-proportion="0.33626762">
               <folding />
             </state>
           </provider>
@@ -1094,7 +1092,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/angular/app/presentation.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="50" selection-start="3912" selection-end="3912" vertical-scroll-proportion="0.7623239">
+        <state line="631" column="51" selection-start="29473" selection-end="29473" vertical-scroll-proportion="0.33626762">
           <folding />
         </state>
       </provider>
