@@ -54,8 +54,9 @@
 
     #impress
 
+      #theme-ceremony-0.theme.step( data-scale="150" data-x="-250000" data-y="-120000" )
+
       #intro.step( data-scale="150" data-x="-150000" data-y="-120000" )
-        %h1(style="font-size:40px; color:black; margin-bottom:20px;") 3 most important things I learned designing software.
         %h1(style="font-size:30px")
           %span.dim By
           Alan Huffman
@@ -92,7 +93,7 @@
             %div(style="float:left; font-size:25px; margin-right:15px; ")
               %div(style="margin-left:75px; margin-bottom:50px; font-size:30px") Visualize
               %img(src="img/devlink/graph.png" style="height:250px; width:250px" )
-
+        %div(style="font-size:12px") We use : iOS, Java, Ruby, Javascript, Coffeescript, AngularJS
       #theme-ceremony.theme.step( data-highlight="ceremony" data-scale="150" data-x="-5000" data-y="-20000" )
 
       #ceremony-0.step(data-x="-3500" data-y="-2000")
@@ -104,7 +105,7 @@
             An action performed only formally with no deep significance.
 
         %div(style="float:left; width:500px;")
-          %div( data-make-slide="c1" style="font-size:15px; margin-top:20px; width:440px")
+          %div( data-make-slide="java" style="font-size:15px; margin-top:20px; width:440px")
             %div( style="background-color:#999; padding-left:10px; color:white;")Java
             %div( style="background-color:#EFEFEF; border: 1px solid #999; padding-left:10px")
               %span(style="color:red")
@@ -125,7 +126,7 @@
                   )<span style="color:red">;</span>
 
 
-          %div( data-make-slide="c2" style="font-size:15px; padding-top:20px; width:440px;")
+          %div( data-make-slide="csharp" style="font-size:15px; padding-top:20px; width:440px;")
             %div( style="background-color:#999; padding-left:10px; color:white;") C#
             %pre( style="background-color:#EFEFEF; padding-left:10px; border: 1px solid #999;" )
               :preserve
@@ -139,7 +140,7 @@
                     <span style="color:red">}</span>
                 <span style="color:red">}</span>
         %div(style="float:left; width:500px;")
-          %div( data-make-slide="c3" style="font-size:15px; margin-top:20px; width:400px")
+          %div( data-make-slide="javascript" style="font-size:15px; margin-top:20px; width:400px")
             %div( style="background-color:#999; padding-left:10px; color:white;")Javascript
             %pre( style="background-color:#EFEFEF; padding-left:10px; border: 1px solid #999;" )
               :preserve
@@ -148,7 +149,7 @@
                 <span style="color:red">}</span>)<span style="color:red">;</span>
 
         %div(style="float:left; width:500px;")
-          %div( data-make-slide="c4" style="font-size:15px; margin-top:20px; width:400px")
+          %div( data-make-slide="html" style="font-size:15px; margin-top:20px; width:400px")
             %div( style="background-color:#999; padding-left:10px; color:white;")HTML
             %pre( style="background-color:#EFEFEF; padding-left:10px; border: 1px solid #999;" )
               :preserve
@@ -156,7 +157,7 @@
                   &lt;div <span style="color:red">id="</span>bar<span style="color:red">"&gt;</span> ugh, brackets <span style="color:red">&lt;/div&gt;</span>
 
         %div(style="float:left; width:500px;")
-          %div( data-make-slide="c5" style="margin-top:15px; width:400px; font-size:15px;")
+          %div( data-make-slide="css" style="margin-top:15px; width:400px; font-size:15px;")
             %div( style="background-color:#999; padding-left:10px; color:white;")CSS
             %pre( style="background-color:#EFEFEF; padding-left:10px; border: 1px solid #999;" )
               :preserve
@@ -179,15 +180,26 @@
           %a( href="http://thinkrelevance.com/blog/2008/04/23/refactoring-from-ceremony-to-essence" ) From Ceremony to Essence
 
 
-      #c1.step(data-x="-2000" data-y="-2000" style="font-size:30px")
+      #java.step(data-x="-2000" data-y="-2000" style="font-size:30px")
+        %div(style="font-size:12px") no closures, no type inferences, broken uniform accessor principle (Java Beans vs getter/setter in class)
 
-      #c2.step(data-x="-500" data-y="-2000" style="font-size:30px")
+      #csharp.step(data-x="-500" data-y="-2000" style="font-size:30px")
+        %div(style="font-size:12px") can be low ceremony, uniform accessor principle
 
-      #c3.step(data-x="1000" data-y="-2000" style="font-size:30px")
+      #javascript.step(data-x="1000" data-y="-2000" style="font-size:30px")
+        %div(style="font-size:12px")  Unnecessary characters, braces, semicolons --  requires jshint/jslint.
+        %div(style="font-size:12px")  Frankly I love javascript, but it's a deeply troubled & conflicted language. (not bad for a 2 week project though)
 
-      #c4.step(data-x="2500" data-y="-2000" style="font-size:30px")
+      #html.step(data-x="2500" data-y="-2000" style="font-size:30px")
+        %div(style="font-size:12px")  HTML / XML is great for computers to read, but it's a bore to write.
+        %div(style="font-size:12px")  Frankly it's unnecessary any how.. Much of HTML can be ommitted -- something we learned with HTML5
+        %div(style="font-size:12px")  Something we formalized with HAML
 
-      #c5.step(data-x="4000" data-y="-2000" style="font-size:30px")
+      #css.step(data-x="4000" data-y="-2000" style="font-size:30px")
+        %div(style="font-size:12px")  CSS is a power, evil language. It's complicated and terrible, but I love it
+        %div(style="font-size:12px")  Yet it requires us to repeat ourselves over and over again..
+        %div(style="font-size:12px")  There is no support for variables, mixins, nestings
+        %div(style="font-size:12px")  ** Yes I have grown to love white space significant languages. Linting & formatting built in.
 
       #ceremony-1.step(data-x="5500" data-y="-2000" style="font-size:20px; overflow:auto; height:700px; margin-top:0; border:1px solid #DDD; padding-top:0; margin-top:15px" )
         %div.dim(style="font-size:25px; margin-bottom:35px;") Only so many key strokes in life...
@@ -238,6 +250,10 @@
                   .append( "2*2 = " + square2 )
                   .append( "2*2*2 = " + cube2 )
                   .append( "root 6 = " + sqrtCube2 )
+
+        %div(style="clear:both; font-size:12px; margin-top:20px;")
+          Coffeescript is an expression based language -- everything returns something.
+          %div Yeah it's just syntactic sugar, and you don't NEED it, but you don't need toilet paper either.. but it's nice to have.
 
       #cermony-2.step(data-x="7000" data-y="-2000" style="font-size:20px; overflow:auto; height:700px; margin-top:0; border:1px solid #DDD; padding-top:0; margin-top:15px" )
         %div.dim(style="font-size:30px; margin-bottom:20px")
@@ -290,6 +306,9 @@
 
               $out.html res + " == " + calculator(2).plus(2).minus(1)
                                                             .times(8).divideBy(2).result()
+        %div(style="clear:both; font-size:12px; margin-top:20px;")
+          Terseness isn't just easier / faster.. it's cleaner and easier to understand.
+          %div It further drives you -- me at least, to strive for extremely clean expressions.
 
       #cermony-3.step(data-x="8500" data-y="-2000" style="font-size:20px; overflow:auto; height:700px; margin-top:0; border:1px solid #DDD; padding-top:0; margin-top:15px" )
         %div.dim(style="font-size:30px; margin-bottom:20px")
@@ -357,6 +376,9 @@
               p = new Person("Alan Huffman", "02/21/1975")
               $out.html p.sayAge()
 
+        %div(style="clear:both; font-size:12px; margin-top:20px;")
+          I totally get prototypal inheritance, but damn, it's so much easier to understand classes.
+
 
       #cermony-4.step(data-x="10000" data-y="-2000"  style="font-size:20px; overflow:auto; height:700px; margin-top:0; border:1px solid #DDD; padding-top:0; margin-top:15px" )
         %div.dim(style="font-size:30px; margin-bottom:20px")
@@ -416,12 +438,14 @@
               p = new Doctor("Heart", "Alan Huffman", "02/21/1975")
               $out.html p.sayAge() + ". " + p.saySpecialty()
 
+        %div(style="clear:both; font-size:12px; margin-top:20px;")
+          Frankly javascript is dangerous (global variables), and can get really complicated fast.
+          %div Coffeescript inheritance is simple to understand... hell of a lot easier than straight JS.
+
       #cermony-5.step(data-x="12000" data-y="-2000"  style="font-size:20px; overflow:auto; margin-top:0;" )
         %div.dim(style="font-size:60px;")
           By all means,
-          %span(style="color:black") stop doing stuff that s
-          %span> u
-          %span(style="color:black")cks.
+          %span(style="color:black") stop doing stuff that is hard.
         %div.dim(style="font-size:20px") For me that was Java (high ceremony, no closures, un-evolved). I gave it up after 10 years.
         %div.dim(style="font-size:60px; margin-bottom:35px; margin-top:100px;")
           Whatever you do...
@@ -429,12 +453,19 @@
             HAVE FUN
             %span.dim> .
 
+        %div(style="clear:both; font-size:12px; margin-top:20px;")
+          People talk about things being enterprise... But enterprise is what works... what motivates us to solve hard problems
+          %div Crusty old ways of doing things aren't enterprise... they just aren't fun.
+
 
       #theme-complexity.theme.step( data-highlight="complexity" data-scale="150" data-x="-6000" data-y="-1000000" )
 
       #complexity-0.step(data-x="-4500" data-y="-1000")
         %a(href="http://en.wikipedia.org/wiki/Claude_E._Shannon" style="background:none; float:left;")
-          %img(style="float:left; opacity:0.75" src="img/devlink/claudeshannon.jpg")
+          %div(style="float:left; font-size:12px")
+            %img(style="opacity:0.75" src="img/devlink/claudeshannon.jpg")
+            %div Claude Shannon
+
         %div( style="float:left; padding-left:50px;")
           %div.dim Information is measure of
           %div
@@ -448,6 +479,7 @@
             Variation
         %a(href="http://www.amazon.com/The-Information-History-Theory-Flood/dp/1400096235" style="background:none; float:right")
           %img(style="float:left; opacity:0.65" src="img/devlink/information.jpg")
+
 
         %div(style="float:left; font-size:40px; margin-top:50px" )
           %spin.dim Kolmogorov complexity
@@ -505,7 +537,11 @@
 
       #complexity-4.step(data-x="1500" data-y="-1000" style="font-size:30px")
         %div.dim PRG : Post Redirect Get
-        %dim(style="font-size:30px") Ancient (once powerful... extinction imminenant)
+        %dim(style="font-size:30px")
+          Ancient
+          %span.dim (and relatively low complexity)
+          Certainly works.
+          %span.dim Most apps are still PRG.
         %img(style="position: absolute; margin-left: 855px; width: 150px; margin-top: -30px;" src="img/devlink/web_evolution_PRG.png")
         %hr
         %div(style="font-size:40px")
@@ -535,7 +571,7 @@
         %div.substep
           %div(style="color: red")
             %div - Must understand everything (SQL, JS, Ruby/C#.., HTML, ...)
-            %div - Highly "complected"
+            %div - "Complected"
             %div(style="color: black; padding-left:440px; margin-top:-25px")
               %span(style="float:left; margin-top:50px")Some like it:
               %div(style="float:left; margin-top:20px; margin-left:20px")
@@ -552,6 +588,10 @@
             %br
             Plate tectonics, Quantum Mechanics & The Big Bang.
             %div.dim :-)
+          %div(style="font-size:12px") Einstein literally endorsed a book by Charles Hapgood called The Earth's Shifting Crust which denied the existence of continental drift.
+          %div(style="font-size:12px")
+            %br
+            Older browsers can be a good reason for going this way.
 
       #complexity-6.step(data-x="4500" data-y="-1000")
         %img(src="img/devlink/ajax.jpg" style="height:150px")
@@ -565,9 +605,19 @@
         %div(style="font-size:30px; color: red")
           %div - Complected -- requires variable understanding of various parts of the system
           %div - Variation in the application, when & how parts of the UI are rendered.
+        %div(style="font-size:12px") Older browsers can be a good reason for going this way.
 
       #yeoman.step(data-x="8000" data-y="-1000" data-rotate=180)
         %img(src="img/devlink/yeoman.png")
+        %div(style="font-size:12px; color:black")
+          %div Yo : Scaffolding tool
+          %div Grunt: Build tool
+          %div Bower: Package management
+          %div
+            %div Web development is it's own thing now -- Front End developers have their own server side agnostic application framework.
+            %div C#, Java, Ruby, Python -- whatever...
+            %div Forces the separation -- if you use Yeoman, you'll find complecting hard.
+
 
       #complexity-7.step(data-x="10000" data-y="-1000" data-rotate=180)
         %img(src="img/devlink/spa_dna.png" style="height:200px")
@@ -581,6 +631,8 @@
         %hr
         %div(style="font-size:30px")
           %div(style="color: red") But why?
+          %div(style="font-size:12px") Allows separation of skill sets & concerns.
+          %div(style="font-size:12px") Separation of technologies. Forced boundary.
 
       #complexity-9.step(data-x="14000" data-y="-1000" data-rotate=180)
         %div(style="font-size:30px") Clean separation between the Presentation and Control / Model production (server)
@@ -601,7 +653,10 @@
               %div(style="margin-top:30px")
                 %img(src="img/devlink/spa_dna.png" style="height:150px")
           %div.dim(style="margin-top:40px; font-size:30px; clear:both;") REST API isolates server & client side stack.
-
+          %div(style="font-size:12px; color:black")
+            %div I have literally used this abstraction to rewrite the front end and backend in different technologies.
+            %div Also allows the server side component to be consumed by iPad apps.
+            %div For the same reason you don't store markup in your database, nor should the expressed model be polluted w/ markup.
 
       #complexity-10.step(data-x="16000" data-y="-1000" data-rotate=180)
         %div(style="font-size:30px") But honestly... it's because there is a server in them there browsers!
@@ -612,6 +667,7 @@
           %div.dim(style="font-size:20px")
             %a(href="http://www.youtube.com/watch?v=ztspvPYybIY") Ryan Dahl
             put V8 on the server, creating a non-blocking IO, javascript based application server.
+          %div(style="margin-top:20px; font-size:14px; color:black") This was a turning point in my career. It's when I became a Front End developer and gave up the dark ways of the server :-).
 
       #complexity-11.step(data-x="18000" data-y="-1000" data-rotate=180)
         %div(style="font-size:35px") Growing array of server capabilities...
@@ -628,8 +684,14 @@
         %div.dim(style="margin-top:50px; font-size:30px; clear:both")
           Best real time debugging experience (IMO)
 
+        %div(style="font-size:12px; color:black")
+          %div Old habits die hard... more and more I treat the browser like an application server.
+          %div I remember my PRG developers arguing that we shouldn't "reload the app" on a page refresh
+          %div I had to remind them that in the PRG world, we reload pages all the time.
+
       #complexity-12.step(data-x="20000" data-y="-1000" data-rotate=180)
-        %div.dim This presentation was built using:
+        %div.dim This presentation is a single page web app!
+        %div.dim Built using:
         %div(style="margin-top:15px")
           %hr
         %div(style="margin-top:15px")
@@ -654,6 +716,7 @@
             ,
             %a(style="background:none" href="http://jashkenas.github.io/coffee-script/#scripts") Coffescript Compiler
 
+        %div(style="font-size:12px; color:black") Go ahead and crack open the developer toolkit. Join us.
 
       #theme-variation.theme.step( data-highlight="variation" data-scale="150" data-x="-200000" data-y="-8000" )
 
@@ -676,6 +739,7 @@
           %img(src="img/devlink/deming/D2.gif" style="height:200px")
           %img(src="img/devlink/deming/D3.jpeg" style="height:200px")
         %h2(style="margin:0 auto; width:800px") He mastered statistics without losing his humanity.
+        %div.dim(style="font-size:14px; margin-top:20px; color:black") He understood the power but also the limitations of statistics.
 
       #deming2.deming.step(data-x="-1500" data-y="0" style="height:500px")
         %div( style="margin-top:-20px; font-size:40px" )
@@ -741,6 +805,10 @@
             %a.plain( href="http://www.hci.com.au/hcisite2/articles/deming.htm") #5.
             %span(style="font-size:30px")Constantly strive to reduce variation.
         %img(src="img/devlink/deming/DemingCloud.png" style="float:right; width:500px; margin-top:0px")
+        %div(style="clear:both; font-size:12px; color:black; margin-top: 20px;")
+          %div He understood craftsmanship.
+          %div He believed in cultivating passion and working towards better worlds.
+          %div Famous experiments. Great books. Ford Qualtiy is Job #1.
 
       #variation-shipping.step(data-x="4500" data-y="0" style="height:500px")
         %div.vdim(style="position:absolute; margin-top:-175px;")
@@ -779,6 +847,7 @@
           %div
             %img( style="width:500px; height:275px" src="img/devlink/deming/Volkswagen-MQB-Platform.jpg" )
             %img( style="width:500px; height:275px" src="img/devlink/deming/Nissan-Common-Module-Family-diagram-1500x996.jpg" )
+          %div(style="font-size:12px; color:black") VW MQB Platform: shared modular construction
 
       #variation-3.step(data-x="9000" data-y="0" style="height:500px")
         %div.dim(style="position:absolute; margin-top:-175px;")
@@ -789,27 +858,32 @@
             %img( style="width:600px" src="img/devlink/deming/HTTP-anotomy.jpg" )
             %div( style="font-size:60px; padding-left:10px; color:#666")Internet is the largest application ever built.
           %img( style="height:500px; float:right; margin-right:75px" src="img/devlink/deming/internet.jpg" )
+        %div(style="clear:both; font-size:12px; color:black; margin-top: 20px;")
+          %div URI : Uniform Resource Identifier
+          %div HTTP is an amazing protocol. Relatively simple yet immensly expressive.
 
       #variation-4.step(data-x="10500" data-y="0" style="height:500px")
-        %div(style="position:absolute; margin-top:-175px; color:#666;")
-          Spent the last 3 years reducing variation.
+        %div(style="position:absolute; margin-top:-150px; font-size:24px;")
+          I spent years on jobs where I could have made it worse.
+          %div(style="font-size:16px") More variation, bad languages, high complexity. Easy != simplicity
+
         %div(style="margin-top:-75px")
           %img( style="height:550px" src="img/devlink/deming/PreviousCompany.png" )
 
       #variation-5.step(data-x="10500" data-y="0" style="height:500px")
-        %div(style="position:absolute; margin-top:-175px; color:#666;")
-          Hardest years of my career... to get here:
+        %div(style="position:absolute; margin-top:-150px; font-size:24px;")
+          We had fun with simple designs & reduced variation solving HARD PROBLEMS!
         %div(style="margin-top:-75px")
           %img( style="height:550px" src="img/devlink/deming/PreviousCompanyAfter.png" )
 
       #variation-6.step( data-x="12000" data-y="0" )
         %div(style="background:white; width:750px; margin: 0 auto; padding-top:10px; padding-bottom:10px")
           %div(style="background:white; width:600px; margin: 0 auto;")
-            %a(href="http://localhost:9000/#/all" target="blank" style="background:none; font-size:25px") Low variation supports productivity & insight.
+            %div(href="http://localhost:9000/#/all" target="blank" style="background:none; font-size:22px") We believe that low variation enables productivity & insight.
             %div(style="margin-top:-30px")
-              %a(href="http://localhost:9000/#/all" target="blank" style="background:none; font-size:20px;") Subtle connections & pattern are hard found in complexity.
+              %div(href="http://localhost:9000/#/all" target="blank" style="background:none; font-size:20px;") Subtle connections & pattern are hard found in complexity.
             %div(style="margin-top:25px")
-              %a(href="http://localhost:9000/#/all" target="blank" style="background:none")
+              %div(href="http://localhost:9000/#/all" target="blank" style="background:none")
                 %img(src="img/devlink/agilytics.png" style="width:600px")
 
   %script(src = "components/impressjs/js/impress.js")
@@ -911,7 +985,7 @@
     $(".runMe").click().click();
     $("[data-make-slide]").each(function(){
       var $this = $(this);
-      $("#" + $this.attr("data-make-slide")).html($this.html());
+      $("#" + $this.attr("data-make-slide")).prepend($this.html());
     })
 
     $(".deming").prepend(

@@ -8,8 +8,6 @@ gem 'rails', '3.2.13'
 # Adding Mongo
 gem 'sqlite3'
 
-gem "resque"
-
 gem 'haml-rails'
 gem 'underscore-rails'
 gem 'httparty'
@@ -19,6 +17,8 @@ gem 'highcharts-rails', '~> 3.0.0'
 gem 'less-rails-bootstrap'
 gem 'angular-gem'
 gem 'angular-ui-bootstrap-rails'
+
+gem "resque", "~> 2.0.0.pre.1", github: "resque/resque"
 
 gem 'chosen-rails'
 gem 'caseconverter'
@@ -35,11 +35,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 
   gem 'better_errors'
-  gem 'pry-plus'
-  gem 'pry-rails'
-  gem 'pry-debugger'
-  gem 'pry-stack_explorer'
-
+  gem 'jazz_hands'
   gem 'jasmine-rails'
 end
 

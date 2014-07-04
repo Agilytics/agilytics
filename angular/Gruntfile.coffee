@@ -84,11 +84,6 @@ module.exports = (grunt) ->
 
       all: ["Gruntfile.js", "<%= yeoman.app %>/scripts/{,*/}*.js"]
 
-    karma:
-      unit:
-        configFile: "karma.conf.js"
-        singleRun: true
-
     coffee:
       dist:
         expand: true
@@ -226,6 +221,6 @@ module.exports = (grunt) ->
       grunt.config "coffee.dist.src", filepath
 
   grunt.registerTask "server", ["clean:server", "coffee:dist", "copy:dist", "haml:dist", "compass:server", "configureProxies", "connect:server", "open", "watch"]
-  grunt.registerTask "test", ["clean:server", "coffee", "haml", "compass", "connect:test", "karma"]
+  grunt.registerTask "test", ["clean:server", "coffee", "haml", "compass", "connect:test"]
   grunt.registerTask "build", ["clean:dist", "jshint", "test", "coffee", "compass:dist", "useminPrepare", "imagemin", "cssmin", "htmlmin", "concat", "copy", "cdnify", "ngmin", "uglify", "rev", "usemin"]
   grunt.registerTask "default", ["build"]

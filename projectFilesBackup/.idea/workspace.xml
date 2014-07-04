@@ -1,0 +1,1339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" />
+    <bookmark url="file://$PROJECT_DIR$/app/models/sprint_story.rb" line="6" mnemonic="2" />
+    <bookmark url="file://$PROJECT_DIR$/app/services/output_agile_data.rb" line="128" />
+    <bookmark url="file://$PROJECT_DIR$/angular/app/scripts/directives/assignee_board_summary.js.coffee" line="42" />
+    <bookmark url="file://$PROJECT_DIR$/angular/app/scripts/controllers/sprint_controller.js.coffee" line="6" mnemonic="3" />
+    <bookmark url="file://$PROJECT_DIR$/angular/app/scripts/directives/sprint_summary.js.coffee" line="30" />
+    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" line="343" />
+    <bookmark url="file://$PROJECT_DIR$/angular/app/scripts/directives/sprint_summary.js.coffee" line="43" />
+    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" line="89" />
+    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" line="112" />
+    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" line="168" />
+    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" line="245" />
+    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller.rb" line="70" />
+    <bookmark url="file://$PROJECT_DIR$/angular/app/presentation.html.haml" line="462" />
+    <bookmark url="file://$PROJECT_DIR$/angular/app/presentation.html.haml" line="724" />
+    <bookmark url="file://$PROJECT_DIR$/angular/app/presentation.html.haml" line="609" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular/app/scripts/tests/karma.conf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/javascripts/angular/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/javascripts/support/jasmine.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/agile_users.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/boards.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/changes.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/sprint_assignees.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/sprint_stories.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/sprints.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/stories.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/subtasks.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/work_activities.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/functional/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/functional/boards_controller_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/functional/import_controller_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/functional/sprints_controller_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/integration/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/performance/browsing_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/test_helper.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/agile_user_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/board_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/change_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/helpers/boards_helper_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/helpers/import_helper_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/helpers/sprints_helper_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/sprint_assignee_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/sprint_story_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/sprint_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/story_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/subtask_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/work_activity_test.rb" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/Gruntfile.coffee" afterPath="$PROJECT_DIR$/angular/Gruntfile.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/agile_data.rb" afterPath="$PROJECT_DIR$/app/services/agile_data.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/agilytics.iml" afterPath="$PROJECT_DIR$/.idea/agilytics.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/cubes/cube.json" afterPath="$PROJECT_DIR$/angular/app/cubes/cube.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/jira_caller.rb" afterPath="$PROJECT_DIR$/app/services/jira_caller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/presentation.html.haml" afterPath="$PROJECT_DIR$/angular/app/presentation.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+    <ignored path="agilytics.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <file path="/Dummy.txt" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1381972873919" ignored="false" />
+    <file path="/jira_caller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378047299773" ignored="false" />
+    <file path="/sprint_controller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369360013117" ignored="false" />
+    <file path="/Gemfile" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378043512531" ignored="false" />
+    <file path="/development.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1368641950738" ignored="false" />
+    <file path="/fragment.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1368732231256" ignored="false" />
+    <file path="/board.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1371917264432" ignored="false" />
+    <file path="/grid.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1368825067893" ignored="false" />
+    <file path="/routes.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1379610789662" ignored="false" />
+    <file path="/changeset.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1368658371694" ignored="false" />
+    <file path="/sprint.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373932588976" ignored="false" />
+    <file path="/jirauser.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1368659051063" ignored="false" />
+    <file path="/story.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1371861469116" ignored="false" />
+    <file path="/sprint.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1368815301284" ignored="false" />
+    <file path="/boardSummary.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373163108711" ignored="false" />
+    <file path="/metrics.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372286036872" ignored="false" />
+    <file path="/assigneeSummary.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369326824945" ignored="false" />
+    <file path="/assigneeSummary.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369325741029" ignored="false" />
+    <file path="/metrics.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375739909719" ignored="false" />
+    <file path="/application.js" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369765560953" ignored="false" />
+    <file path="/boardSummary.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373153651520" ignored="false" />
+    <file path="/assigneeVelocityService.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369257543180" ignored="false" />
+    <file path="/angularApp.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375190697297" ignored="false" />
+    <file path="/boardsSelector.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369258418358" ignored="false" />
+    <file path="/boardsController.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369769283352" ignored="false" />
+    <file path="/boards.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373153231242" ignored="false" />
+    <file path="/application.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373151590330" ignored="false" />
+    <file path="/gridService.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369429749653" ignored="false" />
+    <file path="/assigneeBoardSummary.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372450816867" ignored="false" />
+    <file path="/test.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369427154957" ignored="false" />
+    <file path="/test_Spec.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369607893462" ignored="false" />
+    <file path="/grid.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369608945617" ignored="false" />
+    <file path="/agileCubeService.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375756706650" ignored="false" />
+    <file path="/jasmine.yml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369607983986" ignored="false" />
+    <file path="/test_Spec.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369657648476" ignored="false" />
+    <file path="/ColUtils.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369670450943" ignored="false" />
+    <file path="/col_utils_Spec.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369670481598" ignored="false" />
+    <file path="/CubeTester_Spec.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370284101810" ignored="false" />
+    <file path="/assigneeBoardSummary.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373152934138" ignored="false" />
+    <file path="/overrides.css.scss" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369858239613" ignored="false" />
+    <file path="/temp.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1374679017033" ignored="false" />
+    <file path="/changes.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370092304688" ignored="false" />
+    <file path="/import_controller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370188665816" ignored="false" />
+    <file path="/cube_controller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370206932051" ignored="false" />
+    <file path="/sprint_data.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369942898308" ignored="false" />
+    <file path="/jira_user.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1369942911710" ignored="false" />
+    <file path="/card.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1371042382462" ignored="false" />
+    <file path="/import_data.rake" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375759157898" ignored="false" />
+    <file path="/test.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370094136740" ignored="false" />
+    <file path="/test_helper.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370094784663" ignored="false" />
+    <file path="/sub_task.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370908745003" ignored="false" />
+    <file path="/agile_data.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378049106097" ignored="false" />
+    <file path="/change.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1374852818055" ignored="false" />
+    <file path="/application.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370285506787" ignored="false" />
+    <file path="/20130603202514_create_sprints.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373932615578" ignored="false" />
+    <file path="/20130603202915_create_changes.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1374852813783" ignored="false" />
+    <file path="/20130603203140_create_cards.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370987065012" ignored="false" />
+    <file path="/20130603203219_create_sub_tasks.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370898334317" ignored="false" />
+    <file path="/20130603191155_create_boards.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370898527496" ignored="false" />
+    <file path="/a.dummy" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1381521874905" ignored="false" />
+    <file path="/yahoofinance.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1370793959960" ignored="false" />
+    <file path="/20130603203219_create_subtasks.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373145521826" ignored="false" />
+    <file path="/sprint_story.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1374865745270" ignored="false" />
+    <file path="/20130603203140_create_stories.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1371150172190" ignored="false" />
+    <file path="/20130611225046_create_sprint_stories.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1371911557573" ignored="false" />
+    <file path="/rest_caller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372081974787" ignored="false" />
+    <file path="/sprint_assignee.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1371684728740" ignored="false" />
+    <file path="/20130619232210_create_sprint_assignees.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1371684193219" ignored="false" />
+    <file path="/work_activity.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372103432895" ignored="false" />
+    <file path="/20130619232726_create_work_activities.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372103444804" ignored="false" />
+    <file path="/sprints_controller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1371764783584" ignored="false" />
+    <file path="/agile_user.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1371766484307" ignored="false" />
+    <file path="/20130603204313_create_agile_users.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1371765604644" ignored="false" />
+    <file path="/subtask.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373330912958" ignored="false" />
+    <file path="/assignee.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373145430761" ignored="false" />
+    <file path="/output_agile_data.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377894120847" ignored="false" />
+    <file path="/agileCubeService2.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1374679461999" ignored="false" />
+    <file path="$PROJECT_DIR$/../yeoman-angular-haml/app/scripts/controllers/main.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373059536653" ignored="false" />
+    <file path="/main.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377026528190" ignored="false" />
+    <file path="$PROJECT_DIR$/../yeoman-angular-haml/app/usage_stats.json" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372715343729" ignored="false" />
+    <file path="$PROJECT_DIR$/../yeoman-angular-haml/app/index.html" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373047355553" ignored="false" />
+    <file path="/index.html" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1381430882364" ignored="false" />
+    <file path="$PROJECT_DIR$/../yeoman-angular-haml/app/views/main.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373126717983" ignored="false" />
+    <file path="/main.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373124415358" ignored="false" />
+    <file path="$PROJECT_DIR$/../yeoman-angular-haml/.tmp/scripts/controllers/main.js" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373059544342" ignored="false" />
+    <file path="$PROJECT_DIR$/../yeoman-angular-haml/app/styles/bootstrap.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372946745980" ignored="false" />
+    <file path="/bootstrap.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372798451097" ignored="false" />
+    <file path="/app.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377033122426" ignored="false" />
+    <file path="$PROJECT_DIR$/../yeoman-angular-haml/app/scripts/app.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372816492142" ignored="false" />
+    <file path="$PROJECT_DIR$/../yeoman-angular-haml/app/scripts/services/metric-service.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372804944381" ignored="false" />
+    <file path="$PROJECT_DIR$/../yeoman-angular-haml/app/scripts/services/metricService.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372805236437" ignored="false" />
+    <file path="$PROJECT_DIR$/../yeoman-angular-haml/app/scripts/controllers/metricService.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372805518727" ignored="false" />
+    <file path="$PROJECT_DIR$/../yeoman-angular-haml/app/scripts/controllers/metricsvc.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372816492142" ignored="false" />
+    <file path="$PROJECT_DIR$/../yeoman-angular-haml/app/customer_info.json" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1372898818113" ignored="false" />
+    <file path="$PROJECT_DIR$/../yeoman-angular-haml/app/styles/main.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373057664422" ignored="false" />
+    <file path="/main.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373057664422" ignored="false" />
+    <file path="/reporter.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373145421201" ignored="false" />
+    <file path="/sprint_controller.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375030806097" ignored="false" />
+    <file path="/sprint.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375030462536" ignored="false" />
+    <file path="/sprint-summary.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375115673988" ignored="false" />
+    <file path="/sprint-summary.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375115543870" ignored="false" />
+    <file path="/board-summary.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375032775937" ignored="false" />
+    <file path="/fragment.js2" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373839445043" ignored="false" />
+    <file path="/application.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1373841751169" ignored="false" />
+    <file path="/board-summary.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1374788824268" ignored="false" />
+    <file path="/assignee-board-summary.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1374675851078" ignored="false" />
+    <file path="/sprint_unstacked_bar_graph.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375030819831" ignored="false" />
+    <file path="/sprint_unstacked_bar_graph.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1374938032174" ignored="false" />
+    <file path="/utils.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375111149431" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/bower.json" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377050515488" ignored="false" />
+    <file path="/bower.json" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375134339232" ignored="false" />
+    <file path="/Gruntfile.js" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375733433140" ignored="false" />
+    <file path="/index.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1381101263221" ignored="false" />
+    <file path="/board_summary_trend_line.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375745996513" ignored="false" />
+    <file path="/board_summary_trend_line.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375749406906" ignored="false" />
+    <file path="/sprint_summary.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1375739930699" ignored="false" />
+    <file path="/Gruntfile.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1379611488944" ignored="false" />
+    <file path="/sprint_summary.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376085596236" ignored="false" />
+    <file path="/presentation.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378129237835" ignored="false" />
+    <file path="/impress-demo.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376794671958" ignored="false" />
+    <file path="/*.regexp" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376188954679" ignored="false" />
+    <file path="/prettify.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376401708160" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/duke/app/assets/javascripts/validations.js" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376501246385" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/duke/Gemfile" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376501249107" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/duke/app/assets/stylesheets/application.css.scss" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376501246385" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/duke/app/assets/javascripts/users.js" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376501246385" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/duke/app/assets/javascripts/application.js" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376501246385" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/apollo-k/angular/app/scripts/controllers/reporting.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376592593535" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/apollo-k/app/controllers/reports_controller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376592593535" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/apollo-k/app/models/case.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376592593535" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/app/scripts/controllers/customers.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377033170052" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/README.md" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1376927362853" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/Gruntfile.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378500069765" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/package.json" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377024225702" ignored="false" />
+    <file path="/customers.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377033170052" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/duke/app/controllers/validations_controller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377013367983" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/app/scripts/app.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378497902474" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/app/scripts/controllers/main.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377026528190" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/app/index.html" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378559398656" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/app/scripts/controllers/customers.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377113739677" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/app/views/customers.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377115694451" ignored="false" />
+    <file path="/customers.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377115693998" ignored="false" />
+    <file path="/application_controller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1379528917070" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/duke/app/controllers/application_controller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377050547160" ignored="false" />
+    <file path="/customers.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1377113739677" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/app/scripts/controllers/form_creation_controller.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378566751809" ignored="false" />
+    <file path="/form_creation_controller.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378566749647" ignored="false" />
+    <file path="$PROJECT_DIR$/../developmotivation/angular/Gruntfile.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1379612081219" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/data/case_date.json" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378237052282" ignored="false" />
+    <file path="/case_date.json" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378237587997" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/data/users.json" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378245074766" ignored="false" />
+    <file path="/users.json" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378237146617" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/data/cases.json" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378497596135" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/data/makeUsers.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378245095678" ignored="false" />
+    <file path="/makeUsers.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378244840308" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/data/makeCases.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378243987445" ignored="false" />
+    <file path="$PROJECT_DIR$/../developmotivation/public/index.html" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378348279390" ignored="false" />
+    <file path="/cases.json" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378497594785" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/app/scripts/controllers/cases_controller.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378505262573" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/app/views/cases.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378508009745" ignored="false" />
+    <file path="/cases.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378508009227" ignored="false" />
+    <file path="/cases_controller.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378505261320" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/app/views/form_creation_controller.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378654920054" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/app/index.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1381457210606" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/assets/css/docs.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529619" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/examples/sticky-footer/sticky-footer.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529619" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/thumbnails.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529619" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/button-groups.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529619" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/carousel.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529619" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/examples/theme/theme.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529619" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/json3/benchmark/assets/jsperf.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529619" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/badges.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529619" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/theme.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529619" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/input-groups.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529619" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/examples/offcanvas/offcanvas.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529619" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/examples/grid/grid.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529619" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/pagination.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529619" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/jumbotron.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529619" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/media.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529619" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/mixins.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529619" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/list-group.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529619" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/underscore/test/vendor/qunit.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529619" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/dist/css/bootstrap.min.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529619" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/dist/css/bootstrap.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529619" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/panels.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529619" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/code.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529619" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/popovers.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529619" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/js/tests/vendor/qunit.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529619" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/wells.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529619" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/navs.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529619" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/responsive-utilities.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529619" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/close.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529619" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/underscore/docs/docco.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/pager.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/forms.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/examples/navbar/navbar.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/examples/signin/signin.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/dist/css/bootstrap-theme.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/examples/non-responsive/non-responsive.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/assets/css/pygments-manni.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/modals.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/glyphicons.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/json3/page/style.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/tooltip.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/dropdowns.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/examples/jumbotron-narrow/jumbotron-narrow.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/type.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/component-animations.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/grid.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/dist/css/bootstrap-theme.min.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/navbar.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/examples/starter-template/starter-template.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/examples/sticky-footer-navbar/sticky-footer-navbar.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/breadcrumbs.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/scaffolding.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/tables.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/buttons.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/examples/navbar-static-top/navbar-static-top.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/labels.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/progress-bars.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/utilities.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/es5-shim/tests/lib/jasmine.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/less/alerts.less" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/examples/carousel/carousel.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../si/selene/angular/dist/components/bootstrap/examples/justified-nav/justified-nav.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378562529620" ignored="false" />
+    <file path="/form_creation_controller.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1378654920054" ignored="false" />
+    <file path="$PROJECT_DIR$/../developmotivation/app/controllers/application_controller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1379528917965" ignored="false" />
+    <file path="$PROJECT_DIR$/../developmotivation/app/controllers/linkedin_controller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1379612289038" ignored="false" />
+    <file path="/linkedin_controller.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1379610830291" ignored="false" />
+    <file path="$PROJECT_DIR$/../developmotivation/config/routes.rb" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1379610789663" ignored="false" />
+    <file path="/angular_app.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1379612563731" ignored="false" />
+    <file path="$PROJECT_DIR$/../developmotivation/angular/app/scripts/angular_app.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1381100709727" ignored="false" />
+    <file path="$PROJECT_DIR$/../developmotivation/angular/app/scripts/controllers/go_linkedin.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1379610342318" ignored="false" />
+    <file path="$PROJECT_DIR$/../developmotivation/angular/app/index.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1381102716028" ignored="false" />
+    <file path="$PROJECT_DIR$/../developmotivation/angular/app/scripts/controllers/goto_linkedin.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1379610455348" ignored="false" />
+    <file path="/goto_linkedin.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1379610521896" ignored="false" />
+    <file path="$PROJECT_DIR$/../developmotivation/angular/app/scripts/controllers/goto_linkedin_controller.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1379612654012" ignored="false" />
+    <file path="$PROJECT_DIR$/../developmotivation/angular/bower.json" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1379612068004" ignored="false" />
+    <file path="/goto_linkedin_controller.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1379612487053" ignored="false" />
+    <file path="$PROJECT_DIR$/../developmotivation/angular/app/scripts/controllers/linkedin_profile_controller.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1379879274821" ignored="false" />
+    <file path="/linkedin_profile_controller.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1379612628097" ignored="false" />
+    <file path="$PROJECT_DIR$/../developmotivation/angular/app/index.html" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1381430937793" ignored="false" />
+    <file path="$PROJECT_DIR$/../developmotivation/angular/app/index2.html" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1381522212515" ignored="false" />
+    <file path="/index2.html" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1381464193300" ignored="false" />
+    <file path="$PROJECT_DIR$/../developmotivation/angular/app/styles/earth/app.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1381464413274" ignored="false" />
+    <file path="/app.css" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1381464411750" ignored="false" />
+    <file path="$PROJECT_DIR$/../developmotivation/angular/app/index3.html" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1381436961444" ignored="false" />
+    <file path="$PROJECT_DIR$/../developmotivation/angular/app/scripts/ideatn_app.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1381460096756" ignored="false" />
+    <file path="/ideatn_app.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1381456754818" ignored="false" />
+    <file path="$PROJECT_DIR$/../developmotivation/angular/app/scripts/controllers/home_controller.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1381460049634" ignored="false" />
+    <file path="/home_controller.js.coffee" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1381456419315" ignored="false" />
+    <file path="$PROJECT_DIR$/../developmotivation/angular/.tmp/scripts/controllers/home_controller.js" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1381460057339" ignored="false" />
+    <file path="$PROJECT_DIR$/../developmotivation/angular/app/views/home.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1381889377609" ignored="false" />
+    <file path="/home.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1381889205538" ignored="false" />
+    <file path="$PROJECT_DIR$/../ideatn/angular/app/views/home.html.haml" changelist="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" time="1381972974679" ignored="false" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="DatabaseView">
+    <flatten value="false" />
+    <groupTables value="false" />
+    <sortChildren value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="agilytics" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="presentation.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular/app/presentation.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="454" column="0" selection-start="21303" selection-end="21303" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="26" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="boards_controller.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular/app/scripts/controllers/boards_controller.js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="metrics.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular/app/scripts/controllers/metrics.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="24" selection-start="0" selection-end="24" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sprint_controller.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular/app/scripts/controllers/sprint_controller.js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="35" selection-start="491" selection-end="491" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.haml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/angular/app/index.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="27" selection-start="1712" selection-end="1712" vertical-scroll-proportion="0.024916943">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="angular_app.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular/app/scripts/angular_app.js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="12" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="refresh_sprint_data.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular/app/scripts/controllers/refresh_sprint_data.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="assignee_board_summary.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular/app/scripts/directives/assignee_board_summary.js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="105" selection-start="0" selection-end="105" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gruntfile.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular/Gruntfile.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="191" column="0" selection-start="4502" selection-end="4502" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="GeneratorOptions">
+    <option name="VCS_SHOW_CONFIRMATION" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/angular/app/views/directives/board_summary_trend_line.html.haml" />
+        <option value="$PROJECT_DIR$/lib/tasks/import_data.rake" />
+        <option value="$PROJECT_DIR$/angular/app/scripts/services/agileCubeService.js.coffee" />
+        <option value="$PROJECT_DIR$/angular/app/scripts/directives/sprint_summary.js.coffee" />
+        <option value="$PROJECT_DIR$/angular/app/scripts/presentation/coffeescript_compiler.js" />
+        <option value="$PROJECT_DIR$/angular/app/components/google-code-prettify/src/prettify.js" />
+        <option value="$PROJECT_DIR$/angular/app/components/google-code-prettify/src/prettify.css" />
+        <option value="$PROJECT_DIR$/angular/app/components/hamljs/hamljs.js" />
+        <option value="$PROJECT_DIR$/angular/app/scripts/presentation/hamlmin.js" />
+        <option value="$PROJECT_DIR$/angular/app/components/impressjs/css/impress-demo.css" />
+        <option value="$PROJECT_DIR$/angular/Gruntfile.coffee" />
+        <option value="$PROJECT_DIR$/app/services/output_agile_data.rb" />
+        <option value="$PROJECT_DIR$/app/services/jira_caller.rb" />
+        <option value="$PROJECT_DIR$/app/services/agile_data.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/angular/app/presentation.html.haml" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="22" />
+    <option name="width" value="1280" />
+    <option name="height" value="774" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>Potentially confusing code constructsJavaScript</id>
+          </State>
+        </expanded-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agilytics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agilytics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agilytics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agilytics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agilytics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agilytics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agilytics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agilytics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agilytics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="helpers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agilytics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agilytics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agilytics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agilytics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agilytics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agilytics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agilytics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agilytics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="directives" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agilytics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agilytics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="RailsProjectView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="preferences.keymap" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../developmotivation" />
+    <property name="FullScreen" value="false" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/angular/.tmp" />
+      <recent name="$PROJECT_DIR$/angular" />
+      <recent name="$PROJECT_DIR$/angular/app/img" />
+      <recent name="$PROJECT_DIR$/angular/app/components" />
+      <recent name="$PROJECT_DIR$/angular/app" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/angular/app/img/devlink" />
+      <recent name="$PROJECT_DIR$/angular/app/scripts/presentation" />
+      <recent name="$PROJECT_DIR$/angular/app" />
+      <recent name="$PROJECT_DIR$/angular/app/components" />
+      <recent name="$PROJECT_DIR$/angular/app/cubes" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Ruby.import_data">
+    <configuration default="false" name="import_data" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
+      <module name="agilytics" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$PROJECT_DIR$/lib/tasks" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$PROJECT_DIR$/lib/tasks/import_data.rake" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <RunnerSettings RunnerId="RubyDebugRunner" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyDebugRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="true" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="RailsRunConfigurationType" factoryName="Rails">
+      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
+      <module name="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="RSpecRunConfigurationType" factoryName="RSpec">
+      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
+      <module name="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="RubyRunConfigurationType" factoryName="Ruby">
+      <module name="" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest">
+      <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
+      <module name="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
+      <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
+      <module name="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="ANSICON" value="" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="VERBOSE_OPTION" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" value="chrome" />
+        <option name="fileUrl" value="http://localhost:3000/" />
+      </JSRemoteDebuggerConfigurationSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="chrome" />
+        <option name="fileUrl" value="http://localhost:3000/" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
+    <configuration default="false" name="CoffeeScript Debug" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" value="chrome" />
+        <option name="fileUrl" value="http://localhost:3000/" />
+      </JSRemoteDebuggerConfigurationSettings>
+      <RunnerSettings RunnerId="JavascriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Production: agilytics" type="RailsRunConfigurationType" factoryName="Rails">
+      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
+      <module name="agilytics" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="production" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Development: agilytics" type="RailsRunConfigurationType" factoryName="Rails">
+      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
+      <module name="agilytics" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <RunnerSettings RunnerId="RubyDebugRunner" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyDebugRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="test" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="agilytics" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="test" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":test_unit " />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="spec" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="agilytics" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="spec" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":rspec " />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <method />
+    </configuration>
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Ruby.import_data" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.CoffeeScript Debug" />
+      <item index="2" class="java.lang.String" itemvalue="Rails.Production: agilytics" />
+      <item index="3" class="java.lang.String" itemvalue="Rails.Development: agilytics" />
+      <item index="4" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="5" class="java.lang.String" itemvalue="Rake.spec" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Ruby.import_data" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" name="Default" comment="" />
+      <created>1368622681016</created>
+      <updated>1368622681016</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="22" width="1280" height="774" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32791728" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32892805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959481" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21231766" sideWeight="0.7790869" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4138439" sideWeight="0.99841267" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30470017" sideWeight="0.42562592" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.634757" sideWeight="0.50039154" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22091311" sideWeight="0.49960846" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953683" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3204252" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="myTodoPanelSettings">
+      <value>
+        <are-packages-shown value="false" />
+        <are-modules-shown value="false" />
+        <flatten-packages value="false" />
+        <is-autoscroll-to-source value="false" />
+      </value>
+    </option>
+    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
+    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
+    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
+    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
+    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
+    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
+    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
+    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
+    <option name="LIMIT_HISTORY" value="true" />
+    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
+    <option name="UPDATE_FILTER_SCOPE_NAME" />
+    <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
+    <option name="COMMIT_MESSAGE_MARGIN_SIZE" value="72" />
+    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
+    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
+    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
+    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
+    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
+    <option name="ACTIVE_VCS_NAME" />
+    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
+    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
+    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/angular/app/scripts/tests/services/CubeTester_Spec.coffee</url>
+          <line>58</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/angular/app/scripts/tests/services/CubeTester_Spec.coffee</url>
+          <line>54</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/angular/app/components/google-code-prettify/src/prettify.js</url>
+          <line>1119</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <default-breakpoints>
+        <breakpoint enabled="true" type="OCExceptionBreakpoint">
+          <properties />
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="29" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/angular/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="0" selection-start="973" selection-end="973" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.0.0-p0/gems/caseconverter-0.1.1/lib/case_converter.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="17" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/rest_caller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="21" selection-start="510" selection-end="519" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/output_agile_data.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="22" selection-start="2459" selection-end="2459" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/jira_caller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="346" column="0" selection-start="9368" selection-end="9368" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/agile_data.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="0" selection-start="1561" selection-end="1561" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="26" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/presentation.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="454" column="0" selection-start="21303" selection-end="21303" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/angular_app.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="12" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/Gruntfile.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="191" column="0" selection-start="4502" selection-end="4502" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/directives/assignee_board_summary.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="105" selection-start="0" selection-end="105" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/controllers/boards_controller.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/controllers/refresh_sprint_data.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/controllers/metrics.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="24" selection-start="0" selection-end="24" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/controllers/sprint_controller.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="35" selection-start="491" selection-end="491" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/index.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="27" selection-start="1712" selection-end="1712" vertical-scroll-proportion="0.024916943">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

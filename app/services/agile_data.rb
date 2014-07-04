@@ -66,7 +66,11 @@
       sprint.missed_estimate_changed = 0
       sprint.missed_total_commitment = 0
 
+      binding.pry
+
       sprint.sprint_stories.each { |sstory|
+
+        binding.pry
 
         if sstory.was_added
           sprint.added_commitment += sstory.size

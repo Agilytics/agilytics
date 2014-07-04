@@ -14,13 +14,6 @@ class JiraCaller
     sprintpid = sprint.pid[boardId.length..sprint.pid.length]
     response = http_get("#{@site}/rest/greenhopper/1.0/rapid/charts/scopechangeburndownchart.json?rapidViewId=#{boardId}&sprintId=#{sprintpid}")
 
-    #response['changes'].each{ |d| d[1].each { |c|
-    #    if c['key'] == 'AP-40'
-    #      puts c
-    #    end
-    #  }
-    #};
-
     case response.code
       when 200
         response
@@ -44,7 +37,7 @@ class JiraCaller
   end
 
   def get_sprints(boardId)
-    response = http_get("#{@site}/rest/greenhopper/1.0/sprints/#{boardId}")
+    response = http_get("#{@site}/rest/greenhopper/1.0/sprintquery/#{boardId}?includeHistoricSprints=false&includeFutureSprints=false")
 
     case response.code
       when 200
@@ -344,7 +337,7 @@ class JiraCaller
     end
 
     sprint.name = sprint_json['name']
-    sprint.closed = sprint_json['closed']
+    sprint.closed = sprint_json['state'] == 'CLOSED'
   end
 
 
