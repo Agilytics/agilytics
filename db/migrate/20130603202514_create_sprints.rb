@@ -2,8 +2,10 @@ class CreateSprints < ActiveRecord::Migration
   def change
     create_table :sprints do |t|
       t.string :pid
+      t.string :sprint_id
       t.string :name
       t.boolean :closed
+      t.boolean :to_analyze
 
       t.boolean :have_all_changes
       t.boolean :have_processed_all_changes

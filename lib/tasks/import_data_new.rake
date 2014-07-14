@@ -16,7 +16,7 @@ namespace :import_data_new do
 
   #######
   # JIRA
-  desc 'import from jira'
+  desc 'NEW import from jira'
   task :jira => :environment do
       if !ENV['uid'] || !ENV['pwd'] || !ENV['site']
         usage('jira')
@@ -26,9 +26,10 @@ namespace :import_data_new do
       puts "Connecting to site: #{ENV['site']} with uid: #{ENV['uid']} and pwd: #{ENV['pwd']}"
 
       rc = RestCaller.new(ENV['uid'], ENV['pwd'])
-      jc = JiraCaller.new(rc, ENV['site'])
-      ad = AgileData.new (jc)
-      ad.create()
+      jc = JiraCallerNew.new(rc, ENV['site'])
+      jc.get_boards()
+      jc.process_sprints()
+
   end
 
   ##############
@@ -49,9 +50,9 @@ namespace :import_data_new do
 
       rc = RestCaller.new(ENV['uid'], ENV['pwd'])
       rc.record_in(cacheFile)
-      jc = JiraCaller.new(rc, ENV['site'])
-      ad = AgileData.new (jc)
-      ad.create()
+      jc = JiraCallerNew.new(rc, ENV['site'])
+      jc.get_boards()
+      jc.process_sprints()
       rc.end()
 
   end
@@ -82,9 +83,9 @@ namespace :import_data_new do
 
       rc = RestCaller.new('foo', 'bar')
       rc.use_data_from(cacheFile)
-      jc = JiraCaller.new(rc, ENV['site'])
-      ad = AgileData.new (jc)
-      ad.create()
+      jc = JiraCallerNew.new(rc, ENV['site'])
+      jc.get_boards()
+      jc.process_sprints()
       rc.end()
 
   end

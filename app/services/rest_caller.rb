@@ -31,8 +31,7 @@ class RestCaller
 
     options = {}
     options.merge!({:basic_auth => @auth})
-    if(@responses)
-      if(@responses.key?(uri))
+    if(@responses && @responses.key?(uri))
         res = @responses[uri]
 
         class << res
@@ -40,14 +39,6 @@ class RestCaller
         end
 
         res.code = 200
-
-      else
-        binding.pry
-        puts "404 #{uri}"
-        res =  ClassWithCode.new
-        res.code = 404
-
-      end
 
     else
       res = self.class.get(uri, options)

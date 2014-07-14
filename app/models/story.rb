@@ -5,14 +5,11 @@ class Story < ActiveRecord::Base
 
   attr_accessible :acuity,
                   :create_date,
-                  :done,
-                  :done_date,
-                  :location,
                   :pid,
+                  :story_key,
                   :size,
                   :name,
                   :description,
-                  :status,
                   :assignee_id,
                   :reporter_id,
                   :story_type

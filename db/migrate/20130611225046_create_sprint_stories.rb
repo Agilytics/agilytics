@@ -11,15 +11,15 @@ class CreateSprintStories < ActiveRecord::Migration
       t.string :location
       t.string :status
       t.datetime :init_date
-      t.boolean :was_added
-      t.boolean :was_removed
+      #t.boolean :was_added
+      #t.boolean :was_removed
       t.boolean :is_initialized
 
       t.integer :story_id
       t.integer :sprint_id
       t.integer :assignee_id
       t.integer :reporter_id
-      t.integer :work_activity_id
+      #t.integer :work_activity_id
 
       t.timestamps
 

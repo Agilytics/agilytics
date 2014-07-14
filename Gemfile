@@ -6,7 +6,8 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 # Adding Mongo
-gem 'sqlite3'
+#gem 'sqlite3'
+gem "pg"
 
 gem 'haml-rails'
 gem 'underscore-rails'

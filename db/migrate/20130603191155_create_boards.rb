@@ -3,7 +3,7 @@ class CreateBoards < ActiveRecord::Migration
     create_table :boards do |t|
       t.string :pid
       t.string :name
-      t.boolean :is_sprint_board
+      t.boolean :to_analyze
 
       t.timestamps
     end

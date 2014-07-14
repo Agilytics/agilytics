@@ -4,7 +4,9 @@
     <data-source source="LOCAL" name="Rails agilytics: development" uuid="bd1f2cfd-e9d4-47b7-be38-f29d6b2a4210">
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/development.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:postgresql:agilitics</jdbc-url>
+      <user-name>agilitics</user-name>
+      <user-password>dfcbdfcddfc3dfc6dfcf</user-password>
       <libraries>
         <library>
           <url>file://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/xerial-sqlite-license.txt</url>

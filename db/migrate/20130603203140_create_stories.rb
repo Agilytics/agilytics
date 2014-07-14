@@ -3,6 +3,7 @@ class CreateStories < ActiveRecord::Migration
     create_table :stories do |t|
 
       t.string :pid
+      t.string :story_key
       t.string :acuity
       t.datetime :create_date
       t.datetime :done_date
@@ -14,11 +15,11 @@ class CreateStories < ActiveRecord::Migration
       t.integer :sprint_id
       t.integer :assignee_id
       t.integer :reporter_id
-      t.string :associated_story_pid
-      t.string :associated_subtask_pid
+      #t.string :associated_story_pid
+      #t.string :associated_subtask_pid
       t.string :story_type
       t.string :name
-      t.string :description
+      t.text :description
 
       t.timestamps
     end
