@@ -112,12 +112,10 @@ class JiraCallerNew
           ss.pid = sprint_story_pid
           ss.sprint = sprint
 
-
-          ss.save()
-          sprint.save()
-
           ss.story = process_story(ss, json_story)
 
+          sprint.save()
+          ss.save()
         end
       end
     end
@@ -132,11 +130,17 @@ class JiraCallerNew
         story.create_date = json_story_details['created']
         story.pid = json_story_details['id']
         story.story_key = json_story_details['key']
-        if json_story_details['fields']
 
-          story.size = json_story_details['fields']['customfield_10004']
-          story.name = json_story_details['fields']['summary']
-          story.description = json_story_details['fields']['description']
+        fields = json_story_details['fields']
+        if fields
+
+          story.size = fields['customfield_10004']
+
+          # this gives a snapshot of the story size
+          sprint_story.size = story.size
+
+          story.name = fields['summary']
+          story.description = fields['description']
 
           reporter = get_or_create_user(fields['reporter'], Reporter)
           story.reporter = reporter
@@ -146,8 +150,8 @@ class JiraCallerNew
           story.assignee = assignee
           sprint_story.assignee = assignee
 
+          story.story_type = fields['issuetype']['name'] if fields['issuetype']
         end
-        story.story_type = json_story_details['fields']['issuetype']['name'] if json_story_details['fields']['issuetype']
 
       end
     end
@@ -177,10 +181,10 @@ class JiraCallerNew
       user = userClass.new()
       user.pid = user_name
     end
+
     user.display_name = user_blob['displayName']
     user.email_address = user_blob['emailAddress']
     user.name = user_blob['name']
-    user.pid = user.name
 
     user.save()
 

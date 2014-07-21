@@ -11,11 +11,8 @@
     %title
     %meta( content = "" name = "description")/
     %meta( content = "width=device-width" name= "viewport")/
-    / Place favicon.ico and apple-touch-icon.png in the root directory
-    / build:css styles/main.css
-    %link( href = "styles/bootstrap.css" rel = "stylesheet")/
-    %link( href = "styles/main.css" rel = "stylesheet")/
-    / endbuild
+    %link( href = "components/bootstrap/dist/css/bootstrap.min.css" rel = "stylesheet")/
+
   %body(ng-app= "agilytics" ng-class= "{noScroll:noScroll}")
     /[if lt IE 7]
       %p.chromeframe
@@ -28,22 +25,36 @@
       %script( src="components/es5-shim/es5-shim.js")
       %script( src="components/json3/lib/json3.min.js")
     / Add your site or application content here
-    / Begin Nav
-    .navbar.navbar-fixed-top
-      .navbar-inner
-        .container
-          %a.brand{:href => "#"}
-            %img{:src => "/assets/logo.gif"}/
-          %ul.nav
-            %li{"ng-class" => "{ active: $state.includes('') }"}
-              %a{:href => "#/all"} All
-            %li{"ng-class" => "{ active: $state.includes('') }"}
-              %a{:href => "#/boards"} Boards
-            %li{"ng-class" => "{ active: $state.includes('') }"}
-              %a{:href => "#/assignees"} Boards
+    %header#top.navbar.navbar-static-top.bs-docs-nav{role: "banner"}
+      .container
+        .navbar-header
+          %button.navbar-toggle{"data-target" => ".bs-navbar-collapse", "data-toggle" => "collapse", type: "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.navbar-brand{href: "../"}
+            %span.glyphicon.glyphicon-signal
+            %span.glyphicon-class Agilytics
 
-          %p.navbar-text.pull-right{"ui-view" => "hint"}
-    / end Nav
+        %nav.collapse.navbar-collapse.bs-navbar-collapse{role: "navigation"}
+          %ul.nav.navbar-nav
+            %li.active
+              %a{href: "/#boards"} Boards
+            %li
+              %a{href: "../css"} CSS
+            %li
+              %a{href: "../components"} Components
+            %li
+              %a{href: "../javascript"} JavaScript
+            %li
+              %a{href: "../customize"} Customize
+          %ul.nav.navbar-nav.navbar-right
+            %li
+              %a{href: "http://expo.getbootstrap.com", onclick: "ga('send', 'event', 'Navbar', 'Community links', 'Expo');"} Expo
+            %li
+              %a{href: "http://blog.getbootstrap.com", onclick: "ga('send', 'event', 'Navbar', 'Community links', 'Blog');"} Blog
+
     .container{:style => "margin-top:40px", "ui-view" => ""}
 
     %script( src = "components/jquery/jquery.min.js" )
@@ -55,13 +66,15 @@
     %script( src = "components/angular-cookies/angular-cookies.js" )
     %script( src = "components/angular-sanitize/angular-sanitize.js" )
     / app
+
     %script( src = "scripts/angular_app.js")
+    %script( src = "scripts/controllers/boards_controller.js")
     / build:js scripts/scripts.js
     / services
     %script(src = "scripts/services/agileCubeService.js")
     %script(src = "scripts/services/utils.js")
     / controllers
-    %script( src = "scripts/controllers/boards_controller.js")
+
     %script( src = "scripts/controllers/metrics.js")
     %script( src = "scripts/controllers/sprint_controller.js")
     / directives

@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "",
+  "sourceRoot": "",
+  "sources": [
+    "/assets/source_maps/bundler/gems/activeadmin-0.6.3/app/assets/javascripts/active_admin/lib/namespace.coffee"
+  ],
+  "names": [],
+  "mappings": "AAEA;AAAA,EAAA,MAAM,CAAC,WAAP,GAAqB,EAArB,CAAA;;AACA,EAAA,IAAA,CAAA,MAA4C,CAAC,EAA7C;AAAA,IAAA,MAAM,CAAC,EAAP,GAAY,MAAM,CAAC,WAAnB,CAAA;GADA;AAAA"
+}

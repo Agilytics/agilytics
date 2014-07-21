@@ -1,0 +1,7 @@
+%br
+%assignee-board-summary(boards="cube.boardsWithSprints" assignees22="cube.assignees" assignees="cube.assignees" enddatetime="cube.endOfLastSprint" )
+%br
+%div(ng-repeat="board in cube.boardsWithSprints")
+  %div.hero-unit
+    %board-summary-trend-line(board="board" colors="colors" graph-height="300")
+    -#%board-summary(board="board" colors="colors")

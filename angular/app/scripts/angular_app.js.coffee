@@ -4,13 +4,13 @@ angular.module('agilytics',['ui.compat'])
       '$stateProvider', '$routeProvider', '$urlRouterProvider',
       ($stateProvider, $routeProvider, $urlRouterProvider) ->
 
-        $urlRouterProvider.when('/', '/all').otherwise("/all")
+        $urlRouterProvider.when('/', '/boards').otherwise("/boards")
 
         $stateProvider.state(
-          'all', {
-            url: '/all',
-            templateUrl: 'views/metrics.html'
-            controller: MetricsController
+          'boards', {
+            url: '/boards',
+            templateUrl: 'views/boards.html'
+            controller: "BoardsController"
           }
         )
         .state(
@@ -19,13 +19,6 @@ angular.module('agilytics',['ui.compat'])
             templateUrl: 'views/sprint.html'
             controller: SprintController
             onExit: -> $("body").off("keydown");
-          }
-        )
-        .state(
-          'boards', {
-            url: '/boards',
-            templateUrl: 'views/boards.html'
-            controller: BoardsController
           }
         )
     ]

@@ -1,9 +1,8 @@
-class @BoardsController
+angular.module("agilytics").controller "BoardsController", ($scope, $http) ->
 
-  constructor: ($scope, agileCubeService)->
-    agileCubeService.getCube( (cube)->
-      $scope.cube = cube
-    )
-    this
+  $http.get("/api/boards.json").success((data)->
+    $scope.boards = data
+  )
 
-@BoardsController.$inject = ['$scope', 'agileCubeService']
+  this
+

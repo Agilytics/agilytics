@@ -158,6 +158,7 @@
       <excludeFolder url="file://$MODULE_DIR$/angular/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/angular/dist" />
       <excludeFolder url="file://$MODULE_DIR$/angular/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/angularold" />
       <excludeFolder url="file://$MODULE_DIR$/public/assets/source_maps" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
     </content>
@@ -169,94 +170,46 @@
     <orderEntry type="library" scope="PROVIDED" name="activerecord (v3.2.13, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activeresource (v3.2.13, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v3.2.13, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="angular-gem (v1.1.5, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="angular-ui-bootstrap-rails (v0.4.0.0, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="arel (v3.0.2, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="awesome_print (v1.1.0, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="better_errors (v0.9.0, RVM: ruby-2.0.0-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="arel (v3.0.3, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="binding_of_caller (v0.7.2, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.0.4, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.3.5, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="caseconverter (v0.1.1, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="chosen-rails (v1.0.0, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="chunky_png (v1.2.8, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="coderay (v1.0.9, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-rails (v3.2.2, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="coffee-rails-source-maps (v1.3.6, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="coffee-script (v2.2.0, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.6.3, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="columnize (v0.3.6, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="commonjs (v0.2.6, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="compass (v0.12.2, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="compass-rails (v1.0.3, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="coolline (v0.4.2, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="debug_inspector (v0.0.2, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="debugger (v1.6.1, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="debugger-linecache (v1.2.0, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="debugger-ruby_core_source (v1.2.3, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.2.4, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="diffy (v3.0.1, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="execjs (v2.0.1, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="fssm (v0.2.10, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="grit (v2.5.0, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="haml (v4.0.3, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="haml-rails (v0.4, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="highcharts-rails (v3.0.5, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.3, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="hirb (v0.7.1, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="httparty (v0.11.0, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.6.1, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="jasmine-core (v1.3.1, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="jasmine-rails (v0.4.5, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="jazz_hands (v0.5.1, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="journey (v1.0.4, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v3.0.4, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="json (v1.8.0, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="less (v2.3.3, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="less-rails (v2.3.3, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="less-rails-bootstrap (v3.0.2, RVM: ruby-2.0.0-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="json (v1.8.1, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="libv8 (v3.16.14.3, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.5.4, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.25, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mono_logger (v1.1.0, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.7.9, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_xml (v0.5.5, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pg (v0.17.1, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="polyglot (v0.3.3, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="posix-spawn (v0.3.6, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="pry (v0.9.12.2, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="pry-debugger (v0.2.2, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pry-doc (v0.4.6, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pry-git (v0.2.3, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pry-rails (v0.3.2, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="pry-remote (v0.1.7, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pry-stack_explorer (v0.4.9.1, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v1.4.5, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-cache (v1.2, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rack-ssl (v1.3.3, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.2, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails (v3.2.13, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="railties (v3.2.13, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rake (v10.1.0, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v3.12.2, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="redis (v3.1.0, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="redis-namespace (v1.5.0, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ref (v1.0.5, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="resque (v2.0.0.pre.1@8a8fd8, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="sass (v3.2.10, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass-rails (v3.2.6, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="slop (v3.4.6, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v2.2.2, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets-rails (v0.0.1, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="therubyracer (v0.12.0, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="thor (v0.18.1, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tilt (v1.4.1, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="treetop (v1.4.15, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="tzinfo (v0.3.37, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="uglifier (v2.2.1, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="underscore-rails (v1.5.1, RVM: ruby-2.0.0-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="yard (v0.8.7, RVM: ruby-2.0.0-p0) [gem]" level="application" />
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />

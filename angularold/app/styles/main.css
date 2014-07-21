@@ -1,0 +1,24 @@
+/* Will be compiled down to a single stylesheet with your sass files */
+.loading{
+ top:0;
+ left:0;
+ height:100%;
+ width:100%;
+ opacity:0.5;
+ position:absolute;
+ z-index:2000;
+ background-color: black;
+ color:white;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -250px;
+}
+
+.no-scroll{
+    overflow:hidden;
+}

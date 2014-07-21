@@ -1,10 +1,23 @@
-%div.ng-cloak
-  %div.hero-unit(ng-repeat="board in cube.boardsWithSprints")
-    %assignee-board-summary(boards="cube.boardsWithSprints" assignees="cube.assignees" board="board")
-    %br
-    %board-summary(board="board")
-    %br(style="margin-top:10px")
-
-
-
+.bs-example
+  %table.table
+    %thead
+      %tr
+        %th #
+        %th Board Name
+        %th Last Updated
+        %th
+          Analyze
+          %br Sprints
+        %th
+          Analyze
+          %br Backlog
+    %tbody
+      %tr( ng-repeat="board in boards")
+        %td {{$index}}
+        %td {{board.name}}
+        %td {{board.last_updated}}
+        %td
+          %input( type="checkbox" style='height:25px; width:45px' ng-model="board.to_analyze")
+        %td
+          %input( type="checkbox" style='height:25px; width:45px' ng-model="board.to_analyze_backlog")
 

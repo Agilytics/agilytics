@@ -7,13 +7,17 @@ gem 'rails', '3.2.13'
 
 # Adding Mongo
 #gem 'sqlite3'
-gem "pg"
+gem 'pg'
+gem 'sass-rails'
+gem 'meta_search',    '>= 1.1.0.pre'
 
 gem 'haml-rails'
 gem 'underscore-rails'
 gem 'httparty'
 
 gem 'highcharts-rails', '~> 3.0.0'
+
+gem 'jquery-rails', '~> 2.3.0'
 
 gem 'less-rails-bootstrap'
 gem 'angular-gem'
@@ -27,7 +31,6 @@ gem 'caseconverter'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'coffee-rails-source-maps'
 
@@ -40,7 +43,7 @@ group :assets do
   gem 'jasmine-rails'
 end
 
-gem 'jquery-rails'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

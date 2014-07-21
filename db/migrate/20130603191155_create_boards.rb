@@ -4,6 +4,8 @@ class CreateBoards < ActiveRecord::Migration
       t.string :pid
       t.string :name
       t.boolean :to_analyze
+      t.boolean :to_analyze_backlog
+      t.datetime :last_updated
 
       t.timestamps
     end

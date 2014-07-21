@@ -2,8 +2,7 @@ Agilytics::Application.routes.draw do
 
   resources :sprints
 
-
-  resources :boards
+  get 'api/boards', to: 'boards#index'
 
   get 'import/quote'
   get 'import/metrics'
