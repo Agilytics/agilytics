@@ -11,14 +11,14 @@ namespace :import_data_new do
   end
 
   def usage(from_here)
-    puts "Please pass in userid (uid), password (pwd) and root URL to Jira Rest API. \n   ex: rake  import_data:#{from_here} uid=ahuffman pwd=foopass site=shareableink.atlassian.com"
+    puts "Please pass in userid (uid), password (pwd) and root URL to Jira Rest API. \n   ex: rake  import_data:#{from_here} uid=ahuffman pwd=foopass site=shareableink.atlassian.com name=shareableink"
   end
 
   #######
   # JIRA
   desc 'NEW import from jira'
   task :jira => :environment do
-      if !ENV['uid'] || !ENV['pwd'] || !ENV['site']
+      if !ENV['uid'] || !ENV['pwd'] || !ENV['site'] || !ENV['name']
         usage('jira')
         exit 0
       end
@@ -26,7 +26,7 @@ namespace :import_data_new do
       puts "Connecting to site: #{ENV['site']} with uid: #{ENV['uid']} and pwd: #{ENV['pwd']}"
 
       rc = RestCaller.new(ENV['uid'], ENV['pwd'])
-      jc = JiraCallerNew.new(rc, ENV['site'])
+      jc = JiraCallerNew.new(rc, ENV['site'], ENV['name'])
       jc.get_boards()
       jc.process_sprints()
 
@@ -36,7 +36,7 @@ namespace :import_data_new do
   # JIRA TO FILE
   desc 'import from jira and write to cache file'
   task :jira_to_file => :environment do
-      if !ENV['uid'] || !ENV['pwd'] || !ENV['site']
+      if !ENV['uid'] || !ENV['pwd'] || !ENV['site'] || !ENV['name']
         usage('jira')
         exit 0
       end
@@ -50,7 +50,7 @@ namespace :import_data_new do
 
       rc = RestCaller.new(ENV['uid'], ENV['pwd'])
       rc.record_in(cacheFile)
-      jc = JiraCallerNew.new(rc, ENV['site'])
+      jc = JiraCallerNew.new(rc, ENV['site'], ENV['name'])
       jc.get_boards()
       jc.process_sprints()
       rc.end()
@@ -69,7 +69,7 @@ namespace :import_data_new do
   # JIRA FROM CACHE FILE
   desc 'import from jira file cached'
   task :jira_from_file => :environment do
-      if !ENV['site']
+      if !ENV['site'] || !ENV['name']
         puts 'Need to specify the site.... site=https://shareableink.atlassian.net'
         exit 0
       elsif !ENV['cacheFile']
@@ -83,7 +83,7 @@ namespace :import_data_new do
 
       rc = RestCaller.new('foo', 'bar')
       rc.use_data_from(cacheFile)
-      jc = JiraCallerNew.new(rc, ENV['site'])
+      jc = JiraCallerNew.new(rc, ENV['site'], ENV['name'])
       jc.get_boards()
       jc.process_sprints()
       rc.end()

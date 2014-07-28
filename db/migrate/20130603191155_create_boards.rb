@@ -7,6 +7,8 @@ class CreateBoards < ActiveRecord::Migration
       t.boolean :to_analyze_backlog
       t.datetime :last_updated
 
+      t.integer :site_id
+
       t.timestamps
     end
   end

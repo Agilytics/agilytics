@@ -1,5 +1,5 @@
 .bs-example
-  %table.table
+  %table.table.table-striped.table-hover
     %thead
       %tr
         %th #
@@ -12,7 +12,7 @@
           Analyze
           %br Backlog
     %tbody
-      %tr( ng-repeat="board in boards")
+      %tr( ng-repeat="board in boards" ng-click="href(board)" style="cursor: pointer" )
         %td {{$index}}
         %td {{board.name}}
         %td {{board.last_updated}}

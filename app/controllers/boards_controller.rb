@@ -2,7 +2,7 @@ class BoardsController < ApplicationController
   # GET /boards
   # GET /boards.json
   def index
-    @boards = Board.all.sort! { |a,b| a.name.downcase <=> b.name.downcase }
+    @boards = Board.find_all_by_site_id(params[:site_id]  ).sort! { |a,b| a.name.downcase <=> b.name.downcase }
 
     respond_to do |format|
       format.html # index.html.erb

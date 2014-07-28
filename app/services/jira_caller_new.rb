@@ -1,7 +1,16 @@
 class JiraCallerNew
 
-  def initialize(rest_caller, site)
+  def initialize(rest_caller, site, name)
     @site = site
+
+    @siteClass = Site.find_by_url(site)
+    unless @siteClass
+      @siteClass = Site.new()
+      @siteClass.name = name
+      @siteClass.url = site
+      @siteClass.save()
+    end
+
     @rest_caller = rest_caller
   end
 
@@ -35,6 +44,9 @@ class JiraCallerNew
 
         if (!b)
           b = Board.new()
+          b.site = @siteClass
+          @siteClass.boards << b
+          @siteClass.save()
         end
 
         b.pid = jb['id'].to_s()

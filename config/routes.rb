@@ -2,6 +2,7 @@ Agilytics::Application.routes.draw do
 
   resources :sprints
 
+  get 'api/sites', to: 'sites#index'
   get 'api/boards', to: 'boards#index'
 
   get 'import/quote'

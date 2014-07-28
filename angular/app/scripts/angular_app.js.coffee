@@ -4,13 +4,27 @@ angular.module('agilytics',['ui.compat'])
       '$stateProvider', '$routeProvider', '$urlRouterProvider',
       ($stateProvider, $routeProvider, $urlRouterProvider) ->
 
-        $urlRouterProvider.when('/', '/boards').otherwise("/boards")
+        $urlRouterProvider.when('/', '/sites').otherwise("/sites")
 
         $stateProvider.state(
+          'sites', {
+            url: '/sites',
+            templateUrl: 'views/sites.html'
+            controller: "SitesController"
+          }
+        )
+        .state(
           'boards', {
-            url: '/boards',
+            url: '/sites/:siteId/boards',
             templateUrl: 'views/boards.html'
             controller: "BoardsController"
+          }
+        )
+        .state(
+          'board', {
+            url: '/sites/:siteId/boards/:boardId',
+            templateUrl: 'views/board.html',
+            controller: "BoardController"
           }
         )
         .state(

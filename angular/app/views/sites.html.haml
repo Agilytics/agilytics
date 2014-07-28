@@ -1,0 +1,12 @@
+
+
+%table.table.table-striped.table-hover
+  %thead
+    %tr
+      %td Site Name
+      %td Number of Boards
+  %tr( ng-repeat="site in sites" ng-click="href(site)"  style="cursor: pointer" )
+    %td
+      {{site.name}}
+    %td
+      {{site.numberofboards}}
