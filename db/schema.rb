@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130611225046) do
+ActiveRecord::Schema.define(:version => 20130730225047) do
 
   create_table "agile_users", :force => true do |t|
     t.string   "pid"
@@ -31,6 +31,14 @@ ActiveRecord::Schema.define(:version => 20130611225046) do
     t.integer  "site_id"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
+  end
+
+  create_table "releases", :force => true do |t|
+    t.string   "name"
+    t.datetime "release_date"
+    t.integer  "site_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "sites", :force => true do |t|

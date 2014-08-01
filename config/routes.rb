@@ -4,6 +4,10 @@ Agilytics::Application.routes.draw do
 
   get 'api/sites', to: 'sites#index'
   get 'api/boards', to: 'boards#index'
+  get 'api/boards/:id/stats', to: 'boards#stats'
+  get 'api/boards/velocities', to: 'boards#velocities'
+
+  post 'api/boards/updateBoards', to: 'boards#updateBoards'
 
   get 'import/quote'
   get 'import/metrics'
@@ -13,6 +17,7 @@ Agilytics::Application.routes.draw do
   get 'import/grid'
   get 'import/gridChanges'
   get 'import/createMasterGrid'
+
 
   mount JasmineRails::Engine => "/specs" if defined?(JasmineRails)
 
@@ -63,9 +68,10 @@ Agilytics::Application.routes.draw do
   #     resources :products
   #   end
 
+
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'import#metrics'
+  #root :to => 'import#metrics'
 
   # See how all your routes lay out with "rake routes"
 

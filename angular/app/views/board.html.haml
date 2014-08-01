@@ -1,1 +1,81 @@
-I am a great big board
+
+%nav.navbar.navbar-default{role: "navigation"}
+  .container-fluid
+    .navbar-header
+      %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-2", "data-toggle" => "collapse", type: "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      .navbar-brand {{board.name}}
+    #bs-example-navbar-collapse-2.collapse.navbar-collapse
+      %form.navbar-form.navbar-left
+        .form-group
+          .btn-group
+            %button.btn.btn-primary( ng-click="openReleaseManagement()")
+              Manage Releases
+
+      .navbar-form.nav.navbar-nav.navbar-right
+        .btn-group
+          %button.btn.btn-default( ng-click="detail=true" ng-class="{'active':detail}" type="button" ) DETAIL ON
+          %button.btn.btn-default( ng-click="detail=false" ng-class="{'active':!detail}" type="button" ) OFF
+
+%release-management
+
+.row
+  %div.col-md-6#velocity(style="min-width: 310px; height: 400px; margin: 0 auto")
+  %div.col-md-6#velocityPercent(style="min-width: 310px; height: 400px; margin: 0 auto")
+
+%table.table.table-striped.table-hover( ng-class="{ 'hide' : !detail }" )
+  %thead
+    %tr
+      %td sprint name
+      %td feature
+      %td enhancement
+      %td bug
+      %td total
+      %td feature %
+      %td enhancements %
+      %td bug %
+
+  %tbody
+    %tr( ng-repeat="stat in stats" ng-click="href(board)" style="cursor: pointer" )
+      %td {{stat.sprint_name}}
+      %td {{stat.feature_velocity}}
+      %td {{stat.enhancement_velocity}}
+      %td {{stat.bug_velocity}}
+      %td {{stat.total_velocity}}
+      %td {{stat.feature_percentage_velocity}}%
+      %td {{stat.enhancements_percentage_velocity}}%
+      %td {{stat.bug_percentage_velocity}}%
+
+.row
+  %div.col-md-6#counts(style="min-width: 310px; height: 400px; margin: 0 auto")
+  %div.col-md-6#countsPercent(style="min-width: 310px; height: 400px; margin: 0 auto")
+
+%table.table.table-striped.table-hover( ng-class="{ 'hide' : !detail }" )
+  %thead
+    %tr
+      %td sprint name
+      %td feature
+      %td enhancement
+      %td bug
+      %td total
+      %td feature %
+      %td enhancements %
+      %td bug %
+
+  %tbody
+    %tr( ng-repeat="stat in stats" ng-click="href(board)" style="cursor: pointer" )
+
+      %td {{stat.sprint_name}}
+      %td {{stat.feature_count}}
+      %td {{stat.enhancement_count}}
+      %td {{stat.bug_count}}
+      %td {{stat.total_count}}
+      %td {{stat.feature_percentage_count}}%
+      %td {{stat.enhancements_percentage_count}}%
+      %td {{stat.bug_percentage_count}}%
+
+
+

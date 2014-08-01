@@ -22,3 +22,13 @@
 .no-scroll{
     overflow:hidden;
 }
+
+.quiet {
+    color:#666;
+}
+
+.very-quiet {
+  color:#999;
+}
+
+.datepicker{z-index:1151;}

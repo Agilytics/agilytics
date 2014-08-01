@@ -13,6 +13,7 @@ class CreateSprints < ActiveRecord::Migration
       t.datetime :end_date
       t.integer :board_id
 
+      t.integer :release_id
 
       t.integer :init_velocity
       t.integer :added_velocity

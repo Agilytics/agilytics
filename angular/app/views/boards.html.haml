@@ -1,23 +1,37 @@
-.bs-example
+#analyzing
+  %h3 Boards available for analysis
   %table.table.table-striped.table-hover
     %thead
       %tr
-        %th #
         %th Board Name
         %th Last Updated
+        %th Velocity
         %th
           Analyze
           %br Sprints
-        %th
-          Analyze
-          %br Backlog
+        /%th
+        /  Analyze
+        /  %br Backlog
     %tbody
-      %tr( ng-repeat="board in boards" ng-click="href(board)" style="cursor: pointer" )
-        %td {{$index}}
-        %td {{board.name}}
-        %td {{board.last_updated}}
-        %td
-          %input( type="checkbox" style='height:25px; width:45px' ng-model="board.to_analyze")
-        %td
-          %input( type="checkbox" style='height:25px; width:45px' ng-model="board.to_analyze_backlog")
+      %tr( ng-class="{'hide':!boards.length}" )
+        %td(colspan=4)
+          %h3 Analyzing
 
+      %tr( ng-repeat="board in boards"  ng-class="{'hide':!boards.length}" )
+
+        %td(ng-click="href(board)" style="cursor: pointer" ) {{board.name}}
+        %td(ng-click="href(board)" style="cursor: pointer" ) {{board.last_updated}}
+        %td.sparkline( id="{{board.id}}" )
+        %td
+          %input.checked( type="checkbox" style='height:25px; width:45px' ng-model="board.to_analyze" ng-click='saveBoards()')
+
+      %tr(ng-class="{'hide':!notBoards.length}")
+        %td(colspan=4)
+          %h3(style="color:#FF9999") Not Analyzing
+
+      %tr( ng-repeat="board in notBoards" style="color:#CC0000" ng-class="{'hide':!notBoards.length}" )
+        %td(ng-click="(board)" style="cursor: pointer" ) {{board.name}}
+        %td(ng-click="(board)" style="cursor: pointer" ) {{board.last_updated}}
+        %td
+        %td
+          %input.checked( type="checkbox" style='height:25px; width:45px' ng-model="board.to_analyze" ng-click='saveBoards()')

@@ -32,4 +32,5 @@ class Sprint < ActiveRecord::Base
   has_many :reporters, :through => :sprint_stories
 
   belongs_to :board
+  belongs_to :release
 end

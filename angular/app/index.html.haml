@@ -8,11 +8,12 @@
   %head
     %meta( charset = "utf-8")/
     %meta( content = "IE=edge,chrome=1" http-equiv= "X-UA-Compatible")/
-    %title
+    %title Agilytics
     %meta( content = "" name = "description")/
     %meta( content = "width=device-width" name= "viewport")/
     %link( href = "components/bootstrap/dist/css/bootstrap.min.css" rel = "stylesheet")/
-
+    %link( href = "components/bootstrap-datepicker/css/datepicker3.css" rel = "stylesheet")/
+    %link( href = "styles/main.css" rel = "stylesheet")/
   %body(ng-app= "agilytics" ng-class= "{noScroll:noScroll}")
     /[if lt IE 7]
       %p.chromeframe
@@ -39,23 +40,15 @@
 
         %nav.collapse.navbar-collapse.bs-navbar-collapse{role: "navigation"}
           %ul.nav.navbar-nav
-            %li.active
-              %a{href: "/#boards"} Boards
             %li
-              %a{href: "../css"} CSS
-            %li
-              %a{href: "../components"} Components
-            %li
-              %a{href: "../javascript"} JavaScript
-            %li
-              %a{href: "../customize"} Customize
+              %a(href='#/sites') Sites
+            %li#boards.hide
+              %a(href='#/boards') Boards
           %ul.nav.navbar-nav.navbar-right
-            %li
-              %a{href: "http://expo.getbootstrap.com", onclick: "ga('send', 'event', 'Navbar', 'Community links', 'Expo');"} Expo
             %li
               %a{href: "http://blog.getbootstrap.com", onclick: "ga('send', 'event', 'Navbar', 'Community links', 'Blog');"} Blog
 
-    .container{:style => "margin-top:40px", "ui-view" => ""}
+    .container(style="" ui-view="")
 
     %script( src = "components/jquery/jquery.min.js" )
     %script( src = "components/underscore/underscore-min.js" )
@@ -65,6 +58,8 @@
     %script( src = "components/angular-resource/angular-resource.js" )
     %script( src = "components/angular-cookies/angular-cookies.js" )
     %script( src = "components/angular-sanitize/angular-sanitize.js" )
+    %script( src = "components/bootstrap/dist/js/bootstrap.min.js")
+    %script( src = "scripts/bootstrap-datepicker.js" )
     / app
 
     %script( src = "scripts/angular_app.js")
@@ -80,6 +75,7 @@
     %script( src = "scripts/controllers/metrics.js")
     %script( src = "scripts/controllers/sprint_controller.js")
     / directives
+    %script(src = "scripts/directives/release_management.js")
     %script(src = "scripts/directives/assignee_board_summary.js")
     %script(src = "scripts/directives/board_summary.js")
     %script(src = "scripts/directives/board_summary_trend_line.js")

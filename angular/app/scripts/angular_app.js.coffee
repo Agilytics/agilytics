@@ -1,3 +1,4 @@
+
 angular.module('agilytics',['ui.compat'])
   .config(
     [
@@ -15,30 +16,37 @@ angular.module('agilytics',['ui.compat'])
         )
         .state(
           'boards', {
-            url: '/sites/:siteId/boards',
+            url: '/boards',
             templateUrl: 'views/boards.html'
             controller: "BoardsController"
           }
         )
         .state(
           'board', {
-            url: '/sites/:siteId/boards/:boardId',
+            url: '/boards/:boardId',
             templateUrl: 'views/board.html',
             controller: "BoardController"
-          }
-        )
-        .state(
-          'sprints', {
-            url: '/sprints/:sprintId?all',
-            templateUrl: 'views/sprint.html'
-            controller: SprintController
-            onExit: -> $("body").off("keydown");
           }
         )
     ]
   ).run([ '$rootScope', '$state', '$stateParams',
         ($rootScope, $state, $stateParams) ->
+
+          getUrlParameter = (sParam) ->
+            sPageURL = window.location.search.substring(1)
+            sURLVariables = sPageURL.split("&")
+            i = 0
+
+            while i < sURLVariables.length
+              sParameterName = sURLVariables[i].split("=")
+              return sParameterName[1]  if sParameterName[0] is sParam
+              i++
+
           $rootScope.$state = $state
           $rootScope.$stateParams = $stateParams
+          $rootScope.siteId = getUrlParameter('site')
+          if getUrlParameter('site')
+            $("#boards").toggleClass("hide")
+
         ]
 )
