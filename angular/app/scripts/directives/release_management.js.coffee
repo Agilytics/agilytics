@@ -1,6 +1,9 @@
 angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScope", "$timeout", ($http, $rootScope,$timeout) ->
 
   getReleases = ->
+
+    $scope.releases.length = 0
+
     $http.get("/api/releases.json?board_id=#{@scope.board.id}&site_id=#{$rootScope.siteId}").success((releases)->
       for release in releases
         if release.release_date
@@ -69,13 +72,10 @@ angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScop
       headers: {'Content-Type': 'application/json'}
     ).success((data, status, headers, config) ->
       delete $scope.release
+      getReleases()
     ).error((data, status, headers, config) ->
       alert 'error'
     )
-
-  cancelRelease = ->
-    scope = @scope
-    scope.release = null
 
   getSprintsForBoard = ->
     $scope = @scope
@@ -117,7 +117,6 @@ angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScop
     #listen for the open : calling scope must set a scope.control = {} and then call scope.control.open()
     scope.control.open = buildManager
 
-    buildManager()
 
     this
 
