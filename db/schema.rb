@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130730225047) do
+ActiveRecord::Schema.define(:version => 20140802033525) do
 
   create_table "agile_users", :force => true do |t|
     t.string   "pid"
@@ -35,8 +35,10 @@ ActiveRecord::Schema.define(:version => 20130730225047) do
 
   create_table "releases", :force => true do |t|
     t.string   "name"
+    t.text     "description"
     t.datetime "release_date"
     t.integer  "site_id"
+    t.integer  "board_id"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
@@ -94,6 +96,7 @@ ActiveRecord::Schema.define(:version => 20130730225047) do
     t.integer  "missed_total_commitment"
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
+    t.integer  "release_id"
   end
 
   create_table "stories", :force => true do |t|

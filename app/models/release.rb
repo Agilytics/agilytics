@@ -6,4 +6,5 @@ class Release < ActiveRecord::Base
 
   has_many :sprints
   belongs_to :site
+  belongs_to :board
 end

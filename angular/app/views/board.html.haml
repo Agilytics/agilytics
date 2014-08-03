@@ -12,7 +12,7 @@
       %form.navbar-form.navbar-left
         .form-group
           .btn-group
-            %button.btn.btn-primary( ng-click="openReleaseManagement()")
+            %button.btn.btn-primary( ng-click="releaseManager.open()")
               Manage Releases
 
       .navbar-form.nav.navbar-nav.navbar-right
@@ -20,7 +20,7 @@
           %button.btn.btn-default( ng-click="detail=true" ng-class="{'active':detail}" type="button" ) DETAIL ON
           %button.btn.btn-default( ng-click="detail=false" ng-class="{'active':!detail}" type="button" ) OFF
 
-%release-management
+%release-management( board="board" control="releaseManager")
 
 .row
   %div.col-md-6#velocity(style="min-width: 310px; height: 400px; margin: 0 auto")

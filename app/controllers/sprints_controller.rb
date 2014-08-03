@@ -10,6 +10,15 @@ class SprintsController < ApplicationController
     end
   end
 
+  def forBoard
+    siteId = params[:site_id]
+    boardId = params[:board_id]
+    sprints = Sprint.where({ :board_id => boardId, release_id: [false,nil] } ).includes(:board).where("boards.site_id" => siteId)
+    respond_to do |format|
+      format.json { render json: sprints }
+    end
+  end
+
   # GET /sprints/1
   # GET /sprints/1.json
   def show

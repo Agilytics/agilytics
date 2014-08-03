@@ -6,8 +6,12 @@ Agilytics::Application.routes.draw do
   get 'api/boards', to: 'boards#index'
   get 'api/boards/:id/stats', to: 'boards#stats'
   get 'api/boards/velocities', to: 'boards#velocities'
-
+  get 'api/sprints/forBoard', to: 'sprints#forBoard'
   post 'api/boards/updateBoards', to: 'boards#updateBoards'
+
+  get 'api/releases', to: 'releases#index'
+  post 'api/releases/create', to: 'releases#create'
+  post 'api/releases/update', to: 'releases#update'
 
   get 'import/quote'
   get 'import/metrics'

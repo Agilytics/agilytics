@@ -7,6 +7,7 @@ class Board < ActiveRecord::Base
                   :last_updated
 
   has_many :sprints
+  has_many :releases
   belongs_to :site
 
 end

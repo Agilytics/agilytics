@@ -1,6 +1,6 @@
 
 / Modal
-#manageRelease.modal.fade(aria-hidden="true" aria-labelledby="Create Release" role="dialog" tabindex="-1")
+#manageRelease.modal.fade(aria-hidden="true" aria-labelledby="Create Release" role="dialog" tabindex="-1" ng-cloak)
   .modal-dialog.modal-lg
     .modal-content
       .modal-header
@@ -10,25 +10,25 @@
         %h4#myModalLabel.modal-title Manage Releases
       .modal-body
 
-      .well
+      .well(ng-class="{'hide':!release}")
         .panel.panel-info
           .panel-heading
             %h3.panel-title {{strategy.description}} a Release
           .panel-body
-            %form.form-horizontal{role: "form"}
+            %form.form-horizontal(role="form" )
               .form-group
                 %label.col-sm-2.control-label(for="inputName") Release name
                 .col-sm-10
-                  %input#inputName.form-control{placeholder: "Name"}/
+                  %input#inputName.form-control(ng-model="release.name" placeholder="Name" required=true)/
               .form-group
-                %label.col-sm-2.control-label{for:"inputDescription"} Description
+                %label.col-sm-2.control-label(for="inputDescription") Description
                 .col-sm-10
-                  %input#inputDescription.form-control{placeholder: "Description"}/
+                  %input#inputDescription.form-control( ng-model="release.description" placeholder="Description" required=true)/
               .form-group
-                %label.col-sm-2.control-label{for:"inputReleaseDate"} Description
+                %label.col-sm-2.control-label(for="inputReleaseDate" ) Release Date
                 .col-sm-10
                   %div.input-group.date
-                    %input#release-date.datepicker.form-control( type="text" ng-model="data.date")
+                    %input#release-date.datepicker.form-control( type="text" ng-model="release.release_date" required=true)
                       %span.input-group-addon
                         %i.glyphicon.glyphicon-th
 
@@ -39,7 +39,7 @@
                   .panel.panel-info(ng-class="{'hide': !release.sprints.length}")
                     .panel-heading
                       %h3.panel-title
-                        Included
+                        Sprints included in release
                         %span.very-quiet (click to add)
                     .panel-body
                       %table.table.table-striped.table-hover
@@ -49,27 +49,34 @@
                               {{sprint.name}}
                               %span.very-quiet : {{sprint.start_date}} - {{sprint.end_date}}
 
-                  .panel.panel-danger(ng-class="{'hide': !sprints.length}")
+                  .panel.panel-warning.hide(ng-class="{'hide': !sprints.length}")
                     .panel-heading
                       %h3.panel-title
-                        Not Included
+                        Available Sprints
                         %span.quiet (click to add)
                     .panel-body
                       %table.table.table-striped.table-hover
                         %tbody
-                          %tr( ng-repeat="sprint in sprints" style="color:red; cursor: pointer" ng-click="addSprintToRelease(sprint)" )
+                          %tr( ng-repeat="sprint in sprints" style="color:#666; cursor: pointer" ng-click="addSprintToRelease(sprint)" )
                             %td {{sprint.name}} : {{sprint.start_date}} - {{sprint.end_date}}
 
-                  .alert.alert-danger( role="alert" ng-class="{'hide': release.sprints.length || sprints.length}")
+                  .alert.alert-danger.hide( ng-cloak=true role="alert" ng-class="{'hide': release.sprints.length || sprints.length}")
                     No closed sprints available.
                     Perhaps sprints are wrongfully added to another release
 
               .form-group
                 .col-sm-offset-2.col-sm-10
-                  %button.btn.btn-default(type="submit" ng-click="saveRelease") Save
-                  %button.btn.btn-default(type="submit" ng-click="cancelRelease") Cancel
+                  %button.btn.btn-default(type="submit" ng-click="saveRelease()") Save
+                  %button.btn.btn-default(ng-click="cancelRelease()" formnovalidate) Cancel
 
-      %table.table.table-striped.table-hover
+      .panel.panel-default
+        .panel-body
+          %button(ng-click="newRelease()") Create a NEW release
+
+      .alert.alert-info.hide(  role="alert" ng-class="{'hide': releases && releases.length}")
+        There are no releases for this board
+
+      %table.table.table-striped.table-hover.hide(ng-class="{'hide': !releases || !releases.length}")
         %thead
           %tr
             %td Release Name
@@ -78,7 +85,7 @@
             %td Sprints
 
         %tbody
-          %tr( ng-repeat="release in releases" style="cursor: pointer" )
+          %tr( ng-repeat="release in releases" style="cursor: pointer" ng-click="editRelease(release)" )
             %td {{release.name}}
             %td {{release.description}}
             %td {{release.release_date}}

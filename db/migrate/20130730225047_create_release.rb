@@ -3,8 +3,10 @@ class CreateRelease < ActiveRecord::Migration
     create_table :releases do |t|
 
       t.string :name
+      t.text :description
       t.datetime :release_date
       t.integer :site_id
+      t.integer :board_id
 
       t.timestamps
 
