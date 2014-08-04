@@ -5,6 +5,9 @@ class Sprint < ActiveRecord::Base
                   :sprint_id,
                   :to_analyze,
 
+                  :cost,
+
+
                   :closed,
                   :start_date,
                   :end_date,

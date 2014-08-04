@@ -2,7 +2,9 @@ class Release < ActiveRecord::Base
 
   attr_accessible :name,
                   :description,
-                  :release_date
+                  :release_date,
+
+                  :cost
 
   has_many :sprints
   belongs_to :site

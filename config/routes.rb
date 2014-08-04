@@ -10,6 +10,7 @@ Agilytics::Application.routes.draw do
   post 'api/boards/updateBoards', to: 'boards#updateBoards'
 
   get 'api/releases', to: 'releases#index'
+  post 'api/releases/delete', to: 'releases#delete'
   post 'api/releases/create', to: 'releases#create'
   post 'api/releases/update', to: 'releases#update'
 

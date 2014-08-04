@@ -13,6 +13,34 @@ class ReleasesController < ApplicationController
 
   end
 
+  def delete
+    release_id = params[:release][:id]
+    site_id = params[:siteId]
+    release = Release.find(release_id)
+
+    if(release.site_id == site_id.to_i)
+      ActiveRecord::Base.transaction do
+
+        release.sprints.each do |sp|
+          sp.release = nil
+          sp.save()
+        end
+
+        release.sprints.clear()
+        release.delete()
+
+      end
+
+      respond_to do |format|
+          format.json { head :no_content }
+      end
+    else
+      respond_to do |format|
+          format.json { head :no_content }
+      end
+    end
+  end
+
   # POST /releases.json
   def create
     release = {}
@@ -24,6 +52,8 @@ class ReleasesController < ApplicationController
       board = Board.find(params[:boardId])
 
       release = Release.new(params[:release])
+
+      release.release_date = Date.strptime(params[:release][:release_date], "%m/%d/%Y")
 
       release.site = Site.find(site_id)
       release.board = board
@@ -64,7 +94,8 @@ class ReleasesController < ApplicationController
       params[:release].delete(:sprints)
 
       release = Release.find(params[:release][:id])
-      release.release_date = params[:release][:release_date]
+      release.release_date = Date.strptime(params[:release][:release_date], "%m/%d/%Y")
+
       release.name = params[:release][:name]
       release.description = params[:release][:description]
       release.sprints.clear()

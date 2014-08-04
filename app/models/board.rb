@@ -4,7 +4,9 @@ class Board < ActiveRecord::Base
                   :pid,
                   :to_analyze,
                   :to_analyze_backlog,
-                  :last_updated
+                  :last_updated,
+
+                  :run_rate_cost
 
   has_many :sprints
   has_many :releases

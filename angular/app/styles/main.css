@@ -31,4 +31,17 @@
   color:#999;
 }
 
+.control-label{
+    color:#999
+
+}
+
+.datepicker{
+    padding: 6px 12px;
+}
+
+input.form-control{
+  color: black;
+  font-weight:bold;
+}
 .datepicker{z-index:1151;}

@@ -13,7 +13,11 @@ class SprintsController < ApplicationController
   def forBoard
     siteId = params[:site_id]
     boardId = params[:board_id]
-    sprints = Sprint.where({ :board_id => boardId, release_id: [false,nil] } ).includes(:board).where("boards.site_id" => siteId)
+    sprints = Sprint.where({ :board_id => boardId, release_id: [false,nil] } )
+      .includes(:board)
+      .where("boards.site_id" => siteId)
+      .sort! { |a, b| a.id <=> b.id }
+
     respond_to do |format|
       format.json { render json: sprints }
     end

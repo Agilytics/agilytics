@@ -2,7 +2,7 @@ angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScop
 
   getReleases = ->
 
-    $scope.releases.length = 0
+    @scope.releases.length = 0
 
     $http.get("/api/releases.json?board_id=#{@scope.board.id}&site_id=#{$rootScope.siteId}").success((releases)->
       for release in releases
@@ -43,20 +43,41 @@ angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScop
     $("#manageRelease").modal()
     $("#release-date").datepicker(
       autoclose: true,
-      todayHighlight: true
+      todayHighlight: true,
+      format:"mm/dd/yyyy"
     )
     null
 
-  editRelease = (release)->
+  deleteRelease = () =>
+
+    data = { release: @scope.release }
+    $http(
+      url: "/api/releases/delete.json?siteId=#{$rootScope.siteId}"
+      method: "POST"
+      data: JSON.stringify(data)
+      headers: {'Content-Type': 'application/json'}
+    ).success((data, status, headers, config) ->
+      delete @scope.release
+      @scope.sprints.length = 0
+      getReleases()
+    ).error((data, status, headers, config) ->
+      alert 'error'
+    )
+
+  editRelease = (release)=>
     scope = @scope
 
     scope.sprints.length = 0
     getSprintsForBoard()
+
     scope.mode = {
       title : "Edit",
       action : "update"
     }
+
     scope.release = release
+    release.sprints = _.sortBy(release.sprints, (s)-> s.id )
+
     $timeout(
       -> $("#release-date").datepicker("update",new Date(scope.release.release_date))
     , 0)
@@ -112,7 +133,8 @@ angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScop
 
 
     scope.newRelease = newRelease
-    scope.editRelease = (release)-> editRelease(release)
+    scope.editRelease = editRelease
+    scope.deleteRelease = deleteRelease
 
     #listen for the open : calling scope must set a scope.control = {} and then call scope.control.open()
     scope.control.open = buildManager
