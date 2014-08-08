@@ -98,6 +98,7 @@ class ReleasesController < ApplicationController
 
       release.name = params[:release][:name]
       release.description = params[:release][:description]
+      release.cost = params[:release][:cost]
       release.sprints.clear()
 
       sprints.each do | sprint |

@@ -8,6 +8,8 @@ class CreateRelease < ActiveRecord::Migration
       t.integer :site_id
       t.integer :board_id
 
+      t.float :cost
+
       t.timestamps
 
     end

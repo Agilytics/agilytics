@@ -6,12 +6,28 @@ angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScop
 
     $http.get("/api/releases.json?board_id=#{@scope.board.id}&site_id=#{$rootScope.siteId}").success((releases)->
       for release in releases
+        calculateReleaseCost(release)
         if release.release_date
           date = new Date(release.release_date)
           release.release_date = (date.getMonth() + 1) + '/' + date.getDate() + '/' +  date.getFullYear()
         release.release_date
+
         @scope.releases.push release
     )
+
+  calculateReleaseCost = (release)->
+    release.calculated_cost = 0
+    for sprint in release.sprints
+      calculateCost sprint
+      release.calculated_cost += sprint.cost
+
+  calculateCosts = =>
+    calculateReleaseCost(@scope.release)
+
+    @scope.unreleased_sprint_costs = 0
+    for sprint in @scope.sprints
+      calculateCost sprint
+      @scope.unreleased_sprint_costs += sprint.cost
 
   buildManager = =>
 
@@ -36,9 +52,11 @@ angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScop
 
     $scope.removeSprintFromRelease = (sprint) ->
       moveAndSort($scope.release.sprints, $scope.sprints, sprint)
+      calculateCosts()
 
     $scope.addSprintToRelease = (sprint) ->
       moveAndSort($scope.sprints, $scope.release.sprints, sprint)
+      calculateCosts()
 
     $("#manageRelease").modal()
     $("#release-date").datepicker(
@@ -46,6 +64,14 @@ angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScop
       todayHighlight: true,
       format:"mm/dd/yyyy"
     )
+    null
+
+  setRelease = (release) =>
+
+    @scope.release = release
+
+    @scope.canSave = => !!@scope.release && !!@scope.release.release_date && !!@scope.release.name
+
     null
 
   deleteRelease = () =>
@@ -75,7 +101,7 @@ angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScop
       action : "update"
     }
 
-    scope.release = release
+    setRelease(release)
     release.sprints = _.sortBy(release.sprints, (s)-> s.id )
 
     $timeout(
@@ -84,7 +110,9 @@ angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScop
     null
 
   saveRelease = =>
+    return false if @scope.saveIsEnabled
     $scope = @scope
+
     data = { release: $scope.release }
     $http(
       url: "/api/releases/#{$scope.mode.action}.json?siteId=#{$rootScope.siteId}&boardId=#{$scope.board.id}"
@@ -98,12 +126,17 @@ angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScop
       alert 'error'
     )
 
+  calculateCost = (sprint)=>
+    unless(sprint.cost)
+      sprint.cost = @scope.board.run_rate_cost
+
   getSprintsForBoard = ->
     $scope = @scope
 
     $http.get("/api/sprints/forBoard.json?board_id=#{$scope.board.id}&site_id=#{$rootScope.siteId}").success((sprints)->
       for sprint in sprints
         $scope.sprints.push sprint
+        calculateCosts()
     )
 
   newRelease = =>
@@ -114,12 +147,13 @@ angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScop
     }
     getSprintsForBoard()
 
-    scope.release = {
+    setRelease {
       name: "",
       description: "",
       release_date: "",
       sprints: []
     }
+
     null
 
   linker = (scope, element, attr) =>
@@ -130,6 +164,7 @@ angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScop
     scope.saveRelease = saveRelease
     scope.cancelRelease = ->
       scope.release = null
+      getReleases()
 
 
     scope.newRelease = newRelease
@@ -138,7 +173,6 @@ angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScop
 
     #listen for the open : calling scope must set a scope.control = {} and then call scope.control.open()
     scope.control.open = buildManager
-
 
     this
 

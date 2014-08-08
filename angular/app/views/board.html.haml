@@ -20,7 +20,40 @@
           %button.btn.btn-default( ng-click="detail=true" ng-class="{'active':detail}" type="button" ) DETAIL ON
           %button.btn.btn-default( ng-click="detail=false" ng-class="{'active':!detail}" type="button" ) OFF
 
+      .navbar-form.nav.navbar-nav.navbar-right
+        %button.btn.btn-default( ng-class="{'hide':edit}" ng-click="edit=true" ) Edit
+        %button.btn.btn-warning( ng-class="{'hide':!edit}" ng-click="edit=false" ) Cancel
+
 %release-management( board="board" control="releaseManager")
+
+.panel.panel-default(ng-class="{'hide':!edit}")
+  .panel-body
+    %form.form-horizontal(role="form" )
+      .form-group
+        %label.col-sm-2.control-label(for="inputName") Board name
+        .col-sm-10
+          %input#inputName.form-control(ng-model="board.name" placeholder="Name" required=true)/
+
+      .form-group
+        %label.col-sm-2.control-label(for="cost") Run Rate: $ per sprint
+        .row
+          .col-sm-5
+            .input-group
+              .input-group-addon $
+              %input#cost.form-control(ng-model="board.run_rate_cost" placeholder="cost" size="30" required=true type="text" tep="0.01" name="cost"  )/
+
+          .col-sm-4(style="padding:5px")
+            {{board.run_rate_cost | currency:"$"}}
+
+      .form-group
+        .col-sm-offset-2.col-sm-8
+          .alert.alert-info(ng-class="{'hide': canSaveBoard()}")
+            If you enter the cost, release cost can be calculated per sprint.
+
+      .form-group
+        .col-sm-offset-2.col-sm-10
+          %button.btn.btn-primary(ng-disabled="!canSaveBoard()" ng-click="saveBoard()") Save
+          %button.btn.btn-warning( ng-click="edit=false" ) Cancel
 
 .row
   %div.col-md-6#velocity(style="min-width: 310px; height: 400px; margin: 0 auto")

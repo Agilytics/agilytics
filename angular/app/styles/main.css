@@ -23,6 +23,10 @@
     overflow:hidden;
 }
 
+.loud {
+  color:black!;
+}
+
 .quiet {
     color:#666;
 }

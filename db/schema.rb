@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140802033525) do
+ActiveRecord::Schema.define(:version => 20140804004852) do
 
   create_table "agile_users", :force => true do |t|
     t.string   "pid"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(:version => 20140802033525) do
     t.integer  "site_id"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
+    t.float    "run_rate_cost"
   end
 
   create_table "releases", :force => true do |t|
@@ -39,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20140802033525) do
     t.datetime "release_date"
     t.integer  "site_id"
     t.integer  "board_id"
+    t.float    "cost"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
@@ -97,6 +99,7 @@ ActiveRecord::Schema.define(:version => 20140802033525) do
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
     t.integer  "release_id"
+    t.float    "cost"
   end
 
   create_table "stories", :force => true do |t|

@@ -2,6 +2,22 @@ angular.module("agilytics").controller "BoardController", ($scope, $http, $locat
 
   $scope.board = {id: $stateParams.boardId}
   $scope.releaseManager = {} # for release manager
+  $scope.canSaveBoard = =>
+    $scope.board.name && $scope.board.run_rate_cost
+
+  $scope.saveBoard = ->
+    data = { board: $scope.board }
+    $http(
+      url: "/api/boards/#{scope.board.id}/update.json?siteId=#{$rootScope.siteId}"
+      method: "POST"
+      data: JSON.stringify(data)
+      headers: {'Content-Type': 'application/json'}
+    ).success((data, status, headers, config) ->
+      $scope.edit = false
+      $scope.board = data
+    ).error((data, status, headers, config) ->
+      alert 'error'
+    )
 
   toPercent = (i)->
     Math.round(i * 100)

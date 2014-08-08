@@ -9,6 +9,8 @@ Agilytics::Application.routes.draw do
   get 'api/sprints/forBoard', to: 'sprints#forBoard'
   post 'api/boards/updateBoards', to: 'boards#updateBoards'
 
+  post 'api/boards/:id/update', to: 'boards#update'
+
   get 'api/releases', to: 'releases#index'
   post 'api/releases/delete', to: 'releases#delete'
   post 'api/releases/create', to: 'releases#create'

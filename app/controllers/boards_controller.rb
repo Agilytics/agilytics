@@ -70,11 +70,14 @@ class BoardsController < ApplicationController
   # PUT /boards/1.json
   def update
     @board = Board.find(params[:id])
+    update = {}
+    update[:name] = params[:board][:name]
+    update[:run_rate_cost] = params[:board][:run_rate_cost]
 
     respond_to do |format|
-      if @board.update_attributes(params[:board])
+      if @board.update_attributes(update)
         format.html { redirect_to @board, notice: 'Board was successfully updated.' }
-        format.json { head :no_content }
+        format.json  { render json: @board }
       else
         format.html { render action: "edit" }
         format.json { render json: @board.errors, status: :unprocessable_entity }
