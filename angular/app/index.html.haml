@@ -68,14 +68,16 @@
     %script( src = "scripts/controllers/sites_controller.js")
     / build:js scripts/scripts.js
     / services
-    %script(src = "scripts/services/agileCubeService.js")
     %script(src = "scripts/services/utils.js")
+    %script(src = "scripts/services/board_data_service.js")
+    %script(src = "scripts/services/category_data_service.js")
     / controllers
 
     %script( src = "scripts/controllers/metrics.js")
     %script( src = "scripts/controllers/sprint_controller.js")
     / directives
 
+    %script(src = "scripts/directives/release_and_costs.js")
     %script(src = "scripts/directives/release_management.js")
     %script(src = "scripts/directives/assignee_board_summary.js")
     %script(src = "scripts/directives/board_summary.js")

@@ -1,5 +1,16 @@
 class @AgiliticsUtils
 
+    moveAndSort : (fromCollection, toCollection, item)->
+      for s, i in fromCollection
+        if s.id == item.id
+          fromCollection.splice(i, 1)
+          toCollection.push item
+          sprints = _.sortBy(toCollection, (s)->s.id)
+          toCollection.length = 0
+          for item in sprints
+            toCollection.push item
+          break
+
     dateFormat : (dstr) ->
       return "" unless dstr
       dmonths = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ]

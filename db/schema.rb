@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140804004852) do
+ActiveRecord::Schema.define(:version => 20140816011226) do
 
   create_table "agile_users", :force => true do |t|
     t.string   "pid"
@@ -29,10 +29,30 @@ ActiveRecord::Schema.define(:version => 20140804004852) do
     t.boolean  "to_analyze_backlog"
     t.datetime "last_updated"
     t.integer  "site_id"
+    t.float    "run_rate_cost"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
-    t.float    "run_rate_cost"
   end
+
+  create_table "boards_categories", :id => false, :force => true do |t|
+    t.integer "category_id"
+    t.integer "board_id"
+  end
+
+  add_index "boards_categories", ["board_id", "category_id"], :name => "index_boards_categories_on_board_id_and_category_id"
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "categories_tags", :id => false, :force => true do |t|
+    t.integer "category_id"
+    t.integer "tag_id"
+  end
+
+  add_index "categories_tags", ["tag_id", "category_id"], :name => "index_categories_tags_on_tag_id_and_category_id"
 
   create_table "releases", :force => true do |t|
     t.string   "name"
@@ -41,8 +61,9 @@ ActiveRecord::Schema.define(:version => 20140804004852) do
     t.integer  "site_id"
     t.integer  "board_id"
     t.float    "cost"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.integer  "total_velocity"
   end
 
   create_table "sites", :force => true do |t|
@@ -71,6 +92,13 @@ ActiveRecord::Schema.define(:version => 20140804004852) do
     t.datetime "updated_at",                    :null => false
   end
 
+  create_table "sprint_stories_tags", :id => false, :force => true do |t|
+    t.integer "sprint_story_id"
+    t.integer "tag_id"
+  end
+
+  add_index "sprint_stories_tags", ["tag_id", "sprint_story_id"], :name => "index_sprint_stories_tags_on_tag_id_and_sprint_story_id"
+
   create_table "sprints", :force => true do |t|
     t.string   "pid"
     t.string   "sprint_id"
@@ -81,7 +109,9 @@ ActiveRecord::Schema.define(:version => 20140804004852) do
     t.boolean  "have_processed_all_changes"
     t.datetime "start_date"
     t.datetime "end_date"
+    t.datetime "closed_date"
     t.integer  "board_id"
+    t.integer  "release_id"
     t.integer  "init_velocity"
     t.integer  "added_velocity"
     t.integer  "estimate_changed_velocity"
@@ -96,10 +126,9 @@ ActiveRecord::Schema.define(:version => 20140804004852) do
     t.integer  "missed_added_commitment"
     t.integer  "missed_estimate_changed"
     t.integer  "missed_total_commitment"
+    t.float    "cost"
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
-    t.integer  "release_id"
-    t.float    "cost"
   end
 
   create_table "stories", :force => true do |t|
@@ -121,6 +150,12 @@ ActiveRecord::Schema.define(:version => 20140804004852) do
     t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "tags", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

@@ -101,14 +101,22 @@ class JiraCallerNew
 
   def process_sprints
     Sprint.where(to_analyze: true).all().each do  |sprint|
+
       response = get_stories( sprint.board.pid, sprint.sprint_id )
+
       if response["contents"]
         process_stories(sprint, SprintStory::COMPLETED, response["contents"]["completedIssues"] )
         process_stories(sprint, SprintStory::NOT_COMPLETED, response["contents"]["incompleteIssues"])
         process_stories(sprint, SprintStory::PUNTED, response["contents"]["puntedIssues"])
       end
+
+      sprint.start_date =  DateTime.parse response["sprint"]["startDate"]
+      sprint.end_date = DateTime.parse response["sprint"]["endDate"]
+      sprint.closed_date = DateTime.parse response["sprint"]["closedDate"] if response["sprint"]["closedDate"]
+
       sprint.to_analyze = false
       sprint.save()
+
     end
   end
 
@@ -163,6 +171,14 @@ class JiraCallerNew
           sprint_story.assignee = assignee
 
           story.story_type = fields['issuetype']['name'] if fields['issuetype']
+
+          tag = get_or_create_tag("#{Tag::TYPE}:#{story.story_type}")
+          tag.sprint_stories << sprint_story
+          sprint_story.tags << tag
+
+
+          tag.save()
+
         end
 
       end
@@ -170,6 +186,16 @@ class JiraCallerNew
     story.sprint_stories << sprint_story
     story.save()
     story
+  end
+
+  def get_or_create_tag(tagName)
+    tag = Tag.find_by_name(tagName)
+    unless tag
+      tag = Tag.new()
+      tag.name = tagName
+      tag.save()
+    end
+    tag
   end
 
   def get_stories(board_id, sprint_id)

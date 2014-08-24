@@ -4,7 +4,8 @@ class Release < ActiveRecord::Base
                   :description,
                   :release_date,
 
-                  :cost
+                  :cost,
+                  :total_velocity
 
   has_many :sprints
   belongs_to :site

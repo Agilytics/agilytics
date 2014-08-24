@@ -7,9 +7,9 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: agilitics
+  database: agilytics
   pool: 5
-  username: agilitics
+  username: agilytics
   password: agile
 
 

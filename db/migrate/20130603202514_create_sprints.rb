@@ -11,6 +11,7 @@ class CreateSprints < ActiveRecord::Migration
       t.boolean :have_processed_all_changes
       t.datetime :start_date
       t.datetime :end_date
+      t.datetime :closed_date
       t.integer :board_id
 
       t.integer :release_id
@@ -32,6 +33,8 @@ class CreateSprints < ActiveRecord::Migration
       t.integer :missed_estimate_changed
       t.integer :missed_total_commitment
 
+      t.integer :release_id
+      t.float :cost
 
       t.timestamps
     end

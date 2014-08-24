@@ -1,4 +1,4 @@
-angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScope", "$timeout", ($http, $rootScope,$timeout) ->
+angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScope", "$timeout", "agiliticsUtils", ($http, $rootScope,$timeout, agiliticsUtils) ->
 
   getReleases = ->
 
@@ -6,7 +6,7 @@ angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScop
 
     $http.get("/api/releases.json?board_id=#{@scope.board.id}&site_id=#{$rootScope.siteId}").success((releases)->
       for release in releases
-        calculateReleaseCost(release)
+        calculateReleaseCostAndVelocity(release)
         if release.release_date
           date = new Date(release.release_date)
           release.release_date = (date.getMonth() + 1) + '/' + date.getDate() + '/' +  date.getFullYear()
@@ -15,14 +15,17 @@ angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScop
         @scope.releases.push release
     )
 
-  calculateReleaseCost = (release)->
-    release.calculated_cost = 0
+  calculateReleaseCostAndVelocity = (release)->
+    release.cost = 0
+    release.total_velocity = 0
     for sprint in release.sprints
       calculateCost sprint
-      release.calculated_cost += sprint.cost
+      release.cost += sprint.cost
+      release.total_velocity += 1 * sprint.total_velocity
+      console.log "#{release.name} #{sprint.name} sp:velocity #{1 * sprint.total_velocity}  calc:veloc #{ 1 * sprint.total_velocity}"
 
   calculateCosts = =>
-    calculateReleaseCost(@scope.release)
+    calculateReleaseCostAndVelocity(@scope.release)
 
     @scope.unreleased_sprint_costs = 0
     for sprint in @scope.sprints
@@ -39,23 +42,12 @@ angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScop
 
     getReleases()
 
-    moveAndSort = (fromCollection, toCollection, sprint)->
-      for s, i in fromCollection
-        if s.id == sprint.id
-          fromCollection.splice(i, 1)
-          toCollection.push sprint
-          sprints = _.sortBy(toCollection, (s)->s.id)
-          toCollection.length = 0
-          for sprint in sprints
-            toCollection.push sprint
-          break
-
     $scope.removeSprintFromRelease = (sprint) ->
-      moveAndSort($scope.release.sprints, $scope.sprints, sprint)
+      agiliticsUtils.moveAndSort($scope.release.sprints, $scope.sprints, sprint)
       calculateCosts()
 
     $scope.addSprintToRelease = (sprint) ->
-      moveAndSort($scope.sprints, $scope.release.sprints, sprint)
+      agiliticsUtils.moveAndSort($scope.sprints, $scope.release.sprints, sprint)
       calculateCosts()
 
     $("#manageRelease").modal()
@@ -132,8 +124,9 @@ angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScop
 
   getSprintsForBoard = ->
     $scope = @scope
+    $scope.sprints.length = 0
 
-    $http.get("/api/sprints/forBoard.json?board_id=#{$scope.board.id}&site_id=#{$rootScope.siteId}").success((sprints)->
+    $http.get("/api/sprints/forBoardNotReleased.json?board_id=#{$scope.board.id}&site_id=#{$rootScope.siteId}").success((sprints)->
       for sprint in sprints
         $scope.sprints.push sprint
         calculateCosts()
@@ -151,6 +144,7 @@ angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScop
       name: "",
       description: "",
       release_date: "",
+      cost: 0,
       sprints: []
     }
 

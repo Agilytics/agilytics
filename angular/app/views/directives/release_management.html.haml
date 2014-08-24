@@ -15,7 +15,7 @@
         .well(ng-class="{'hide':!release}")
           .panel.panel-info
             .panel-heading
-              %h3.panel-title {{mode.title}} Release
+              %h3.panel-title {{ mode.title }} Release
             .panel-body
               %form.form-horizontal(role="form" )
                 .form-group
@@ -25,26 +25,13 @@
 
                 .form-group
                   %label.col-sm-2.control-label(for="cost") Cost
-                  .col-sm-5
-                    .input-group
-                      .input-group-addon $
-                      %input#cost.form-control(ng-model="release.cost" placeholder="cost" size="30" required=true type="text" tep="0.01" name="cost"  )/
-
-                  .col-sm-5(ng-class="{'hide':!release.cost }" style="padding:5px")
+                  .col-sm-5(style="padding-left:10px; padding:5px")
                     {{release.cost | currency:"$"}}
 
-                  .col-sm-5(ng-class="{'hide':release.cost }" )
-                    %button.btn.btn-info( ng-click="release.cost = release.calculated_cost")
-                      Use Calculated Cost {{release.calculated_cost | currency:"$"}}
-
-                .form-group(ng-class="{'hide': release.cost == release.calculated_cost}")
-                  .alert.alert-warning
-                    .col-sm-7
-                      The release cost & sprints cost do not match
-                    .col.sm-3
-                      %button.btn.btn-warning( ng-click="release.cost = release.calculated_cost")
-                        Use Calculated Cost {{release.calculated_cost | currency:"$"}} ?
-
+                .form-group
+                  %label.col-sm-2.control-label(for="cost") Velocity
+                  .col-sm-5(style="padding-left:10px; padding:5px")
+                    {{release.total_velocity}}
 
                 .form-group
                   %label.col-sm-2.control-label(for="inputDescription") Description
@@ -60,7 +47,7 @@
                           %i.glyphicon.glyphicon-th
 
                 .form-group
-                  %label.col-sm-2.control-label{for: "inputPassword3"} Sprints
+                  %label.col-sm-2.control-label Sprints
                   .col-sm-10
 
                     .panel.panel-info(ng-class="{'hide': !release.sprints.length}")
@@ -68,7 +55,7 @@
                         %h3.panel-title
                           Sprints included in release
                           %span.very-quiet (click to remove)
-                          %span(style="color:black") Calculated Cost {{release.calculated_cost | currency:"$"}}
+                          %span(style="color:black")  Cost {{release.cost | currency:"$"}}
                       .panel-body
                         %table.table.table-striped.table-hover
                           %tbody
@@ -76,8 +63,8 @@
                               %td
                                 {{sprint.name}}
                                 %span.very-quiet : {{sprint.start_date}} - {{sprint.end_date}}
-                              %td.col-md-3
-                                {{sprint.cost | currency:"$"}}
+                              %td.col-md-2 {{ sprint.total_velocity }}
+                              %td.col-md-2 {{sprint.cost | currency:"$"}}
 
                     .panel.panel-warning.hide(ng-class="{'hide': !sprints.length}")
                       .panel-heading
@@ -90,8 +77,9 @@
                         %table.table.table-striped.table-hover
                           %tbody
                             %tr( ng-repeat="sprint in sprints" style="color:#666; cursor: pointer" ng-click="addSprintToRelease(sprint)" )
-                              %td {{sprint.name}} : {{sprint.start_date}} - {{sprint.end_date}}
-                              %td.col-md-3 {{sprint.cost | currency:"$"}}
+                              %td {{ sprint.name }} : {{ sprint.start_date }} - {{ sprint.end_date }}
+                              %td.col-md-2 {{ sprint.total_velocity }}
+                              %td.col-md-2 {{ sprint.cost | currency:"$" }}
 
                     .alert.alert-danger.hide( ng-cloak=true role="alert" ng-class="{'hide': release.sprints.length || sprints.length}")
                       No closed sprints available.
@@ -124,6 +112,7 @@
                 %td Description
                 %td Date
                 %td Cost
+                %td Velocity
                 %td Sprints
 
             %tbody
@@ -132,11 +121,10 @@
                 %td {{release.description}}
                 %td {{release.release_date}}
                 %td
-                  %span(ng-class="{'hide':!release.cost }") {{release.cost || release.calculated_cost | currency:"$"}}
+                  %span(ng-class="{'hide':!release.cost }") {{release.cost | currency:"$"}}
                   %span(ng-class="{'hide':release.cost || !release.calculated_cost}")
-                    %span {{release.cost || release.calculated_cost | currency:"$"}}
-                    %span.quiet (calculated)
-                  .quiet(ng-class="{'hide':release.cost || release.calculated_cost }")
+                    %span {{release.cost | currency:"$"}}
+                %td {{ release.total_velocity }}
                 %td
                   %span( ng-repeat="sprint in release.sprints" )
                     {{sprint.name}}{{$last ? '' : ', '}}

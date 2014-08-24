@@ -25,6 +25,9 @@ class SprintStory < ActiveRecord::Base
                 :assignee_id
                 :reporter_id
                 :work_activity_id
+
+  has_and_belongs_to_many :tags
+
 #  has_many :changes
   belongs_to :story
   belongs_to :sprint

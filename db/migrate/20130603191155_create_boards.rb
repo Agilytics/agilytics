@@ -8,6 +8,7 @@ class CreateBoards < ActiveRecord::Migration
       t.datetime :last_updated
 
       t.integer :site_id
+      t.float :run_rate_cost
 
       t.timestamps
     end

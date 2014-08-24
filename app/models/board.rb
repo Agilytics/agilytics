@@ -11,5 +11,6 @@ class Board < ActiveRecord::Base
   has_many :sprints
   has_many :releases
   belongs_to :site
+  has_and_belongs_to_many :categories
 
 end

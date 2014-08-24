@@ -11,6 +11,7 @@ class Sprint < ActiveRecord::Base
                   :closed,
                   :start_date,
                   :end_date,
+                  :closed_date,
 
                   :init_velocity,
                   :added_velocity,

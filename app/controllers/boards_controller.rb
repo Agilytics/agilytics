@@ -77,7 +77,7 @@ class BoardsController < ApplicationController
     respond_to do |format|
       if @board.update_attributes(update)
         format.html { redirect_to @board, notice: 'Board was successfully updated.' }
-        format.json  { render json: @board }
+        format.json { render json: @board }
       else
         format.html { render action: "edit" }
         format.json { render json: @board.errors, status: :unprocessable_entity }
@@ -97,6 +97,88 @@ class BoardsController < ApplicationController
     end
   end
 
+  def tags
+    tags = []
+    ActiveRecord::Base.connection.execute("
+      select distinct t.* from
+      tags t
+      join sprint_stories_tags tss on t.id = tss.tag_id
+      join sprint_stories ss on tss.sprint_story_id = ss.id
+      join sprints sp on ss.sprint_id = sp.id
+      join boards b on sp.board_id = b.id
+      WHERE
+        b.id = #{params[:id]}
+                                          ").each do |row|
+      tags << row
+    end
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json {
+        render json: {
+            tags: tags
+        }
+      }
+    end
+
+  end
+
+  def categories
+    board = Board.includes(categories: [:tags]).find(params[:id])
+    respond_to do |format|
+      format.html { redirect_to boards_url }
+      format.json {
+        render json: {categories: board.categories}, include: [:tags]
+      }
+    end
+  end
+
+  def delete_category
+     ActiveRecord::Base.transaction do
+      board = Board.find(params[:id])
+      category = Category.find(params[:category_id])
+      board.categories.delete category
+      board.save()
+     end
+    respond_to do |format|
+      format.html { head :no_content }
+      format.json { head :no_content }
+    end
+  end
+
+  def set_categories
+    ActiveRecord::Base.transaction do
+      board = Board.find(params[:id])
+
+      params[:categories].each do |categoryJ|
+
+        if categoryJ[:id]
+          categoryO = Category.find(categoryJ[:id])
+        else
+          categoryO = Category.new()
+        end
+
+        board.categories << categoryO unless categoryO.id && board.categories.find(categoryO.id)
+
+        # add remove all tags
+        categoryO.tags.clear()
+
+        categoryO.name = categoryJ[:name]
+        if categoryJ[:tags]
+          categoryJ[:tags].each do |tagJ|
+            tagO = Tag.find(tagJ[:id])
+            categoryO.tags << tagO
+          end
+        end
+
+        categoryO.save()
+      end
+    end
+    respond_to do |format|
+      format.html { head :no_content }
+      format.json { head :no_content }
+    end
+  end
 
   def velocities
     boards = Hash.new
@@ -145,96 +227,156 @@ class BoardsController < ApplicationController
     end
   end
 
+  def build_where_for_categories(categories)
+    tag_ids = ""
+    categories.each do |category|
+      category.tags.each do |tag|
+        tag_ids += "#{tag.id},"
+      end
+    end
+    tag_ids[0..-2]
+  end
+
+  def build_case_for_categories(categories, type)
+
+    #counts
+    sql_category = ""
+    firstCategory = true
+    categories.each do |category|
+
+      if firstCategory then
+        firstCategory = false
+      else
+        sql_category += ", "
+      end
+
+      sql_category += "\nSUM(CASE WHEN "
+      first = true
+
+      category.tags.each do |tag|
+        if first then
+          first = false
+        else
+          sql_category += " OR "
+        end
+        sql_category += "t.id ='#{tag.id}'"
+      end
+      sql_category += " THEN #{ type == 'count' ? 1 : 's.size' }
+              ELSE 0
+              END) AS cat_#{category[:id]}_#{type}"
+    end
+    sql_category
+  end
+
 
   def stats
     board_id = params[:id]
     site_id = params[:site_id]
     results = []
-    board = Board.find_by_id(board_id)
-    ActiveRecord::Base.connection.execute("
+    board = Board.includes(:categories).find(board_id)
+
+    categories = board.categories
+
+    #[
+    #    {
+    #        name: 'bug',
+    #        labels: ['type:Bug']
+    #    },
+    #    {
+    #        name: 'feature',
+    #        labels: ['type:New Feature']
+    #    },
+    #    {
+    #        name: 'enhancement',
+    #        labels: ['type:Improvement', 'type:Story']
+    #    }
+    #]
+    unless categories.empty?
+      sql = build_case_for_categories(categories, "count")
+      sql += ", #{build_case_for_categories(categories, "velocity")}"
+      tagids = build_where_for_categories(categories)
+
+      selectSQL = ""
+      categories.each do|category|
+        selectSQL +=
+        "
+          t.cat_#{category.id}_count as cat_#{category.id}_count,
+          CAST(CAST(t.cat_#{category.id}_count as float) / t.total_count as float) as cat_#{category.id}_percentage_count,
+          t.cat_#{category.id}_velocity as cat_#{category.id}_velocity,
+          CAST(CAST(t.cat_#{category.id}_velocity as float) / t.total_velocity as float) as cat_#{category.id}_percentage_velocity,
+
+         "
+      end
+         # t.feature_count,
+         # t.bug_count,
+         # t.enhancement_count,
+
+      ActiveRecord::Base.connection.execute("
       select
-        t.board_name,
-        t.id as sprint_id,
-        t.name as sprint_name,
-        t.feature_count,
-        t.bug_count,
-        t.enhancement_count,
-        t.total_count,
-        CAST(CAST(t.feature_count as float) / t.total_count as float) as feature_percentage_count,
-        CAST(CAST(t.bug_count as float)  / t.total_count as float) as bug_percentage_count,
-        CAST(CAST(t.enhancement_count as float) / t.total_count as float) as enhancements_percentage_count,
-        t.bug_velocity,
-        t.feature_velocity,
-        t.enhancement_velocity,
-        t.total_velocity,
-        CAST(CAST(t.feature_velocity as float) / t.total_velocity as float) as feature_percentage_velocity,
-        CAST(CAST(t.bug_velocity as float)  / t.total_velocity as float) as bug_percentage_velocity,
-        CAST(CAST(t.enhancement_velocity as float) / t.total_velocity as float) as enhancements_percentage_velocity
+          t.board_name,
+          t.id as sprint_id,
+          t.name as sprint_name,
+          t.end_date,
+          t.id as id,
+          t.name as name,
+          t.total_count,
 
-      from
-        (SELECT
-           TO_NUMBER(sp.sprint_id, '999999') as id,
-           b.name as board_name,
-           sp.name,
-           SUM(CASE WHEN s.story_type = 'New Feature' THEN 1
-               ELSE 0
-               END)    AS feature_count,
+          #{selectSQL}
 
-           SUM(CASE WHEN s.story_type = 'Bug' THEN 1
-               ELSE 0
-               END)    AS bug_count,
+          t.total_velocity
 
-           SUM(CASE WHEN s.story_type = 'Improvement' OR s.story_type = 'Story'  THEN 1
-               ELSE 0
-               END)    AS enhancement_count,
+        from
+          (SELECT
+             TO_NUMBER(sp.sprint_id, '999999') as id,
+             b.name as board_name,
+             sp.name,
+             sp.cost,
 
-           SUM(CASE WHEN s.story_type = 'New Feature' THEN s.size
-               ELSE 0
-               END)    AS feature_velocity,
+             #{sql},
 
-           SUM(CASE WHEN s.story_type = 'Bug' THEN s.size
-               ELSE 0
-               END)    AS bug_velocity,
+             COUNT(1) AS total_count,
+             SUM(s.size) AS total_velocity,
+             sp.end_date
 
-           SUM(CASE WHEN s.story_type = 'Improvement' OR s.story_type = 'Story' THEN s.size
-               ELSE 0
-               END)    AS enhancement_velocity  ,
 
-           COUNT(1) AS total_count,
+           FROM
+             stories s
+             JOIN sprint_stories ss ON ss.story_id = s.id
+             JOIN sprints sp ON ss.sprint_id = sp.id
+             JOIN boards b ON sp.board_id = b.id
+             JOIN sprint_stories_tags as sst on sst.sprint_story_id = ss.id
+             join tags as t on t.id = sst.tag_id
 
-           SUM(s.size) AS total_velocity
+           WHERE
+             ss.status = 'completed'
+             and b.id = #{board_id}
+             and b.site_id = #{site_id}
+             and t.id in (#{tagids})
 
-         FROM
-           stories s
-           JOIN sprint_stories ss ON ss.story_id = s.id
-           JOIN sprints sp ON ss.sprint_id = sp.id
-           JOIN boards b ON sp.board_id = b.id
+           GROUP BY
+             sp.name,
+             sp.cost,
+             b.name,
+             sp.end_date,
+             to_number(sp.sprint_id, '999999')
 
-         WHERE
-           ss.status = 'completed'
-           and b.id = #{board_id}
-           and b.site_id = #{site_id}
+           ORDER BY
+             b.name,
+             to_number(sp.sprint_id, '999999')
 
-         GROUP BY
-           sp.name,
-           b.name,
-           to_number(sp.sprint_id, '999999')
-
-         ORDER BY
-           b.name,
-           to_number(sp.sprint_id, '999999')
-
-        ) as t
-    ").each do |row|
-      results.push row
+          ) as t
+      ").each do |row|
+        results.push row
+      end
     end
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: {
-          board: board,
-          data: results
-      }
+      format.json {
+        render json: {
+            board: board ,
+            data: results
+        }, include: [:categories]
       }
     end
   end

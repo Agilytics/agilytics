@@ -51,9 +51,13 @@ class ReleasesController < ApplicationController
 
       board = Board.find(params[:boardId])
 
-      release = Release.new(params[:release])
-
+      release = Release.new()
       release.release_date = Date.strptime(params[:release][:release_date], "%m/%d/%Y")
+
+      release.name = params[:release][:name]
+      release.description = params[:release][:description]
+      release.cost = params[:release][:cost]
+      release.total_velocity = params[:release][:total_velocity]
 
       release.site = Site.find(site_id)
       release.board = board
@@ -99,6 +103,7 @@ class ReleasesController < ApplicationController
       release.name = params[:release][:name]
       release.description = params[:release][:description]
       release.cost = params[:release][:cost]
+      release.total_velocity = params[:release][:total_velocity]
       release.sprints.clear()
 
       sprints.each do | sprint |
