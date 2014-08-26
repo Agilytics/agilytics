@@ -39,7 +39,11 @@ class JiraCallerNew
   def map_boards (jira_boards)
     boards = Array.new()
     jira_boards.each do |jb|
-      if jb['sprintSupportEnabled']
+      puts jb['name'] + " " + jb['id'].to_s
+      if jb['sprintSupportEnabled'] && jb['id'].to_s == "17"
+        ## TMP TODO
+
+
         b = Board.find_by_pid((jb['id']).to_s)
 
         if (!b)
@@ -173,10 +177,8 @@ class JiraCallerNew
           story.story_type = fields['issuetype']['name'] if fields['issuetype']
 
           tag = get_or_create_tag("#{Tag::TYPE}:#{story.story_type}")
-          tag.sprint_stories << sprint_story
           sprint_story.tags << tag
-
-
+          sprint_story.save()
           tag.save()
 
         end

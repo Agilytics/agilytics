@@ -10,10 +10,24 @@ angular.module('agilytics').directive('releaseAndCosts',
 
     calculateReleaseCost = (release)=>
       release.calculated_cost = 0
+      releaseSprints = []
+
       for sprint in release.sprints
-        calculateCost sprint
-        release.calculated_cost += sprint.cost
-        release.last_sprint = sprint
+        locSprint = @sprintsByKey[sprint.pid]
+
+        if locSprint
+          console.log "found #{sprint.name} #{sprint.pid}"
+          release.total_velocity += locSprint.total_velocity*1
+        else
+          console.log "NOT found #{sprint.name} PID #{sprint.pid}"
+          locSprint = sprint.cost
+          locSprint = sprint
+
+        release.calculated_cost += locSprint.cost
+        releaseSprints.push locSprint
+
+      release.sprints.length = 0
+      release.sprints.push releaseSprints
 
     calculateCosts = =>
       @unreleased_sprint_costs = 0
@@ -26,8 +40,12 @@ angular.module('agilytics').directive('releaseAndCosts',
 
     getSprintsForBoard = (callback)=>
       $http.get("/api/boards/#{@board.id}/stats.json?site_id=#{$rootScope.siteId}").success((res)=>
+
         for sprint in res.data
           @sprints.push sprint
+
+          console.log "logging : #{sprint.pid} name: #{sprint.name}"
+          @sprintsByKey[sprint.pid] = sprint
           calculateCosts()
         callback()
       )
@@ -58,7 +76,7 @@ angular.module('agilytics').directive('releaseAndCosts',
         tooltip:
 
           formatter: ->
-            "#{this.point.name} : storyPoints #{this.point.y} Date: #{this.point.date} #{this.point.detail}"
+            "#{this.point.name} : storyPoints #{this.point.y} Date: #{this.point.date} <br/> #{this.point.detail}"
 
         series: series
 
@@ -68,6 +86,7 @@ angular.module('agilytics').directive('releaseAndCosts',
 
         @board = res.board
         @sprints = []
+        @sprintsByKey = {}
         @releases = []
 
         callback = =>
@@ -90,11 +109,10 @@ angular.module('agilytics').directive('releaseAndCosts',
             dateObj = new Date(date)
             Date.UTC(dateObj.getUTCFullYear(),  dateObj.getUTCMonth(), dateObj.getUTCDate())
 
-          after2014 = new Date('01/01/2014')
-          for sprint in @sprints when new Date(sprint.end_date) > after2014
+          for sprint in @sprints when new Date(sprint.end_date)
             events.push { date: makeUTC(sprint.end_date), event: sprint, type: "sprint" }
 
-          for release in @releases when new Date(release.release_date) > after2014
+          for release in @releases when new Date(release.release_date)
             events.push { date: makeUTC(release.release_date), event: release, type: "release" }
 
           events = _.sortBy(events, (s)-> new Date(s.date))
@@ -113,7 +131,8 @@ angular.module('agilytics').directive('releaseAndCosts',
             if event.type == 'release'
               for sprint in event.event.sprints
                 detail += "<br>#{sprint.name} #{format2(sprint.cost)} velocity: #{sprint.total_velocity || 0}"
-              detail += "<br>total: #{format2 release.cost} velocity: #{release.total_velocity}"
+
+              detail = "Total: #{format2 release.calculated_cost} velocity: #{release.total_velocity} <br/>"  + detail
               name = "Release: #{name}"
             else
               detail += "<br>#{sprint.name} #{format2(sprint.cost)} velocity: #{sprint.total_velocity || 0}"
@@ -140,15 +159,17 @@ angular.module('agilytics').directive('releaseAndCosts',
               summedDeadVelocityBySprint.push makePoint event, summedDeadVelocity
 
             else
+
               release = event.event
               # story points
               summedDeadVelocity += release.total_velocity
+              console.log release.total_velocity
               releasedVelocity.push makePoint event, release.total_velocity
               summedDeadVelocityBySprint.push makePoint event, summedDeadVelocity
-              # $
-              summedDeadVelocityCost += release.cost
+              # $                                                            yep
+              summedDeadVelocityCost += release.calculated_cost
               summedDeadVelocityCostBySprint.push makePoint event, summedDeadVelocityCost
-              releasedVelocityCost.push makePoint event, release.cost
+              releasedVelocityCost.push makePoint event, release.calculated_cost
 
 
           # story points
@@ -164,10 +185,7 @@ angular.module('agilytics').directive('releaseAndCosts',
           showReleaseGraph("releaseVelocityChart", "Dead & Realized Velocity", "Story Points",  [releasedVelocitySeries, deadVelocitySeries, sprintVelocitySeries])
           showReleaseGraph("releaseChart", "Velocity, cost & releases", "Cost in $",  [releasedVelocityCostSeries, deadVelocityCostSeries, sprintVelocityCostSeries])
 
-        callbackAfter2 = _.after(2, callback)
-
-        getReleases(callbackAfter2)
-        getSprintsForBoard(callbackAfter2)
+        getSprintsForBoard -> getReleases callback
 
       @
 

@@ -45,7 +45,6 @@ class BoardsController < ApplicationController
         puts " ---------------- #{b.any?}"
         if b.any?
           b = b.first
-          puts "#{jb[:id]} #{params[:siteId]} #{b.name} #{b.to_analyze}"
 
           jb.delete(:id)
           jb.delete(:created_at)
@@ -296,9 +295,9 @@ class BoardsController < ApplicationController
       sql += ", #{build_case_for_categories(categories, "velocity")}"
       tagids = build_where_for_categories(categories)
 
-      selectSQL = ""
-      categories.each do|category|
-        selectSQL +=
+      select_SQL = ""
+      categories.each do |category|
+        select_SQL +=
         "
           t.cat_#{category.id}_count as cat_#{category.id}_count,
           CAST(CAST(t.cat_#{category.id}_count as float) / t.total_count as float) as cat_#{category.id}_percentage_count,
@@ -307,65 +306,65 @@ class BoardsController < ApplicationController
 
          "
       end
-         # t.feature_count,
-         # t.bug_count,
-         # t.enhancement_count,
 
-      ActiveRecord::Base.connection.execute("
-      select
-          t.board_name,
-          t.id as sprint_id,
-          t.name as sprint_name,
-          t.end_date,
-          t.id as id,
-          t.name as name,
-          t.total_count,
+      the_sql =
+        "select
+            t.board_name,
+            t.id as sprint_id,
+            t.name as sprint_name,
+            t.end_date,
+            t.id as id,
+            t.pid,
+            t.name as name,
+            t.total_count,
 
-          #{selectSQL}
+            #{select_SQL}
 
-          t.total_velocity
+            t.total_velocity
 
-        from
-          (SELECT
-             TO_NUMBER(sp.sprint_id, '999999') as id,
-             b.name as board_name,
-             sp.name,
-             sp.cost,
+          from
+            (SELECT
+               TO_NUMBER(sp.sprint_id, '999999') as id,
+               b.name as board_name,
+               sp.name,
+               sp.cost,
+               sp.pid,
+               #{sql},
 
-             #{sql},
-
-             COUNT(1) AS total_count,
-             SUM(s.size) AS total_velocity,
-             sp.end_date
+               COUNT(1) AS total_count,
+               SUM(s.size) AS total_velocity,
+               sp.end_date
 
 
-           FROM
-             stories s
-             JOIN sprint_stories ss ON ss.story_id = s.id
-             JOIN sprints sp ON ss.sprint_id = sp.id
-             JOIN boards b ON sp.board_id = b.id
-             JOIN sprint_stories_tags as sst on sst.sprint_story_id = ss.id
-             join tags as t on t.id = sst.tag_id
+             FROM
+               stories s
+               JOIN sprint_stories ss ON ss.story_id = s.id
+               JOIN sprints sp ON ss.sprint_id = sp.id
+               JOIN boards b ON sp.board_id = b.id
+               JOIN sprint_stories_tags as sst on sst.sprint_story_id = ss.id
+               join tags as t on t.id = sst.tag_id
 
-           WHERE
-             ss.status = 'completed'
-             and b.id = #{board_id}
-             and b.site_id = #{site_id}
-             and t.id in (#{tagids})
+             WHERE
+               ss.status = 'completed'
+               and b.id = #{board_id}
+               and b.site_id = #{site_id}
+               and t.id in (#{tagids})
 
-           GROUP BY
-             sp.name,
-             sp.cost,
-             b.name,
-             sp.end_date,
-             to_number(sp.sprint_id, '999999')
+             GROUP BY
+               sp.pid,
+               sp.name,
+               sp.cost,
+               b.name,
+               sp.end_date,
+               to_number(sp.sprint_id, '999999')
 
-           ORDER BY
-             b.name,
-             to_number(sp.sprint_id, '999999')
+             ORDER BY
+               b.name,
+               to_number(sp.sprint_id, '999999')
 
-          ) as t
-      ").each do |row|
+            ) as t"
+
+      ActiveRecord::Base.connection.execute(the_sql).each do |row|
         results.push row
       end
     end

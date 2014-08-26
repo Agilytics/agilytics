@@ -22,7 +22,7 @@
 
       .navbar-form.nav.navbar-nav.navbar-right
         %button.btn.btn-default( ng-class="{'hide':edit}" ng-click="editBoard()" ) Edit
-        %button.btn.btn-warning( ng-class="{'hide':!edit}" ng-click="cancelEdit()" ) Cancel
+        %button.btn.btn-warning( ng-class="{'hide':!edit}" ng-click="cancelEdit()" ) Close Edit
 
 %release-management( board="board" control="releaseManager")
 
@@ -144,24 +144,19 @@
   %thead
     %tr
       %td sprint name
-      %td feature
-      %td enhancement
-      %td bug
+
+      %td(ng-repeat="category in board.categories") {{category.name}}
       %td total
-      %td feature %
-      %td enhancements %
-      %td bug %
+      %td(ng-repeat="category in board.categories") {{category.name}} %
+
+
 
   %tbody
     %tr( ng-repeat="stat in stats" )
       %td {{stat.sprint_name}}
-      %td {{stat.feature_velocity}}
-      %td {{stat.enhancement_velocity}}
-      %td {{stat.bug_velocity}}
+      %td(ng-repeat="category in board.categories") {{stat["cat_" + category.id + "_velocity"] }}
       %td {{stat.total_velocity}}
-      %td {{stat.feature_percentage_velocity}}%
-      %td {{stat.enhancements_percentage_velocity}}%
-      %td {{stat.bug_percentage_velocity}}%
+      %td(ng-repeat="category in board.categories") {{stat["cat_" + category.id + "_percentage_velocity"] }}
 
 .row
   %div.col-md-6#counts(style="min-width: 310px; height: 400px; margin: 0 auto")

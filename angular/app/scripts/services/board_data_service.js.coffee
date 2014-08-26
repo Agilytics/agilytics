@@ -2,7 +2,8 @@ class @BoardService
   constructor: (@$http)->
 
   toPercent: (i)->
-    Math.round(i * 100)
+    p = Math.round(i * 100)
+    p
 
   processData: (data, categories)=>
 
@@ -31,26 +32,24 @@ class @BoardService
 
       for cat, i in categories
         count = stat["cat_#{cat.id}_count"] * 1
+        stat["cat_#{cat.id}_percentage_count"] = @toPercent stat["cat_#{cat.id}_percentage_count"]
         percent_count = stat["cat_#{cat.id}_percentage_count"] * 1
 
         velocity = stat["cat_#{cat.id}_velocity"] * 1
+        stat["cat_#{cat.id}_percentage_velocity"] = @toPercent stat["cat_#{cat.id}_percentage_velocity"] * 1
         percent_velocity = stat["cat_#{cat.id}_percentage_velocity"] * 1
 
 
         totalCount += count
         counts.series[i+1].data.push count
-        counts.seriesPercent[i].data.push percent_count * 100
+        counts.seriesPercent[i].data.push  percent_count
 
         totalVelocity += velocity
         velocities.series[i+1].data.push velocity
-        velocities.seriesPercent[i].data.push percent_velocity * 100
+        velocities.seriesPercent[i].data.push percent_velocity
 
       counts.series[0].data.push totalCount
       velocities.series[0].data.push totalVelocity
-
-
-
-
 
     sprints: sprints
     stats: data
@@ -97,7 +96,7 @@ class @BoardService
 
   saveCategories: (boardId, siteId, categories, callback)=>
     data = {
-      categories: categories,
+      categories: categories
     }
 
     @$http(
@@ -113,4 +112,4 @@ class @BoardService
 
 angular.module('agilytics').factory('boardDataService', ["$http", ($http)->
   new BoardService($http)
-  ])
+])
