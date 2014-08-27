@@ -1,0 +1,88 @@
+
+/ Modal
+#manageCategories.modal.fade(aria-hidden="true" aria-labelledby="Create Release" role="dialog" tabindex="-1" ng-cloak)
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        %button.close(data-dismiss="modal" type="button")
+          %span(aria-hiddena="true") ×
+          %span.sr-only Close
+        %h4#myModalLabel.modal-title
+          Manage Categories
+
+      .modal-body
+        -#CATEGORY
+        .panel.panel-default
+          .panel-heading
+            %h3.panel-title Board categories:
+
+          -#CATEGORIES
+          .panel-body
+            %table.table.table-striped.table-hover.hide( ng-class="{'hide': !board.categories || !board.categories.length}" )
+              %tbody
+                %tr( ng-repeat="category in board.categories" )
+                  %td( style="cursor: pointer" ng-click="editCategory(category)" )
+                    {{category.name}}
+                  %td( style="cursor: pointer" ng-click="editCategory(category)" )
+                    %span( ng-repeat="tag in category.tags" )
+                      {{tag.name}}{{$last ? '' : ', '}}
+                  %td.col-md-1( style="cursor: pointer" ng-click="deleteCategory(category)" )
+                    %button.btn.btn-warning
+                      X
+
+            %button.btn.btn-warning( type="submit" ng-click="createCategory()" ng-class="{'hide': !!(category || board.categories.length) }" )
+              No Categories: Create One
+
+            %button.hide.btn.btn-primary( type="submit" ng-click="createCategory()" ng-class="{'hide': category || !board.categories.length }" )
+              Add Category
+
+          .panel-body
+            -# EDIT CATEGORY
+            %form.form-horizontal.hide( ng-class="{'hide': !category }" )
+              .form-group
+                %label.col-sm-2.control-label(for="inputName") Name
+                .col-sm-10
+                  %input#inputName.form-control(ng-model="category.name" placeholder="Name" required=true)
+
+
+              -##############################################################
+
+              .form-group
+                %label.col-sm-2.control-label(for="inputName") Tags
+                .col-sm-10
+                  .panel.panel-info(ng-class="{'hide': !category.tags.length}")
+                    .panel-heading
+                      %h3.panel-title
+                        Tags included in category
+                        %span.very-quiet (click to remove)
+                    .panel-body
+                      %table.table.table-striped.table-hover
+                        %tbody
+                          %tr( ng-repeat="tag in category.tags" style="cursor: pointer" ng-click="removeTagFromCategory(tag, category)" )
+                            %td
+                              {{tag.name}}
+
+                  .panel.panel-warning.hide(ng-class="{'hide': !tags.length}")
+                    .panel-heading
+                      %h3.panel-title
+                        Available Tags
+                        %span.quiet (click to add)
+
+                    .panel-body
+                      %table.table.table-striped.table-hover
+                        %tbody
+                          %tr( ng-repeat="tag in tags" style="color:#666; cursor: pointer" ng-click="addTagToCategory(tag, category)" )
+                            %td
+                              {{ tag.name }}
+
+                  .alert.alert-danger.hide( ng-cloak=true role="alert" ng-class="{'hide': category.tags.length || tags.length}")
+                    No more tags available.
+
+              -##############################################################
+
+              .form-group
+                .col-sm-offset-2.col-sm-10
+                  %button.btn.btn-primary(ng-disabled="!canSaveCategory(category)" ng-click="saveCategory(category)") Save
+                  %button.btn.btn-warning( ng-click="cancelEditCategory(category)" ) Cancel
+      .modal-footer
+        %button.btn.btn-default(data-dismiss="modal" type="button") Close

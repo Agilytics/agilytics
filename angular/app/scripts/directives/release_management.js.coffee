@@ -22,7 +22,6 @@ angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScop
       calculateCost sprint
       release.cost += sprint.cost
       release.total_velocity += 1 * sprint.total_velocity
-      console.log "#{release.name} #{sprint.name} sp:velocity #{1 * sprint.total_velocity}  calc:veloc #{ 1 * sprint.total_velocity}"
 
   calculateCosts = =>
     calculateReleaseCostAndVelocity(@scope.release)

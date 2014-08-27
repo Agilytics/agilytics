@@ -1,56 +1,18 @@
 angular.module("agilytics").controller "BoardController", ($scope, $http, $location,
                                                            $stateParams, $timeout, $rootScope,
-                                                           boardDataService, agiliticsUtils)->
+                                                           boardDataService)->
   $scope.board = {id: $stateParams.boardId}
   $scope.releaseManager = {} # for release manager
+  $scope.categoryManager = {} # for release manager
   $scope.canSaveBoard = =>
     $scope.board.name && $scope.board.run_rate_cost
 
   $scope.cancelEdit = =>
     $scope.edit = false
 
-  #------------ TAGS / CATEGORY
-
-  $scope.createCategory = ()->
-    $scope.category = {
-      name:""
-      tags:[]
-    }
-  $scope.editCategory = (category)->
-    $scope.category = category
-
-  $scope.removeTagFromCategory = (tag,category)->
-    agiliticsUtils.moveAndSort(category.tags, $scope.tags , tag)
-
-  $scope.addTagToCategory = (tag,category)->
-    agiliticsUtils.moveAndSort($scope.tags, category.tags, tag)
-
-  $scope.canSaveCategory = (category)-> !! (category && category.name)
-
-  $scope.saveCategory = (category)=>
-    category.tags = [] unless category.tags
-    boardDataService.saveCategories($stateParams.boardId, $rootScope.siteId, [category], =>
-      boardDataService.getCategories $stateParams.boardId, $rootScope.siteId, (categories)=>
-        $scope.board.categories = categories
-        $scope.category = null
-    )
-
-  $scope.deleteCategory = (category)->
-    boardDataService.deleteCategory $stateParams.boardId, $rootScope.siteId, category.id, ->
-      boardDataService.getCategories $stateParams.boardId, $rootScope.siteId, (categories) ->
-        $scope.board.categories = categories
-        $scope.category = null
-
-  $scope.cancelEditCategory = (category)->
-    $scope.category = null
-  #------------
-
   $scope.editBoard = =>
     $scope.edit = true
     $scope.categories = null
-    boardDataService.getCategories $stateParams.boardId, $rootScope.siteId, (categories)=>
-      $scope.board.categories = categories
-
 
   $scope.saveBoard = ->
     data = { board: $scope.board }
@@ -114,9 +76,6 @@ angular.module("agilytics").controller "BoardController", ($scope, $http, $locat
     $scope.stats = stats
     $scope.board = board
     $scope.tags = []
-
-    boardDataService.getTags $stateParams.boardId, $rootScope.siteId, (tags)->
-      $scope.tags = tags
 
     sg = ->
       sprints = data.sprints

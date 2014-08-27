@@ -16,10 +16,8 @@ angular.module('agilytics').directive('releaseAndCosts',
         locSprint = @sprintsByKey[sprint.pid]
 
         if locSprint
-          console.log "found #{sprint.name} #{sprint.pid}"
           release.total_velocity += locSprint.total_velocity*1
         else
-          console.log "NOT found #{sprint.name} PID #{sprint.pid}"
           locSprint = sprint.cost
           locSprint = sprint
 
@@ -44,7 +42,6 @@ angular.module('agilytics').directive('releaseAndCosts',
         for sprint in res.data
           @sprints.push sprint
 
-          console.log "logging : #{sprint.pid} name: #{sprint.name}"
           @sprintsByKey[sprint.pid] = sprint
           calculateCosts()
         callback()
@@ -163,7 +160,7 @@ angular.module('agilytics').directive('releaseAndCosts',
               release = event.event
               # story points
               summedDeadVelocity += release.total_velocity
-              console.log release.total_velocity
+
               releasedVelocity.push makePoint event, release.total_velocity
               summedDeadVelocityBySprint.push makePoint event, summedDeadVelocity
               # $                                                            yep
