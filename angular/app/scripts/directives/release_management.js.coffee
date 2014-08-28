@@ -2,9 +2,9 @@ angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScop
 
   getReleases = ->
 
-    @scope.releases.length = 0
+    @locScope.releases.length = 0
 
-    $http.get("/api/releases.json?board_id=#{@scope.board.id}&site_id=#{$rootScope.siteId}").success((releases)->
+    $http.get("/api/releases.json?board_id=#{@locScope.board.id}&site_id=#{$rootScope.siteId}").success((releases)->
       for release in releases
         calculateReleaseCostAndVelocity(release)
         if release.release_date
@@ -12,7 +12,7 @@ angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScop
           release.release_date = (date.getMonth() + 1) + '/' + date.getDate() + '/' +  date.getFullYear()
         release.release_date
 
-        @scope.releases.push release
+        @locScope.releases.push release
     )
 
   calculateReleaseCostAndVelocity = (release)->
@@ -24,16 +24,16 @@ angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScop
       release.total_velocity += 1 * sprint.total_velocity
 
   calculateCosts = =>
-    calculateReleaseCostAndVelocity(@scope.release)
+    calculateReleaseCostAndVelocity(@locScope.release)
 
-    @scope.unreleased_sprint_costs = 0
-    for sprint in @scope.sprints
+    @locScope.unreleased_sprint_costs = 0
+    for sprint in @locScope.sprints
       calculateCost sprint
-      @scope.unreleased_sprint_costs += sprint.cost
+      @locScope.unreleased_sprint_costs += sprint.cost
 
   buildManager = =>
 
-    $scope = @scope
+    $scope = @locScope
 
     $scope.sprints = []
 
@@ -59,30 +59,30 @@ angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScop
 
   setRelease = (release) =>
 
-    @scope.release = release
+    @locScope.release = release
 
-    @scope.canSave = => !!@scope.release && !!@scope.release.release_date && !!@scope.release.name
+    @locScope.canSave = => !!@locScope.release && !!@locScope.release.release_date && !!@locScope.release.name
 
     null
 
   deleteRelease = () =>
 
-    data = { release: @scope.release }
+    data = { release: @locScope.release }
     $http(
       url: "/api/releases/delete.json?siteId=#{$rootScope.siteId}"
       method: "POST"
       data: JSON.stringify(data)
       headers: {'Content-Type': 'application/json'}
     ).success((data, status, headers, config) ->
-      delete @scope.release
-      @scope.sprints.length = 0
+      delete @locScope.release
+      @locScope.sprints.length = 0
       getReleases()
     ).error((data, status, headers, config) ->
       alert 'error'
     )
 
   editRelease = (release)=>
-    scope = @scope
+    scope = @locScope
 
     scope.sprints.length = 0
     getSprintsForBoard()
@@ -101,8 +101,8 @@ angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScop
     null
 
   saveRelease = =>
-    return false if @scope.saveIsEnabled
-    $scope = @scope
+    return false if @locScope.saveIsEnabled
+    $scope = @locScope
 
     data = { release: $scope.release }
     $http(
@@ -119,10 +119,10 @@ angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScop
 
   calculateCost = (sprint)=>
     unless(sprint.cost)
-      sprint.cost = @scope.board.run_rate_cost
+      sprint.cost = @locScope.board.run_rate_cost
 
   getSprintsForBoard = ->
-    $scope = @scope
+    $scope = @locScope
     $scope.sprints.length = 0
 
     $http.get("/api/sprints/forBoardNotReleased.json?board_id=#{$scope.board.id}&site_id=#{$rootScope.siteId}").success((sprints)->
@@ -132,7 +132,7 @@ angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScop
     )
 
   newRelease = =>
-    scope = @scope
+    scope = @locScope
     scope.mode = {
       title : "New",
       action : "create"
@@ -150,7 +150,8 @@ angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScop
     null
 
   linker = (scope, element, attr) =>
-    @scope = scope
+
+    @locScope = scope
     scope.release = null
 
     scope.openReleaseManagement = buildManager
@@ -172,6 +173,7 @@ angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScop
   restrict: 'E',
   link: linker,
   templateUrl: "views/directives/release_management.html"
+  restrict: 'E'
   scope:
     board: "="
     control: "="

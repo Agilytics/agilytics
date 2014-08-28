@@ -48,12 +48,10 @@ angular.module('agilytics').directive('categoryManagement', [ "$http", "$rootSco
       null
     #------------
 
-
     linker = (scope, element, attr) =>
       @scope = scope
       #listen for the open : calling scope must set a scope.control = {} and then call scope.control.open()
       scope.control.open = buildManager
-
       this
 
     restrict: 'E',

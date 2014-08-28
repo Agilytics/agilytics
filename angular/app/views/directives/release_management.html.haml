@@ -1,4 +1,3 @@
-
 / Modal
 #manageRelease.modal.fade(aria-hidden="true" aria-labelledby="Create Release" role="dialog" tabindex="-1" ng-cloak)
   .modal-dialog.modal-lg
@@ -116,6 +115,7 @@
                 %td Sprints
 
             %tbody
+              {{releases.length}}
               %tr( ng-repeat="release in releases" style="cursor: pointer" ng-click="editRelease(release)" )
                 %td {{release.name}}
                 %td {{release.description}}

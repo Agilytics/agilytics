@@ -1,9 +1,16 @@
 angular.module("agilytics").controller "BoardController", ($scope, $http, $location,
                                                            $stateParams, $timeout, $rootScope,
                                                            boardDataService)->
+
+  $scope.dateRange = {
+    from: ""
+    to: ""
+  }
+
   $scope.board = {id: $stateParams.boardId}
   $scope.releaseManager = {} # for release manager
   $scope.categoryManager = {} # for release manager
+
   $scope.canSaveBoard = =>
     $scope.board.name && $scope.board.run_rate_cost
 
@@ -76,6 +83,7 @@ angular.module("agilytics").controller "BoardController", ($scope, $http, $locat
     $scope.stats = stats
     $scope.board = board
     $scope.tags = []
+    $scope.events = []
 
     sg = ->
       sprints = data.sprints
@@ -86,8 +94,8 @@ angular.module("agilytics").controller "BoardController", ($scope, $http, $locat
       showGraph("counts", "By Count", sprints, data.counts.series, "Number")
       showGraph("countsPercent", "By % Count", sprints, data.counts.seriesPercent, "Percent of Count", false, true)
 
-    $scope.editBoard()
     $timeout(sg, 0)
+
   )
 
   this

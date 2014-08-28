@@ -25,7 +25,7 @@ angular.module('agilytics',['ui.compat'])
           'board', {
             url: '/boards/:boardId',
             templateUrl: 'views/board.html',
-            controller: "BoardController"
+            controller:  "BoardController"
           }
         )
     ]

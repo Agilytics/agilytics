@@ -26,8 +26,20 @@
         %button.btn.btn-default( ng-class="{'hide':edit}" ng-click="editBoard()" ) Edit
         %button.btn.btn-warning( ng-class="{'hide':!edit}" ng-click="cancelEdit()" ) Close Edit
 
-%release-management( board="board" control="releaseManager")
-%category-management( board="board" control="categoryManager")
+  .well
+    %form.form-inline
+      .form-group
+        %label(for="fromDate") From
+        %select.form-control#fromDate(ng-model="dateRange.from" ng-options="i.name + ' : ' + i.date for i in events")
+      .form-group
+        %label(for="fromDate") To
+        %select.form-control#toDate(ng-model="dateRange.to" ng-options="i.name + ' : ' + i.date for i in events")
+
+
+
+%release-management( board="board" control="releaseManager" )
+%category-management( board="board" control="categoryManager" )
+
 
 .panel.panel-default(ng-class="{'hide':!edit}")
   .panel-heading
@@ -59,7 +71,6 @@
         .col-sm-offset-2.col-sm-10
           %button.btn.btn-primary(ng-disabled="!canSaveBoard()" ng-click="saveBoard()") Save
           %button.btn.btn-warning( ng-click="edit=false" ) Cancel
-
 
 .row
   %release-and-costs( board="board" )
