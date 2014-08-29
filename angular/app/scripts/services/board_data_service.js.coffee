@@ -1,16 +1,11 @@
 class @BoardService
-  constructor: (@$http)->
+  constructor: (@$http, @agiliticsUtils)->
 
-  toPercent: (i)->
-    p = Math.round(i * 100)
-    p
-
-
-  calculateSprintCost: (sprint, board)=>
+  _calculateSprintCost: (sprint, board)=>
     unless(sprint.cost)
       sprint.cost = board.run_rate_cost
 
-  calculateReleaseCost: (release)=>
+  _calculateReleaseCost: (release)=>
     release.calculated_cost = 0
     releaseSprints = []
 
@@ -29,43 +24,105 @@ class @BoardService
     release.sprints.length = 0
     release.sprints.push releaseSprints
 
-  getEvents: (boardId, siteId, callback)=>
+  getEvents: (boardId, siteId, eventRange, callback)=>
 
     @sprintsByKey = {}
     loc_releases = []
 
     @$http.get("/api/releases.json?board_id=#{boardId}&site_id=#{siteId}").success (releases)=>
       loc_releases = []
+      loc_eventRange = {}
 
-      @metricsForBoard boardId, siteId, (stats, board, data, res)=>
+
+
+      @$http.get("/api/boards/#{boardId}/stats.json?site_id=#{siteId}").success (res)=>
+
+        # going to need to filter it here
+        data = @processData(res.data, res.board.categories)
+        stats = _.sortBy(data.stats, (s) ->
+          -1 * s.id)
+        board = res.board
+
 
         sprints = []
         for sprint in data.stats
           sprints.push sprint
           @sprintsByKey[sprint.pid] = sprint
-          @calculateSprintCost sprint, board
+          @_calculateSprintCost sprint, board
 
         for release in releases
-          @calculateReleaseCost(release)
+          @_calculateReleaseCost(release)
           loc_releases.push release
 
-
         events = []
+        sprintEvents = []
+        releaseEvents = []
 
         makeUTC = (date)->
           dateObj = new Date(date)
-          Date.UTC(dateObj.getUTCFullYear(), dateObj.getUTCMonth(), dateObj.getUTCDate())
+
+          yyyy = dateObj.getUTCFullYear()
+          mm = dateObj.getUTCMonth() + 1
+          mm = '0' + mm if mm.length = 1
+          dd = dateObj.getUTCDate()
+          dd = '0' + dd if dd.length = 1
+
+          { utc: Date.UTC(yyyy, mm, dd), str: "#{mm}/#{dd}/#{yyyy}" }
 
         for sprint in sprints when new Date(sprint.end_date)
-          events.push { date: makeUTC(sprint.end_date), event: sprint, type: "sprint" }
+          d = makeUTC(sprint.end_date)
+          sprintEvent = { date: d.utc, dateString: d.str, event: sprint, type: "sprint" }
+          loc_eventRange.to = sprintEvent if eventRange && eventRange.to == sprintEvent.event.pid
+          loc_eventRange.from = sprintEvent if eventRange && eventRange.from == sprintEvent.event.pid
+          events.push sprintEvent
+          sprintEvents.push sprintEvent
+
 
         for release in loc_releases when new Date(release.release_date)
-          events.push { date: makeUTC(release.release_date), event: release, type: "release" }
+          d = makeUTC(release.release_date)
+          releaseEvent = { date: d.utc, dateString: d.str, event: release, type: "release" }
+          events.push releaseEvent
 
-        events = _.sortBy(events, (s)->
-          new Date(s.date))
+        sortByDate = (events)-> _.sortBy(events, (s)-> new Date(s.date))
+        events = sortByDate events
+        sprintEvents = sortByDate sprintEvents
 
-        callback({ board: res.board, events: events, releases: loc_releases, sprints: sprints, sprintsByKey: @sprintsByKey })
+        filteredEvents = []
+        filteredSprintEvents = []
+        filteredReleaseEvents = []
+
+        loc_eventRange.from = sprintEvents[0] if sprintEvents && (!eventRange || !eventRange.from)
+        loc_eventRange.to = sprintEvents[sprintEvents.length - 1] if sprintEvents && (!eventRange || !eventRange.to )
+
+        begin = false
+        end = false
+        filteredReleaseEvents.length = 0
+        filteredSprintEvents.length = 0
+
+        for event in events
+          begin = true if begin || event == loc_eventRange.from
+
+          if begin && !end
+            filteredEvents.push event
+            filteredReleaseEvents.push event if event.type == "release"
+            filteredSprintEvents.push event if event.type == "sprint"
+
+          end = true if end || event == loc_eventRange.to
+
+        callback
+          board: res.board
+          events: events
+          filteredEvents: filteredEvents
+          filteredSprintEvents: filteredSprintEvents
+          filteredReleaseEvents: filteredReleaseEvents
+          releaseEvents: releaseEvents
+          sprintEvents: sprintEvents
+          eventRange: loc_eventRange
+          releases: loc_releases
+          sprints: sprints
+          sprintsByKey: @sprintsByKey
+          stats: stats
+          statsData:data
 
   processData: (data, categories)=>
 
@@ -94,13 +151,13 @@ class @BoardService
 
       for cat, i in categories
         count = stat["cat_#{cat.id}_count"] * 1
-        stat["cat_#{cat.id}_percentage_count"] = @toPercent stat["cat_#{cat.id}_percentage_count"]
+
+        stat["cat_#{cat.id}_percentage_count"] = @agiliticsUtils.toPercent stat["cat_#{cat.id}_percentage_count"]
         percent_count = stat["cat_#{cat.id}_percentage_count"] * 1
 
         velocity = stat["cat_#{cat.id}_velocity"] * 1
-        stat["cat_#{cat.id}_percentage_velocity"] = @toPercent stat["cat_#{cat.id}_percentage_velocity"] * 1
+        stat["cat_#{cat.id}_percentage_velocity"] = @agiliticsUtils.toPercent stat["cat_#{cat.id}_percentage_velocity"] * 1
         percent_velocity = stat["cat_#{cat.id}_percentage_velocity"] * 1
-
 
         totalCount += count
         counts.series[i + 1].data.push count
@@ -149,12 +206,6 @@ class @BoardService
     @$http.get("/api/boards/#{boardId}/categories.json?site_id=#{siteId}").success (res)=>
       callback(res.categories)
 
-  metricsForBoard: (boardId, siteId, callback)=>
-    @$http.get("/api/boards/#{boardId}/stats.json?site_id=#{siteId}").success (res)=>
-      data = @processData(res.data, res.board.categories)
-      stats = _.sortBy(data.stats, (s) ->
-        -1 * s.id)
-      callback(stats, res.board, data, res)
 
   saveCategories: (boardId, siteId, categories, callback)=>
     data = {
@@ -172,6 +223,6 @@ class @BoardService
       alert 'error'
     )
 
-angular.module('agilytics').factory('boardDataService', ["$http", ($http)->
-  new BoardService($http)
+angular.module('agilytics').factory('boardDataService', ["$http", "agiliticsUtils", ($http, agiliticsUtils)->
+  new BoardService($http, agiliticsUtils)
 ])

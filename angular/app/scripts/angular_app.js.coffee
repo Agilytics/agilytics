@@ -28,6 +28,13 @@ angular.module('agilytics',['ui.compat'])
             controller:  "BoardController"
           }
         )
+        .state(
+          'boardwithDates', {
+            url: '/boards/:boardId/:from/:to',
+            templateUrl: 'views/board.html',
+            controller:  "BoardController"
+          }
+        )
     ]
   ).run([ '$rootScope', '$state', '$stateParams',
         ($rootScope, $state, $stateParams) ->

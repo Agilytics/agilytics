@@ -26,16 +26,17 @@
         %button.btn.btn-default( ng-class="{'hide':edit}" ng-click="editBoard()" ) Edit
         %button.btn.btn-warning( ng-class="{'hide':!edit}" ng-click="cancelEdit()" ) Close Edit
 
-  .well
-    %form.form-inline
-      .form-group
-        %label(for="fromDate") From
-        %select.form-control#fromDate(ng-model="dateRange.from" ng-options="i.name + ' : ' + i.date for i in events")
-      .form-group
-        %label(for="fromDate") To
-        %select.form-control#toDate(ng-model="dateRange.to" ng-options="i.name + ' : ' + i.date for i in events")
 
-
+.row
+  %form.col-md-10.form-inline
+    .form-group
+      %label(for="fromDate") From
+      %select.form-control#fromDate(ng-model="dateRange.from" ng-options="i.dateString + ' : ' + i.event.name + ' - ' + i.type for i in events")
+    .form-group
+      %label(for="fromDate") To
+      %select.form-control#toDate(ng-model="dateRange.to" ng-options="i.dateString + ' : ' + i.event.name + ' - ' + i.type for i in events")
+    %button.btn.btn-info( ng-click="filter()" ng-disabled="!canFilter()") Filter
+%hr
 
 %release-management( board="board" control="releaseManager" )
 %category-management( board="board" control="categoryManager" )

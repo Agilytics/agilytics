@@ -2,10 +2,17 @@ angular.module("agilytics").controller "BoardController", ($scope, $http, $locat
                                                            $stateParams, $timeout, $rootScope,
                                                            boardDataService)->
 
+
+
   $scope.dateRange = {
     from: ""
     to: ""
   }
+
+
+  $scope.canFilter = -> $scope.dateRange.from && $scope.dateRange.to
+  $scope.filter = =>
+    window.location.hash= "/boards/#{$stateParams.boardId}/#{$scope.dateRange.from.event.pid}/#{$scope.dateRange.to.event.pid}"
 
   $scope.board = {id: $stateParams.boardId}
   $scope.releaseManager = {} # for release manager
@@ -79,20 +86,25 @@ angular.module("agilytics").controller "BoardController", ($scope, $http, $locat
 
     $("\##{id}").highcharts options
 
-  boardDataService.metricsForBoard($stateParams.boardId, $rootScope.siteId, (stats, board, data)->
-    $scope.stats = stats
-    $scope.board = board
+  fromEventPid = $stateParams["from"]
+  toEventPid = $stateParams["to"]
+  boardDataService.getEvents($stateParams.boardId, $rootScope.siteId, { from: fromEventPid, to: toEventPid }, (res)->
+    #$scope.stats = res.stats
+    $scope.board = res.board
     $scope.tags = []
-    $scope.events = []
+    $scope.events = res.sprintEvents
+
+    $scope.dateRange.from = res.eventRange.from
+    $scope.dateRange.to = res.eventRange.to
 
     sg = ->
-      sprints = data.sprints
+      sprints = res.statsData.sprints
 
-      showGraph("velocity", "By Velocity", sprints, data.velocities.series, "Story Points", true)
-      showGraph("velocityPercent", "By % Velocity", sprints, data.velocities.seriesPercent, "Percent Story Points",
+      showGraph("velocity", "By Velocity", sprints, res.statsData.velocities.series, "Story Points", true)
+      showGraph("velocityPercent", "By % Velocity", sprints, res.statsData.velocities.seriesPercent, "Percent Story Points",
         false, true)
-      showGraph("counts", "By Count", sprints, data.counts.series, "Number")
-      showGraph("countsPercent", "By % Count", sprints, data.counts.seriesPercent, "Percent of Count", false, true)
+      showGraph("counts", "By Count", sprints, res.statsData.counts.series, "Number")
+      showGraph("countsPercent", "By % Count", sprints, res.statsData.counts.seriesPercent, "Percent of Count", false, true)
 
     $timeout(sg, 0)
 

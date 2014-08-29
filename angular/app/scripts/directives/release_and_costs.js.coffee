@@ -63,7 +63,8 @@ angular.module('agilytics').directive('releaseAndCosts', [ "$http", "$rootScope"
 
       @boardId = scope.board.id
 
-      boardDataService.getEvents @boardId, $rootScope.siteId, (res)=>
+      #null is eventRange
+      boardDataService.getEvents @boardId, $rootScope.siteId, null, (res)=>
 
         @sprints = res.sprints
         @releases = res.releases
