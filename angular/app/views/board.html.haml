@@ -74,7 +74,8 @@
           %button.btn.btn-warning( ng-click="edit=false" ) Cancel
 
 .row
-  %release-and-costs( board="board" )
+  {{sprintRange.to}} {{sprintRange.from}}
+  %release-and-costs( board="board" range="sprintRange"  )
 
 .row
   %div.col-md-6#velocity(style="min-width: 310px; height: 400px; margin: 0 auto")

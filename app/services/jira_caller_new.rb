@@ -40,10 +40,9 @@ class JiraCallerNew
     boards = Array.new()
     jira_boards.each do |jb|
       puts jb['name'] + " " + jb['id'].to_s
-      if jb['sprintSupportEnabled'] && jb['id'].to_s == "17"
+      if jb['sprintSupportEnabled']
+
         ## TMP TODO
-
-
         b = Board.find_by_pid((jb['id']).to_s)
 
         if (!b)

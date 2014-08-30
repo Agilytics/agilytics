@@ -88,6 +88,11 @@ angular.module("agilytics").controller "BoardController", ($scope, $http, $locat
 
   fromEventPid = $stateParams["from"]
   toEventPid = $stateParams["to"]
+
+  $scope.sprintRange = { to: toEventPid, from: fromEventPid }
+
+  console.log "BoardController - #{$scope.sprintRange.from} - #{$scope.sprintRange.to}"
+
   boardDataService.getEvents($stateParams.boardId, $rootScope.siteId, { from: fromEventPid, to: toEventPid }, (res)->
     #$scope.stats = res.stats
     $scope.board = res.board
@@ -98,13 +103,13 @@ angular.module("agilytics").controller "BoardController", ($scope, $http, $locat
     $scope.dateRange.to = res.eventRange.to
 
     sg = ->
-      sprints = res.statsData.sprints
+      sprints = res.filteredSeriesData.sprints
 
-      showGraph("velocity", "By Velocity", sprints, res.statsData.velocities.series, "Story Points", true)
-      showGraph("velocityPercent", "By % Velocity", sprints, res.statsData.velocities.seriesPercent, "Percent Story Points",
+      showGraph("velocity", "By Velocity", sprints, res.filteredSeriesData.velocities.series, "Story Points", true)
+      showGraph("velocityPercent", "By % Velocity", sprints, res.filteredSeriesData.velocities.seriesPercent, "Percent Story Points",
         false, true)
-      showGraph("counts", "By Count", sprints, res.statsData.counts.series, "Number")
-      showGraph("countsPercent", "By % Count", sprints, res.statsData.counts.seriesPercent, "Percent of Count", false, true)
+      showGraph("counts", "By Count", sprints, res.filteredSeriesData.counts.series, "Number")
+      showGraph("countsPercent", "By % Count", sprints, res.filteredSeriesData.counts.seriesPercent, "Percent of Count", false, true)
 
     $timeout(sg, 0)
 

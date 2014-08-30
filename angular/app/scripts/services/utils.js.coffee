@@ -16,6 +16,17 @@ class @AgiliticsUtils
           toCollection.push item
         break
 
+  makeUTCObject : (date)->
+    dateObj = new Date(date)
+
+    yyyy = dateObj.getUTCFullYear()
+    mm = dateObj.getUTCMonth() + 1
+    mm = '0' + mm if mm.length = 1
+    dd = dateObj.getUTCDate()
+    dd = '0' + dd if dd.length = 1
+
+    { utc: Date.UTC(yyyy, mm, dd), str: "#{mm}/#{dd}/#{yyyy}" }
+
   dateFormat: (dstr) ->
     return "" unless dstr
     dmonths = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October",

@@ -63,13 +63,11 @@ angular.module('agilytics').directive('releaseAndCosts', [ "$http", "$rootScope"
 
       @boardId = scope.board.id
 
-      #null is eventRange
-      boardDataService.getEvents @boardId, $rootScope.siteId, null, (res)=>
+      console.log "#{scope.range.from} - #{scope.range.to}"
 
-        @sprints = res.sprints
-        @releases = res.releases
-        @board = res.board
-        events = res.events
+      boardDataService.getEvents @boardId, $rootScope.siteId, {from: scope.range.from, to: scope.range.to }, (res)=>
+
+        events = res.filteredEvents
 
         # story points
         summedDeadVelocityBySprint = []
@@ -135,4 +133,5 @@ angular.module('agilytics').directive('releaseAndCosts', [ "$http", "$rootScope"
     templateUrl: "views/directives/release_and_costs.html"
     scope:
       board: "="
+      range: "="
   ])

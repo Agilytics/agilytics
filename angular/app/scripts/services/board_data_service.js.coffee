@@ -9,8 +9,9 @@ class @BoardService
     release.calculated_cost = 0
     releaseSprints = []
 
-    for sprint in release.sprints
-      locSprint = @sprintsByKey[sprint.pid]
+    # when is due to the possibility that the release may be filtered
+    for sprint in release.sprints when @filteredSprintsByKey[sprint.pid]
+      locSprint = @filteredSprintsByKey[sprint.pid]
 
       if locSprint
         release.total_velocity += locSprint.total_velocity * 1
@@ -26,105 +27,95 @@ class @BoardService
 
   getEvents: (boardId, siteId, eventRange, callback)=>
 
-    @sprintsByKey = {}
-    loc_releases = []
+    @filteredSprintsByKey = {}
+    releases = []
+    loc_eventRange = {}
+    eventRange = {} unless eventRange
 
     @$http.get("/api/releases.json?board_id=#{boardId}&site_id=#{siteId}").success (releases)=>
-      loc_releases = []
-      loc_eventRange = {}
-
-
 
       @$http.get("/api/boards/#{boardId}/stats.json?site_id=#{siteId}").success (res)=>
 
-        # going to need to filter it here
-        data = @processData(res.data, res.board.categories)
-        stats = _.sortBy(data.stats, (s) ->
-          -1 * s.id)
         board = res.board
 
+        sprintVelocityCostStats = res.data
+        filteredSprintVelocityCostsStats = []
 
-        sprints = []
-        for sprint in data.stats
-          sprints.push sprint
-          @sprintsByKey[sprint.pid] = sprint
-          @_calculateSprintCost sprint, board
-
-        for release in releases
-          @_calculateReleaseCost(release)
-          loc_releases.push release
+        eventRange.from = sprintVelocityCostStats[0].pid if sprintVelocityCostStats && !eventRange.from
+        eventRange.to = sprintVelocityCostStats[sprintVelocityCostStats.length - 1].pid if sprintVelocityCostStats && !eventRange.to
 
         events = []
         sprintEvents = []
         releaseEvents = []
-
-        makeUTC = (date)->
-          dateObj = new Date(date)
-
-          yyyy = dateObj.getUTCFullYear()
-          mm = dateObj.getUTCMonth() + 1
-          mm = '0' + mm if mm.length = 1
-          dd = dateObj.getUTCDate()
-          dd = '0' + dd if dd.length = 1
-
-          { utc: Date.UTC(yyyy, mm, dd), str: "#{mm}/#{dd}/#{yyyy}" }
-
-        for sprint in sprints when new Date(sprint.end_date)
-          d = makeUTC(sprint.end_date)
-          sprintEvent = { date: d.utc, dateString: d.str, event: sprint, type: "sprint" }
-          loc_eventRange.to = sprintEvent if eventRange && eventRange.to == sprintEvent.event.pid
-          loc_eventRange.from = sprintEvent if eventRange && eventRange.from == sprintEvent.event.pid
-          events.push sprintEvent
-          sprintEvents.push sprintEvent
-
-
-        for release in loc_releases when new Date(release.release_date)
-          d = makeUTC(release.release_date)
-          releaseEvent = { date: d.utc, dateString: d.str, event: release, type: "release" }
-          events.push releaseEvent
-
-        sortByDate = (events)-> _.sortBy(events, (s)-> new Date(s.date))
-        events = sortByDate events
-        sprintEvents = sortByDate sprintEvents
-
+        #
         filteredEvents = []
         filteredSprintEvents = []
         filteredReleaseEvents = []
 
-        loc_eventRange.from = sprintEvents[0] if sprintEvents && (!eventRange || !eventRange.from)
-        loc_eventRange.to = sprintEvents[sprintEvents.length - 1] if sprintEvents && (!eventRange || !eventRange.to )
+        beginIncludingSprints = false
+        stopIncludingSprints = false
 
-        begin = false
-        end = false
-        filteredReleaseEvents.length = 0
-        filteredSprintEvents.length = 0
+        for sprint in sprintVelocityCostStats
 
-        for event in events
-          begin = true if begin || event == loc_eventRange.from
+          @_calculateSprintCost sprint, board
 
-          if begin && !end
-            filteredEvents.push event
-            filteredReleaseEvents.push event if event.type == "release"
-            filteredSprintEvents.push event if event.type == "sprint"
+          d = @agiliticsUtils.makeUTCObject(sprint.end_date)
+          sprintEvent = { date: d.utc, dateString: d.str, event: sprint, type: "sprint" }
 
-          end = true if end || event == loc_eventRange.to
+          ## filtering
+          beginIncludingSprints = beginIncludingSprints || sprint.pid == eventRange.from
+
+          if beginIncludingSprints && !stopIncludingSprints
+            @filteredSprintsByKey[sprint.pid] = sprint
+            filteredSprintVelocityCostsStats.push sprint
+            filteredEvents.push sprintEvent
+            filteredSprintEvents.push sprintEvent
+
+          stopIncludingSprints = stopIncludingSprints || sprint.pid == eventRange.to
+          ## end filtering
+
+
+          events.push sprintEvent
+          sprintEvents.push sprintEvent
+
+          loc_eventRange.from = sprintEvent if sprint.pid == eventRange.from
+          loc_eventRange.to = sprintEvent if sprint.pid == eventRange.to
+
+
+
+        for release in releases
+          @_calculateReleaseCost(release)
+          d = @agiliticsUtils.makeUTCObject(release.release_date)
+          releaseEvent = { date: d.utc, dateString: d.str, event: release, type: "release" }
+
+          events.push releaseEvent
+          releaseEvents.push releaseEvent
+          if d.utc >= sprintEvents[0].date && d.utc <= sprintEvents[sprintEvents.length - 1].date
+            filteredEvents.push releaseEvent
+            filteredReleaseEvents.push releaseEvent
+
+        sortByDate = (events)-> _.sortBy(events, (s)->new Date(s.date))
 
         callback
           board: res.board
-          events: events
-          filteredEvents: filteredEvents
-          filteredSprintEvents: filteredSprintEvents
-          filteredReleaseEvents: filteredReleaseEvents
-          releaseEvents: releaseEvents
-          sprintEvents: sprintEvents
+          #
+          events: sortByDate events
+          filteredEvents: sortByDate filteredEvents
+          filteredSprintEvents: sortByDate filteredSprintEvents
+          filteredReleaseEvents: sortByDate filteredReleaseEvents
+          releaseEvents: sortByDate releaseEvents
+          sprintEvents: sortByDate sprintEvents
+          #
           eventRange: loc_eventRange
-          releases: loc_releases
-          sprints: sprints
-          sprintsByKey: @sprintsByKey
-          stats: stats
-          statsData:data
+          releases: releases
+          sprints: sprintVelocityCostStats
+          filteredSprintsByKey: @filteredSprintsByKey
+          stats: sprintVelocityCostStats
+          filteredStats: filteredSprintVelocityCostsStats
+          seriesData: @createSereisForGraphs(sprintVelocityCostStats, res.board.categories)
+          filteredSeriesData: @createSereisForGraphs(filteredSprintVelocityCostsStats, res.board.categories)
 
-  processData: (data, categories)=>
+  createSereisForGraphs: (data, categories)=>
 
     # colors: http://coolmaxhot.com/graphics/hex-color-palette.htm
     buildSeries = (withTotal)->
@@ -171,7 +162,6 @@ class @BoardService
       velocities.series[0].data.push totalVelocity
 
     sprints: sprints
-    stats: data
     counts: counts
     velocities: velocities
 
