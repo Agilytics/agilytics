@@ -364,6 +364,10 @@ class BoardsController < ApplicationController
 
             ) as t"
 
+      puts "########################################################"
+      puts the_sql
+      puts "########################################################"
+
       ActiveRecord::Base.connection.execute(the_sql).each do |row|
         results.push row
       end

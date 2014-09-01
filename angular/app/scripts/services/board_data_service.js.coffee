@@ -22,6 +22,7 @@ class @BoardService
       release.calculated_cost += locSprint.cost
       releaseSprints.push locSprint
 
+
     release.sprints.length = 0
     release.sprints.push releaseSprints
 
@@ -71,9 +72,9 @@ class @BoardService
             filteredEvents.push sprintEvent
             filteredSprintEvents.push sprintEvent
 
+
           stopIncludingSprints = stopIncludingSprints || sprint.pid == eventRange.to
           ## end filtering
-
 
           events.push sprintEvent
           sprintEvents.push sprintEvent
@@ -94,7 +95,7 @@ class @BoardService
             filteredEvents.push releaseEvent
             filteredReleaseEvents.push releaseEvent
 
-        sortByDate = (events)-> _.sortBy(events, (s)->new Date(s.date))
+        sortByDate = (events)-> _.sortBy(events, (s)-> s.date )
 
         callback
           board: res.board
@@ -112,10 +113,10 @@ class @BoardService
           filteredSprintsByKey: @filteredSprintsByKey
           stats: sprintVelocityCostStats
           filteredStats: filteredSprintVelocityCostsStats
-          seriesData: @createSereisForGraphs(sprintVelocityCostStats, res.board.categories)
-          filteredSeriesData: @createSereisForGraphs(filteredSprintVelocityCostsStats, res.board.categories)
+          seriesData: @createSeriesForGraphs(sprintVelocityCostStats, res.board.categories)
+          filteredSeriesData: @createSeriesForGraphs(filteredSprintVelocityCostsStats, res.board.categories)
 
-  createSereisForGraphs: (data, categories)=>
+  createSeriesForGraphs: (data, categories)=>
 
     # colors: http://coolmaxhot.com/graphics/hex-color-palette.htm
     buildSeries = (withTotal)->

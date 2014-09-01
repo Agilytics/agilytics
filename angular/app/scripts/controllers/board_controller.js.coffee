@@ -91,11 +91,10 @@ angular.module("agilytics").controller "BoardController", ($scope, $http, $locat
 
   $scope.sprintRange = { to: toEventPid, from: fromEventPid }
 
-  console.log "BoardController - #{$scope.sprintRange.from} - #{$scope.sprintRange.to}"
-
   boardDataService.getEvents($stateParams.boardId, $rootScope.siteId, { from: fromEventPid, to: toEventPid }, (res)->
-    #$scope.stats = res.stats
+    $scope.stats = res.filteredStats
     $scope.board = res.board
+
     $scope.tags = []
     $scope.events = res.sprintEvents
 

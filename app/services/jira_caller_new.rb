@@ -1,5 +1,9 @@
 class JiraCallerNew
 
+  def lputs(str)
+    puts str
+  end
+
   def initialize(rest_caller, site, name)
     @site = site
 
@@ -15,9 +19,9 @@ class JiraCallerNew
   end
 
   def http_get(uri, default_arg = [], &if_success_block)
-    puts "getting -> #{uri}"
+    lputs "getting -> #{uri}"
     response = @rest_caller.http_get(uri)
-    if_success_block ||= lambda {|response| response }
+    if_success_block ||= lambda { |response| response }
 
     case response.code
       when 200
@@ -30,7 +34,8 @@ class JiraCallerNew
   end
 
   def get_boards
-    http_get("#{@site}/rest/greenhopper/1.0/rapidview"){ |response|
+
+    http_get("#{@site}/rest/greenhopper/1.0/rapidview") { |response|
       boards = map_boards response['views']
       add_sprints boards
     }
@@ -39,10 +44,9 @@ class JiraCallerNew
   def map_boards (jira_boards)
     boards = Array.new()
     jira_boards.each do |jb|
-      puts jb['name'] + " " + jb['id'].to_s
+      lputs jb['name'] + " " + jb['id'].to_s
       if jb['sprintSupportEnabled']
 
-        ## TMP TODO
         b = Board.find_by_pid((jb['id']).to_s)
 
         if (!b)
@@ -78,19 +82,18 @@ class JiraCallerNew
 
   def add_or_create_sprint(board, sprint_json)
     # only process closed sprints
-    if sprint_json['state'] != 'CLOSED'
+    if sprint_json['state'] != 'CLOSED' && sprint_json['id'].to_s != '210'
       return
     end
 
     sprint_json_pid = board.pid + sprint_json['id'].to_s
-    sprint = Sprint.where( pid: sprint_json_pid ).first
+    sprint = Sprint.where(pid: sprint_json_pid).first
 
     unless sprint
       sprint = Sprint.new
       # sprint ids are not unique across boards in JIRA
       sprint.to_analyze = true
       sprint.pid = sprint_json_pid
-      puts sprint_json['id'].to_s
       sprint.sprint_id = sprint_json['id'].to_s
       board.sprints << sprint
       board.save()
@@ -103,17 +106,19 @@ class JiraCallerNew
   end
 
   def process_sprints
-    Sprint.where(to_analyze: true).all().each do  |sprint|
 
-      response = get_stories( sprint.board.pid, sprint.sprint_id )
+    Sprint.where(to_analyze: true).all().each do |sprint|
+
+      response = get_stories(sprint.board.pid, sprint.sprint_id)
+
 
       if response["contents"]
-        process_stories(sprint, SprintStory::COMPLETED, response["contents"]["completedIssues"] )
+        process_stories(sprint, SprintStory::COMPLETED, response["contents"]["completedIssues"])
         process_stories(sprint, SprintStory::NOT_COMPLETED, response["contents"]["incompleteIssues"])
         process_stories(sprint, SprintStory::PUNTED, response["contents"]["puntedIssues"])
       end
 
-      sprint.start_date =  DateTime.parse response["sprint"]["startDate"]
+      sprint.start_date = DateTime.parse response["sprint"]["startDate"]
       sprint.end_date = DateTime.parse response["sprint"]["endDate"]
       sprint.closed_date = DateTime.parse response["sprint"]["closedDate"] if response["sprint"]["closedDate"]
 
@@ -124,30 +129,36 @@ class JiraCallerNew
   end
 
   def process_stories(sprint, status, json_stories)
+    count = {count: 0}
     if json_stories
       json_stories.each do |json_story|
-        puts json_story["key"]
-        sprint_story_pid = sprint.pid + json_story["key"]
-        unless SprintStory.find_all_by_pid(sprint_story_pid).first()
+        lputs json_story["key"]
+        sprint_story_pid = sprint.pid + json_story["key"] + status
+        found = SprintStory.find_all_by_pid(sprint_story_pid).first()
+
+        unless found
           ss = SprintStory.new
           ss.is_done = json_story["done"]
           ss.status = status
           ss.pid = sprint_story_pid
           ss.sprint = sprint
-
-          ss.story = process_story(ss, json_story)
+          ss.story = process_story(ss, json_story, count, sprint, status)
 
           sprint.save()
           ss.save()
+        else
+          puts "FOUND"
         end
       end
     end
   end
 
-  def process_story(sprint_story, json_story)
+  def process_story(sprint_story, json_story, count, sprint, status)
+
     story = Story.find_by_pid(json_story['id'].to_s)
+    json_story_id = json_story['id'].to_s
     unless story
-      json_story_id = json_story["id"]
+
       http_get("#{@site}/rest/api/2/issue/#{json_story_id}", Object.new) do |json_story_details|
         story = Story.new
         story.create_date = json_story_details['created']
@@ -181,9 +192,48 @@ class JiraCallerNew
           tag.save()
 
         end
+      end
+    else
+      count[:count] += 1
 
+      puts "---- > #{@site}/rest/api/2/issue/#{json_story_id} #{count[:count]} #{story.id} size: #{story.size} #{status} ELSE #{sprint.name} #{story.name}"
+      http_get("#{@site}/rest/api/2/issue/#{json_story_id}", Object.new) do |json_story_details|
+
+        story.create_date = json_story_details['created']
+        story.pid = json_story_details['id']
+        story.story_key = json_story_details['key']
+
+        fields = json_story_details['fields']
+
+        if fields
+
+          story.size = fields['customfield_10004']
+
+          # this gives a snapshot of the story size
+          sprint_story.size = story.size
+
+          story.name = fields['summary']
+          story.description = fields['description']
+
+          reporter = get_or_create_user(fields['reporter'], Reporter)
+          story.reporter = reporter
+          sprint_story.reporter = reporter
+
+          assignee = get_or_create_user(fields['assignee'], Assignee)
+          story.assignee = assignee
+          sprint_story.assignee = assignee
+
+          story.story_type = fields['issuetype']['name'] if fields['issuetype']
+          tag = get_or_create_tag("#{Tag::TYPE}:#{story.story_type}")
+
+          sprint_story.tags << tag
+          sprint_story.save()
+          tag.save()
+
+        end
       end
     end
+
     story.sprint_stories << sprint_story
     story.save()
     story
@@ -200,8 +250,9 @@ class JiraCallerNew
   end
 
   def get_stories(board_id, sprint_id)
+    lputs "#{@site}/rest/greenhopper/1.0/rapid/charts/sprintreport?rapidViewId=#{board_id}&sprintId=#{sprint_id}"
     http_get "#{@site}/rest/greenhopper/1.0/rapid/charts/sprintreport?rapidViewId=#{board_id}&sprintId=#{sprint_id}",
-             { contents: {  completedIssues: [], incompleteIssues: [], puntedIssues: [] }}
+             {contents: {completedIssues: [], incompleteIssues: [], puntedIssues: []}}
   end
 
 

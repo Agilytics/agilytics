@@ -1,8 +1,11 @@
 class @AgiliticsUtils
 
   toPercent: (i)->
-    p = Math.round(i * 100)
-    p
+    if i <= 1
+      Math.round(i * 100)
+    else
+      Math.round(i)
+
 
   moveAndSort: (fromCollection, toCollection, item)->
     for s, i in fromCollection
@@ -21,9 +24,10 @@ class @AgiliticsUtils
 
     yyyy = dateObj.getUTCFullYear()
     mm = dateObj.getUTCMonth() + 1
-    mm = '0' + mm if mm.length = 1
+    mm = '0' + mm if mm < 10
+
     dd = dateObj.getUTCDate()
-    dd = '0' + dd if dd.length = 1
+    dd = '0' + dd if dd < 10
 
     { utc: Date.UTC(yyyy, mm, dd), str: "#{mm}/#{dd}/#{yyyy}" }
 

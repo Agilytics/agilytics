@@ -16,35 +16,40 @@
     <bookmark url="file://$PROJECT_DIR$/angular/app/presentation.html.haml" line="462" />
     <bookmark url="file://$PROJECT_DIR$/angular/app/presentation.html.haml" line="724" />
     <bookmark url="file://$PROJECT_DIR$/angular/app/presentation.html.haml" line="609" />
-    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller_new.rb" line="216" />
-    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller_new.rb" line="208" />
-    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller_new.rb" line="5" />
-    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller_new.rb" line="50" />
+    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller_new.rb" line="267" />
+    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller_new.rb" line="259" />
+    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller_new.rb" line="9" />
+    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller_new.rb" line="54" />
     <bookmark url="file://$PROJECT_DIR$/angular/app/scripts/directives/release_management.js.coffee" line="114" />
     <bookmark url="file://$PROJECT_DIR$/angular/app/views/directives/release_management.html.haml" line="28" />
     <bookmark url="file://$PROJECT_DIR$/angular/app/views/directives/release_management.html.haml" line="28" />
-    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller_new.rb" line="177" />
-    <bookmark url="file://$PROJECT_DIR$/angular/app/scripts/services/board_data_service.js.coffee" line="117" />
-    <bookmark url="file://$PROJECT_DIR$/angular/app/scripts/services/board_data_service.js.coffee" line="142" />
-    <bookmark url="file://$PROJECT_DIR$/angular/app/scripts/services/board_data_service.js.coffee" line="159" />
+    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller_new.rb" line="187" />
+    <bookmark url="file://$PROJECT_DIR$/angular/app/scripts/services/board_data_service.js.coffee" line="118" />
+    <bookmark url="file://$PROJECT_DIR$/angular/app/scripts/services/board_data_service.js.coffee" line="143" />
+    <bookmark url="file://$PROJECT_DIR$/angular/app/scripts/services/board_data_service.js.coffee" line="160" />
     <bookmark url="file://$PROJECT_DIR$/app/controllers/boards_controller.rb" line="303" />
-    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller_new.rb" line="44" />
-    <bookmark url="file://$PROJECT_DIR$/angular/app/scripts/services/board_data_service.js.coffee" line="162" />
+    <bookmark url="file://$PROJECT_DIR$/app/services/jira_caller_new.rb" line="48" />
+    <bookmark url="file://$PROJECT_DIR$/angular/app/scripts/services/board_data_service.js.coffee" line="163" />
     <bookmark url="file://$PROJECT_DIR$/angular/app/scripts/directives/release_and_costs.js.coffee" line="53" />
-    <bookmark url="file://$PROJECT_DIR$/angular/app/scripts/services/board_data_service.js.coffee" line="145" />
+    <bookmark url="file://$PROJECT_DIR$/angular/app/scripts/services/board_data_service.js.coffee" line="146" />
     <bookmark url="file://$PROJECT_DIR$/angular/app/views/board.html.haml" line="37" />
     <bookmark url="file://$PROJECT_DIR$/angular/app/scripts/controllers/board_controller.js.coffee" line="14" />
-    <bookmark url="file://$PROJECT_DIR$/angular/app/scripts/services/board_data_service.js.coffee" line="45" />
+    <bookmark url="file://$PROJECT_DIR$/angular/app/scripts/services/board_data_service.js.coffee" line="46" />
+    <bookmark url="file://$PROJECT_DIR$/angular/app/scripts/services/board_data_service.js.coffee" line="88" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a1eac57-8db0-46e5-83c3-4a6da8aab3a5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/views/board.html.haml" afterPath="$PROJECT_DIR$/angular/app/views/board.html.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/scripts/controllers/board_controller.js.coffee" afterPath="$PROJECT_DIR$/angular/app/scripts/controllers/board_controller.js.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/scripts/services/board_data_service.js.coffee" afterPath="$PROJECT_DIR$/angular/app/scripts/services/board_data_service.js.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/boards_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/boards_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/scripts/directives/category_management.js.coffee" afterPath="$PROJECT_DIR$/angular/app/scripts/directives/category_management.js.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/jira_caller_new.rb" afterPath="$PROJECT_DIR$/app/services/jira_caller_new.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new_way_aug_10_2014_9AM.json.txt" afterPath="$PROJECT_DIR$/new_way_aug_10_2014_9AM.json.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rebuild_data.sh" afterPath="$PROJECT_DIR$/rebuild_data.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rebuild_data_from_file.sh" afterPath="$PROJECT_DIR$/rebuild_data_from_file.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/scripts/directives/release_and_costs.js.coffee" afterPath="$PROJECT_DIR$/angular/app/scripts/directives/release_and_costs.js.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/views/directives/release_management.html.haml" afterPath="$PROJECT_DIR$/angular/app/views/directives/release_management.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/scripts/directives/release_management.js.coffee" afterPath="$PROJECT_DIR$/angular/app/scripts/directives/release_management.js.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/scripts/services/utils.js.coffee" afterPath="$PROJECT_DIR$/angular/app/scripts/services/utils.js.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -74,21 +79,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="board_controller.js.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular/app/scripts/controllers/board_controller.js.coffee">
+      <file leaf-file-name="release_management.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular/app/views/directives/release_management.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1845">
-              <caret line="82" column="36" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="board_data_service.js.coffee" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/angular/app/scripts/services/board_data_service.js.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.76666665" vertical-offset="578" max-vertical-offset="3345">
-              <caret line="106" column="35" selection-start-line="106" selection-start-column="35" selection-end-line="106" selection-end-column="35" />
+            <state vertical-scroll-proportion="-10.875" vertical-offset="789" max-vertical-offset="2085">
+              <caret line="70" column="126" selection-start-line="70" selection-start-column="43" selection-end-line="70" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -97,68 +92,38 @@
       <file leaf-file-name="jira_caller_new.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/services/jira_caller_new.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="3570">
-              <caret line="41" column="6" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
+            <state vertical-scroll-proportion="-7.923077" vertical-offset="2344" max-vertical-offset="4335">
+              <caret line="170" column="44" selection-start-line="170" selection-start-column="43" selection-end-line="170" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="import_data_new.rake" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/tasks/import_data_new.rake">
+      <file leaf-file-name="board_data_service.js.coffee" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/angular/app/scripts/services/board_data_service.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1470">
-              <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.34621212" vertical-offset="863" max-vertical-offset="3360">
+              <caret line="88" column="65" selection-start-line="88" selection-start-column="65" selection-end-line="88" selection-end-column="65" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="agile_data.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/services/agile_data.rb">
+      <file leaf-file-name="rebuild_data_from_file.sh" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rebuild_data_from_file.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="86" max-vertical-offset="2040">
-              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="120">
+              <caret line="0" column="60" selection-start-line="0" selection-start-column="60" selection-end-line="0" selection-end-column="60" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="utils.js.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular/app/scripts/services/utils.js.coffee">
+      <file leaf-file-name="new_way_july_20_2014_8PM.json.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/new_way_july_20_2014_8PM.json.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140">
-              <caret line="1" column="1" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="board.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular/app/views/board.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.083334" vertical-offset="706" max-vertical-offset="2055">
-              <caret line="76" column="35" selection-start-line="76" selection-start-column="35" selection-end-line="76" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="angular_app.js.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular/app/scripts/angular_app.js.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="975">
-              <caret line="32" column="46" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="release_management.js.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular/app/scripts/directives/release_management.js.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.384615" vertical-offset="2077" max-vertical-offset="2790">
-              <caret line="153" column="13" selection-start-line="153" selection-start-column="12" selection-end-line="153" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+              <caret line="0" column="2" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="1176563" />
               <folding />
             </state>
           </provider>
@@ -167,8 +132,48 @@
       <file leaf-file-name="release_and_costs.js.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/angular/app/scripts/directives/release_and_costs.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="518" max-vertical-offset="2130">
-              <caret line="67" column="103" selection-start-line="67" selection-start-column="103" selection-end-line="67" selection-end-column="103" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="38" max-vertical-offset="2100">
+              <caret line="43" column="67" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="import_data_new.rake" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/tasks/import_data_new.rake">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="398" max-vertical-offset="1470">
+              <caret line="42" column="15" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="boards_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/boards_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.192307" vertical-offset="4797" max-vertical-offset="5895">
+              <caret line="334" column="18" selection-start-line="334" selection-start-column="15" selection-end-line="334" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="release_management.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular/app/scripts/directives/release_management.js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1500" max-vertical-offset="2820">
+              <caret line="155" column="7" selection-start-line="155" selection-start-column="7" selection-end-line="155" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utils.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular/app/scripts/services/utils.js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1200">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -195,7 +200,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/db/migrate/20130730225046_create_release.rb" />
         <option value="$PROJECT_DIR$/angular/app/components/angular-bootstrap-datetimepicker/src/js/datetimepicker.js" />
         <option value="$PROJECT_DIR$/angular/app/scripts/controllers/boards_controller.js.coffee" />
         <option value="$PROJECT_DIR$/angular/app/components/bootstrap-datepicker/js/bootstrap-datepicker.js" />
@@ -208,14 +212,12 @@
         <option value="$PROJECT_DIR$/db/migrate/20130603202514_create_sprints.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20140804004852_add_run_rate_cost_to_boards.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130603191155_create_boards.rb" />
-        <option value="$PROJECT_DIR$/rebuild_data.sh" />
         <option value="$PROJECT_DIR$/app/models/decorator.rb" />
         <option value="$PROJECT_DIR$/db/migrate/create_tag_many2_many.rb" />
         <option value="$PROJECT_DIR$/app/models/sprint_story.rb" />
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/db/migrate/20140810225047_create_tag.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20140810225055_create_tag_many2_many.rb" />
-        <option value="$PROJECT_DIR$/db/schema.rb" />
         <option value="$PROJECT_DIR$/app/models/release.rb" />
         <option value="$PROJECT_DIR$/app/controllers/releases_controller.rb" />
         <option value="$PROJECT_DIR$/angular/app/views/boards.html.haml" />
@@ -233,18 +235,21 @@
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/angular/app/views/directives/category_management.html.haml" />
-        <option value="$PROJECT_DIR$/angular/app/views/directives/release_management.html.haml" />
         <option value="$PROJECT_DIR$/angular/app/index.html.haml" />
-        <option value="$PROJECT_DIR$/app/controllers/boards_controller.rb" />
         <option value="$PROJECT_DIR$/angular/app/views/directives/release_and_costs.html.haml" />
-        <option value="$PROJECT_DIR$/angular/app/scripts/directives/category_management.js.coffee" />
-        <option value="$PROJECT_DIR$/angular/app/scripts/directives/release_management.js.coffee" />
         <option value="$PROJECT_DIR$/angular/app/scripts/angular_app.js.coffee" />
-        <option value="$PROJECT_DIR$/app/services/jira_caller_new.rb" />
-        <option value="$PROJECT_DIR$/angular/app/scripts/services/utils.js.coffee" />
         <option value="$PROJECT_DIR$/angular/app/views/board.html.haml" />
-        <option value="$PROJECT_DIR$/angular/app/scripts/directives/release_and_costs.js.coffee" />
+        <option value="$PROJECT_DIR$/angular/app/scripts/directives/category_management.js.coffee" />
         <option value="$PROJECT_DIR$/angular/app/scripts/controllers/board_controller.js.coffee" />
+        <option value="$PROJECT_DIR$/db/schema.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/boards_controller.rb" />
+        <option value="$PROJECT_DIR$/rebuild_data.sh" />
+        <option value="$PROJECT_DIR$/rebuild_data_from_file.sh" />
+        <option value="$PROJECT_DIR$/app/services/jira_caller_new.rb" />
+        <option value="$PROJECT_DIR$/angular/app/scripts/directives/release_management.js.coffee" />
+        <option value="$PROJECT_DIR$/angular/app/views/directives/release_management.html.haml" />
+        <option value="$PROJECT_DIR$/angular/app/scripts/services/utils.js.coffee" />
+        <option value="$PROJECT_DIR$/angular/app/scripts/directives/release_and_costs.js.coffee" />
         <option value="$PROJECT_DIR$/angular/app/scripts/services/board_data_service.js.coffee" />
       </list>
     </option>
@@ -260,7 +265,6 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1280" />
     <option name="y" value="22" />
     <option name="width" value="1280" />
     <option name="height" value="1414" />
@@ -849,7 +853,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="22" width="1280" height="1414" extended-state="6" />
+    <frame x="0" y="22" width="1280" height="1414" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3269494" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -926,42 +930,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130603191155_create_boards.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22058824" vertical-offset="0" max-vertical-offset="680">
-          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130603202514_create_sprints.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.74558824" vertical-offset="18" max-vertical-offset="720">
-          <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rebuild_data.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="619">
-          <caret line="0" column="187" selection-start-line="0" selection-start-column="157" selection-end-line="0" selection-end-column="157" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/story.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29871976" vertical-offset="0" max-vertical-offset="703">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3322933" vertical-offset="957" max-vertical-offset="2190">
-          <caret line="78" column="101" selection-start-line="78" selection-start-column="97" selection-end-line="78" selection-end-column="101" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/sprint_story.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.03975535" vertical-offset="26" max-vertical-offset="1230">
@@ -988,13 +956,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13235295" vertical-offset="0" max-vertical-offset="680">
           <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/sprint.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3970588" vertical-offset="0" max-vertical-offset="680">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -1183,14 +1144,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/views/directives/release_management.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2085">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular/app/views/directives/category_management.html.haml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-21.25" vertical-offset="150" max-vertical-offset="1410">
@@ -1199,14 +1152,6 @@
           <caret line="42" column="67" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="67" />
           <caret line="43" column="26" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="26" />
           <caret line="44" column="106" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="106" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/boards_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79134464" vertical-offset="4541" max-vertical-offset="5835">
-          <caret line="371" column="24" selection-start-line="371" selection-start-column="22" selection-end-line="371" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -1227,30 +1172,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/scripts/directives/category_management.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1035">
-          <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/scripts/angular_app.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="975">
-          <caret line="32" column="46" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/scripts/directives/release_management.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.384615" vertical-offset="2077" max-vertical-offset="2790">
-          <caret line="153" column="13" selection-start-line="153" selection-start-column="12" selection-end-line="153" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/services/agile_data.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="86" max-vertical-offset="2040">
@@ -1259,58 +1180,146 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/import_data_new.rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1470">
-          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/services/jira_caller_new.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="3570">
-          <caret line="41" column="6" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/scripts/services/utils.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140">
-          <caret line="1" column="1" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular/app/views/board.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.083334" vertical-offset="706" max-vertical-offset="2055">
-          <caret line="76" column="35" selection-start-line="76" selection-start-column="35" selection-end-line="76" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/scripts/directives/release_and_costs.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="518" max-vertical-offset="2130">
-          <caret line="67" column="103" selection-start-line="67" selection-start-column="103" selection-end-line="67" selection-end-column="103" />
+        <state vertical-scroll-proportion="-8.46" vertical-offset="192" max-vertical-offset="2055">
+          <caret line="41" column="52" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/angular/app/scripts/controllers/board_controller.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1845">
-          <caret line="82" column="36" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1830">
+          <caret line="0" column="28" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/directives/category_management.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1065">
+          <caret line="54" column="60" selection-start-line="54" selection-start-column="60" selection-end-line="54" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/angular_app.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
+          <caret line="58" column="25" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_way_july_20_2014_8PM.json.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+          <caret line="0" column="2" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="1176563" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/sprint.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39726028" vertical-offset="9" max-vertical-offset="675">
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/story.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3196347" vertical-offset="0" max-vertical-offset="657">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.95319813" vertical-offset="1294" max-vertical-offset="2505">
+          <caret line="127" column="2" selection-start-line="127" selection-start-column="2" selection-end-line="127" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/boards_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.192307" vertical-offset="4797" max-vertical-offset="5895">
+          <caret line="334" column="18" selection-start-line="334" selection-start-column="15" selection-end-line="334" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rebuild_data_from_file.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="619">
+          <caret line="0" column="60" selection-start-line="0" selection-start-column="60" selection-end-line="0" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rebuild_data.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="642">
+          <caret line="0" column="58" selection-start-line="0" selection-start-column="58" selection-end-line="0" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/jira_caller_new.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.923077" vertical-offset="2344" max-vertical-offset="4335">
+          <caret line="170" column="44" selection-start-line="170" selection-start-column="43" selection-end-line="170" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/import_data_new.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="398" max-vertical-offset="1470">
+          <caret line="42" column="15" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/views/directives/release_management.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.875" vertical-offset="789" max-vertical-offset="2085">
+          <caret line="70" column="126" selection-start-line="70" selection-start-column="43" selection-end-line="70" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/directives/release_management.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1500" max-vertical-offset="2820">
+          <caret line="155" column="7" selection-start-line="155" selection-start-column="7" selection-end-line="155" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/services/utils.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1200">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/directives/release_and_costs.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="38" max-vertical-offset="2100">
+          <caret line="43" column="67" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/angular/app/scripts/services/board_data_service.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.76666665" vertical-offset="578" max-vertical-offset="3345">
-          <caret line="106" column="35" selection-start-line="106" selection-start-column="35" selection-end-line="106" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.34621212" vertical-offset="863" max-vertical-offset="3360">
+          <caret line="88" column="65" selection-start-line="88" selection-start-column="65" selection-end-line="88" selection-end-column="65" />
           <folding />
         </state>
       </provider>

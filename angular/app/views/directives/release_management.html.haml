@@ -61,7 +61,7 @@
                             %tr( ng-repeat="sprint in release.sprints" style="cursor: pointer" ng-click="removeSprintFromRelease(sprint)" )
                               %td
                                 {{sprint.name}}
-                                %span.very-quiet : {{sprint.start_date}} - {{sprint.end_date}}
+                                %span.very-quiet : {{ formatDate( sprint.start_date ) }} - {{ formatDate( sprint.end_date ) }}
                               %td.col-md-2 {{ sprint.total_velocity }}
                               %td.col-md-2 {{sprint.cost | currency:"$"}}
 
@@ -76,7 +76,7 @@
                         %table.table.table-striped.table-hover
                           %tbody
                             %tr( ng-repeat="sprint in sprints" style="color:#666; cursor: pointer" ng-click="addSprintToRelease(sprint)" )
-                              %td {{ sprint.name }} : {{ sprint.start_date }} - {{ sprint.end_date }}
+                              %td {{ sprint.name }} : {{ formatDate( sprint.start_date ) }} - {{ formatDate( sprint.end_date ) }}
                               %td.col-md-2 {{ sprint.total_velocity }}
                               %td.col-md-2 {{ sprint.cost | currency:"$" }}
 

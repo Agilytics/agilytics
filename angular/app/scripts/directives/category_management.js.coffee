@@ -5,6 +5,8 @@ angular.module('agilytics').directive('categoryManagement', [ "$http", "$rootSco
     #------------ TAGS / CATEGORY
     buildManager = =>
 
+      @board = @scope.board
+
       @scope.createCategory = =>
         @scope.category = {
           name:""

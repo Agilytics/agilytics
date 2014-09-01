@@ -61,7 +61,7 @@ angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScop
 
     @locScope.release = release
 
-    @locScope.canSave = => !!@locScope.release && !!@locScope.release.release_date && !!@locScope.release.name
+    @locScope.canSave = => !!@locScope.release && !!@locScope.release.release_date && !!@locScope.release.name && !!@locScope.release.sprints
 
     null
 
@@ -150,6 +150,8 @@ angular.module('agilytics').directive('releaseManagement', [ "$http", "$rootScop
     null
 
   linker = (scope, element, attr) =>
+
+    scope.formatDate = (str) -> agiliticsUtils.makeUTCObject( new Date(str) ).str
 
     @locScope = scope
     scope.release = null

@@ -31,7 +31,7 @@ angular.module('agilytics').directive('releaseAndCosts', [ "$http", "$rootScope"
         series: series
 
     makePoint = (event, y) ->
-        d = new Date(event.date)
+        d = new Date(event.dateString)
         date = (d.getMonth() + 1) + '/' + d.getDate() + '/' + d.getFullYear()
 
         format2 = (n) ->
@@ -62,8 +62,6 @@ angular.module('agilytics').directive('releaseAndCosts', [ "$http", "$rootScope"
     linker = (scope)=>
 
       @boardId = scope.board.id
-
-      console.log "#{scope.range.from} - #{scope.range.to}"
 
       boardDataService.getEvents @boardId, $rootScope.siteId, {from: scope.range.from, to: scope.range.to }, (res)=>
 
