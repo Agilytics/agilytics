@@ -9,7 +9,8 @@
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
-
+*.sh
+*.json.txt
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp

@@ -8,34 +8,45 @@
         %span.icon-bar
         %span.icon-bar
       .navbar-brand {{board.name}}
-    #bs-example-navbar-collapse-2.collapse.navbar-collapse
-      %form.navbar-form.navbar-left
-        .form-group
-          .btn-group
-            %button.btn.btn-primary( ng-click="releaseManager.open()")
-              Manage Releases
-            %button.btn.btn-primary( ng-click="categoryManager.open()")
-              Manage Categories
 
-      .navbar-form.nav.navbar-nav.navbar-right
+      .navbar-form.nav.navbar-nav.navbar-left
+        %form.form-inline
+          .form-group
+            %label(for="fromDate") From
+            %select.form-control#fromDate(ng-model="dateRange.from" ng-options="i.dateString + ' : ' + i.event.name + ' - ' + i.type for i in events")
+          .form-group
+            %label(for="fromDate") To
+            %select.form-control#toDate(ng-model="dateRange.to" ng-options="i.dateString + ' : ' + i.event.name + ' - ' + i.type for i in events")
+          %button.btn.btn-info( ng-click="filter()" ng-disabled="!canFilter()") Filter
+
+    .collapse.navbar-collapse
+      .navbar-form.pull-right.navbar-right
         .btn-group
-          %button.btn.btn-default( ng-click="detail=true" ng-class="{'active':detail}" type="button" ) DETAIL ON
-          %button.btn.btn-default( ng-click="detail=false" ng-class="{'active':!detail}" type="button" ) OFF
+          %button( type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" )
+            %span.glyphicon.glyphicon-asterisk
+          %ul.dropdown-menu{"aria-labelledby" => "dropdownMenu1", :role => "menu"}
+            %li{:role => "presentation"}
+              -#%a{:href => "#", :role => "menuitem", :tabindex => "-1"} Action
+              %a( ng-class="{'hide':edit}" ng-click="editBoard()" ) Edit
+              %a( ng-class="{'hide':!edit}" ng-click="cancelEdit()" ) Close Edit
+            %li{:role => "presentation"}
+              %a( ng-click="detail=!detail" )
+                %span( ng-class="{'hide':detail}" ) Show Detail
+                %span( ng-class="{'hide':!detail}" ) Hide Detail
+            %li.divider{:role => "presentation"}
+            %li( role="presentation" )
+              %a(  ng-click="categoryManager.open()" ) Manage Categories
+            %li( role="presentation" )
+              %a( ng-click="releaseManager.open()") Manage Releases
 
-      .navbar-form.nav.navbar-nav.navbar-right
-        %button.btn.btn-default( ng-class="{'hide':edit}" ng-click="editBoard()" ) Edit
-        %button.btn.btn-warning( ng-class="{'hide':!edit}" ng-click="cancelEdit()" ) Close Edit
-
-
+%br
 .row
-  %form.col-md-10.form-inline
-    .form-group
-      %label(for="fromDate") From
-      %select.form-control#fromDate(ng-model="dateRange.from" ng-options="i.dateString + ' : ' + i.event.name + ' - ' + i.type for i in events")
-    .form-group
-      %label(for="fromDate") To
-      %select.form-control#toDate(ng-model="dateRange.to" ng-options="i.dateString + ' : ' + i.event.name + ' - ' + i.type for i in events")
-    %button.btn.btn-info( ng-click="filter()" ng-disabled="!canFilter()") Filter
+  %ul.col-md-12.nav.nav-tabs{:role => "tablist"}
+    %li.active
+      %a(href="#/boards/{{board.id}}.team") Team
+    %li
+      %a(href="#/boards/{{board.id}}.teamMembers") Team Members
+
 %hr
 
 %release-management( board="board" control="releaseManager" )
@@ -74,7 +85,6 @@
           %button.btn.btn-warning( ng-click="edit=false" ) Cancel
 
 .row
-  {{sprintRange.to}} {{sprintRange.from}}
   %release-and-costs( board="board" range="sprintRange"  )
 
 .row

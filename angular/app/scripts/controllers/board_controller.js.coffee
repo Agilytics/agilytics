@@ -2,17 +2,14 @@ angular.module("agilytics").controller "BoardController", ($scope, $http, $locat
                                                            $stateParams, $timeout, $rootScope,
                                                            boardDataService)->
 
-
-
   $scope.dateRange = {
     from: ""
     to: ""
   }
 
-
   $scope.canFilter = -> $scope.dateRange.from && $scope.dateRange.to
   $scope.filter = =>
-    window.location.hash= "/boards/#{$stateParams.boardId}/#{$scope.dateRange.from.event.pid}/#{$scope.dateRange.to.event.pid}"
+    window.location.hash= "/boards/#{$stateParams.boardId}?from=#{$scope.dateRange.from.event.pid}&to=#{$scope.dateRange.to.event.pid}"
 
   $scope.board = {id: $stateParams.boardId}
   $scope.releaseManager = {} # for release manager

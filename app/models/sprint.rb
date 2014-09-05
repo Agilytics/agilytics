@@ -7,7 +7,6 @@ class Sprint < ActiveRecord::Base
 
                   :cost,
 
-
                   :closed,
                   :start_date,
                   :end_date,
