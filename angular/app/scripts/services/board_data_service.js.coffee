@@ -43,7 +43,9 @@ class @BoardService
         filteredSprintVelocityCostsStats = []
 
         eventRange.from = sprintVelocityCostStats[0].pid if sprintVelocityCostStats && !eventRange.from
-        eventRange.to = sprintVelocityCostStats[sprintVelocityCostStats.length - 1].pid if sprintVelocityCostStats && !eventRange.to
+        if !eventRange.to ||  eventRange.to == sprintVelocityCostStats[sprintVelocityCostStats.length - 1].pid
+          eventRange.doNotFilterEnd = true
+          eventRange.to = sprintVelocityCostStats[sprintVelocityCostStats.length - 1].pid
 
         events = []
         sprintEvents = []
@@ -91,7 +93,7 @@ class @BoardService
 
           events.push releaseEvent
           releaseEvents.push releaseEvent
-          if d.utc >= sprintEvents[0].date && d.utc <= sprintEvents[sprintEvents.length - 1].date
+          if d.utc >= loc_eventRange.from.date && ( d.utc <= loc_eventRange.to.date || eventRange.doNotFilterEnd )
             filteredEvents.push releaseEvent
             filteredReleaseEvents.push releaseEvent
 
