@@ -33,6 +33,32 @@ namespace :import_data_new do
   end
 
   ##############
+  # Update all stories
+  desc 'update all stories from jira and cache file'
+  task :update_all_stories => :environment do
+      if !ENV['uid'] || !ENV['pwd'] || !ENV['site'] || !ENV['name']
+        usage('jira')
+        exit 0
+      end
+      if !ENV['cacheFile']
+        cacheFile = Time.new().to_s.tr(' ', '_') + '.json.txt'
+      else
+        cacheFile = ENV['cacheFile']
+      end
+
+      puts "Connecting to site: #{ENV['site']} with uid: #{ENV['uid']} and pwd: #{ENV['pwd']}"
+
+      rc = RestCaller.new(ENV['uid'], ENV['pwd'])
+      rc.record_in(cacheFile)
+      jc = JiraCallerNew.new(rc, ENV['site'], ENV['name'])
+      jc.update_all_stories()
+      rc.end()
+
+  end
+
+
+
+  ##############
   # JIRA TO FILE
   desc 'import from jira and write to cache file'
   task :jira_to_file => :environment do

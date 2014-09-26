@@ -122,8 +122,8 @@ angular.module('agilytics').directive('releaseAndCosts', [ "$http", "$rootScope"
 
         showReleaseGraph("releaseVelocityChart", "Dead & Realized Velocity", "Story Points",
           [releasedVelocitySeries, deadVelocitySeries, sprintVelocitySeries])
-        showReleaseGraph("releaseChart", "Velocity, cost & releases", "Cost in $",
-          [releasedVelocityCostSeries, deadVelocityCostSeries, sprintVelocityCostSeries])
+        #showReleaseGraph("releaseChart", "Velocity, cost & releases", "Cost in $",
+        #  [releasedVelocityCostSeries, deadVelocityCostSeries, sprintVelocityCostSeries])
       @
 
     restrict: 'E'

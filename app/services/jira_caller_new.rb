@@ -77,7 +77,11 @@ class JiraCallerNew
   end
 
   def get_sprints(boardId)
-    http_get("#{@site}/rest/greenhopper/1.0/sprintquery/#{boardId}?includeHistoricSprints=true&includeFutureSprints=true")
+    url = "#{@site}/rest/greenhopper/1.0/sprintquery/#{boardId}?includeHistoricSprints=true&includeFutureSprints=true"
+    puts "****"
+    puts url
+    puts "****"
+    http_get(url)
   end
 
   def add_or_create_sprint(board, sprint_json)
@@ -142,10 +146,11 @@ class JiraCallerNew
           ss.status = status
           ss.pid = sprint_story_pid
           ss.sprint = sprint
-          ss.story = process_story(ss, json_story, count, sprint, status)
-
-          sprint.save()
           ss.save()
+
+          ss.story = process_story(ss, json_story, count, sprint, status)
+          sprint.save()
+
         else
           puts "FOUND"
         end
@@ -153,88 +158,99 @@ class JiraCallerNew
     end
   end
 
+  def add_tag_to_sprint_stories(story, tag)
+      for ss in story.sprint_stories
+        ss.tags << tag unless ss.tags.include? tag
+        ss.save()
+        tag.save()
+      end
+  end
+
+  def add_labels(story, labels)
+    for label in labels
+
+      label_name = "#{Tag::LABEL}:#{label}"
+
+      tag = get_or_create_tag(label_name)
+
+      add_tag_to_sprint_stories(story, tag)
+
+    end
+  end
+
+  def update_all_stories()
+    for story in Story.all()
+      if story.updated_at < Date.today()
+        update_story story
+        story.save()
+      end
+    end
+  end
+
+  def update_story(story)
+
+      http_get("#{@site}/rest/api/2/issue/#{story.pid}", Object.new) do |json_story_details|
+
+        story.create_date = json_story_details['created']
+        story.pid = json_story_details['id']
+        story.story_key = json_story_details['key']
+
+        fields = json_story_details['fields']
+
+        if fields
+
+          story.size = fields['customfield_10004']
+
+          story.name = fields['summary']
+          story.description = fields['description']
+
+          reporter = get_or_create_user(fields['reporter'], Reporter)
+          story.reporter = reporter
+
+          assignee = get_or_create_user(fields['assignee'], Assignee)
+          story.assignee = assignee
+
+          story.story_type = fields['issuetype']['name'] if fields['issuetype']
+          tag = get_or_create_tag("#{Tag::TYPE}:#{story.story_type}")
+
+          add_tag_to_sprint_stories(story,tag)
+
+          assignee.save() if assignee
+          puts "(skip : NIL assignee : for story: #{story.pid} assignee: #{fields['assignee']}" unless assignee
+
+          reporter.save() if reporter
+          puts "(skip) : NIL reporter : for story: #{story.pid} reporter: #{fields['assignee']}" unless reporter
+
+          add_labels story, fields['labels']
+          tag.save()
+
+          story.updated_at = Date.today
+          story.save()
+
+        end
+      end
+
+  end
+
   def process_story(sprint_story, json_story, count, sprint, status)
 
     story = Story.find_by_pid(json_story['id'].to_s)
-    json_story_id = json_story['id'].to_s
-    unless story
-
-      http_get("#{@site}/rest/api/2/issue/#{json_story_id}", Object.new) do |json_story_details|
-        story = Story.new
-        story.create_date = json_story_details['created']
-        story.pid = json_story_details['id']
-        story.story_key = json_story_details['key']
-
-        fields = json_story_details['fields']
-        if fields
-
-          story.size = fields['customfield_10004']
-
-          # this gives a snapshot of the story size
-          sprint_story.size = story.size
-
-          story.name = fields['summary']
-          story.description = fields['description']
-
-          reporter = get_or_create_user(fields['reporter'], Reporter)
-          story.reporter = reporter
-          sprint_story.reporter = reporter
-
-          assignee = get_or_create_user(fields['assignee'], Assignee)
-          story.assignee = assignee
-          sprint_story.assignee = assignee
-
-          story.story_type = fields['issuetype']['name'] if fields['issuetype']
-
-          tag = get_or_create_tag("#{Tag::TYPE}:#{story.story_type}")
-          sprint_story.tags << tag
-          sprint_story.save()
-          tag.save()
-
-        end
-      end
-    else
-      count[:count] += 1
-
-      puts "---- > #{@site}/rest/api/2/issue/#{json_story_id} #{count[:count]} #{story.id} size: #{story.size} #{status} ELSE #{sprint.name} #{story.name}"
-      http_get("#{@site}/rest/api/2/issue/#{json_story_id}", Object.new) do |json_story_details|
-
-        story.create_date = json_story_details['created']
-        story.pid = json_story_details['id']
-        story.story_key = json_story_details['key']
-
-        fields = json_story_details['fields']
-
-        if fields
-
-          story.size = fields['customfield_10004']
-
-          # this gives a snapshot of the story size
-          sprint_story.size = story.size
-
-          story.name = fields['summary']
-          story.description = fields['description']
-
-          reporter = get_or_create_user(fields['reporter'], Reporter)
-          story.reporter = reporter
-          sprint_story.reporter = reporter
-
-          assignee = get_or_create_user(fields['assignee'], Assignee)
-          story.assignee = assignee
-          sprint_story.assignee = assignee
-
-          story.story_type = fields['issuetype']['name'] if fields['issuetype']
-          tag = get_or_create_tag("#{Tag::TYPE}:#{story.story_type}")
-
-          sprint_story.tags << tag
-          sprint_story.save()
-          tag.save()
-
-        end
-      end
-    end
-
+    story = Story.new unless story
+    story.pid = json_story['id'].to_s
     story.sprint_stories << sprint_story
+    sprint_story.save()
+    story.save()
+
+    update_story story
+
+    # this gives a snapshot of the story size
+    sprint_story.size = story.size
+
+    sprint_story.reporter = story.reporter
+    sprint_story.assignee = story.assignee
+
+    sprint_story.save()
+
     story.save()
     story
   end
@@ -257,7 +273,6 @@ class JiraCallerNew
 
 
 #####
-
   def get_or_create_user(user_blob, userClass)
 
     unless user_blob
@@ -267,6 +282,7 @@ class JiraCallerNew
     # remove spaces
     user_name = user_blob['name'].tr(' ', '+')
     user = userClass.find_by_pid(user_name) unless user
+
     unless user
       user = userClass.new()
       user.pid = user_name

@@ -133,12 +133,12 @@ class BoardsController < ApplicationController
   end
 
   def delete_category
-     ActiveRecord::Base.transaction do
+    ActiveRecord::Base.transaction do
       board = Board.find(params[:id])
       category = Category.find(params[:category_id])
       board.categories.delete category
       board.save()
-     end
+    end
     respond_to do |format|
       format.html { head :no_content }
       format.json { head :no_content }
@@ -267,6 +267,72 @@ class BoardsController < ApplicationController
     sql_category
   end
 
+  def team_stats
+
+    board_id = params[:id]
+    site_id = params[:site_id]
+    results = []
+    board = Board.includes(:categories).find(board_id)
+
+    categories = board.categories
+
+    unless categories.empty?
+      tagids = build_where_for_categories(categories)
+    end
+
+    the_sql =
+        "SELECT
+            a.id as asignee_id,
+            a.name as assignee,
+            b.name,
+            to_number(sp.sprint_id, '999999') as sprint_id,
+            sp.end_date,
+            sum(s.size)
+        FROM
+            stories s
+            JOIN agile_users a on s.assignee_id = a.id
+            JOIN sprint_stories ss ON ss.story_id = s.id
+            JOIN sprints sp ON ss.sprint_id = sp.id
+            JOIN boards b ON sp.board_id = b.id
+            JOIN sprint_stories_tags as sst on sst.sprint_story_id = ss.id
+            JOIN tags as t on t.id = sst.tag_id
+
+        WHERE
+          ss.status = 'completed'
+          and b.id = #{board_id}
+          and b.site_id = #{site_id}
+          and t.id in (#{tagids})
+        GROUP BY
+          a.id,
+          a.name,
+          b.name,
+          sp.end_date,
+          to_number(sp.sprint_id, '999999')
+        ORDER BY
+          b.name,
+          to_number(sp.sprint_id, '999999')
+
+        "
+
+    puts "# TEAM STATS #######################################################"
+    puts the_sql
+    puts "########################################################"
+
+    ActiveRecord::Base.connection.execute(the_sql).each do |row|
+      results.push row
+    end
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json {
+        render json: {
+            board: board,
+            data: results
+        }, include: [:categories]
+      }
+    end
+  end
+
 
   def stats
     board_id = params[:id]
@@ -298,7 +364,7 @@ class BoardsController < ApplicationController
       select_SQL = ""
       categories.each do |category|
         select_SQL +=
-        "
+            "
           t.cat_#{category.id}_count as cat_#{category.id}_count,
           CAST(CAST(t.cat_#{category.id}_count as float) / t.total_count as float) as cat_#{category.id}_percentage_count,
           t.cat_#{category.id}_velocity as cat_#{category.id}_velocity,
@@ -308,7 +374,7 @@ class BoardsController < ApplicationController
       end
 
       the_sql =
-        "select
+          "select
             t.board_name,
             t.id as sprint_id,
             t.name as sprint_name,
@@ -377,7 +443,7 @@ class BoardsController < ApplicationController
       format.html # show.html.erb
       format.json {
         render json: {
-            board: board ,
+            board: board,
             data: results
         }, include: [:categories]
       }

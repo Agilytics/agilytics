@@ -12,7 +12,8 @@ class Story < ActiveRecord::Base
                   :description,
                   :assignee_id,
                   :reporter_id,
-                  :story_type
+                  :story_type,
+                  :updated_at
 
   belongs_to :board
   has_many :sprint_stories

@@ -10,6 +10,7 @@ Agilytics::Application.routes.draw do
 
   get 'api/boards', to: 'boards#index'
   get 'api/boards/:id/categories', to: 'boards#categories'
+  get 'api/boards/:id/team_stats', to: 'boards#team_stats'
   get 'api/boards/:id/stats', to: 'boards#stats'
   get 'api/boards/:id/tags', to: 'boards#tags'
   post 'api/boards/updateBoards', to: 'boards#updateBoards'

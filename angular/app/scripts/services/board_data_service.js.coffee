@@ -42,7 +42,9 @@ class @BoardService
         sprintVelocityCostStats = res.data
         filteredSprintVelocityCostsStats = []
 
-        eventRange.from = sprintVelocityCostStats[0].pid if sprintVelocityCostStats && !eventRange.from
+        startWithThisEvent = if sprintVelocityCostStats.length - 10 > 0 then sprintVelocityCostStats.length - 10 else 0
+        eventRange.from = sprintVelocityCostStats[startWithThisEvent].pid if sprintVelocityCostStats && !eventRange.from
+
         if !eventRange.to ||  eventRange.to == sprintVelocityCostStats[sprintVelocityCostStats.length - 1].pid
           eventRange.doNotFilterEnd = true
           eventRange.to = sprintVelocityCostStats[sprintVelocityCostStats.length - 1].pid
