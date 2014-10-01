@@ -19,8 +19,12 @@
 
       %tr( ng-repeat="board in boards"  ng-class="{'hide':!boards.length}" )
 
-        %td(ng-click="href(board)" style="cursor: pointer" ) {{board.name}}
-        %td(ng-click="href(board)" style="cursor: pointer" ) {{board.last_updated}}
+        %td(style="cursor: pointer" ng-click="goToBoard(board)")
+          %a(href="#/boards/{{board.id}}/stats")
+            {{board.name}}
+        %td(style="cursor: pointer" ng-click="goToBoard(board)")
+          %a(href="#/boards/{{board.id}}/stats")
+            {{board.last_updated}}
         %td.sparkline( id="{{board.id}}" )
         %td
           %input.checked( type="checkbox" style='height:25px; width:45px' ng-model="board.to_analyze" ng-click='saveBoards()')
@@ -30,8 +34,12 @@
           %h3(style="color:#FF9999") Not Analyzing
 
       %tr( ng-repeat="board in notBoards" style="color:#CC0000" ng-class="{'hide':!notBoards.length}" )
-        %td(ng-click="(board)" style="cursor: pointer" ) {{board.name}}
-        %td(ng-click="(board)" style="cursor: pointer" ) {{board.last_updated}}
+        %td(style="cursor: pointer" ng-click="goToBoard(board)")
+          %a(href="#/boards/{{board.id}}/stats")
+            {{board.name}}
+        %td(style="cursor: pointer" ng-click="goToBoard(board)")
+          %a(href="#/boards/{{board.id}}/stats")
+            {{board.last_updated}}
         %td
         %td
           %input.checked( type="checkbox" style='height:25px; width:45px' ng-model="board.to_analyze" ng-click='saveBoards()')

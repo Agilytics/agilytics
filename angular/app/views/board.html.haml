@@ -7,16 +7,16 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      .navbar-brand {{board.name}}
+      .navbar-brand {{state.board.name}}
 
       .navbar-form.nav.navbar-nav.navbar-left
         %form.form-inline
           .form-group
             %label(for="fromDate") From
-            %select.form-control#fromDate(ng-model="dateRange.from" ng-options="i.dateString + ' : ' + i.event.name + ' - ' + i.type for i in events")
+            %select.form-control#fromDate(ng-model="state.eventRange.from" ng-options="i.dateString + ' : ' + i.event.name + ' - ' + i.type for i in state.sprintEvents")
           .form-group
             %label(for="fromDate") To
-            %select.form-control#toDate(ng-model="dateRange.to" ng-options="i.dateString + ' : ' + i.event.name + ' - ' + i.type for i in events")
+            %select.form-control#toDate(ng-model="state.eventRange.to" ng-options="i.dateString + ' : ' + i.event.name + ' - ' + i.type for i in state.sprintEvents")
           %button.btn.btn-info( ng-click="filter()" ng-disabled="!canFilter()") Filter
 
     .collapse.navbar-collapse
@@ -39,106 +39,15 @@
             %li( role="presentation" )
               %a( ng-click="releaseManager.open()") Manage Releases
 
+
 %br
 .row
   %ul.col-md-12.nav.nav-tabs{:role => "tablist"}
-    %li.active
-      %a(href="#/boards/{{board.id}}.team") Team
-    %li
-      %a(href="#/boards/{{board.id}}.teamMembers") Team Members
-
-%hr
-
-%release-management( board="board" control="releaseManager" )
-%category-management( board="board" control="categoryManager" )
+    %li(ng-class="{active: agilyticsContext == 'stats'}")
+      %a(href="#/boards/{{board.id}}/stats?from={{dateRange.from}}&to={{dateRange.to}}") Board Stats
+    %li(ng-class="{active: agilyticsContext == 'team'}")
+      %a(href="#/boards/{{board.id}}/team?from={{dateRange.from}}&to={{dateRange.to}}") Team Members
 
 
-.panel.panel-default(ng-class="{'hide':!edit}")
-  .panel-heading
-    %h3.panel-title Board Detail
-  .panel-body
-    %form.form-horizontal(role="form" )
-      .form-group
-        %label.col-sm-2.control-label(for="inputName") Board name
-        .col-sm-10
-          %input#inputName.form-control(ng-model="board.name" placeholder="Name" required=true)/
-
-      .form-group
-        %label.col-sm-2.control-label(for="cost") Run Rate: $ per sprint
-        .row
-          .col-sm-5
-            .input-group
-              .input-group-addon $
-              %input#cost.form-control(ng-model="board.run_rate_cost" placeholder="cost" size="30" required=true type="text" tep="0.01" name="cost"  )/
-
-          .col-sm-4(style="padding:5px")
-            {{board.run_rate_cost | currency:"$"}}
-
-      .form-group
-        .col-sm-offset-2.col-sm-8
-          .alert.alert-info(ng-class="{'hide': canSaveBoard()}")
-            If you enter the cost, release cost can be calculated per sprint.
-
-      .form-group
-        .col-sm-offset-2.col-sm-10
-          %button.btn.btn-primary(ng-disabled="!canSaveBoard()" ng-click="saveBoard()") Save
-          %button.btn.btn-warning( ng-click="edit=false" ) Cancel
-
-.row
-  %release-and-costs( board="board" range="sprintRange"  )
-
-.row
-  %div.col-md-12#velocity-control-chart(style="min-width: 620px; height: 400px; margin: 0 auto")
-
-.row
-  %div.col-md-6#velocity(style="min-width: 310px; height: 400px; margin: 0 auto")
-  %div.col-md-6#velocityPercent(style="min-width: 310px; height: 400px; margin: 0 auto")
-
-%table.table.table-striped.table-hover( ng-class="{ 'hide' : !detail }" )
-  %thead
-    %tr
-      %td sprint name
-
-      %td(ng-repeat="category in board.categories") {{category.name}}
-      %td total
-      %td(ng-repeat="category in board.categories") {{category.name}} %
-
-
-
-  %tbody
-    %tr( ng-repeat="stat in stats" )
-      %td {{stat.sprint_name}}
-      %td(ng-repeat="category in board.categories") {{stat["cat_" + category.id + "_velocity"] }}
-      %td {{stat.total_velocity}}
-      %td(ng-repeat="category in board.categories") {{stat["cat_" + category.id + "_percentage_velocity"] }}
-
-.row
-  %div.col-md-6#counts(style="min-width: 310px; height: 400px; margin: 0 auto")
-  %div.col-md-6#countsPercent(style="min-width: 310px; height: 400px; margin: 0 auto")
-
-%table.table.table-striped.table-hover( ng-class="{ 'hide' : !detail }" )
-  %thead
-    %tr
-      %td sprint name
-      %td feature
-      %td enhancement
-      %td bug
-      %td total
-      %td feature %
-      %td enhancements %
-      %td bug %
-
-  %tbody
-    %tr( ng-repeat="stat in stats" ng-click="href(board)" style="cursor: pointer" )
-
-      %td {{stat.sprint_name}}
-      %td {{stat.feature_count}}
-      %td {{stat.enhancement_count}}
-      %td {{stat.bug_count}}
-      %td {{stat.total_count}}
-      %td {{stat.feature_percentage_count}}%
-      %td {{stat.enhancements_percentage_count}}%
-      %td {{stat.bug_percentage_count}}%
-
-
+%div( ui-view )
 

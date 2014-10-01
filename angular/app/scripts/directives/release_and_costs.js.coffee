@@ -1,5 +1,5 @@
-angular.module('agilytics').directive('releaseAndCosts', [ "$http", "$rootScope", "$timeout", "boardDataService",
-  ($http, $rootScope, $timeout, boardDataService) ->
+angular.module('agilytics').directive('releaseAndCosts', [ "$http", "$rootScope", "$timeout", "boardStatsService",
+  ($http, $rootScope, $timeout, boardStatsService) ->
 
 
     showReleaseGraph = (id, title, yAxisText, series)=>
@@ -63,7 +63,7 @@ angular.module('agilytics').directive('releaseAndCosts', [ "$http", "$rootScope"
 
       @boardId = scope.board.id
 
-      boardDataService.getEvents @boardId, $rootScope.siteId, {from: scope.range.from, to: scope.range.to }, (res)=>
+      boardStatsService.getEvents @boardId, $rootScope.siteId, {from: scope.range.from, to: scope.range.to }, (res)=>
 
         events = res.filteredEvents
 

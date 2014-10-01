@@ -21,11 +21,31 @@ angular.module('agilytics', ['ui.compat'])
       )
       .state(
         'board', {
-          url: '/boards/:boardId?from&to',
+          url: '/boards/{boardId}?from&to',
+          controller:"BoardController"
           templateUrl: 'views/board.html',
-          controller: "BoardController"
+          dpts: ($state, $stateParams) ->
+            boardId: $stateParams.boardId
+            from: $stateParams.from
+            to: $stateParams.to
+
         }
       )
+      .state(
+        'board.stats', {
+          url: '/stats',
+          templateUrl: 'views/board_stats.html',
+          controller: "BoardStatsController"
+        }
+      ).state(
+        'board.teamMembers',
+        {
+          url: '/team',
+          templateUrl: 'views/board_team.html',
+          controller: "TeamBoardController"
+        }
+      )
+
       #.state(
       #  'board', {
       #    url: '/boards/:boardId/:from/:to',

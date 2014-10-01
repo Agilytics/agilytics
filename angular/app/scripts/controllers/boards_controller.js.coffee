@@ -12,9 +12,8 @@ angular.module("agilytics").controller "BoardsController", ($rootScope, $scope, 
       else
         $scope.notBoards.push board
 
-
-  $scope.href = (board)->
-    window.location.hash = "/boards/#{board.id}"
+  $scope.goToBoard = (board)->
+    window.location.hash= "/boards/#{board.id}/stats"
 
   $scope.saveBoards = ->
 

@@ -1,6 +1,6 @@
-angular.module('agilytics').directive('categoryManagement', [ "$http", "$rootScope", "$timeout", "agiliticsUtils", "boardDataService"
+angular.module('agilytics').directive('categoryManagement', [ "$http", "$rootScope", "$timeout", "agiliticsUtils", "boardStatsService"
 
-  ($http, $rootScope,$timeout, agiliticsUtils, boardDataService) ->
+  ($http, $rootScope,$timeout, agiliticsUtils, boardStatsService) ->
 
     #------------ TAGS / CATEGORY
     buildManager = =>
@@ -26,23 +26,23 @@ angular.module('agilytics').directive('categoryManagement', [ "$http", "$rootSco
 
       @scope.saveCategory = (category)=>
         category.tags = [] unless category.tags
-        boardDataService.saveCategories(@board.id, $rootScope.siteId, [category], =>
-          boardDataService.getCategories @board.id, $rootScope.siteId, (categories)=>
+        boardStatsService.saveCategories(@board.id, $rootScope.siteId, [category], =>
+          boardStatsService.getCategories @board.id, $rootScope.siteId, (categories)=>
             @scope.board.categories = categories
             @scope.category = null
         )
 
       @scope.deleteCategory = (category)=>
-        boardDataService.deleteCategory @board.id, $rootScope.siteId, category.id, ->
-          boardDataService.getCategories @board.id, $rootScope.siteId, (categories) ->
+        boardStatsService.deleteCategory @board.id, $rootScope.siteId, category.id, ->
+          boardStatsService.getCategories @board.id, $rootScope.siteId, (categories) ->
             @scope.board.categories = categories
             @scope.category = null
 
       @scope.cancelEditCategory = (category)=>
         @scope.category = null
 
-      boardDataService.getCategories @board.id, $rootScope.siteId, (categories)=>
-        boardDataService.getTags @board.id, $rootScope.siteId, (tags)->
+      boardStatsService.getCategories @board.id, $rootScope.siteId, (categories)=>
+        boardStatsService.getTags @board.id, $rootScope.siteId, (tags)->
           @scope.tags = tags
           @scope.board.categories = categories
           $("#manageCategories  ").modal()

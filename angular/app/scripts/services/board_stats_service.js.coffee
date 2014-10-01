@@ -1,4 +1,4 @@
-class @BoardService
+class BoardStatsService
   constructor: (@$http, @agiliticsUtils)->
 
   _calculateSprintCost: (sprint, board)=>
@@ -10,8 +10,13 @@ class @BoardService
     releaseSprints = []
 
     # when is due to the possibility that the release may be filtered
-    for sprint in release.sprints when @filteredSprintsByKey[sprint.pid]
+    for sprint in release.sprints
+
+      if !@filteredSprintsByKey[sprint.pid]
+        continue;
+
       locSprint = @filteredSprintsByKey[sprint.pid]
+
 
       if locSprint
         release.total_velocity += locSprint.total_velocity * 1
@@ -22,16 +27,24 @@ class @BoardService
       release.calculated_cost += locSprint.cost
       releaseSprints.push locSprint
 
-
     release.sprints.length = 0
-    release.sprints.push releaseSprints
+    release.sprints = releaseSprints
 
-  getEvents: (boardId, siteId, eventRange, callback)=>
+
+  state:
+    board: { id: 0 }
+    sprintEvents: []
+    eventRange:
+      to: ""
+      from: ""
+
+
+  getEvents: (boardId, siteId, sprintRange, callback)=>
 
     @filteredSprintsByKey = {}
     releases = []
-    loc_eventRange = {}
-    eventRange = {} unless eventRange
+
+    sprintRange = {} unless sprintRange
 
     @$http.get("/api/releases.json?board_id=#{boardId}&site_id=#{siteId}").success (releases)=>
 
@@ -43,11 +56,11 @@ class @BoardService
         filteredSprintVelocityCostsStats = []
 
         startWithThisEvent = if sprintVelocityCostStats.length - 10 > 0 then sprintVelocityCostStats.length - 10 else 0
-        eventRange.from = sprintVelocityCostStats[startWithThisEvent].pid if sprintVelocityCostStats && !eventRange.from
+        sprintRange.from = sprintVelocityCostStats[startWithThisEvent].pid if sprintVelocityCostStats && !sprintRange.from
 
-        if !eventRange.to ||  eventRange.to == sprintVelocityCostStats[sprintVelocityCostStats.length - 1].pid
-          eventRange.doNotFilterEnd = true
-          eventRange.to = sprintVelocityCostStats[sprintVelocityCostStats.length - 1].pid
+        if !sprintRange.to ||  sprintRange.to == sprintVelocityCostStats[sprintVelocityCostStats.length - 1].pid
+          sprintRange.doNotFilterEnd = true
+          sprintRange.to = sprintVelocityCostStats[sprintVelocityCostStats.length - 1].pid
 
         events = []
         sprintEvents = []
@@ -68,7 +81,7 @@ class @BoardService
           sprintEvent = { date: d.utc, dateString: d.str, event: sprint, type: "sprint" }
 
           ## filtering
-          beginIncludingSprints = beginIncludingSprints || sprint.pid == eventRange.from
+          beginIncludingSprints = beginIncludingSprints || sprint.pid == sprintRange.from
 
           if beginIncludingSprints && !stopIncludingSprints
             @filteredSprintsByKey[sprint.pid] = sprint
@@ -77,15 +90,14 @@ class @BoardService
             filteredSprintEvents.push sprintEvent
 
 
-          stopIncludingSprints = stopIncludingSprints || sprint.pid == eventRange.to
+          stopIncludingSprints = stopIncludingSprints || sprint.pid == sprintRange.to
           ## end filtering
 
           events.push sprintEvent
           sprintEvents.push sprintEvent
 
-          loc_eventRange.from = sprintEvent if sprint.pid == eventRange.from
-          loc_eventRange.to = sprintEvent if sprint.pid == eventRange.to
-
+          @state.eventRange.from = sprintEvent if sprint.pid == sprintRange.from
+          @state.eventRange.to = sprintEvent if sprint.pid == sprintRange.to
 
 
         for release in releases
@@ -95,30 +107,31 @@ class @BoardService
 
           events.push releaseEvent
           releaseEvents.push releaseEvent
-          if d.utc >= loc_eventRange.from.date && ( d.utc <= loc_eventRange.to.date || eventRange.doNotFilterEnd )
+          if d.utc >= @state.eventRange.from.date && ( d.utc <= @state.eventRange.to.date || sprintRange.doNotFilterEnd )
             filteredEvents.push releaseEvent
             filteredReleaseEvents.push releaseEvent
 
         sortByDate = (events)-> _.sortBy(events, (s)-> s.date )
 
-        callback
-          board: res.board
-          #
-          events: sortByDate events
-          filteredEvents: sortByDate filteredEvents
-          filteredSprintEvents: sortByDate filteredSprintEvents
-          filteredReleaseEvents: sortByDate filteredReleaseEvents
-          releaseEvents: sortByDate releaseEvents
-          sprintEvents: sortByDate sprintEvents
-          #
-          eventRange: loc_eventRange
-          releases: releases
-          sprints: sprintVelocityCostStats
-          filteredSprintsByKey: @filteredSprintsByKey
-          stats: sprintVelocityCostStats
-          filteredStats: filteredSprintVelocityCostsStats
-          seriesData: @createSeriesForGraphs(sprintVelocityCostStats, res.board.categories)
-          filteredSeriesData: @createSeriesForGraphs(filteredSprintVelocityCostsStats, res.board.categories)
+        @state.board = res.board
+        @state.sprintEvents = sortByDate sprintEvents
+
+        @state.events = sortByDate events
+        @state.filteredEvents = sortByDate filteredEvents
+        @state.filteredSprintEvents = sortByDate filteredSprintEvents
+        @state.filteredReleaseEvents = sortByDate filteredReleaseEvents
+        @state.releaseEvents = sortByDate releaseEvents
+        #
+        @state.releases = releases
+        @state.sprints = sprintVelocityCostStats
+        @state.filteredSprintsByKey = @filteredSprintsByKey
+        @state.stats = sprintVelocityCostStats
+        @state.filteredStats = filteredSprintVelocityCostsStats
+        @state.seriesData = @createSeriesForGraphs(sprintVelocityCostStats, res.board.categories)
+        @state.filteredSeriesData = @createSeriesForGraphs(filteredSprintVelocityCostsStats, res.board.categories)
+
+        callback @state
+
 
   createSeriesForGraphs: (data, categories)=>
 
@@ -218,6 +231,6 @@ class @BoardService
       alert 'error'
     )
 
-angular.module('agilytics').factory('boardDataService', ["$http", "agiliticsUtils", ($http, agiliticsUtils)->
-  new BoardService($http, agiliticsUtils)
+angular.module('agilytics').factory('boardStatsService', ["$http", "agiliticsUtils", ($http, agiliticsUtils)->
+  new BoardStatsService($http, agiliticsUtils)
 ])

@@ -282,11 +282,12 @@ class BoardsController < ApplicationController
 
     the_sql =
         "SELECT
-            a.id as asignee_id,
+            a.id as assignee_id,
             a.name as assignee,
             b.name,
             to_number(sp.sprint_id, '999999') as sprint_id,
             sp.end_date,
+            sp.name as sprint_name,
             sum(s.size)
         FROM
             stories s
@@ -306,6 +307,7 @@ class BoardsController < ApplicationController
           a.id,
           a.name,
           b.name,
+          sp.name,
           sp.end_date,
           to_number(sp.sprint_id, '999999')
         ORDER BY
